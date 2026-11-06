@@ -15,24 +15,8 @@ function chartNumber(value, metric) {
     return metric === 'lr' ? value.toExponential(1) : value.toFixed(metric === 'nll' ? 3 : 2);
 }
 
-function selectHistory() {
-    const history = report.histories[Number(document.getElementById('history').value)];
-    const metric = document.getElementById('history-metric');
-    const previous = metric.value;
-    metric.replaceChildren();
-    for (const key of Object.keys(history.curves)) {
-        const option = document.createElement('option');
-        option.value = key;
-        option.textContent = metricNames[key];
-        metric.append(option);
-    }
-    metric.value = previous in history.curves ? previous : 'nll';
-    drawHistory();
-}
-
-function drawHistory() {
-    const history = report.histories[Number(document.getElementById('history').value)];
-    const metric = document.getElementById('history-metric').value;
+function drawHistory(panel, history) {
+    const metric = panel.querySelector('[data-role="metric"]').value;
     const series = history.curves[metric];
     const all = series.flatMap(s => s.points);
     const width = 900, height = 340;
@@ -44,7 +28,7 @@ function drawHistory() {
     ymax += padding;
     const x = value => margin.left + value / xmax * (width - margin.left - margin.right);
     const y = value => height - margin.bottom - (value - ymin) / (ymax - ymin) * (height - margin.top - margin.bottom);
-    const chart = document.getElementById('history-chart');
+    const chart = panel.querySelector('[data-role="chart"]');
     chart.replaceChildren();
     chart.setAttribute('viewBox', `0 0 ${width} ${height}`);
     chart.setAttribute('aria-label', `${history.label}. ${metricNames[metric]}`);
@@ -66,9 +50,9 @@ function drawHistory() {
             stroke: '#a6afa7', 'stroke-dasharray': '3 4'}));
         chart.append(svgNode('text', {x: x(boundary.x)-6, y: 35, 'text-anchor': 'end', class: 'boundary-label'}, boundary.label));
     }
-    const readout = document.getElementById('history-readout');
+    const readout = panel.querySelector('[data-role="readout"]');
     readout.textContent = 'Точные значения — при наведении или фокусе на точке.';
-    const legend = document.getElementById('history-legend');
+    const legend = panel.querySelector('[data-role="legend"]');
     legend.replaceChildren();
     for (const item of series) {
         const label = document.createElement('span');
@@ -90,33 +74,51 @@ function drawHistory() {
             chart.append(dot);
         }
     }
-    document.getElementById('history-description').textContent = history.description;
-    document.getElementById('history-note').textContent = history.note;
-    document.getElementById('history-source').href = new URL(history.source, report.repository).href;
-    document.getElementById('history-source').textContent = 'Исходные измерения (' + history.source.split('.').pop().toUpperCase() + ')';
-}
-
-const historyGroups = new Map();
-const historySelect = document.getElementById('history');
-report.histories.forEach((history, index) => {
-    if (!historyGroups.has(history.group)) {
-        const group = document.createElement('optgroup');
-        group.label = history.group;
-        historySelect.append(group);
-        historyGroups.set(history.group, group);
-    }
-    const option = document.createElement('option');
-    option.value = index;
-    option.textContent = history.label;
-    historyGroups.get(history.group).append(option);
-});
-document.getElementById('history').addEventListener('change', selectHistory);
-document.getElementById('history-metric').addEventListener('change', drawHistory);
-for (const button of document.querySelectorAll('button[data-history]')) {
-    button.addEventListener('click', () => {
-        document.getElementById('history').value = report.histories.findIndex(r => r.id === button.dataset.history);
-        selectHistory();
-        document.getElementById('training-curves').scrollIntoView({behavior: 'smooth', block: 'start'});
+    panel.querySelector('[data-role="description"]').textContent = history.description;
+    panel.querySelector('[data-role="note"]').textContent = history.note;
+    const sources = panel.querySelector('[data-role="sources"]');
+    sources.replaceChildren();
+    (history.sources || [history.source]).forEach((source, index) => {
+        if (index) sources.append(document.createTextNode(' · '));
+        const link = document.createElement('a');
+        link.href = new URL(source, report.repository).href;
+        link.textContent = 'Измерения' + (index ? ' продолжения' : '') + ' (' + source.split('.').pop().toUpperCase() + ')';
+        sources.append(link);
     });
 }
-selectHistory();
+
+for (const panel of document.querySelectorAll('[data-training-stage]')) {
+    const history = report.histories.find(row => row.id === panel.dataset.trainingStage);
+    const select = panel.querySelector('[data-role="metric"]');
+    for (const key of Object.keys(history.curves)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = metricNames[key];
+        select.append(option);
+    }
+    select.addEventListener('change', () => drawHistory(panel, history));
+    drawHistory(panel, history);
+}
+
+// Experiment groups are comparisons, independent of the stage training curves.
+const experimentTabs = [...document.querySelectorAll('[role="tab"][data-panel]')];
+function selectExperiment(tab) {
+    for (const button of experimentTabs) {
+        const active = button === tab;
+        button.setAttribute('aria-selected', String(active));
+        button.tabIndex = active ? 0 : -1;
+        document.getElementById(button.dataset.panel).hidden = !active;
+    }
+}
+experimentTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectExperiment(tab));
+    tab.addEventListener('keydown', event => {
+        const offset = {ArrowRight: 1, ArrowLeft: -1}[event.key];
+        if (!offset && !['Home','End'].includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? experimentTabs.length-1 :
+            (index + offset + experimentTabs.length) % experimentTabs.length;
+        selectExperiment(experimentTabs[next]);
+        experimentTabs[next].focus();
+    });
+});

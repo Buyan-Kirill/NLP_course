@@ -11,7 +11,6 @@ SOURCES = {
     'reproduction/evidence/poetry_first_metrics.jsonl': 'Журнал первого прохода поэзии',
     'reproduction/evidence/native_sft_metrics.jsonl': 'Журнал SFT продолжения строки',
     'audit/poetry16/batch4k/2423668_validation.json': 'Validation в середине второго прохода поэзии',
-    'audit/pretrain11/lr25_interim_check.json': 'Контрольная панель претрейна: D630, LR10 и LR25',
 }
 
 
@@ -89,7 +88,8 @@ def logged_history(key, label, source, description, *, native_validation=None):
     return dict(id=key, label=label, description=description,
         scale=1e6 if token_count(train[-1]) > 1e6 else 1000,
         unit='млн токенов' if token_count(train[-1]) > 1e6 else 'тыс. токенов',
-        note=f'Train: среднее по блокам до {width} шагов, взвешенное по токенам. '
+        note=(f'Train: среднее по блокам до {width} шагов, взвешенное по токенам. ' if width > 1
+              else 'Train: loss каждого обновления. ')
              + ('Validation: два замера — до и после обучения; пунктир соединяет их, промежуточные значения не измерялись.' if native_validation else
                 'Validation: сохранённые замеры без сглаживания.'),
         source=source, curves=curves)
@@ -106,36 +106,23 @@ def histories(poetry_rows, native):
         'reproduction/evidence/lr50_metrics.jsonl',
         'Ещё 50 млн токенов от D630, LR ×0,5. Validation: 261 391 токен; '
         'ось X отсчитывается от начала этого продолжения.')
-    panel_source = 'audit/pretrain11/lr25_interim_check.json'
-    interim = json.loads((ROOT/panel_source).read_text('utf8'))
-    assert interim['matched_panel_settings_prefixes_seeds']
-    final = json.loads((ROOT/'audit/pretrain11/final_automatic_review.json').read_text('utf8'))
-    baseline = final['main']['models']['D630']
-    selected = final['main']['models']['LR50']
-    points = []
-    for label in ['D630','LR10','LR25']:
-        row = interim['rows'][label]
-        points.append(dict(x=row['absolute_targets'] - interim['rows']['D630']['absolute_targets'],
-            nll=row['validation_nll'], perplexity=math.exp(row['validation_nll']),
-            accuracy=row['validation_token_accuracy']))
-    assert points[0]['nll'] == baseline['teacher_forced']['validation']['nll']
-    assert points[0]['accuracy'] == baseline['teacher_forced']['validation']['token_accuracy']
-    val = selected['teacher_forced']['validation']
-    points.append(dict(x=50000000, nll=val['nll'], perplexity=val['perplexity'],
-        accuracy=val['token_accuracy']))
-    quality = dict(id='quality', label='LR50 · контроль NLL / PPL / Top-1', scale=1e6, unit='млн токенов',
-        description='Дополнительные замеры завершения претрейна LR50 на 0 / 10 / 25 / 50 млн токенов: '
-                    '256 validation-окон, 16 384 токена.',
-        note='Top-1 измерен на эталонном контексте. '
-             'Линии соединяют четыре измеренных checkpoint. Эта панель отличается от validation тренировочного журнала.',
-        source=panel_source, curves={
-            key: [series(label, points, key, color=color)] for key, label, color in [
-                ('nll','Validation NLL','#ad5a25'), ('perplexity','Validation PPL','#ad5a25'),
-                ('accuracy','Top-1','#256855')]})
-    first = logged_history('poetry_first', 'Поэзия · журнал первого прохода',
-        'reproduction/evidence/poetry_first_metrics.jsonl',
-        'Первый из двух проходов выбранной поэтической адаптации. '
-        'Validation: 85 928 токенов, 324 записи, 323 семейства.')
+    # Same validation and a continuous token axis across the two training logs.
+    support = []
+    for source in (initial['source'], finish['source']):
+        _, validation = read_log(ROOT/source)
+        support.extend((row['targets'], row['records'], row['families']) for row in validation)
+    assert set(support) == {(261391, 475, 85)}
+    for metric, curves in initial['curves'].items():
+        for old, continuation in zip(curves, finish['curves'][metric], strict=True):
+            old['points'].extend({**p, 'x': p['x']+630193557} for p in continuation['points'])
+            assert all(a['x'] < b['x'] for a,b in zip(old['points'], old['points'][1:]))
+    initial.update(id='pretrain', label='Претрейн · D → LR50',
+        description='630,19 млн токенов с нуля + 50 млн с LR ×0,5; всего 680,19 млн. '
+                    'Validation: 261 391 токен, 475 записей, 85 семейств.',
+        boundaries=[dict(x=630193557, label='LR ×0,5')],
+        sources=[initial['source'], finish['source']],
+        note='Train NLL — средние по непересекающимся блокам шагов, взвешенные по токенам; '
+             'LR — на конце блока. Validation — исходные замеры без сглаживания.')
     train, validation = read_log(ROOT/'reproduction/evidence/poetry_first_metrics.jsonl')
     by_step = {r['step']: token_count(r) for r in train}
     midpoint = json.loads((ROOT/'audit/poetry16/batch4k/2423668_validation.json').read_text('utf8'))
@@ -153,7 +140,7 @@ def histories(poetry_rows, native):
         note='Точки — измеренные checkpoint. Линии соединяют соседние замеры; '
              'промежуточные значения не измерялись.',
         source='audit/poetry16/batch4k/2423668_validation.json',
-        boundaries=[dict(x=1615779, label='Второй проход'), dict(x=3231558, label='Окончание')],
+        boundaries=[dict(x=1615779, label='Второй проход'), dict(x=3231558, label='Подсказка окончания')],
         curves={key: [series('Validation NLL' if key=='nll' else 'Validation PPL', points,
                              key, color='#ad5a25')] for key in ['nll','perplexity']})
     sft = logged_history('native', 'SFT продолжения · два прохода',
@@ -161,13 +148,5 @@ def histories(poetry_rows, native):
         'Контрольная ветвь от Planned400k; в выбранные веса не входит. '
         '869 фрагментов, два прохода, 21 680 токенов в loss. '
         'Validation: 282 токена продолжений, 23 записи, 21 семейство.', native_validation=native)
-    selected = [initial, finish, poetry]
-    details = [quality, first]
-    for group, entries in [
-        ('Выбранная модель · порядок обучения', selected),
-        ('Подробные замеры этих этапов', details),
-        ('Отдельная ветвь · вне выбранной модели', [sft]),
-    ]:
-        for entry in entries:
-            entry['group'] = group
-    return [*selected, *details, sft]
+    sft['id'] = 'sft'
+    return [initial, poetry, sft]

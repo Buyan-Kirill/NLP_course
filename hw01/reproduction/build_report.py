@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 from urllib.parse import quote, unquote, urlsplit
 
-from reproduction import report_charts, report_data_quality, report_provenance
+from reproduction import report_charts, report_data_quality, report_experiments, report_provenance
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs/report"
@@ -43,6 +43,7 @@ SOURCE_TITLES = {
 SOURCE_TITLES.update(report_charts.SOURCES)
 SOURCE_TITLES.update(report_provenance.SOURCES)
 SOURCE_TITLES.update(report_data_quality.SOURCES)
+SOURCE_TITLES.update(report_experiments.SOURCES)
 
 
 def read(name):
@@ -175,7 +176,7 @@ def report_data():
     assert all((r['answers'], r['situations'], r['meaning'], r['joint']) == (14, 12, 1, 0) for r in chat_reading)
     sources.append("reproduction/evidence/inference22_config.json")
     sources.extend(name for name in [*report_charts.SOURCES, *report_provenance.SOURCES,
-                                    *report_data_quality.SOURCES] if name not in sources)
+                                    *report_data_quality.SOURCES, *report_experiments.SOURCES] if name not in sources)
     data = {"as_of": "2026-11-06", "parameters": 68440576, "repository": REPOSITORY,
             "prose": prose, "poetry": poetry, "pretrain": comparisons,
             "poetry_metrics": poetry_rows, "stages": stages,
@@ -187,6 +188,7 @@ def report_data():
     data['examples'] = report_provenance.final_examples()
     data['showcase'] = report_provenance.showcase()
     data['data_quality'] = report_data_quality.quality_data()
+    data['experiments'] = report_experiments.experiment_data()
     data['histories'] = report_charts.histories(poetry_rows, native)
     data['provenance'] = report_provenance.verify_examples(data)
     return data
@@ -247,6 +249,9 @@ def main():
         f'<td>{row["poetry"]:.3f}</td><td>{row["sft"]:.3f}</td></tr>'
         for row in data['data_quality']['tokenizers_by_domain'])
     replacements['__CHART_SCRIPT__'] = (ROOT/'reproduction/report_charts.js').read_text('utf8')
+    for key, stage in [('PRETRAIN','pretrain'),('POETRY','poetry'),('SFT','sft')]:
+        replacements['__'+key+'_CHART__'] = training_chart(stage)
+    replacements.update(report_experiments.render_tables(data['experiments']))
     replacements['__EXAMPLE_SCRIPT__'] = (ROOT/'reproduction/report_examples.js').read_text('utf8')
     for key, value in replacements.items():
         template = template.replace(key, value)
@@ -256,6 +261,16 @@ def main():
     (OUT / "sources.json").write_text(json.dumps(data["sources"], ensure_ascii=False, indent=2) + "\n", encoding="utf8", newline="\n")
     (OUT / "generation_sources.json").write_text(json.dumps(data['provenance'], ensure_ascii=False, indent=2) + "\n", encoding='utf8', newline="\n")
     print(f"Report: {OUT / 'index.html'}; {len(data['sources'])} inspected sources")
+
+
+def training_chart(stage):
+    return f'''<div class="card training-panel" data-training-stage="{stage}">
+<h3>Динамика обучения</h3>
+<div class="toolbar"><label for="{stage}-metric">Метрика</label><select id="{stage}-metric" data-role="metric"></select></div>
+<p class="caption" data-role="description"></p><div class="chart-legend" data-role="legend"></div>
+<div class="chart-scroll"><svg class="training-chart" data-role="chart" role="img"></svg></div>
+<p class="caption" data-role="readout" aria-live="polite"></p><p class="caption" data-role="note"></p>
+<p class="source" data-role="sources"></p></div>'''
 
 
 if __name__ == "__main__":

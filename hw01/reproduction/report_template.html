@@ -12,8 +12,14 @@
 @media(max-width:700px){header,main,footer{padding:18px}header{padding-top:28px}.grid,.steps{grid-template-columns:minmax(0,1fr)}h2{font-size:25px}.lead{font-size:17px}.numbers{gap:18px}.card{padding:16px}.scroll table{min-width:530px}.toolbar select{width:100%}.hero-example{padding:18px}.hero-flow{grid-template-columns:minmax(0,1fr);gap:12px}.hero-process{text-align:left}.hero-arrow{display:inline-block;transform:rotate(90deg);margin-right:8px}.hero-verse{font-size:22px}}
 @media print{body{background:white;font-size:11pt}header{padding-top:0}nav,.toolbar{display:none}h1{font-size:29pt}.card,table{break-inside:avoid}.grid{grid-template-columns:1fr 1fr}pre{font-size:12pt}.stage-text{max-height:none}footer{margin-top:16px}}
 [hidden]{display:none!important}
-.chart-scroll{overflow-x:auto}.chart-scroll svg{min-width:650px}.chart-grid{stroke:var(--line);stroke-width:1}.chart-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin:12px 0}.chart-legend span{border-top:3px solid;padding-top:3px;font-size:13px}#history-chart text{font-size:16px}#history-chart .boundary-label{font-size:13px}#history-chart circle:focus{outline:2px solid var(--ink)}.score{font:600 18px system-ui;color:var(--muted);margin-top:8px}.rubric td:first-child{min-width:130px}.ratings table{min-width:0;font-size:13px}.ratings td,.ratings th{padding:7px 5px}.ratings td:last-child{font-weight:700}
+.chart-scroll{overflow-x:auto}.chart-scroll svg{min-width:650px}.chart-grid{stroke:var(--line);stroke-width:1}.chart-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin:12px 0}.chart-legend span{border-top:3px solid;padding-top:3px;font-size:13px}.training-chart text{font-size:16px}.training-chart .boundary-label{font-size:13px}.training-chart circle:focus{outline:2px solid var(--ink)}.score{font:600 18px system-ui;color:var(--muted);margin-top:8px}.rubric td:first-child{min-width:130px}.ratings table{min-width:0;font-size:13px}.ratings td,.ratings th{padding:7px 5px}.ratings td:last-child{font-weight:700}
 
+
+.experiment-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.experiment-tabs button[aria-selected="true"]{background:var(--green);color:white;border-color:var(--green)}
+.experiment-panel h3{margin-top:20px}.experiment-panel td:first-child{min-width:110px}
+.training-panel{margin:18px 0}.experiment-panel .note{font-size:14px}
+@media print{.experiment-tabs{display:none}.experiment-panel[hidden]{display:block!important}}
 </style></head><body>
 <header><div class="eyebrow">Углублённый NLP · Домашнее задание №1 · 6 ноября 2026</div>
 <h1>PoetryGPT</h1><p class="lead">Обучение языковой модели с нуля на русских текстах XVIII–XIX веков, поэтическая адаптация и генерация рифмованных продолжений.</p>
@@ -21,10 +27,10 @@
 <p class="source"><a href="../reproduction.md">Код и воспроизведение</a> · <a href="https://github.com/Buyan-Kirill/NLP_course/releases/tag/poetrygpt-v1">Обученные веса</a> · <a href="../../inference.ipynb">Ноутбук инференса</a></p>
 <nav aria-label="Разделы"><a href="#results">Примеры</a><a href="#overview">Модель</a><a href="#data">Корпус и BPE</a><a href="#pretrain">Претрейн</a><a href="#adaptation">Поэзия</a><a href="#sft">SFT</a><a href="#experiments">Эксперименты</a><a href="#inference">Инференс</a><a href="#metrics">Метрики</a></nav></header>
 <main>
-<section id="results"><h2>Продолжения на новых входах</h2><div class="grid">__SHOWCASE__</div><p class="caption">Точные сохранённые выводы весов Planned400k, без редактирования. Примеры выбраны для демонстрации; метрики считаются отдельно на фиксированных наборах. Ни эти входы, ни ответы, ни полные двустишия не найдены в окончательном train при поиске последовательностей слов без учёта регистра, пунктуации и ударений. Это проверка точных совпадений, не смыслового сходства. <a href="../../reproduction/evidence/showcase_audit.json">Протокол проверки (JSON)</a>.</p></section>
+<section id="results"><h2>Продолжения на новых входах</h2><div class="grid">__SHOWCASE__</div><p class="caption">Точные сохранённые выводы весов Planned400k, без редактирования. Примеры выбраны для демонстрации; метрики считаются отдельно на фиксированных наборах. Нормализованные входы, ответы и двустишия не найдены в окончательном train; проверены точные последовательности слов. <a href="../../reproduction/evidence/showcase_audit.json">Протокол проверки (JSON)</a>.</p></section>
 <section id="overview"><h2>Описание</h2><p>Decoder-only Transformer: 68,44 млн параметров, 20 слоёв, ширина 512, 8 голов attention, RoPE, RMSNorm, SwiGLU. Контекст 512 токенов; собственный byte-level BPE со словарём 8192. Все веса языковой модели инициализированы случайно.</p>
 <div class="scroll"><table><thead><tr><th>Корпус</th><th>Train-токены</th><th>Состав</th></tr></thead><tbody><tr><td>Историческая проза</td><td>210,02 млн</td><td>41 282 сегмента: RSD, Lib.ru/Классика</td></tr><tr><td>Поэзия</td><td>1,61 млн</td><td>5478 произведений: PoetryCorpus, ru-poetry-dataset, corpus_1835, rus_elegies, РВБ, Lib.ru</td></tr></tbody></table></div>
-<p>Удалены HTML-разметка и редакторский аппарат; применены OCR-проверки, дедупликация и контроль пересечений. Семейства произведений разделены до нарезки окон; сохранены строки и доступные строфы.</p>
+
 <p class="caption">В объёме корпуса указаны содержательные токены. В бюджете обучения и батче — токены, включённые в loss, с учётом EOS и повторных проходов. Исторический отбор основан на авторстве и каталогах; точные даты написания подтверждены не для всех произведений.</p><p class="source"><a href="../dataset.md">Данные</a> · <a href="../model.md">Архитектура и гиперпараметры</a> · <a href="../reproduction.md">Воспроизведение</a></p></section>
 
 <section id="data"><h2>Корпус и токенизатор</h2><p>Корпус собран из семи источников. Очистка включает издательские вставки, чужоязычные блоки, OCR и повторы; чистые части длинных произведений сохранялись. Split закреплён за семейством произведения до нарезки окон.</p>
@@ -34,25 +40,15 @@
 <div class="scroll"><table><caption>Повторная проверка на раздельных validation v3. В каждой ячейке — токенов на слово. Эти выборки не равны окончательному корпусу 210 млн токенов.</caption><thead><tr><th>BPE</th><th>Проза</th><th>Поэзия</th><th>SFT</th></tr></thead><tbody>__TOKENIZER_DOMAIN_ROWS__</tbody></table></div>
 <p>Новый 16k сокращал число токенов в среднем по прозе и поэзии на 8,69% относительно нового 8k — ниже заранее выбранного порога 15% для удвоения словаря. Новый 8k улучшал сжатие прозы, но увеличивал длину поэзии на 2,58%, превысив допуск 1%. Поэтому сохранён прежний 8k. Это критерий сжатия и стоимости embedding, а не доказательство лучшего качества генерации.</p><p class="source"><a href="../../reproduction/evidence/tokenizers_v2.json">Шесть исходных опытов</a> · <a href="../../reproduction/evidence/tokenizers_v3.json">Повторная проверка и правило выбора</a> · <a href="../../reproduction/fit_tokenizer.py">Код обучения BPE</a></p></details></section>
 
-<section id="pretrain"><h2>Претрейн</h2><p>Next-token CE, Muon для скрытых матриц и AdamW для embedding/head и одномерных параметров. BF16, gradient clipping 1, эффективный батч 16 384 токена. Основная ветвь обучена на 630,19 млн токенов; затем выполнено ещё 50 млн с LR ×0,5.</p>
-<p>На общем checkpoint сравнивались четыре продолжения по 50 млн токенов: контроль CE, LR ×0,5, замена 5% входных токенов и смесь 70% исходного потока / 30% отобранной прозы.</p>
-<div id="training-curves" class="card">
-<h3>Динамика обучения</h3>
-<div class="toolbar"><label for="history">График</label><select id="history"></select><label for="history-metric">Метрика</label><select id="history-metric"></select></div>
-<p id="history-description" class="caption"></p>
-<div id="history-legend" class="chart-legend"></div>
-<div class="chart-scroll"><svg id="history-chart" role="img"></svg></div>
-<p id="history-readout" class="caption" aria-live="polite"></p>
-<p id="history-note" class="caption"></p><a id="history-source" class="source"></a>
-</div>
-<details><summary>Сравнение четырёх вариантов: одинаковый бюджет 50 млн токенов</summary>
-<div class="scroll"><table><caption>Validation: 256 окон, 73 семейства, 16 384 токена. Генерация: 96 продолжений длиной до 96 токенов.</caption><thead><tr><th>Вариант</th><th>NLL ↓</th><th>PPL ↓</th><th>Top-1 ↑</th><th>Distinct-2 ↑</th><th>Repeat-4 ↓</th></tr></thead><tbody>__PRE_ROWS__</tbody></table></div>
-<p>LR ×0,5 дал лучший validation NLL. У контроля выше Distinct-2 и ниже Repeat-4. Для дальнейшей адаптации выбран LR ×0,5 с учётом совокупной оценки.</p></details></section>
+<section id="pretrain"><h2>Претрейн</h2><p>Next-token CE, Muon для скрытых матриц и AdamW для embedding/head и одномерных параметров. BF16, gradient clipping 1, эффективный батч 16 384 токена. Три прохода корпуса — 630,19 млн токенов; затем ещё 50 млн с LR ×0,5. Полная кривая ниже включает оба участка.</p>
 
-<section id="adaptation"><h2>Поэтическое дообучение</h2><p>Два прохода по поэтическому train. LR плавно снижается от 3e-5 до 3e-6 за 3 231 558 обучаемых токенов; состояния оптимизаторов сброшены в начале первого прохода. На втором проходе эффективный батч снижен с 16 384 до 4096 токенов.</p>
+__PRETRAIN_CHART__
+</section>
+
+<section id="adaptation"><h2>Поэтическое дообучение</h2><p>Два прохода по поэтическому train. LR плавно снижается от 3e-5 до 3e-6 за два прохода, 3,23 млн токенов в loss; состояния оптимизаторов сброшены в начале первого прохода. На втором проходе эффективный батч снижен с 16 384 до 4096 токенов.</p>
 <p>Дополнительно выполнено 400 тыс. токенов на смеси обычной поэзии и примеров с заданным конечным словом, 50/50. Для этой ветви выбран checkpoint Planned400k.</p>
 <div class="scroll"><table><caption>Общая validation: 324 записи, 323 семейства, 85 928 токенов.</caption><thead><tr><th>Этап</th><th>NLL ↓</th><th>PPL ↓</th></tr></thead><tbody>__POETRY_ROWS__</tbody></table></div>
-<p><button type="button" data-history="poetry">График поэтического дообучения</button></p>
+__POETRY_CHART__
 <p>Минимальный NLL получен после второго прохода с батчем 4096; финальные веса выбраны по результатам генерации и проверки рифмы, а не только по NLL.</p>
 <details><summary>Генерации после этапов</summary><p class="caption">Три общих входа из validation, seed 7, до 48 новых токенов; исходный вывод без редактирования.</p><div class="toolbar"><label for="stage-case">Ввод</label><select id="stage-case"></select></div><pre id="stage-prompt"></pre><div id="stage-examples" class="grid" aria-live="polite"></div></details></section>
 
@@ -61,18 +57,56 @@
 <p>Инструкционная ветвь сохранена для сравнения; в финальные веса не включена.</p>
 <h3>Продолжение строки</h3><p>869 фрагментов, два прохода, 21 680 токенов в loss. AdamW, LR 3e-5→3e-6, эффективный батч 256 токенов. Родитель — Planned400k; loss только по продолжению, без chat-ролей.</p>
 <div class="scroll"><table><caption>Validation: 23 фрагмента, 21 семейство, 282 токена продолжений.</caption><thead><tr><th>Модель</th><th>NLL ↓</th><th>PPL ↓</th></tr></thead><tbody>__NATIVE_ROWS__</tbody></table></div>
-<p><button type="button" data-history="native">График SFT продолжения строки</button></p><p>Для validation этой ветви сохранены два измерения — до и после обучения; на графике они соединены пунктиром.</p></details></section>
+</details>__SFT_CHART__</section>
 
-<section id="experiments"><h2>Эксперименты и решения</h2><p>Основные направления: оптимизатор Muon, баланс данных, устойчивость к ошибкам контекста, размер батча, планирование рифмы и ограниченный поиск. Изменения сравнивались по loss и свободной генерации; одного снижения NLL для выбора было недостаточно.</p>
-<details><summary>Что проверяли, что измерили и что оставили</summary><div class="scroll"><table><thead><tr><th>Гипотеза</th><th>Сравнение</th><th>Результат и решение</th></tr></thead><tbody>
-<tr><td>Меньший LR полезнее следующего обычного прохода</td><td>Общий D630, по 50 млн токенов: CE / LR ×0,5 / шум / смесь</td><td>На общей панели NLL: 2,7598 / 2,7356 / 2,7801 / 2,7592. Выбран LR ×0,5; <a href="#pretrain">n-граммные метрики</a> также учитывались.</td></tr>
-<tr><td>Шум делает модель устойчивее к ошибкам входа</td><td>Замена 5% входных токенов, обычный CE по чистым целям</td><td>В этом опыте NLL и PPL хуже контроля: 2,7801 и 16,12 против 2,7598 и 15,80. В основной рецепт не включён.</td></tr>
-<tr><td>Больше полезной прозы улучшает связность</td><td>70% обычного потока + 30% отобранных текстов, 50 млн токенов</td><td>NLL 2,7592 почти равен контролю; по совокупной оценке выбран другой вариант. Доля 30% — проверенный рецепт, не найденный оптимум.</td></tr>
-<tr><td>Поэзии нужно больше обновлений на тот же объём</td><td>Второй проход с batch 16 384 или 4096 токенов</td><td>На общей поэтической validation меньший batch дал минимальный NLL среди этих ветвей. Сохранены оба результата, выбран 4096.</td></tr>
-<tr><td>Планирование окончания помогает форме</td><td>После двух проходов поэзии — 400 тыс. токенов, 50% обычного текста / 50% примеров с окончанием</td><td>Выбран Planned400k для последующей проверки генерации. <a href="#adaptation">Его NLL показан рядом с предыдущими этапами</a>; выигрыш рифмы не приписывается только этому обучению.</td></tr>
-<tr><td>Рифму можно контролировать при инференсе</td><td>Одинаковые веса и шесть входов, свободная генерация / фонетический поиск</td><td>Смысл вместе с рифмой: 0/6 → 3/6 у обоих читателей; рифма с поиском 5/6. Поиск включён в демонстрацию; выборка мала.</td></tr>
-<tr><td>SFT-loss отражает качество ответа</td><td>Вопросы, просьбы и отдельная ветвь продолжения строки</td><td>Loss снижался, но преимущества свободных ответов не подтвердились. Финальный артефакт — продолжение строки, без SFT-весов.</td></tr>
-</tbody></table></div><p class="source">Исходные журналы, общие панели, генерации и оценки доступны в разделе <a href="#evidence">«Измерения и версии»</a>. Непроверенные идеи не включены в таблицу результатов.</p></details></section>
+<section id="experiments"><h2>Эксперименты и выбор решения</h2>
+<p>Сначала сравнивались корпус и базовая модель, затем — адресные изменения обучения и способы получить рифмованный ответ. Ниже сгруппированы основные завершённые серии; сравнения внутри каждой таблицы используют общую оценочную выборку.</p>
+<div class="experiment-tabs" role="tablist" aria-label="Группы экспериментов">
+<button id="tab-base" role="tab" aria-selected="true" aria-controls="experiments-base" data-panel="experiments-base">Корпус и модель</button>
+<button id="tab-training" role="tab" aria-selected="false" aria-controls="experiments-training" data-panel="experiments-training" tabindex="-1">Методы обучения</button>
+<button id="tab-poetry" role="tab" aria-selected="false" aria-controls="experiments-poetry" data-panel="experiments-poetry" tabindex="-1">Поэзия, SFT и рифма</button></div>
+
+<div id="experiments-base" class="experiment-panel" role="tabpanel" aria-labelledby="tab-base">
+<h3>Объём корпуса × размер модели</h3>
+<p>Два размера на узком повествовательном корпусе и расширенном, включающем письма, воспоминания и очерки. При одинаковом бюджете узкий корпус повторяется чаще.</p>
+__MATRIX_TABLE__
+<p class="note">36,3M улучшает NLL при обоих составах. Расширение улучшает общий NLL, но немного ухудшает повествовательное ядро: состав корпуса и число повторов важно контролировать раздельно.</p>
+<h3>Глубина сети × оптимизатор</h3>
+<p>A/C — 12 слоёв шириной 640, 66,21M параметров; B/D — 20 слоёв шириной 512, 68,44M. Во всех вариантах RoPE, RMSNorm, SwiGLU и контекст 512. Пары A→C и B→D проверяют замену оптимизатора при той же архитектуре.</p>
+__ARCHITECTURE_TABLE__
+<p>Muon снижает NLL обеих архитектур, но на этом бюджете не даёт общего преимущества по слепому чтению. D точнее предсказывает эталон и требует больше времени; один seed не позволяет оценить разброс обучения.</p>
+<details><summary>Более длинное обучение и выбор родителя</summary>
+__BUDGET_TABLE__
+<p>После третьего прохода D получил NLL ниже B и более высокий средний балл полного продолжения. A/C проверялись до 735 млн, A — до 1,05 млрд токенов. Низкий loss не гарантировал устойчивого удержания мысли; для адресных пилотов сохранён D630, затем выбран LR50.</p>
+</details>
+<p class="source">Эксперименты BPE 4k/8k/16k — в разделе <a href="#data">«Корпус и токенизатор»</a>.</p></div>
+
+<div id="experiments-training" class="experiment-panel" role="tabpanel" aria-labelledby="tab-training" hidden>
+<h3>Контекст и вспомогательная цель</h3>
+<p>От общего D630 проверялись дополнительные 128 предыдущих токенов при тех же обучающих целях и дополнительный прогноз второго токена с весом 0,1 поверх обычного CE.</p>
+__PILOTS_TABLE__
+<p>Перекрытие окон слегка улучшило NLL, но оба изменения уступили обычному CE по баллу полного продолжения. В основной рецепт они не включены.</p>
+<h3>LR, входной шум и перебалансировка</h3>
+<div class="scroll"><table><caption>Ещё по 50 млн токенов от D630. Validation: 256 окон, 73 семейства, 16 384 токена. N-граммы: 96 продолжений до 96 токенов.</caption><thead><tr><th>Вариант</th><th>NLL ↓</th><th>PPL ↓</th><th>Top-1 ↑</th><th>Distinct-2 ↑</th><th>Repeat-4 ↓</th></tr></thead><tbody>__PRE_ROWS__</tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Изменение и гипотеза</th><th>Результат и решение</th></tr></thead><tbody>
+<tr><td>LR ×0,5: более осторожное обновление уже обученных весов</td><td>Лучший NLL этой серии; выбран для поэтической адаптации. По контролю повторов и разнообразия преимуществ нет.</td></tr>
+<tr><td>Замена 5% входных токенов: устойчивость к испорченному контексту; цели остаются чистыми</td><td>NLL и PPL хуже контроля. Случайная замена подслова не воспроизводит все ошибки авторегрессии; рецепт не включён.</td></tr>
+<tr><td>70% исходного потока + 30% отобранной прозы: больше диалогов, повествования, объяснений, писем и воспоминаний</td><td>NLL практически равен контролю. Меняются состав, границы и порядок фрагментов; отдельный эффект качества не выделен. Продление не выбрано.</td></tr>
+</tbody></table></div>
+<p class="caption">Все пилоты наследовали общую базу. Loss, n-граммные показатели и слепое чтение рассматривались совместно; небольшое преимущество одного показателя не трактовалось как общий выигрыш.</p></div>
+
+<div id="experiments-poetry" class="experiment-panel" role="tabpanel" aria-labelledby="tab-poetry" hidden>
+<h3>От доменной адаптации к управляемой рифме</h3>
+<div class="scroll"><table><thead><tr><th>Гипотеза</th><th>Сравнение</th><th>Результат и решение</th></tr></thead><tbody>
+<tr><td>Больше обновлений на тот же объём поэзии</td><td>Второй проход: эффективный batch 16 384 / 4096 токенов</td><td>Меньший batch дал минимальный NLL общей поэтической validation. Сохранён 4096; <a href="#adaptation">таблица и кривая</a>.</td></tr>
+<tr><td>Целевая форма AA и порядок подачи</td><td>Короткие законченные двустишия; постоянные 35% против роста доли 20→50%, по 400 тыс. токенов</td><td>Устойчивое преимущество свободной рифмы не установлено. Объём повторов и форма примера сами по себе рифму не обеспечили.</td></tr>
+<tr><td>Заранее заданное конечное слово</td><td>Поэзия / примеры с окончанием 50/50, 400 тыс. токенов; отдельные опыты копирования окончания и вариаций одного контекста</td><td>Выбран Planned400k. Выполнение знакомой подсказки не означало переноса на новые окончания; фонетический поиск проверен отдельно.</td></tr>
+<tr><td>Инструкционное дообучение</td><td>Вопросы, просьбы, наблюдения, факты из контекста, диалог и уточнения; отдельно — продолжение строки</td><td>SFT снижает loss на эталонных ответах. Свободные ответы остаются менее устойчивыми; в поставляемых весах сохранён поэтический родитель. <a href="#sft">Метрики двух ветвей</a>.</td></tr>
+<tr><td>Ограничения при генерации</td><td>Одинаковые веса и шесть новых входов: свободная генерация / фонетический поиск</td><td>Смысл вместе с рифмой: 0/6 → 3/6 у обоих оценщиков; рифма с поиском 5/6. Метод включён в демонстрацию. <a href="#comparison">Все шесть сравнений</a>.</td></tr>
+</tbody></table></div>
+<p class="note">Финальная система продолжает первую строку. Конечные слова предлагает фонетический словарь; модель строит строку целиком. Это результат поэтической адаптации вместе с поиском, а не показатель самостоятельной рифмовки или качества chat-SFT.</p></div>
+<p class="source"><a href="../../reproduction/evidence/experiments.json">Исходные поля сравнений и хеши протоколов (JSON)</a> · <a href="#evidence">Все источники отчёта</a>. Числа разных оценочных панелей не объединены.</p>
+</section>
 
 <section id="inference"><h2>Инференс</h2><p>Локальный запуск в <a href="../../inference.ipynb">inference.ipynb</a>. RPST определяет ударение и до 32 рифмующихся окончаний на CPU. PoetryGPT строит варианты второй строки на выбранном устройстве CPU/CUDA; поиск ранжирует целые строки по языковой вероятности с ограничениями длины и повторов.</p>
 <details><summary>Параметры поиска</summary><p>Beam 8, ветвление 8; префикс до 16 BPE-токенов, строка до 24; длина в пределах ±2 слогов от ввода. Веса модели неизменны. <a href="../inference22.md">Реализация и фонетические ресурсы</a>.</p></details>

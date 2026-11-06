@@ -100,10 +100,6 @@
     "sha256": "ce57b7d0756787abe2a625af0e5e96c0f2c96912f7d46e87ba8ff8c521da310d"
   },
   {
-    "path": "audit/pretrain11/lr25_interim_check.json",
-    "sha256": "93723cf2850e4fc5d799a84a942d557efee0a9edd8bf678e5e435f50cf298944"
-  },
-  {
     "path": "reproduction/evidence/showcase_audit.json",
     "sha256": "dfb337fec909593ce1fd3bb340e1ac0ca48ebbca66cb0a4f794a51b702fdca6d"
   },
@@ -142,5 +138,9 @@
   {
     "path": "reproduction/evidence/tokenizers_v3.json",
     "sha256": "7fa6c4c4fe00048313fb7be0bdd238cf69a9d87f055faac46b70570680a843a2"
+  },
+  {
+    "path": "reproduction/evidence/experiments.json",
+    "sha256": "cbd249825222cf47e264ecdb78627bfdc2127080a023311f564fc5e3693684c3"
   }
 ]
