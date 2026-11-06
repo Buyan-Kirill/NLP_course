@@ -26,6 +26,14 @@ def fixture():
 
 
 class DeliveryTests(unittest.TestCase):
+    def test_report_links_work_without_sibling_files_and_keep_local_anchors(self):
+        from reproduction.build_report import portable_links, REPOSITORY
+        source = '<a href="../../README.md">Code</a><a href="#metrics">Metrics</a>'
+        result = portable_links(source)
+        self.assertIn('href="'+REPOSITORY+'README.md"', result)
+        self.assertIn('href="#metrics"', result)
+        self.assertNotIn('href="../', result)
+
     def test_corpus_word_statistics_use_word_types_and_record_lengths(self):
         from reproduction.analyze_corpus import analyze
         with fixture() as folder:

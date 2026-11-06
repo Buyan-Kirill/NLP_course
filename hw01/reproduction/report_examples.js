@@ -53,8 +53,8 @@ function showExample() {
         showRatings(mode+'-ratings', row[mode]);
     }
     const source = document.getElementById('example-source');
-    source.href = '../../'+row.source;
-    source.textContent = 'Исходная генерация Planned400k · SHA '+row.checkpoint_sha256.slice(0,12)+'…';
+    source.href = new URL(row.source, report.repository).href;
+    source.textContent = 'Протокол генерации (JSON) · SHA '+row.checkpoint_sha256.slice(0,12)+'…';
 }
 
 function showStages() {
@@ -72,8 +72,8 @@ function showStages() {
         text.textContent = stage.examples[index].text;
         const source = document.createElement('a');
         source.className = 'source';
-        source.href = '../../'+stage.examples[index].source;
-        source.textContent = 'Протокол генерации';
+        source.href = new URL(stage.examples[index].source, report.repository).href;
+        source.textContent = 'Протокол генерации (JSON)';
         card.append(title, text, source);
         target.append(card);
     }

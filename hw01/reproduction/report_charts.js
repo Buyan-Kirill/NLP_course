@@ -92,8 +92,8 @@ function drawHistory() {
     }
     document.getElementById('history-description').textContent = history.description;
     document.getElementById('history-note').textContent = history.note;
-    document.getElementById('history-source').href = '../../' + history.source;
-    document.getElementById('history-source').textContent = 'Исходные измерения';
+    document.getElementById('history-source').href = new URL(history.source, report.repository).href;
+    document.getElementById('history-source').textContent = 'Исходные измерения (' + history.source.split('.').pop().toUpperCase() + ')';
 }
 
 const historyGroups = new Map();

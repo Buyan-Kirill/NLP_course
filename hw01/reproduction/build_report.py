@@ -4,11 +4,14 @@ import html
 import json
 import math
 from pathlib import Path
+import re
+from urllib.parse import quote, unquote, urlsplit
 
 from reproduction import report_charts, report_data_quality, report_provenance
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs/report"
+REPOSITORY = "https://github.com/Buyan-Kirill/NLP_course/blob/main/hw01/"
 
 SOURCE_TITLES = {
     "reproduction/evidence/inference22_config.json": "Конфигурация записанного примера22",
@@ -44,6 +47,24 @@ SOURCE_TITLES.update(report_data_quality.SOURCES)
 
 def read(name):
     return json.loads((ROOT / name).read_text("utf-8-sig"))
+
+
+def portable_links(document):
+    """Keep in-page anchors local; open repository evidence from any HTML location."""
+    def replace(match):
+        href = html.unescape(match[1])
+        parsed = urlsplit(href)
+        if not href or href.startswith('#') or parsed.scheme or parsed.netloc:
+            return match[0]
+        target = (OUT / unquote(parsed.path)).resolve()
+        relative = target.relative_to(ROOT).as_posix()
+        url = REPOSITORY + quote(relative, safe='/')
+        if parsed.query:
+            url += '?' + parsed.query
+        if parsed.fragment:
+            url += '#' + parsed.fragment
+        return 'href="' + html.escape(url, quote=True) + '"'
+    return re.sub(r'href="([^"]*)"', replace, document)
 
 
 def report_data():
@@ -155,7 +176,7 @@ def report_data():
     sources.append("reproduction/evidence/inference22_config.json")
     sources.extend(name for name in [*report_charts.SOURCES, *report_provenance.SOURCES,
                                     *report_data_quality.SOURCES] if name not in sources)
-    data = {"as_of": "2026-11-06", "parameters": 68440576,
+    data = {"as_of": "2026-11-06", "parameters": 68440576, "repository": REPOSITORY,
             "prose": prose, "poetry": poetry, "pretrain": comparisons,
             "poetry_metrics": poetry_rows, "stages": stages,
             "final": pair_scores, "native": native, "open_examples": examples,
@@ -201,8 +222,7 @@ def main():
     replacements['__SHOWCASE__'] = ''.join(
         '<article class="card"><span class="tag">Сохранённая генерация</span>'
         f'<pre>{html.escape(row["prefix"])}\n{html.escape(row["output"].rstrip())}</pre>'
-        '<p class="caption">Открытый диагностический ввод · ограниченный поиск</p>'
-        f'<a class="source" href="../../{html.escape(row["source"])}">Исходный вывод</a></article>'
+        '</article>'
         for row in data['showcase'][1:])
     def integer(value):
         return f'{value:,}'.replace(',', ' ')
@@ -230,6 +250,7 @@ def main():
     replacements['__EXAMPLE_SCRIPT__'] = (ROOT/'reproduction/report_examples.js').read_text('utf8')
     for key, value in replacements.items():
         template = template.replace(key, value)
+    template = portable_links(template)
     (OUT / "index.html").write_text(template, encoding="utf8", newline="\n")
     (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf8", newline="\n")
     (OUT / "sources.json").write_text(json.dumps(data["sources"], ensure_ascii=False, indent=2) + "\n", encoding="utf8", newline="\n")
