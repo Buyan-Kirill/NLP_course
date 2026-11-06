@@ -10,7 +10,7 @@ from unittest.mock import patch
 import zipfile
 
 from reproduction.datasets import select_text
-from reproduction.download import extract_checked, fetch, ROOT
+from reproduction.download import extract_checked, fetch, https_context, ROOT
 from reproduction.run import STAGES, recipe
 
 
@@ -26,6 +26,12 @@ def fixture():
 
 
 class DeliveryTests(unittest.TestCase):
+    def test_download_keeps_certificate_and_hostname_verification(self):
+        import ssl
+        context = https_context()
+        self.assertEqual(context.verify_mode, ssl.CERT_REQUIRED)
+        self.assertTrue(context.check_hostname)
+
     def test_source_selection_preserves_unicode_and_newlines(self):
         source = 'Предисловие.\nОдин стою в саду.\n\nИ тихо вечера я жду.\nСноска.'
         first = source.index('Один'); last = source.index('\nСноска')

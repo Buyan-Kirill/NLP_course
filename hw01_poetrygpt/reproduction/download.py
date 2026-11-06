@@ -6,12 +6,24 @@ import os
 from pathlib import Path
 import shutil
 import stat
+import ssl
 import time
 import uuid
 from urllib.request import Request, urlopen
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def https_context():
+    """Keep system trust and add Mozilla roots where Python misses an issuer."""
+    context = ssl.create_default_context()
+    try:
+        import certifi
+    except ModuleNotFoundError:
+        return context
+    context.load_verify_locations(certifi.where())
+    return context
 
 
 def sha256(path):
@@ -32,7 +44,7 @@ def fetch(url, destination, expected, size=None, *, equivalent=None):
         try:
             request = Request(url, headers={'User-Agent': 'PoetryGPT-reproduction/1.0'})
             temporary = destination.with_name(destination.name + '.' + uuid.uuid4().hex + '.partial')
-            with urlopen(request, timeout=90) as response, temporary.open('xb') as stream:
+            with urlopen(request, timeout=90, context=https_context()) as response, temporary.open('xb') as stream:
                 shutil.copyfileobj(response, stream, length=1024 * 1024)
             matches = ((size is None or temporary.stat().st_size == size)
                        and sha256(temporary) == expected)
