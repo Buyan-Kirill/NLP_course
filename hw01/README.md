@@ -15,7 +15,7 @@
 
 ## Попробовать
 
-После клонирования репозитория перейдите в `hw01_poetrygpt/`.
+После клонирования репозитория перейдите в `hw01/`.
 Установите зависимости в **Python 3.12**: `python -m pip install -r requirements.txt`.
 Для CPU используйте `requirements-cpu.txt`.
 Откройте [inference.ipynb](inference.ipynb), выберите этот Python как ядро и выполните

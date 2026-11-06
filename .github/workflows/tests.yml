@@ -1,4 +1,4 @@
-name: CPU contracts
+name: HW01 CPU contracts
 on:
   push:
   pull_request:
@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: hw01_poetrygpt
+        working-directory: hw01
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: hw01_poetrygpt/requirements*.txt
+          cache-dependency-path: hw01/requirements*.txt
       - run: python -m pip install -r requirements-cpu.txt
       - run: python -m unittest discover -s tests
