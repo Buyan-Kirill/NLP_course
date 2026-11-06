@@ -67,6 +67,27 @@ python -m reproduction.datasets prepare
 токенов с готовыми весами. Код обучения другого BPE — `reproduction/fit_tokenizer.py`;
 это отдельный эксперимент, его token IDs нельзя подставлять в готовые веса.
 
+Обучение нового BPE на восстановленном train:
+
+```bash
+python -m reproduction.fit_tokenizer --input data/prose_v7/expanded_train.jsonl --input data/poetry_v7/train.jsonl --vocab-size 8192 --output runs/bpe_8192
+```
+
+Для сравнения размеров изменяются `--vocab-size` и папка `--output` (4096 / 8192 / 16384).
+Исторические эксперименты v2/v3 и частоты редких токенов приведены в
+[отчёте](report/index.html#data); они выполнены до финального расширения корпуса.
+Основной воспроизводимый маршрут использует поставляемый собственный BPE;
+его повторное обучение на другом составе текстов даст другие token IDs.
+
+Распределение слов в окончательном корпусе:
+
+```bash
+python -m reproduction.analyze_corpus
+```
+
+Команда сохраняет частотные показатели словоформ, перцентили длины записей, доли кириллицы/латиницы
+и SHA входов в `runs/corpus_statistics.json`.
+
 ## Обучение
 
 ```bash

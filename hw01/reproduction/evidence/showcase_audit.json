@@ -1,0 +1,84 @@
+{
+  "method": "Case-insensitive Unicode words; punctuation, whitespace and acute stress ignored; exact contiguous matches only",
+  "scope": "All final prose and poetry train texts; not a semantic or paraphrase-overlap test",
+  "inputs": {
+    "prose": {
+      "sha256": "f8abb8dc2da0d5087052f120130a4ce9da7dd9af0a67babf56f62c8d0f7cf7a5"
+    },
+    "poetry": {
+      "sha256": "c4beaaa28a8ed80107fef93bc310de32762aa111a8609fb2ca50afa2b4479e6d"
+    }
+  },
+  "examples": [
+    {
+      "id": "dev_0",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "index": 0,
+      "prefix": "В окне с утра виднеется река,",
+      "output": "И в ней, как в зеркале, горят два огонька.\n",
+      "search": "Поиск19 · открытая диагностическая выборка",
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "dev_1",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "index": 1,
+      "prefix": "Котёнок дремлет возле сундука,",
+      "output": "Котёнок спит у огонька.\n",
+      "search": "Поиск19 · открытая диагностическая выборка",
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "dev_5",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "index": 5,
+      "prefix": "Ребёнок шапку ищет у дверей,",
+      "output": "Ребёнок-мальчуган бежит за ней.\n",
+      "search": "Поиск19 · открытая диагностическая выборка",
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "inference_1",
+      "source": "reproduction/evidence/stress_fix22_report.json",
+      "index": 1,
+      "prefix": "Я хочу тебя обнять",
+      "output": "И обнять, и целовать, и звать.\n",
+      "search": "Поиск22 · выбранные веса",
+      "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "inference_2",
+      "source": "reproduction/evidence/stress_fix22_report.json",
+      "index": 2,
+      "prefix": "В саду под вечер свет горит,",
+      "output": "И в кустах соловей звенит.\n",
+      "search": "Поиск22 · выбранные веса",
+      "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    }
+  ]
+}

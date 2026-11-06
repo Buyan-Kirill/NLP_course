@@ -26,6 +26,19 @@ def fixture():
 
 
 class DeliveryTests(unittest.TestCase):
+    def test_corpus_word_statistics_use_word_types_and_record_lengths(self):
+        from reproduction.analyze_corpus import analyze
+        with fixture() as folder:
+            path = folder / 'sample.jsonl'
+            path.write_text(json.dumps(dict(text='Лес, лес. Ёж — жук-плавунец! tea.'), ensure_ascii=False)+'\n', 'utf8')
+            stats = analyze(path)
+        self.assertEqual(stats['words'], 5)
+        self.assertEqual(stats['word_types'], 4)
+        self.assertEqual(stats['word_frequency_types']['1'], 3)
+        self.assertEqual(stats['document_words']['p50'], 5)
+        self.assertEqual(stats['script_letters']['latin'], 3)
+        self.assertEqual(stats['top20'][0], dict(word='лес', count=2))
+
     def test_npz_bytes_match_the_frozen_layout_across_platforms(self):
         import numpy as np
         from reproduction.array_archive import write_npz

@@ -1,0 +1,754 @@
+{
+  "policy": {
+    "sizes": [
+      4096,
+      8192,
+      16384
+    ],
+    "mixtures": [
+      "pretrain",
+      "mixed"
+    ],
+    "rule": "Prefer 8192; choose 16384 only if pretrain validation token count falls >=15% vs8192 and SFT validation does not worsen. Choose mixed at selected size only if SFT validation tokens do not increase and pretrain validation increase <=1%. All train/validation SFT must fit512.",
+    "reason": "Predeclared compression/embedding-cost heuristic, not evidence of best model quality.",
+    "test_use": "Only selected tokenizer final diagnostics; no test-driven selection",
+    "inputs_sha256": {
+      "data\\pretrain_v2\\train.jsonl": "4098deae98f139739844a7402b91419f8d816938e6398782b367fcb938f1a650",
+      "data\\pretrain_v2\\validation.jsonl": "d971a1c9a3a84b193a1b7af4210e67e523e70ee1746bb272d99cc5d13a7e867e",
+      "data\\sft_v2\\train.jsonl": "d933b322a655ed683de6ae2c005ce98d3866263967c0575b34d2f30cf260a71b",
+      "data\\sft_v2\\validation.jsonl": "4935c536fc7729209a1d288b90a0843caafd790bb603eee3232554a1a7be1911",
+      "scripts/train_tokenizers.py": "02d4db16fd931b9bdc94061f75e98c27b82269d0a6db714f4ade2b2f80733dbd",
+      "scripts/training_data.py": "e24e827cc5bcc70449a2743c073ddd12393f5ded888d52d3243c056ce225c294",
+      "scripts/validate_sft.py": "9ee8b609cc15f95817cf6c7bf7720ffda9074a814b56281bbbc1ba87586e8310",
+      "scripts/build_sft.py": "7e093518f955e9a57b217b68edbea1f3ee67eafa18152df47861f8b75ff19b05"
+    },
+    "tokenizers_version": "0.22.1",
+    "threads": "4"
+  },
+  "experiments": [
+    {
+      "name": "bpe_4096_pretrain",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 4096,
+      "vocab_actual": 4096,
+      "mixture": "pretrain",
+      "fit_seconds": 2.164467299997341,
+      "sampled_process_peak_rss_mb": 257.55078125,
+      "file_bytes": 345847,
+      "pretrain_train": {
+        "tokens": 2581803,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 2.2202869909805782,
+        "bytes_per_token": 4.996993573870664,
+        "lengths": {
+          "count": 7013,
+          "min": 15,
+          "max": 53436,
+          "mean": 368.14530158277483,
+          "p50": 227.0,
+          "p95": 1041.3999999999996
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3947,
+        "types_used_1_to_5_times": 34,
+        "unused_vocab_types": 149
+      },
+      "pretrain_validation": {
+        "tokens": 150232,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 2.221282510017299,
+        "bytes_per_token": 4.994628308216625,
+        "lengths": {
+          "count": 409,
+          "min": 30,
+          "max": 2735,
+          "mean": 367.3154034229829,
+          "p50": 220.0,
+          "p95": 1165.999999999994
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3886,
+        "types_used_1_to_5_times": 507,
+        "unused_vocab_types": 210
+      },
+      "sft_train": {
+        "tokens": 25241,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 2.181590319792567,
+        "bytes_per_token": 5.051384651955153,
+        "lengths": {
+          "count": 1136,
+          "min": 5,
+          "max": 57,
+          "mean": 22.219190140845072,
+          "p50": 21.0,
+          "p95": 45.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 2305,
+        "types_used_1_to_5_times": 1428,
+        "unused_vocab_types": 1791
+      },
+      "sft_validation": {
+        "tokens": 6081,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 2.2488905325443787,
+        "bytes_per_token": 4.915638875185002,
+        "lengths": {
+          "count": 246,
+          "min": 5,
+          "max": 54,
+          "mean": 24.71951219512195,
+          "p50": 23.0,
+          "p95": 47.75
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1365,
+        "types_used_1_to_5_times": 1136,
+        "unused_vocab_types": 2731
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 32,
+        "max": 148,
+        "mean": 59.31875,
+        "p50": 51.0,
+        "p95": 102.04999999999995,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 33,
+        "max": 130,
+        "mean": 61.75454545454546,
+        "p50": 57.0,
+        "p95": 105.55,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 1048576,
+      "probes_roundtrip": 5,
+      "sha256": "443a35b871ddda46258c402a33d71046686025f92c0c86e484e4ac9d78747cd8"
+    },
+    {
+      "name": "bpe_4096_mixed",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 4096,
+      "vocab_actual": 4096,
+      "mixture": "mixed",
+      "fit_seconds": 2.304508400033228,
+      "sampled_process_peak_rss_mb": 267.52734375,
+      "file_bytes": 345879,
+      "pretrain_train": {
+        "tokens": 2581857,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 2.220333429650575,
+        "bytes_per_token": 4.996889060858134,
+        "lengths": {
+          "count": 7013,
+          "min": 15,
+          "max": 53435,
+          "mean": 368.1530015685156,
+          "p50": 227.0,
+          "p95": 1041.3999999999996
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3947,
+        "types_used_1_to_5_times": 35,
+        "unused_vocab_types": 149
+      },
+      "pretrain_validation": {
+        "tokens": 150224,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 2.2211642245649315,
+        "bytes_per_token": 4.99489429119182,
+        "lengths": {
+          "count": 409,
+          "min": 31,
+          "max": 2733,
+          "mean": 367.2958435207824,
+          "p50": 220.0,
+          "p95": 1165.3999999999942
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3886,
+        "types_used_1_to_5_times": 503,
+        "unused_vocab_types": 210
+      },
+      "sft_train": {
+        "tokens": 25090,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 2.168539325842697,
+        "bytes_per_token": 5.081785571941013,
+        "lengths": {
+          "count": 1136,
+          "min": 5,
+          "max": 57,
+          "mean": 22.086267605633804,
+          "p50": 21.0,
+          "p95": 44.25
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 2316,
+        "types_used_1_to_5_times": 1436,
+        "unused_vocab_types": 1780
+      },
+      "sft_validation": {
+        "tokens": 6066,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 2.2433431952662723,
+        "bytes_per_token": 4.927794263105836,
+        "lengths": {
+          "count": 246,
+          "min": 5,
+          "max": 55,
+          "mean": 24.658536585365855,
+          "p50": 23.0,
+          "p95": 47.75
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1369,
+        "types_used_1_to_5_times": 1142,
+        "unused_vocab_types": 2727
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 32,
+        "max": 147,
+        "mean": 59.00416666666667,
+        "p50": 50.0,
+        "p95": 101.0,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 33,
+        "max": 130,
+        "mean": 61.61818181818182,
+        "p50": 57.0,
+        "p95": 104.55,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 1048576,
+      "probes_roundtrip": 5,
+      "sha256": "b549dbe6cd12b2b46f04284f4e01bfd158e566b21b23c41a5e1264d5aba42ddd"
+    },
+    {
+      "name": "bpe_8192_pretrain",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 8192,
+      "vocab_actual": 8192,
+      "mixture": "pretrain",
+      "fit_seconds": 2.9191421000286937,
+      "sampled_process_peak_rss_mb": 273.296875,
+      "file_bytes": 750793,
+      "pretrain_train": {
+        "tokens": 2316917,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 1.9924915550418636,
+        "bytes_per_token": 5.568284491848435,
+        "lengths": {
+          "count": 7013,
+          "min": 14,
+          "max": 47937,
+          "mean": 330.37459004705545,
+          "p50": 204.0,
+          "p95": 934.5999999999985
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 8034,
+        "types_used_1_to_5_times": 60,
+        "unused_vocab_types": 158
+      },
+      "pretrain_validation": {
+        "tokens": 134736,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 1.9921635887806248,
+        "bytes_per_token": 5.569060978506116,
+        "lengths": {
+          "count": 409,
+          "min": 26,
+          "max": 2490,
+          "mean": 329.4278728606357,
+          "p50": 197.0,
+          "p95": 1045.5999999999933
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 7673,
+        "types_used_1_to_5_times": 3889,
+        "unused_vocab_types": 519
+      },
+      "sft_train": {
+        "tokens": 22347,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 1.9314606741573033,
+        "bytes_per_token": 5.705553318118763,
+        "lengths": {
+          "count": 1136,
+          "min": 4,
+          "max": 49,
+          "mean": 19.671654929577464,
+          "p50": 19.0,
+          "p95": 40.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3237,
+        "types_used_1_to_5_times": 2416,
+        "unused_vocab_types": 4955
+      },
+      "sft_validation": {
+        "tokens": 5453,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 2.0166420118343193,
+        "bytes_per_token": 5.481753163396296,
+        "lengths": {
+          "count": 246,
+          "min": 4,
+          "max": 51,
+          "mean": 22.166666666666668,
+          "p50": 20.0,
+          "p95": 42.75
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1628,
+        "types_used_1_to_5_times": 1459,
+        "unused_vocab_types": 6564
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 30,
+        "max": 133,
+        "mean": 53.28958333333333,
+        "p50": 46.0,
+        "p95": 91.09999999999991,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 31,
+        "max": 123,
+        "mean": 56.04545454545455,
+        "p50": 52.0,
+        "p95": 93.55,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 2097152,
+      "probes_roundtrip": 5,
+      "sha256": "9dadc130127f6c59d6ae21f21075fd9e786f3c230f1c5ed3fa9348fc93252f6b"
+    },
+    {
+      "name": "bpe_8192_mixed",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 8192,
+      "vocab_actual": 8192,
+      "mixture": "mixed",
+      "fit_seconds": 3.503259699966293,
+      "sampled_process_peak_rss_mb": 278.515625,
+      "file_bytes": 750529,
+      "pretrain_train": {
+        "tokens": 2317230,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 1.9927607273327692,
+        "bytes_per_token": 5.567532355441626,
+        "lengths": {
+          "count": 7013,
+          "min": 14,
+          "max": 47917,
+          "mean": 330.4192214458862,
+          "p50": 204.0,
+          "p95": 935.3999999999996
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 8036,
+        "types_used_1_to_5_times": 64,
+        "unused_vocab_types": 156
+      },
+      "pretrain_validation": {
+        "tokens": 134801,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 1.9931246580811142,
+        "bytes_per_token": 5.566375620358899,
+        "lengths": {
+          "count": 409,
+          "min": 27,
+          "max": 2488,
+          "mean": 329.5867970660147,
+          "p50": 198.0,
+          "p95": 1044.9999999999936
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 7670,
+        "types_used_1_to_5_times": 3893,
+        "unused_vocab_types": 522
+      },
+      "sft_train": {
+        "tokens": 22037,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 1.90466724286949,
+        "bytes_per_token": 5.785814766075237,
+        "lengths": {
+          "count": 1136,
+          "min": 4,
+          "max": 49,
+          "mean": 19.398767605633804,
+          "p50": 19.0,
+          "p95": 39.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 3273,
+        "types_used_1_to_5_times": 2453,
+        "unused_vocab_types": 4919
+      },
+      "sft_validation": {
+        "tokens": 5395,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 1.9951923076923077,
+        "bytes_per_token": 5.540685820203892,
+        "lengths": {
+          "count": 246,
+          "min": 4,
+          "max": 51,
+          "mean": 21.93089430894309,
+          "p50": 20.0,
+          "p95": 42.75
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1640,
+        "types_used_1_to_5_times": 1474,
+        "unused_vocab_types": 6552
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 30,
+        "max": 134,
+        "mean": 52.64375,
+        "p50": 45.0,
+        "p95": 91.04999999999995,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 30,
+        "max": 122,
+        "mean": 55.518181818181816,
+        "p50": 52.0,
+        "p95": 92.55,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 2097152,
+      "probes_roundtrip": 5,
+      "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+    },
+    {
+      "name": "bpe_16384_pretrain",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 16384,
+      "vocab_actual": 16384,
+      "mixture": "pretrain",
+      "fit_seconds": 3.760491600027308,
+      "sampled_process_peak_rss_mb": 279.6484375,
+      "file_bytes": 1611057,
+      "pretrain_train": {
+        "tokens": 2113393,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 1.8174659277758285,
+        "bytes_per_token": 6.104521496948272,
+        "lengths": {
+          "count": 7013,
+          "min": 11,
+          "max": 43503,
+          "mean": 301.35362897476114,
+          "p50": 186.0,
+          "p95": 851.7999999999993
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 16206,
+        "types_used_1_to_5_times": 195,
+        "unused_vocab_types": 178
+      },
+      "pretrain_validation": {
+        "tokens": 123134,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 1.8206201114840388,
+        "bytes_per_token": 6.093792128900223,
+        "lengths": {
+          "count": 409,
+          "min": 24,
+          "max": 2270,
+          "mean": 301.06112469437653,
+          "p50": 179.0,
+          "p95": 953.9999999999945
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 13067,
+        "types_used_1_to_5_times": 9923,
+        "unused_vocab_types": 3317
+      },
+      "sft_train": {
+        "tokens": 20418,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 1.7647363872082973,
+        "bytes_per_token": 6.244588108531688,
+        "lengths": {
+          "count": 1136,
+          "min": 4,
+          "max": 46,
+          "mean": 17.973591549295776,
+          "p50": 17.0,
+          "p95": 36.25
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 4008,
+        "types_used_1_to_5_times": 3315,
+        "unused_vocab_types": 12376
+      },
+      "sft_validation": {
+        "tokens": 4960,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 1.834319526627219,
+        "bytes_per_token": 6.026612903225806,
+        "lengths": {
+          "count": 246,
+          "min": 4,
+          "max": 45,
+          "mean": 20.16260162601626,
+          "p50": 19.0,
+          "p95": 38.75
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1780,
+        "types_used_1_to_5_times": 1658,
+        "unused_vocab_types": 14604
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 26,
+        "max": 125,
+        "mean": 49.270833333333336,
+        "p50": 42.0,
+        "p95": 86.0,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 29,
+        "max": 114,
+        "mean": 51.56363636363636,
+        "p50": 48.0,
+        "p95": 87.0,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 4194304,
+      "probes_roundtrip": 5,
+      "sha256": "170a6d3fd9e869cc688298820a45ed5913ef10d1cc707e2600320cb532ac94f8"
+    },
+    {
+      "name": "bpe_16384_mixed",
+      "experiment_fingerprint": "59eefdfefecfb92470e817f0700c3591e3e0b1803c18eea603687d9b52cf762d",
+      "vocab_requested": 16384,
+      "vocab_actual": 16384,
+      "mixture": "mixed",
+      "fit_seconds": 3.721095399989281,
+      "sampled_process_peak_rss_mb": 283.44921875,
+      "file_bytes": 1609667,
+      "pretrain_train": {
+        "tokens": 2113820,
+        "bytes": 12901253,
+        "characters": 7217414,
+        "words": 1162824,
+        "tokens_per_word": 1.817833137258949,
+        "bytes_per_token": 6.1032883594629626,
+        "lengths": {
+          "count": 7013,
+          "min": 11,
+          "max": 43498,
+          "mean": 301.41451589904466,
+          "p50": 186.0,
+          "p95": 851.7999999999993
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 16207,
+        "types_used_1_to_5_times": 203,
+        "unused_vocab_types": 177
+      },
+      "pretrain_validation": {
+        "tokens": 123159,
+        "bytes": 750353,
+        "characters": 419657,
+        "words": 67633,
+        "tokens_per_word": 1.8209897535226887,
+        "bytes_per_token": 6.092555152282821,
+        "lengths": {
+          "count": 409,
+          "min": 24,
+          "max": 2271,
+          "mean": 301.12224938875306,
+          "p50": 179.0,
+          "p95": 953.5999999999947
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 13083,
+        "types_used_1_to_5_times": 9940,
+        "unused_vocab_types": 3301
+      },
+      "sft_train": {
+        "tokens": 19895,
+        "bytes": 127502,
+        "characters": 70221,
+        "words": 11570,
+        "tokens_per_word": 1.719533275713051,
+        "bytes_per_token": 6.408745916059312,
+        "lengths": {
+          "count": 1136,
+          "min": 4,
+          "max": 45,
+          "mean": 17.513204225352112,
+          "p50": 17.0,
+          "p95": 36.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 4091,
+        "types_used_1_to_5_times": 3418,
+        "unused_vocab_types": 12293
+      },
+      "sft_validation": {
+        "tokens": 4868,
+        "bytes": 29892,
+        "characters": 16475,
+        "words": 2704,
+        "tokens_per_word": 1.8002958579881656,
+        "bytes_per_token": 6.1405094494659,
+        "lengths": {
+          "count": 246,
+          "min": 4,
+          "max": 45,
+          "mean": 19.788617886178862,
+          "p50": 18.0,
+          "p95": 38.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1786,
+        "types_used_1_to_5_times": 1673,
+        "unused_vocab_types": 14598
+      },
+      "sft_train_templated_lengths": {
+        "count": 480,
+        "min": 26,
+        "max": 118,
+        "mean": 48.18125,
+        "p50": 41.0,
+        "p95": 83.04999999999995,
+        "over_context_512": 0
+      },
+      "sft_validation_templated_lengths": {
+        "count": 110,
+        "min": 29,
+        "max": 114,
+        "mean": 50.72727272727273,
+        "p50": 47.5,
+        "p95": 84.64999999999999,
+        "over_context_512": 0
+      },
+      "embedding_parameters_at_d_model_256_tied": 4194304,
+      "probes_roundtrip": 5,
+      "sha256": "3cad497910c0b9a4e620c4b9459e85a896d93ceabdecc53c910201df46bfd6b5"
+    }
+  ],
+  "selected": "bpe_8192_mixed",
+  "final_test": {
+    "pretrain_v2": {
+      "tokens": 116632,
+      "bytes": 645365,
+      "characters": 361323,
+      "words": 58694,
+      "tokens_per_word": 1.9871196374416464,
+      "bytes_per_token": 5.533344193703272,
+      "lengths": {
+        "count": 382,
+        "min": 29,
+        "max": 3358,
+        "mean": 305.3193717277487,
+        "p50": 187.5,
+        "p95": 961.4999999999997
+      },
+      "roundtrip_failures": 0,
+      "used_token_types": 7490,
+      "types_used_1_to_5_times": 4199,
+      "unused_vocab_types": 702,
+      "input_sha256": "7be907ee66cdd1f122e59824e1928051969e4ed81221b024af385f45a75179e2"
+    },
+    "sft_v2": {
+      "tokens": 5360,
+      "bytes": 29904,
+      "characters": 16487,
+      "words": 2703,
+      "tokens_per_word": 1.9829818719940806,
+      "bytes_per_token": 5.57910447761194,
+      "lengths": {
+        "count": 242,
+        "min": 3,
+        "max": 48,
+        "mean": 22.14876033057851,
+        "p50": 21.0,
+        "p95": 43.0
+      },
+      "roundtrip_failures": 0,
+      "used_token_types": 1633,
+      "types_used_1_to_5_times": 1465,
+      "unused_vocab_types": 6559,
+      "input_sha256": "3df9a3bf488e2b891fd2d9785df068404957ec9541f494ad5e787108d76fab7f",
+      "templated_lengths": {
+        "count": 110,
+        "min": 30,
+        "max": 105,
+        "mean": 55.127272727272725,
+        "p50": 57.0,
+        "p95": 75.55,
+        "over_context_512": 0
+      }
+    }
+  },
+  "limitations": [
+    "RSS is whole-process sampled peak, not isolated native allocator maximum.",
+    "Compression does not establish semantic understanding or generation quality."
+  ]
+}

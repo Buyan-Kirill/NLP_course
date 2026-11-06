@@ -104,6 +104,10 @@
     "sha256": "93723cf2850e4fc5d799a84a942d557efee0a9edd8bf678e5e435f50cf298944"
   },
   {
+    "path": "reproduction/evidence/showcase_audit.json",
+    "sha256": "dfb337fec909593ce1fd3bb340e1ac0ca48ebbca66cb0a4f794a51b702fdca6d"
+  },
+  {
     "path": "audit/continuation19/final_reading/mapping.json",
     "sha256": "aae6b5f4cd25e46444105d2a24f456e40bf1f8607ab9144126292ed3515ede6b"
   },
@@ -126,5 +130,17 @@
   {
     "path": "docs/generation_quality_rubric_v2.md",
     "sha256": "c511b83646081e709ec2fd86cf1a4b3069302f04e3b7fab5a4736cd96e7c7160"
+  },
+  {
+    "path": "reproduction/evidence/corpus_statistics.json",
+    "sha256": "30189c358a3c6213adc9ddc12d35af7be14359b6bcb8a10ac8a8e3a72a25cbb3"
+  },
+  {
+    "path": "reproduction/evidence/tokenizers_v2.json",
+    "sha256": "0878c98660284c94f7a342cc6077d004e474007de3b32227b108b98b37604b9c"
+  },
+  {
+    "path": "reproduction/evidence/tokenizers_v3.json",
+    "sha256": "7fa6c4c4fe00048313fb7be0bdd238cf69a9d87f055faac46b70570680a843a2"
   }
 ]

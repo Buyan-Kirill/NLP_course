@@ -1,0 +1,2454 @@
+{
+  "experiment_fingerprint": "ef7ad0ae4e2fa7a5e744624427ebf5e7b2da1365d35cde4f7e48212f888a068a",
+  "policy": {
+    "sizes": [
+      4096,
+      8192,
+      16384
+    ],
+    "baseline": "baseline_v2_8192",
+    "special_tokens": [
+      "<|pad|>",
+      "<|bos|>",
+      "<|eos|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|eot|>"
+    ],
+    "sampling": {
+      "max_characters_per_domain": 12000000,
+      "chunk_characters": 8192,
+      "seed": 20261031,
+      "rule": "Train only: hash-order fixed Unicode-character chunks; exact equal character budget prose/poetry, cap=min(available domains,limit). Last chunk may be cropped. UTF8 byte counts reported separately. SFT message content naturally once, no duplication."
+    },
+    "selection": "4k diagnostic. Default new8k;16k only if mean of domain-wise prose/poetry token savings vs8k>=15%, neither pretrain domain nor SFT worsens and SFT fits512. Replace v2 only if chosen candidate strictly improves prose validation tokens, poetry<=+1%, SFT<=+1%, all train/validation SFT fits512. Otherwise retain v2. No automatic test-driven fallback.",
+    "test_use": "Read/evaluate only after selection is persisted; selected tokenizer only; never tune on test.",
+    "reason": "Predeclared compression/embedding-cost heuristic, not evidence of generation quality or statistical significance.",
+    "inputs_sha256": {
+      "data\\prose_v3\\train.jsonl": "785047a1a339547527d0cb1f085aec867a4cb052ad456a0115a236258f9f509a",
+      "data\\poetry_v3\\train.jsonl": "c833a5b0b32e83fb6cc967b813f3de96889b5713b68cdd46a6b3a7217a451056",
+      "data\\sft_v3\\train.jsonl": "04db4ee83c5d8e2f8189d137caa231653782d7dd7b9b45fe18a5c8272c225cef",
+      "data\\prose_v3\\validation.jsonl": "bf74cff44f1529162adbe33d950f9f65afabbc21c07b39dfbe9d68761c4bdf33",
+      "data\\poetry_v3\\validation.jsonl": "958c516a62cb84edb54ec20e388309a20427cd2f8d4c3fec36b7bcc3fe2ba244",
+      "data\\sft_v3\\validation.jsonl": "268faed4a21b9463ba4b648371989b9c88390189e031c0650f54b145b0b46dd8",
+      "scripts\\train_tokenizers_v3.py": "0784a6d3d28d1a7575ac6265ccee4cc675637c065d9f95e2260a1bb958eb9eca",
+      "scripts\\train_tokenizers.py": "02d4db16fd931b9bdc94061f75e98c27b82269d0a6db714f4ade2b2f80733dbd",
+      "scripts\\training_data.py": "e24e827cc5bcc70449a2743c073ddd12393f5ded888d52d3243c056ce225c294",
+      "scripts\\build_sft.py": "7e093518f955e9a57b217b68edbea1f3ee67eafa18152df47861f8b75ff19b05",
+      "scripts\\validate_sft.py": "9ee8b609cc15f95817cf6c7bf7720ffda9074a814b56281bbbc1ba87586e8310",
+      "artifacts\\tokenizers_v2\\selected\\tokenizer.json": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+    },
+    "versions": {
+      "python": "3.12.5",
+      "tokenizers": "0.22.1",
+      "numpy": "2.2.6",
+      "psutil": "7.1.0"
+    },
+    "threads": "4",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "sampling_manifest": "audit/tokenizers_v3/fit_sampling.json",
+  "experiments": [
+    {
+      "name": "baseline_v2_8192",
+      "experiment_fingerprint": "ef7ad0ae4e2fa7a5e744624427ebf5e7b2da1365d35cde4f7e48212f888a068a",
+      "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+      "vocab_requested": null,
+      "vocab_actual": 8192,
+      "resources": {
+        "fit_seconds": 0,
+        "note": "Frozen v2 artifact; not refit"
+      },
+      "file_bytes": 750529,
+      "embedding_parameters_at_d_model_256_tied": 2097152,
+      "probes": {
+        "historical": [
+          {
+            "text": "Ѣ ѣ І і Ѳ ѳ Ѵ ѵ",
+            "ids": [
+              147,
+              101,
+              226,
+              147,
+              102,
+              262,
+              234,
+              226,
+              147,
+              250,
+              226,
+              147,
+              116,
+              226,
+              147,
+              117,
+              226,
+              147,
+              118,
+              226,
+              147,
+              119
+            ],
+            "pieces": [
+              "Ñ",
+              "¢",
+              "Ġ",
+              "Ñ",
+              "£",
+              "ĠÐ",
+              "Ĩ",
+              "Ġ",
+              "Ñ",
+              "ĸ",
+              "Ġ",
+              "Ñ",
+              "²",
+              "Ġ",
+              "Ñ",
+              "³",
+              "Ġ",
+              "Ñ",
+              "´",
+              "Ġ",
+              "Ñ",
+              "µ"
+            ],
+            "count": 22
+          },
+          {
+            "text": "міръ онѣ дѣти чрезъ злато брег",
+            "ids": [
+              290,
+              147,
+              250,
+              270,
+              868,
+              466,
+              147,
+              102,
+              297,
+              147,
+              102,
+              727,
+              3036,
+              868,
+              5530,
+              1608
+            ],
+            "pieces": [
+              "Ð¼",
+              "Ñ",
+              "ĸ",
+              "ÑĢ",
+              "ÑĬ",
+              "ĠÐ¾Ð½",
+              "Ñ",
+              "£",
+              "ĠÐ´",
+              "Ñ",
+              "£",
+              "ÑĤÐ¸",
+              "ĠÑĩÑĢÐµÐ·",
+              "ÑĬ",
+              "ĠÐ·Ð»Ð°ÑĤÐ¾",
+              "ĠÐ±ÑĢÐµÐ³"
+            ],
+            "count": 16
+          },
+          {
+            "text": "внемли ланиты чело оне",
+            "ids": [
+              281,
+              831,
+              394,
+              5795,
+              2160,
+              6088
+            ],
+            "pieces": [
+              "Ð²",
+              "Ð½ÐµÐ¼",
+              "Ð»Ð¸",
+              "ĠÐ»Ð°Ð½Ð¸ÑĤÑĭ",
+              "ĠÑĩÐµÐ»Ð¾",
+              "ĠÐ¾Ð½Ðµ"
+            ],
+            "count": 6
+          },
+          {
+            "text": "пора́",
+            "ids": [
+              335,
+              1977,
+              4183
+            ],
+            "pieces": [
+              "Ð¿",
+              "Ð¾ÑĢÐ°",
+              "Ìģ"
+            ],
+            "count": 3
+          }
+        ],
+        "modern": [
+          {
+            "text": "Ёж\n\nПод звёздами — тишина…",
+            "ids": [
+              146,
+              229,
+              348,
+              204,
+              204,
+              744,
+              536,
+              5191,
+              283,
+              458,
+              378,
+              3151,
+              1808
+            ],
+            "pieces": [
+              "Ð",
+              "ģ",
+              "Ð¶",
+              "Ċ",
+              "Ċ",
+              "ÐŁÐ¾Ð´",
+              "ĠÐ·Ð²",
+              "ÑĳÐ·",
+              "Ð´",
+              "Ð°Ð¼Ð¸",
+              "ĠâĢĶ",
+              "ĠÑĤÐ¸ÑĪÐ¸Ð½Ð°",
+              "âĢ¦"
+            ],
+            "count": 13
+          },
+          {
+            "text": "мессенджер селфи квантовый",
+            "ids": [
+              290,
+              6775,
+              295,
+              283,
+              348,
+              307,
+              2906,
+              551,
+              268,
+              304,
+              281,
+              1823,
+              2189
+            ],
+            "pieces": [
+              "Ð¼",
+              "ÐµÑģÑģ",
+              "ÐµÐ½",
+              "Ð´",
+              "Ð¶",
+              "ÐµÑĢ",
+              "ĠÑģÐµÐ»",
+              "ÑĦ",
+              "Ð¸",
+              "ĠÐº",
+              "Ð²",
+              "Ð°Ð½ÑĤ",
+              "Ð¾Ð²ÑĭÐ¹"
+            ],
+            "count": 13
+          },
+          {
+            "text": "雪 🦔 café\t\n",
+            "ids": [
+              171,
+              255,
+              109,
+              226,
+              178,
+              259,
+              105,
+              248,
+              226,
+              72,
+              70,
+              75,
+              133,
+              108,
+              203,
+              204
+            ],
+            "pieces": [
+              "é",
+              "Ľ",
+              "ª",
+              "Ġ",
+              "ð",
+              "Ł",
+              "¦",
+              "Ķ",
+              "Ġ",
+              "c",
+              "a",
+              "f",
+              "Ã",
+              "©",
+              "ĉ",
+              "Ċ"
+            ],
+            "count": 16
+          }
+        ],
+        "format": [
+          {
+            "text": "\n\n  строка\r\n\tследующая\n",
+            "ids": [
+              204,
+              204,
+              226,
+              432,
+              1283,
+              207,
+              204,
+              203,
+              741,
+              347,
+              596,
+              4482,
+              204
+            ],
+            "pieces": [
+              "Ċ",
+              "Ċ",
+              "Ġ",
+              "ĠÑģÑĤÑĢ",
+              "Ð¾ÐºÐ°",
+              "č",
+              "Ċ",
+              "ĉ",
+              "ÑģÐ»",
+              "ÐµÐ´",
+              "ÑĥÑİ",
+              "ÑīÐ°Ñı",
+              "Ċ"
+            ],
+            "count": 13
+          },
+          {
+            "text": "<|pad|>",
+            "ids": [
+              0
+            ],
+            "pieces": [
+              "<|pad|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|bos|>",
+            "ids": [
+              1
+            ],
+            "pieces": [
+              "<|bos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eos|>",
+            "ids": [
+              2
+            ],
+            "pieces": [
+              "<|eos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|user|>",
+            "ids": [
+              3
+            ],
+            "pieces": [
+              "<|user|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|assistant|>",
+            "ids": [
+              4
+            ],
+            "pieces": [
+              "<|assistant|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eot|>",
+            "ids": [
+              5
+            ],
+            "pieces": [
+              "<|eot|>"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "train": {
+        "prose": {
+          "tokens": 7793659,
+          "bytes": 42977495,
+          "characters": 23989915,
+          "words": 3709158,
+          "tokens_per_word": 2.1011935862532685,
+          "bytes_per_token": 5.514418195612612,
+          "lengths": {
+            "count": 1056,
+            "min": 122,
+            "max": 194874,
+            "mean": 7380.358901515152,
+            "p50": 3349.5,
+            "p95": 29666.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7887,
+          "types_used_1_to_5_times": 582,
+          "unused_vocab_types": 305
+        },
+        "poetry": {
+          "tokens": 2618891,
+          "bytes": 14561375,
+          "characters": 8141821,
+          "words": 1313760,
+          "tokens_per_word": 1.9934318292534405,
+          "bytes_per_token": 5.560130223060066,
+          "lengths": {
+            "count": 8392,
+            "min": 14,
+            "max": 47917,
+            "mean": 312.0699475691134,
+            "p50": 197.5,
+            "p95": 856.8999999999996
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 8039,
+          "types_used_1_to_5_times": 59,
+          "unused_vocab_types": 153
+        },
+        "sft": {
+          "tokens": 25650,
+          "bytes": 147342,
+          "characters": 81177,
+          "words": 13369,
+          "tokens_per_word": 1.9186176976587628,
+          "bytes_per_token": 5.744327485380117,
+          "lengths": {
+            "count": 1296,
+            "min": 4,
+            "max": 49,
+            "mean": 19.791666666666668,
+            "p50": 19.0,
+            "p95": 39.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3451,
+          "types_used_1_to_5_times": 2506,
+          "unused_vocab_types": 4741,
+          "templated_lengths": {
+            "count": 540,
+            "min": 30,
+            "max": 134,
+            "mean": 54.3,
+            "p50": 47.0,
+            "p95": 93.0,
+            "over_context_512": 0
+          },
+          "templated_tokens": 29322,
+          "user": {
+            "tokens": 9853,
+            "bytes": 57374,
+            "characters": 31472,
+            "words": 5082,
+            "tokens_per_word": 1.9388036206218024,
+            "bytes_per_token": 5.822998071653304,
+            "lengths": {
+              "count": 648,
+              "min": 4,
+              "max": 46,
+              "mean": 15.205246913580247,
+              "p50": 14.0,
+              "p95": 30.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2135,
+            "types_used_1_to_5_times": 1741,
+            "unused_vocab_types": 6057
+          },
+          "assistant": {
+            "tokens": 15797,
+            "bytes": 89968,
+            "characters": 49705,
+            "words": 8287,
+            "tokens_per_word": 1.9062386871002774,
+            "bytes_per_token": 5.6952585934038105,
+            "lengths": {
+              "count": 648,
+              "min": 13,
+              "max": 49,
+              "mean": 24.378086419753085,
+              "p50": 22.0,
+              "p95": 42.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2892,
+            "types_used_1_to_5_times": 2328,
+            "unused_vocab_types": 5300
+          }
+        }
+      },
+      "validation": {
+        "prose": {
+          "tokens": 2331486,
+          "bytes": 12785714,
+          "characters": 7177101,
+          "words": 1135405,
+          "tokens_per_word": 2.0534399619519026,
+          "bytes_per_token": 5.483933422718387,
+          "lengths": {
+            "count": 401,
+            "min": 139,
+            "max": 265304,
+            "mean": 5814.179551122194,
+            "p50": 3232.0,
+            "p95": 10867.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7262,
+          "types_used_1_to_5_times": 1298,
+          "unused_vocab_types": 930
+        },
+        "poetry": {
+          "tokens": 150472,
+          "bytes": 837461,
+          "characters": 468171,
+          "words": 75537,
+          "tokens_per_word": 1.9920303957001204,
+          "bytes_per_token": 5.565560370035621,
+          "lengths": {
+            "count": 489,
+            "min": 27,
+            "max": 2488,
+            "mean": 307.71370143149284,
+            "p50": 182.0,
+            "p95": 900.5999999999998
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7729,
+          "types_used_1_to_5_times": 3593,
+          "unused_vocab_types": 463
+        },
+        "sft": {
+          "tokens": 5395,
+          "bytes": 29892,
+          "characters": 16475,
+          "words": 2704,
+          "tokens_per_word": 1.9951923076923077,
+          "bytes_per_token": 5.540685820203892,
+          "lengths": {
+            "count": 246,
+            "min": 4,
+            "max": 51,
+            "mean": 21.93089430894309,
+            "p50": 20.0,
+            "p95": 42.75
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 1640,
+          "types_used_1_to_5_times": 1474,
+          "unused_vocab_types": 6552,
+          "templated_lengths": {
+            "count": 110,
+            "min": 30,
+            "max": 122,
+            "mean": 55.518181818181816,
+            "p50": 52.0,
+            "p95": 92.55,
+            "over_context_512": 0
+          },
+          "templated_tokens": 6107,
+          "user": {
+            "tokens": 2074,
+            "bytes": 11639,
+            "characters": 6396,
+            "words": 1034,
+            "tokens_per_word": 2.0058027079303673,
+            "bytes_per_token": 5.611861137897782,
+            "lengths": {
+              "count": 123,
+              "min": 4,
+              "max": 38,
+              "mean": 16.86178861788618,
+              "p50": 15.0,
+              "p95": 32.89999999999999
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 885,
+            "types_used_1_to_5_times": 831,
+            "unused_vocab_types": 7307
+          },
+          "assistant": {
+            "tokens": 3321,
+            "bytes": 18253,
+            "characters": 10079,
+            "words": 1670,
+            "tokens_per_word": 1.988622754491018,
+            "bytes_per_token": 5.496236073471846,
+            "lengths": {
+              "count": 123,
+              "min": 16,
+              "max": 51,
+              "mean": 27.0,
+              "p50": 23.0,
+              "p95": 45.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 1261,
+            "types_used_1_to_5_times": 1180,
+            "unused_vocab_types": 6931
+          }
+        }
+      }
+    },
+    {
+      "name": "bpe_4096_mixed",
+      "experiment_fingerprint": "ef7ad0ae4e2fa7a5e744624427ebf5e7b2da1365d35cde4f7e48212f888a068a",
+      "sha256": "8aa1aa328b4ad5ca03bf89741c49c38b676dab90711260e2bf8c8be9212e9983",
+      "vocab_requested": 4096,
+      "vocab_actual": 4096,
+      "resources": {
+        "fit_seconds": 6.7969179000356235,
+        "fit_cpu_seconds": 19.0625,
+        "process_rss_before_fit_mb": 210.5,
+        "sampled_process_peak_rss_mb": 529.2578125
+      },
+      "file_bytes": 344919,
+      "embedding_parameters_at_d_model_256_tied": 1048576,
+      "probes": {
+        "historical": [
+          {
+            "text": "Ѣ ѣ І і Ѳ ѳ Ѵ ѵ",
+            "ids": [
+              147,
+              101,
+              391,
+              102,
+              262,
+              234,
+              391,
+              250,
+              391,
+              116,
+              391,
+              117,
+              391,
+              118,
+              391,
+              119
+            ],
+            "pieces": [
+              "Ñ",
+              "¢",
+              "ĠÑ",
+              "£",
+              "ĠÐ",
+              "Ĩ",
+              "ĠÑ",
+              "ĸ",
+              "ĠÑ",
+              "²",
+              "ĠÑ",
+              "³",
+              "ĠÑ",
+              "´",
+              "ĠÑ",
+              "µ"
+            ],
+            "count": 16
+          },
+          {
+            "text": "міръ онѣ дѣти чрезъ злато брег",
+            "ids": [
+              289,
+              147,
+              250,
+              271,
+              731,
+              408,
+              147,
+              102,
+              295,
+              147,
+              102,
+              710,
+              2768,
+              731,
+              3713,
+              320,
+              2596
+            ],
+            "pieces": [
+              "Ð¼",
+              "Ñ",
+              "ĸ",
+              "ÑĢ",
+              "ÑĬ",
+              "ĠÐ¾Ð½",
+              "Ñ",
+              "£",
+              "ĠÐ´",
+              "Ñ",
+              "£",
+              "ÑĤÐ¸",
+              "ĠÑĩÑĢÐµÐ·",
+              "ÑĬ",
+              "ĠÐ·Ð»Ð°",
+              "ÑĤÐ¾",
+              "ĠÐ±ÑĢÐµÐ³"
+            ],
+            "count": 17
+          },
+          {
+            "text": "внемли ланиты чело оне",
+            "ids": [
+              283,
+              1102,
+              359,
+              329,
+              2181,
+              277,
+              3417,
+              288,
+              399
+            ],
+            "pieces": [
+              "Ð²",
+              "Ð½ÐµÐ¼",
+              "Ð»Ð¸",
+              "ĠÐ»",
+              "Ð°Ð½Ð¸ÑĤ",
+              "Ñĭ",
+              "ĠÑĩÐµÐ»Ð¾",
+              "ĠÐ¾",
+              "Ð½Ðµ"
+            ],
+            "count": 9
+          },
+          {
+            "text": "пора́",
+            "ids": [
+              337,
+              1580,
+              142,
+              229
+            ],
+            "pieces": [
+              "Ð¿",
+              "Ð¾ÑĢÐ°",
+              "Ì",
+              "ģ"
+            ],
+            "count": 4
+          }
+        ],
+        "modern": [
+          {
+            "text": "Ёж\n\nПод звёздами — тишина…",
+            "ids": [
+              146,
+              229,
+              382,
+              204,
+              204,
+              1068,
+              664,
+              623,
+              3033,
+              454,
+              380,
+              2109,
+              340,
+              857
+            ],
+            "pieces": [
+              "Ð",
+              "ģ",
+              "Ð¶",
+              "Ċ",
+              "Ċ",
+              "ÐŁÐ¾Ð´",
+              "ĠÐ·Ð²",
+              "Ñĳ",
+              "Ð·Ð´",
+              "Ð°Ð¼Ð¸",
+              "ĠâĢĶ",
+              "ĠÑĤÐ¸ÑĪÐ¸",
+              "Ð½Ð°",
+              "âĢ¦"
+            ],
+            "count": 14
+          },
+          {
+            "text": "мессенджер селфи квантовый",
+            "ids": [
+              289,
+              2328,
+              294,
+              286,
+              382,
+              305,
+              2432,
+              550,
+              267,
+              297,
+              283,
+              335,
+              1113,
+              433
+            ],
+            "pieces": [
+              "Ð¼",
+              "ÐµÑģÑģ",
+              "ÐµÐ½",
+              "Ð´",
+              "Ð¶",
+              "ÐµÑĢ",
+              "ĠÑģÐµÐ»",
+              "ÑĦ",
+              "Ð¸",
+              "ĠÐº",
+              "Ð²",
+              "Ð°Ð½",
+              "ÑĤÐ¾Ð²",
+              "ÑĭÐ¹"
+            ],
+            "count": 14
+          },
+          {
+            "text": "雪 🦔 café\t\n",
+            "ids": [
+              171,
+              255,
+              109,
+              226,
+              178,
+              259,
+              105,
+              248,
+              2354,
+              70,
+              75,
+              2912,
+              203,
+              204
+            ],
+            "pieces": [
+              "é",
+              "Ľ",
+              "ª",
+              "Ġ",
+              "ð",
+              "Ł",
+              "¦",
+              "Ķ",
+              "Ġc",
+              "a",
+              "f",
+              "Ã©",
+              "ĉ",
+              "Ċ"
+            ],
+            "count": 14
+          }
+        ],
+        "format": [
+          {
+            "text": "\n\n  строка\r\n\tследующая\n",
+            "ids": [
+              204,
+              204,
+              226,
+              555,
+              1531,
+              207,
+              204,
+              203,
+              596,
+              347,
+              2228,
+              392,
+              204
+            ],
+            "pieces": [
+              "Ċ",
+              "Ċ",
+              "Ġ",
+              "ĠÑģÑĤÑĢ",
+              "Ð¾ÐºÐ°",
+              "č",
+              "Ċ",
+              "ĉ",
+              "ÑģÐ»",
+              "ÐµÐ´",
+              "ÑĥÑİÑī",
+              "Ð°Ñı",
+              "Ċ"
+            ],
+            "count": 13
+          },
+          {
+            "text": "<|pad|>",
+            "ids": [
+              0
+            ],
+            "pieces": [
+              "<|pad|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|bos|>",
+            "ids": [
+              1
+            ],
+            "pieces": [
+              "<|bos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eos|>",
+            "ids": [
+              2
+            ],
+            "pieces": [
+              "<|eos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|user|>",
+            "ids": [
+              3
+            ],
+            "pieces": [
+              "<|user|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|assistant|>",
+            "ids": [
+              4
+            ],
+            "pieces": [
+              "<|assistant|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eot|>",
+            "ids": [
+              5
+            ],
+            "pieces": [
+              "<|eot|>"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "train": {
+        "prose": {
+          "tokens": 7854033,
+          "bytes": 42977495,
+          "characters": 23989915,
+          "words": 3709158,
+          "tokens_per_word": 2.1174705957524593,
+          "bytes_per_token": 5.472028829010522,
+          "lengths": {
+            "count": 1056,
+            "min": 125,
+            "max": 198777,
+            "mean": 7437.53125,
+            "p50": 3363.5,
+            "p95": 30084.25
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3973,
+          "types_used_1_to_5_times": 49,
+          "unused_vocab_types": 123
+        },
+        "poetry": {
+          "tokens": 2997018,
+          "bytes": 14561375,
+          "characters": 8141821,
+          "words": 1313760,
+          "tokens_per_word": 2.2812522835221043,
+          "bytes_per_token": 4.858621136075926,
+          "lengths": {
+            "count": 8392,
+            "min": 15,
+            "max": 53500,
+            "mean": 357.1279790276454,
+            "p50": 226.0,
+            "p95": 982.4499999999998
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3939,
+          "types_used_1_to_5_times": 64,
+          "unused_vocab_types": 157
+        },
+        "sft": {
+          "tokens": 28451,
+          "bytes": 147342,
+          "characters": 81177,
+          "words": 13369,
+          "tokens_per_word": 2.1281322462413046,
+          "bytes_per_token": 5.178798636251801,
+          "lengths": {
+            "count": 1296,
+            "min": 4,
+            "max": 57,
+            "mean": 21.952932098765434,
+            "p50": 21.0,
+            "p95": 44.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 2532,
+          "types_used_1_to_5_times": 1519,
+          "unused_vocab_types": 1564,
+          "templated_lengths": {
+            "count": 540,
+            "min": 33,
+            "max": 132,
+            "mean": 59.487037037037034,
+            "p50": 51.0,
+            "p95": 100.0,
+            "over_context_512": 0
+          },
+          "templated_tokens": 32123,
+          "user": {
+            "tokens": 10744,
+            "bytes": 57374,
+            "characters": 31472,
+            "words": 5082,
+            "tokens_per_word": 2.1141282959464776,
+            "bytes_per_token": 5.340096798212956,
+            "lengths": {
+              "count": 648,
+              "min": 4,
+              "max": 46,
+              "mean": 16.580246913580247,
+              "p50": 15.0,
+              "p95": 32.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 1829,
+            "types_used_1_to_5_times": 1398,
+            "unused_vocab_types": 2267
+          },
+          "assistant": {
+            "tokens": 17707,
+            "bytes": 89968,
+            "characters": 49705,
+            "words": 8287,
+            "tokens_per_word": 2.1367201641124653,
+            "bytes_per_token": 5.080928446377139,
+            "lengths": {
+              "count": 648,
+              "min": 15,
+              "max": 57,
+              "mean": 27.325617283950617,
+              "p50": 25.0,
+              "p95": 48.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2159,
+            "types_used_1_to_5_times": 1515,
+            "unused_vocab_types": 1937
+          }
+        }
+      },
+      "validation": {
+        "prose": {
+          "tokens": 2341827,
+          "bytes": 12785714,
+          "characters": 7177101,
+          "words": 1135405,
+          "tokens_per_word": 2.0625477252610303,
+          "bytes_per_token": 5.4597175623989305,
+          "lengths": {
+            "count": 401,
+            "min": 144,
+            "max": 267474,
+            "mean": 5839.967581047382,
+            "p50": 3263.0,
+            "p95": 10787.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3900,
+          "types_used_1_to_5_times": 134,
+          "unused_vocab_types": 196
+        },
+        "poetry": {
+          "tokens": 171714,
+          "bytes": 837461,
+          "characters": 468171,
+          "words": 75537,
+          "tokens_per_word": 2.2732435759958696,
+          "bytes_per_token": 4.877068847036351,
+          "lengths": {
+            "count": 489,
+            "min": 31,
+            "max": 2724,
+            "mean": 351.15337423312883,
+            "p50": 210.0,
+            "p95": 1019.7999999999981
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3765,
+          "types_used_1_to_5_times": 694,
+          "unused_vocab_types": 331
+        },
+        "sft": {
+          "tokens": 5973,
+          "bytes": 29892,
+          "characters": 16475,
+          "words": 2704,
+          "tokens_per_word": 2.208949704142012,
+          "bytes_per_token": 5.004520341536916,
+          "lengths": {
+            "count": 246,
+            "min": 6,
+            "max": 54,
+            "mean": 24.28048780487805,
+            "p50": 22.0,
+            "p95": 48.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 1424,
+          "types_used_1_to_5_times": 1200,
+          "unused_vocab_types": 2672,
+          "templated_lengths": {
+            "count": 110,
+            "min": 34,
+            "max": 132,
+            "mean": 60.77272727272727,
+            "p50": 56.0,
+            "p95": 99.1,
+            "over_context_512": 0
+          },
+          "templated_tokens": 6685,
+          "user": {
+            "tokens": 2276,
+            "bytes": 11639,
+            "characters": 6396,
+            "words": 1034,
+            "tokens_per_word": 2.2011605415860735,
+            "bytes_per_token": 5.1137961335676625,
+            "lengths": {
+              "count": 123,
+              "min": 6,
+              "max": 39,
+              "mean": 18.504065040650406,
+              "p50": 17.0,
+              "p95": 35.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 825,
+            "types_used_1_to_5_times": 747,
+            "unused_vocab_types": 3271
+          },
+          "assistant": {
+            "tokens": 3697,
+            "bytes": 18253,
+            "characters": 10079,
+            "words": 1670,
+            "tokens_per_word": 2.2137724550898206,
+            "bytes_per_token": 4.937246416012983,
+            "lengths": {
+              "count": 123,
+              "min": 18,
+              "max": 54,
+              "mean": 30.056910569105693,
+              "p50": 26.0,
+              "p95": 50.89999999999999
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 1125,
+            "types_used_1_to_5_times": 1008,
+            "unused_vocab_types": 2971
+          }
+        }
+      }
+    },
+    {
+      "name": "bpe_8192_mixed",
+      "experiment_fingerprint": "ef7ad0ae4e2fa7a5e744624427ebf5e7b2da1365d35cde4f7e48212f888a068a",
+      "sha256": "60e20961674ea03dd4f405045609cd63875cd1c8c1b04a8b324a70afd3def17e",
+      "vocab_requested": 8192,
+      "vocab_actual": 8192,
+      "resources": {
+        "fit_seconds": 6.898021599976346,
+        "fit_cpu_seconds": 19.296875,
+        "process_rss_before_fit_mb": 284.34375,
+        "sampled_process_peak_rss_mb": 523.60546875
+      },
+      "file_bytes": 748101,
+      "embedding_parameters_at_d_model_256_tied": 2097152,
+      "probes": {
+        "historical": [
+          {
+            "text": "Ѣ ѣ І і Ѳ ѳ Ѵ ѵ",
+            "ids": [
+              147,
+              101,
+              391,
+              102,
+              262,
+              234,
+              391,
+              250,
+              391,
+              116,
+              391,
+              117,
+              391,
+              118,
+              391,
+              119
+            ],
+            "pieces": [
+              "Ñ",
+              "¢",
+              "ĠÑ",
+              "£",
+              "ĠÐ",
+              "Ĩ",
+              "ĠÑ",
+              "ĸ",
+              "ĠÑ",
+              "²",
+              "ĠÑ",
+              "³",
+              "ĠÑ",
+              "´",
+              "ĠÑ",
+              "µ"
+            ],
+            "count": 16
+          },
+          {
+            "text": "міръ онѣ дѣти чрезъ злато брег",
+            "ids": [
+              289,
+              147,
+              250,
+              271,
+              731,
+              408,
+              147,
+              102,
+              295,
+              147,
+              102,
+              710,
+              2768,
+              731,
+              3713,
+              320,
+              2596
+            ],
+            "pieces": [
+              "Ð¼",
+              "Ñ",
+              "ĸ",
+              "ÑĢ",
+              "ÑĬ",
+              "ĠÐ¾Ð½",
+              "Ñ",
+              "£",
+              "ĠÐ´",
+              "Ñ",
+              "£",
+              "ÑĤÐ¸",
+              "ĠÑĩÑĢÐµÐ·",
+              "ÑĬ",
+              "ĠÐ·Ð»Ð°",
+              "ÑĤÐ¾",
+              "ĠÐ±ÑĢÐµÐ³"
+            ],
+            "count": 17
+          },
+          {
+            "text": "внемли ланиты чело оне",
+            "ids": [
+              283,
+              1102,
+              359,
+              4576,
+              277,
+              3417,
+              288,
+              399
+            ],
+            "pieces": [
+              "Ð²",
+              "Ð½ÐµÐ¼",
+              "Ð»Ð¸",
+              "ĠÐ»Ð°Ð½Ð¸ÑĤ",
+              "Ñĭ",
+              "ĠÑĩÐµÐ»Ð¾",
+              "ĠÐ¾",
+              "Ð½Ðµ"
+            ],
+            "count": 8
+          },
+          {
+            "text": "пора́",
+            "ids": [
+              337,
+              1580,
+              4603
+            ],
+            "pieces": [
+              "Ð¿",
+              "Ð¾ÑĢÐ°",
+              "Ìģ"
+            ],
+            "count": 3
+          }
+        ],
+        "modern": [
+          {
+            "text": "Ёж\n\nПод звёздами — тишина…",
+            "ids": [
+              146,
+              229,
+              382,
+              204,
+              204,
+              1068,
+              664,
+              623,
+              3033,
+              454,
+              380,
+              4506,
+              857
+            ],
+            "pieces": [
+              "Ð",
+              "ģ",
+              "Ð¶",
+              "Ċ",
+              "Ċ",
+              "ÐŁÐ¾Ð´",
+              "ĠÐ·Ð²",
+              "Ñĳ",
+              "Ð·Ð´",
+              "Ð°Ð¼Ð¸",
+              "ĠâĢĶ",
+              "ĠÑĤÐ¸ÑĪÐ¸Ð½Ð°",
+              "âĢ¦"
+            ],
+            "count": 13
+          },
+          {
+            "text": "мессенджер селфи квантовый",
+            "ids": [
+              289,
+              2328,
+              4683,
+              382,
+              305,
+              2432,
+              550,
+              267,
+              297,
+              4996,
+              1113,
+              433
+            ],
+            "pieces": [
+              "Ð¼",
+              "ÐµÑģÑģ",
+              "ÐµÐ½Ð´",
+              "Ð¶",
+              "ÐµÑĢ",
+              "ĠÑģÐµÐ»",
+              "ÑĦ",
+              "Ð¸",
+              "ĠÐº",
+              "Ð²Ð°Ð½",
+              "ÑĤÐ¾Ð²",
+              "ÑĭÐ¹"
+            ],
+            "count": 12
+          },
+          {
+            "text": "雪 🦔 café\t\n",
+            "ids": [
+              171,
+              255,
+              109,
+              226,
+              178,
+              259,
+              105,
+              248,
+              2354,
+              70,
+              75,
+              2912,
+              203,
+              204
+            ],
+            "pieces": [
+              "é",
+              "Ľ",
+              "ª",
+              "Ġ",
+              "ð",
+              "Ł",
+              "¦",
+              "Ķ",
+              "Ġc",
+              "a",
+              "f",
+              "Ã©",
+              "ĉ",
+              "Ċ"
+            ],
+            "count": 14
+          }
+        ],
+        "format": [
+          {
+            "text": "\n\n  строка\r\n\tследующая\n",
+            "ids": [
+              204,
+              204,
+              226,
+              555,
+              1531,
+              207,
+              204,
+              203,
+              7531,
+              2228,
+              392,
+              204
+            ],
+            "pieces": [
+              "Ċ",
+              "Ċ",
+              "Ġ",
+              "ĠÑģÑĤÑĢ",
+              "Ð¾ÐºÐ°",
+              "č",
+              "Ċ",
+              "ĉ",
+              "ÑģÐ»ÐµÐ´",
+              "ÑĥÑİÑī",
+              "Ð°Ñı",
+              "Ċ"
+            ],
+            "count": 12
+          },
+          {
+            "text": "<|pad|>",
+            "ids": [
+              0
+            ],
+            "pieces": [
+              "<|pad|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|bos|>",
+            "ids": [
+              1
+            ],
+            "pieces": [
+              "<|bos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eos|>",
+            "ids": [
+              2
+            ],
+            "pieces": [
+              "<|eos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|user|>",
+            "ids": [
+              3
+            ],
+            "pieces": [
+              "<|user|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|assistant|>",
+            "ids": [
+              4
+            ],
+            "pieces": [
+              "<|assistant|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eot|>",
+            "ids": [
+              5
+            ],
+            "pieces": [
+              "<|eot|>"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "train": {
+        "prose": {
+          "tokens": 7008515,
+          "bytes": 42977495,
+          "characters": 23989915,
+          "words": 3709158,
+          "tokens_per_word": 1.8895164347272346,
+          "bytes_per_token": 6.132182780517699,
+          "lengths": {
+            "count": 1056,
+            "min": 109,
+            "max": 178528,
+            "mean": 6636.851325757576,
+            "p50": 3016.0,
+            "p95": 26673.25
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 8025,
+          "types_used_1_to_5_times": 197,
+          "unused_vocab_types": 167
+        },
+        "poetry": {
+          "tokens": 2690830,
+          "bytes": 14561375,
+          "characters": 8141821,
+          "words": 1313760,
+          "tokens_per_word": 2.048189928145171,
+          "bytes_per_token": 5.411480844200488,
+          "lengths": {
+            "count": 8392,
+            "min": 13,
+            "max": 48164,
+            "mean": 320.6422783603432,
+            "p50": 203.0,
+            "p95": 885.8999999999996
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7945,
+          "types_used_1_to_5_times": 260,
+          "unused_vocab_types": 247
+        },
+        "sft": {
+          "tokens": 25504,
+          "bytes": 147342,
+          "characters": 81177,
+          "words": 13369,
+          "tokens_per_word": 1.9076969107637072,
+          "bytes_per_token": 5.7772114178168135,
+          "lengths": {
+            "count": 1296,
+            "min": 4,
+            "max": 49,
+            "mean": 19.679012345679013,
+            "p50": 19.0,
+            "p95": 40.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 3549,
+          "types_used_1_to_5_times": 2619,
+          "unused_vocab_types": 4643,
+          "templated_lengths": {
+            "count": 540,
+            "min": 30,
+            "max": 119,
+            "mean": 54.02962962962963,
+            "p50": 46.5,
+            "p95": 91.0,
+            "over_context_512": 0
+          },
+          "templated_tokens": 29176,
+          "user": {
+            "tokens": 9551,
+            "bytes": 57374,
+            "characters": 31472,
+            "words": 5082,
+            "tokens_per_word": 1.8793781975600157,
+            "bytes_per_token": 6.007119673332635,
+            "lengths": {
+              "count": 648,
+              "min": 4,
+              "max": 44,
+              "mean": 14.739197530864198,
+              "p50": 14.0,
+              "p95": 27.0
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2277,
+            "types_used_1_to_5_times": 1928,
+            "unused_vocab_types": 5915
+          },
+          "assistant": {
+            "tokens": 15953,
+            "bytes": 89968,
+            "characters": 49705,
+            "words": 8287,
+            "tokens_per_word": 1.9250633522384457,
+            "bytes_per_token": 5.639566225788253,
+            "lengths": {
+              "count": 648,
+              "min": 13,
+              "max": 49,
+              "mean": 24.618827160493826,
+              "p50": 22.0,
+              "p95": 42.64999999999998
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2877,
+            "types_used_1_to_5_times": 2320,
+            "unused_vocab_types": 5315
+          }
+        }
+      },
+      "validation": {
+        "prose": {
+          "tokens": 2104485,
+          "bytes": 12785714,
+          "characters": 7177101,
+          "words": 1135405,
+          "tokens_per_word": 1.853510421391486,
+          "bytes_per_token": 6.075459791825554,
+          "lengths": {
+            "count": 401,
+            "min": 131,
+            "max": 242386,
+            "mean": 5248.092269326683,
+            "p50": 2928.0,
+            "p95": 9754.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7717,
+          "types_used_1_to_5_times": 687,
+          "unused_vocab_types": 475
+        },
+        "poetry": {
+          "tokens": 154347,
+          "bytes": 837461,
+          "characters": 468171,
+          "words": 75537,
+          "tokens_per_word": 2.043329758926089,
+          "bytes_per_token": 5.425832701639812,
+          "lengths": {
+            "count": 489,
+            "min": 29,
+            "max": 2438,
+            "mean": 315.63803680981596,
+            "p50": 188.0,
+            "p95": 917.9999999999983
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 7145,
+          "types_used_1_to_5_times": 3108,
+          "unused_vocab_types": 1047
+        },
+        "sft": {
+          "tokens": 5372,
+          "bytes": 29892,
+          "characters": 16475,
+          "words": 2704,
+          "tokens_per_word": 1.9866863905325445,
+          "bytes_per_token": 5.564408041697692,
+          "lengths": {
+            "count": 246,
+            "min": 5,
+            "max": 51,
+            "mean": 21.83739837398374,
+            "p50": 20.0,
+            "p95": 43.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 1653,
+          "types_used_1_to_5_times": 1495,
+          "unused_vocab_types": 6539,
+          "templated_lengths": {
+            "count": 110,
+            "min": 31,
+            "max": 116,
+            "mean": 55.30909090909091,
+            "p50": 51.0,
+            "p95": 91.0,
+            "over_context_512": 0
+          },
+          "templated_tokens": 6084,
+          "user": {
+            "tokens": 2033,
+            "bytes": 11639,
+            "characters": 6396,
+            "words": 1034,
+            "tokens_per_word": 1.9661508704061896,
+            "bytes_per_token": 5.725036891293655,
+            "lengths": {
+              "count": 123,
+              "min": 5,
+              "max": 37,
+              "mean": 16.528455284552845,
+              "p50": 15.0,
+              "p95": 31.799999999999983
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 900,
+            "types_used_1_to_5_times": 848,
+            "unused_vocab_types": 7292
+          },
+          "assistant": {
+            "tokens": 3339,
+            "bytes": 18253,
+            "characters": 10079,
+            "words": 1670,
+            "tokens_per_word": 1.9994011976047905,
+            "bytes_per_token": 5.466606768493561,
+            "lengths": {
+              "count": 123,
+              "min": 17,
+              "max": 51,
+              "mean": 27.146341463414632,
+              "p50": 23.0,
+              "p95": 44.89999999999999
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 1250,
+            "types_used_1_to_5_times": 1172,
+            "unused_vocab_types": 6942
+          }
+        }
+      }
+    },
+    {
+      "name": "bpe_16384_mixed",
+      "experiment_fingerprint": "ef7ad0ae4e2fa7a5e744624427ebf5e7b2da1365d35cde4f7e48212f888a068a",
+      "sha256": "d08c83ffdfc6b6c794b82c3b74c3e8c89f0bbd3207e1c7b316509eef378b5fcf",
+      "vocab_requested": 16384,
+      "vocab_actual": 16384,
+      "resources": {
+        "fit_seconds": 7.52049409999745,
+        "fit_cpu_seconds": 20.875,
+        "process_rss_before_fit_mb": 305.84375,
+        "sampled_process_peak_rss_mb": 540.77734375
+      },
+      "file_bytes": 1606561,
+      "embedding_parameters_at_d_model_256_tied": 4194304,
+      "probes": {
+        "historical": [
+          {
+            "text": "Ѣ ѣ І і Ѳ ѳ Ѵ ѵ",
+            "ids": [
+              147,
+              101,
+              391,
+              102,
+              262,
+              234,
+              391,
+              250,
+              391,
+              116,
+              391,
+              117,
+              391,
+              118,
+              391,
+              119
+            ],
+            "pieces": [
+              "Ñ",
+              "¢",
+              "ĠÑ",
+              "£",
+              "ĠÐ",
+              "Ĩ",
+              "ĠÑ",
+              "ĸ",
+              "ĠÑ",
+              "²",
+              "ĠÑ",
+              "³",
+              "ĠÑ",
+              "´",
+              "ĠÑ",
+              "µ"
+            ],
+            "count": 16
+          },
+          {
+            "text": "міръ онѣ дѣти чрезъ злато брег",
+            "ids": [
+              289,
+              13671,
+              271,
+              731,
+              408,
+              147,
+              102,
+              295,
+              147,
+              102,
+              710,
+              2768,
+              731,
+              8495,
+              2596
+            ],
+            "pieces": [
+              "Ð¼",
+              "Ñĸ",
+              "ÑĢ",
+              "ÑĬ",
+              "ĠÐ¾Ð½",
+              "Ñ",
+              "£",
+              "ĠÐ´",
+              "Ñ",
+              "£",
+              "ÑĤÐ¸",
+              "ĠÑĩÑĢÐµÐ·",
+              "ÑĬ",
+              "ĠÐ·Ð»Ð°ÑĤÐ¾",
+              "ĠÐ±ÑĢÐµÐ³"
+            ],
+            "count": 15
+          },
+          {
+            "text": "внемли ланиты чело оне",
+            "ids": [
+              283,
+              1102,
+              359,
+              9848,
+              3417,
+              10292
+            ],
+            "pieces": [
+              "Ð²",
+              "Ð½ÐµÐ¼",
+              "Ð»Ð¸",
+              "ĠÐ»Ð°Ð½Ð¸ÑĤÑĭ",
+              "ĠÑĩÐµÐ»Ð¾",
+              "ĠÐ¾Ð½Ðµ"
+            ],
+            "count": 6
+          },
+          {
+            "text": "пора́",
+            "ids": [
+              337,
+              1580,
+              4603
+            ],
+            "pieces": [
+              "Ð¿",
+              "Ð¾ÑĢÐ°",
+              "Ìģ"
+            ],
+            "count": 3
+          }
+        ],
+        "modern": [
+          {
+            "text": "Ёж\n\nПод звёздами — тишина…",
+            "ids": [
+              146,
+              229,
+              382,
+              204,
+              204,
+              1068,
+              664,
+              623,
+              3033,
+              454,
+              380,
+              4506,
+              857
+            ],
+            "pieces": [
+              "Ð",
+              "ģ",
+              "Ð¶",
+              "Ċ",
+              "Ċ",
+              "ÐŁÐ¾Ð´",
+              "ĠÐ·Ð²",
+              "Ñĳ",
+              "Ð·Ð´",
+              "Ð°Ð¼Ð¸",
+              "ĠâĢĶ",
+              "ĠÑĤÐ¸ÑĪÐ¸Ð½Ð°",
+              "âĢ¦"
+            ],
+            "count": 13
+          },
+          {
+            "text": "мессенджер селфи квантовый",
+            "ids": [
+              289,
+              2328,
+              4683,
+              382,
+              305,
+              2432,
+              550,
+              267,
+              297,
+              4996,
+              1113,
+              433
+            ],
+            "pieces": [
+              "Ð¼",
+              "ÐµÑģÑģ",
+              "ÐµÐ½Ð´",
+              "Ð¶",
+              "ÐµÑĢ",
+              "ĠÑģÐµÐ»",
+              "ÑĦ",
+              "Ð¸",
+              "ĠÐº",
+              "Ð²Ð°Ð½",
+              "ÑĤÐ¾Ð²",
+              "ÑĭÐ¹"
+            ],
+            "count": 12
+          },
+          {
+            "text": "雪 🦔 café\t\n",
+            "ids": [
+              171,
+              255,
+              109,
+              226,
+              178,
+              259,
+              105,
+              248,
+              2354,
+              70,
+              75,
+              2912,
+              203,
+              204
+            ],
+            "pieces": [
+              "é",
+              "Ľ",
+              "ª",
+              "Ġ",
+              "ð",
+              "Ł",
+              "¦",
+              "Ķ",
+              "Ġc",
+              "a",
+              "f",
+              "Ã©",
+              "ĉ",
+              "Ċ"
+            ],
+            "count": 14
+          }
+        ],
+        "format": [
+          {
+            "text": "\n\n  строка\r\n\tследующая\n",
+            "ids": [
+              204,
+              204,
+              226,
+              555,
+              1531,
+              207,
+              204,
+              203,
+              7531,
+              2228,
+              392,
+              204
+            ],
+            "pieces": [
+              "Ċ",
+              "Ċ",
+              "Ġ",
+              "ĠÑģÑĤÑĢ",
+              "Ð¾ÐºÐ°",
+              "č",
+              "Ċ",
+              "ĉ",
+              "ÑģÐ»ÐµÐ´",
+              "ÑĥÑİÑī",
+              "Ð°Ñı",
+              "Ċ"
+            ],
+            "count": 12
+          },
+          {
+            "text": "<|pad|>",
+            "ids": [
+              0
+            ],
+            "pieces": [
+              "<|pad|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|bos|>",
+            "ids": [
+              1
+            ],
+            "pieces": [
+              "<|bos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eos|>",
+            "ids": [
+              2
+            ],
+            "pieces": [
+              "<|eos|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|user|>",
+            "ids": [
+              3
+            ],
+            "pieces": [
+              "<|user|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|assistant|>",
+            "ids": [
+              4
+            ],
+            "pieces": [
+              "<|assistant|>"
+            ],
+            "count": 1
+          },
+          {
+            "text": "<|eot|>",
+            "ids": [
+              5
+            ],
+            "pieces": [
+              "<|eot|>"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "train": {
+        "prose": {
+          "tokens": 6345067,
+          "bytes": 42977495,
+          "characters": 23989915,
+          "words": 3709158,
+          "tokens_per_word": 1.7106488858118203,
+          "bytes_per_token": 6.773371345014954,
+          "lengths": {
+            "count": 1056,
+            "min": 99,
+            "max": 161517,
+            "mean": 6008.586174242424,
+            "p50": 2740.0,
+            "p95": 23948.5
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 15960,
+          "types_used_1_to_5_times": 889,
+          "unused_vocab_types": 424
+        },
+        "poetry": {
+          "tokens": 2453044,
+          "bytes": 14561375,
+          "characters": 8141821,
+          "words": 1313760,
+          "tokens_per_word": 1.86719339909877,
+          "bytes_per_token": 5.936043136609046,
+          "lengths": {
+            "count": 8392,
+            "min": 11,
+            "max": 43850,
+            "mean": 292.30743565300287,
+            "p50": 186.0,
+            "p95": 806.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 15713,
+          "types_used_1_to_5_times": 1353,
+          "unused_vocab_types": 671
+        },
+        "sft": {
+          "tokens": 22898,
+          "bytes": 147342,
+          "characters": 81177,
+          "words": 13369,
+          "tokens_per_word": 1.7127683446779864,
+          "bytes_per_token": 6.434710455061578,
+          "lengths": {
+            "count": 1296,
+            "min": 4,
+            "max": 44,
+            "mean": 17.66820987654321,
+            "p50": 17.0,
+            "p95": 36.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 4525,
+          "types_used_1_to_5_times": 3774,
+          "unused_vocab_types": 11859,
+          "templated_lengths": {
+            "count": 540,
+            "min": 26,
+            "max": 111,
+            "mean": 49.2037037037037,
+            "p50": 42.5,
+            "p95": 83.0,
+            "over_context_512": 0
+          },
+          "templated_tokens": 26570,
+          "user": {
+            "tokens": 8460,
+            "bytes": 57374,
+            "characters": 31472,
+            "words": 5082,
+            "tokens_per_word": 1.6646989374262102,
+            "bytes_per_token": 6.781796690307329,
+            "lengths": {
+              "count": 648,
+              "min": 4,
+              "max": 40,
+              "mean": 13.055555555555555,
+              "p50": 12.0,
+              "p95": 24.649999999999977
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 2580,
+            "types_used_1_to_5_times": 2314,
+            "unused_vocab_types": 13804
+          },
+          "assistant": {
+            "tokens": 14438,
+            "bytes": 89968,
+            "characters": 49705,
+            "words": 8287,
+            "tokens_per_word": 1.7422468927235428,
+            "bytes_per_token": 6.2313339797755924,
+            "lengths": {
+              "count": 648,
+              "min": 13,
+              "max": 44,
+              "mean": 22.280864197530864,
+              "p50": 20.0,
+              "p95": 38.64999999999998
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 3512,
+            "types_used_1_to_5_times": 3098,
+            "unused_vocab_types": 12872
+          }
+        }
+      },
+      "validation": {
+        "prose": {
+          "tokens": 1923343,
+          "bytes": 12785714,
+          "characters": 7177101,
+          "words": 1135405,
+          "tokens_per_word": 1.6939708738291623,
+          "bytes_per_token": 6.647651510936947,
+          "lengths": {
+            "count": 401,
+            "min": 123,
+            "max": 222618,
+            "mean": 4796.3665835411475,
+            "p50": 2700.0,
+            "p95": 8903.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 14755,
+          "types_used_1_to_5_times": 2602,
+          "unused_vocab_types": 1629
+        },
+        "poetry": {
+          "tokens": 140805,
+          "bytes": 837461,
+          "characters": 468171,
+          "words": 75537,
+          "tokens_per_word": 1.8640533778148458,
+          "bytes_per_token": 5.947665210752459,
+          "lengths": {
+            "count": 489,
+            "min": 25,
+            "max": 2263,
+            "mean": 287.9447852760736,
+            "p50": 172.0,
+            "p95": 832.3999999999995
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 12075,
+          "types_used_1_to_5_times": 8285,
+          "unused_vocab_types": 4309
+        },
+        "sft": {
+          "tokens": 4799,
+          "bytes": 29892,
+          "characters": 16475,
+          "words": 2704,
+          "tokens_per_word": 1.7747781065088757,
+          "bytes_per_token": 6.228797666180454,
+          "lengths": {
+            "count": 246,
+            "min": 4,
+            "max": 45,
+            "mean": 19.508130081300813,
+            "p50": 18.0,
+            "p95": 39.0
+          },
+          "roundtrip_failures": 0,
+          "used_token_types": 1779,
+          "types_used_1_to_5_times": 1673,
+          "unused_vocab_types": 14605,
+          "templated_lengths": {
+            "count": 110,
+            "min": 28,
+            "max": 110,
+            "mean": 50.1,
+            "p50": 46.0,
+            "p95": 82.55,
+            "over_context_512": 0
+          },
+          "templated_tokens": 5511,
+          "user": {
+            "tokens": 1797,
+            "bytes": 11639,
+            "characters": 6396,
+            "words": 1034,
+            "tokens_per_word": 1.7379110251450678,
+            "bytes_per_token": 6.476905954368392,
+            "lengths": {
+              "count": 123,
+              "min": 4,
+              "max": 33,
+              "mean": 14.609756097560975,
+              "p50": 13.0,
+              "p95": 27.89999999999999
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 910,
+            "types_used_1_to_5_times": 877,
+            "unused_vocab_types": 15474
+          },
+          "assistant": {
+            "tokens": 3002,
+            "bytes": 18253,
+            "characters": 10079,
+            "words": 1670,
+            "tokens_per_word": 1.7976047904191617,
+            "bytes_per_token": 6.080279813457695,
+            "lengths": {
+              "count": 123,
+              "min": 14,
+              "max": 45,
+              "mean": 24.40650406504065,
+              "p50": 21.0,
+              "p95": 41.89999999999999
+            },
+            "roundtrip_failures": 0,
+            "used_token_types": 1307,
+            "types_used_1_to_5_times": 1248,
+            "unused_vocab_types": 15077
+          }
+        }
+      }
+    }
+  ],
+  "selected": "baseline_v2_8192",
+  "decision": {
+    "16k_vs_8k_ratios": {
+      "prose": 0.9139257347997254,
+      "poetry": 0.9122626290112539,
+      "sft": 0.8933358153387937
+    },
+    "balanced_compression_gain": 0.08690581809451037,
+    "16k_passed": false,
+    "candidate": "bpe_8192_mixed",
+    "candidate_vs_v2_ratios": {
+      "prose": 0.902636773285364,
+      "poetry": 1.0257522994311234,
+      "sft": 0.9957367933271548
+    },
+    "replacement_passed": false
+  },
+  "selected_sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+  "final_test": {
+    "prose": {
+      "tokens": 464061,
+      "bytes": 2598947,
+      "characters": 1457937,
+      "words": 231884,
+      "tokens_per_word": 2.0012635628158906,
+      "bytes_per_token": 5.600442614225285,
+      "lengths": {
+        "count": 58,
+        "min": 378,
+        "max": 99062,
+        "mean": 8001.051724137931,
+        "p50": 4299.5,
+        "p95": 17690.349999999948
+      },
+      "roundtrip_failures": 0,
+      "used_token_types": 6440,
+      "types_used_1_to_5_times": 2071,
+      "unused_vocab_types": 1752,
+      "input_sha256": "635cf77c6eac60d8247589114945e7c11f0df81af3974ae6b9e2d2c2ab96f518"
+    },
+    "poetry": {
+      "tokens": 133790,
+      "bytes": 741305,
+      "characters": 414741,
+      "words": 67476,
+      "tokens_per_word": 1.9827790621850732,
+      "bytes_per_token": 5.540810224979445,
+      "lengths": {
+        "count": 449,
+        "min": 29,
+        "max": 3358,
+        "mean": 297.97327394209356,
+        "p50": 193.0,
+        "p95": 890.3999999999999
+      },
+      "roundtrip_failures": 0,
+      "used_token_types": 7601,
+      "types_used_1_to_5_times": 3866,
+      "unused_vocab_types": 591,
+      "input_sha256": "94edd77dfab48ba2da0c83230385b0479d970b3e3065117020602a710b23e182"
+    },
+    "sft": {
+      "tokens": 5360,
+      "bytes": 29904,
+      "characters": 16487,
+      "words": 2703,
+      "tokens_per_word": 1.9829818719940806,
+      "bytes_per_token": 5.57910447761194,
+      "lengths": {
+        "count": 242,
+        "min": 3,
+        "max": 48,
+        "mean": 22.14876033057851,
+        "p50": 21.0,
+        "p95": 43.0
+      },
+      "roundtrip_failures": 0,
+      "used_token_types": 1633,
+      "types_used_1_to_5_times": 1465,
+      "unused_vocab_types": 6559,
+      "templated_lengths": {
+        "count": 110,
+        "min": 30,
+        "max": 105,
+        "mean": 55.127272727272725,
+        "p50": 57.0,
+        "p95": 75.55,
+        "over_context_512": 0
+      },
+      "templated_tokens": 6064,
+      "user": {
+        "tokens": 2110,
+        "bytes": 11818,
+        "characters": 6484,
+        "words": 1032,
+        "tokens_per_word": 2.044573643410853,
+        "bytes_per_token": 5.600947867298578,
+        "lengths": {
+          "count": 121,
+          "min": 3,
+          "max": 42,
+          "mean": 17.43801652892562,
+          "p50": 15.0,
+          "p95": 35.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 882,
+        "types_used_1_to_5_times": 821,
+        "unused_vocab_types": 7310
+      },
+      "assistant": {
+        "tokens": 3250,
+        "bytes": 18086,
+        "characters": 10003,
+        "words": 1671,
+        "tokens_per_word": 1.9449431478156793,
+        "bytes_per_token": 5.564923076923077,
+        "lengths": {
+          "count": 121,
+          "min": 17,
+          "max": 48,
+          "mean": 26.859504132231404,
+          "p50": 23.0,
+          "p95": 45.0
+        },
+        "roundtrip_failures": 0,
+        "used_token_types": 1271,
+        "types_used_1_to_5_times": 1198,
+        "unused_vocab_types": 6921
+      },
+      "input_sha256": "2617b32f638086fa8a8c0bf17d55516f639afbd2d6a7f4a28f9d80dd33684306"
+    }
+  },
+  "test_sft_context_ok": true,
+  "limitations": [
+    "Compression does not measure downstream language/generation quality.",
+    "RSS is sampled whole-process memory, not isolated allocator maximum.",
+    "Fixed character chunks introduce artificial fit boundaries; evaluation uses full original works.",
+    "No normalization: historical orthography and whitespace preserved.",
+    "Test overlength is reported without changing tokenizer selection or silently truncating."
+  ]
+}

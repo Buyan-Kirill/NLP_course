@@ -5,7 +5,7 @@ import json
 import math
 from pathlib import Path
 
-from reproduction import report_charts, report_provenance
+from reproduction import report_charts, report_data_quality, report_provenance
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs/report"
@@ -39,6 +39,7 @@ SOURCE_TITLES = {
 }
 SOURCE_TITLES.update(report_charts.SOURCES)
 SOURCE_TITLES.update(report_provenance.SOURCES)
+SOURCE_TITLES.update(report_data_quality.SOURCES)
 
 
 def read(name):
@@ -152,7 +153,8 @@ def report_data():
             meaning=row['flags']['meaning_acceptable']['true'], joint=row['flags']['joint']['true']))
     assert all((r['answers'], r['situations'], r['meaning'], r['joint']) == (14, 12, 1, 0) for r in chat_reading)
     sources.append("reproduction/evidence/inference22_config.json")
-    sources.extend(name for name in [*report_charts.SOURCES, *report_provenance.SOURCES] if name not in sources)
+    sources.extend(name for name in [*report_charts.SOURCES, *report_provenance.SOURCES,
+                                    *report_data_quality.SOURCES] if name not in sources)
     data = {"as_of": "2026-11-06", "parameters": 68440576,
             "prose": prose, "poetry": poetry, "pretrain": comparisons,
             "poetry_metrics": poetry_rows, "stages": stages,
@@ -162,6 +164,8 @@ def report_data():
             "sources": [{"path": name, "sha256": hashlib.sha256((ROOT / name).read_bytes()).hexdigest()}
                         for name in sources]}
     data['examples'] = report_provenance.final_examples()
+    data['showcase'] = report_provenance.showcase()
+    data['data_quality'] = report_data_quality.quality_data()
     data['histories'] = report_charts.histories(poetry_rows, native)
     data['provenance'] = report_provenance.verify_examples(data)
     return data
@@ -194,14 +198,42 @@ def main():
     replacements['__POETRY_ROWS__'] = ''.join(f'<tr><td>{html.escape(r["label"])}</td><td>{r["nll"]:.4f}</td><td>{r["perplexity"]:.2f}</td></tr>' for r in data['poetry_metrics'])
     replacements['__NATIVE_ROWS__'] = ''.join(f'<tr><td>{"До SFT" if r["label"] == "planned400k" else "После SFT"}</td><td>{r["nll"]:.4f}</td><td>{r["perplexity"]:.2f}</td></tr>' for r in data['native'])
     replacements['__CHAT_ROWS__'] = ''.join(f'<tr><td>{"Поэзия, batch 4096" if r["label"] == "poetry4k" else "После chat-SFT"}</td><td>{r["nll"]:.4f}</td><td>{r["perplexity"]:.2f}</td><td>{r["accuracy"]:.1%}</td></tr>' for r in data['chat_metrics'])
+    replacements['__SHOWCASE__'] = ''.join(
+        '<article class="card"><span class="tag">Сохранённая генерация</span>'
+        f'<pre>{html.escape(row["prefix"])}\n{html.escape(row["output"].rstrip())}</pre>'
+        '<p class="caption">Открытый диагностический ввод · ограниченный поиск</p>'
+        f'<a class="source" href="../../{html.escape(row["source"])}">Исходный вывод</a></article>'
+        for row in data['showcase'][1:])
+    def integer(value):
+        return f'{value:,}'.replace(',', ' ')
+    replacements['__CORPUS_ROWS__'] = ''.join(
+        f'<tr><td>{label}</td><td>{integer(row["words"])}</td><td>{integer(row["word_types"])}</td>'
+        f'<td>{row["word_frequency_types"]["1"]/row["word_types"]:.1%}</td>'
+        f'<td>{row["document_words"]["p50"]} / {row["document_words"]["p95"]}</td>'
+        f'<td>{row["script_letters"]["latin_share_of_cyrillic_and_latin"]:.3%}</td></tr>'
+        for domain, label in [('prose','Проза'),('poetry','Поэзия')]
+        for row in [data['data_quality']['corpus']['domains'][domain]])
+    replacements['__WORD_HEAD__'] = ''.join(
+        '<p><b>'+label+':</b> '+html.escape(', '.join(
+            f'{r["word"]} ({integer(r["count"])})' for r in data['data_quality']['corpus']['domains'][domain]['top20'][:8]))+'</p>'
+        for domain,label in [('prose','Проза'),('poetry','Поэзия')])
+    replacements['__TOKENIZER_ROWS__'] = ''.join(
+        f'<tr><td>{integer(row["size"])}</td><td>{"Претрейн + SFT" if row["mixture"] == "mixed" else "Претрейн"}'
+        f'{" · выбрано" if row["selected"] else ""}</td><td>{row["tokens_per_word"]:.3f}</td>'
+        f'<td>{row["rare_types"]}</td><td>{row["unused_types"]}</td></tr>'
+        for row in data['data_quality']['tokenizers'])
+    replacements['__TOKENIZER_DOMAIN_ROWS__'] = ''.join(
+        f'<tr><td>{"Исходный 8k · выбрано" if row["name"] == "baseline_v2_8192" else "Новый " + str(row["size"]//1024) + "k"}</td><td>{row["prose"]:.3f}</td>'
+        f'<td>{row["poetry"]:.3f}</td><td>{row["sft"]:.3f}</td></tr>'
+        for row in data['data_quality']['tokenizers_by_domain'])
     replacements['__CHART_SCRIPT__'] = (ROOT/'reproduction/report_charts.js').read_text('utf8')
     replacements['__EXAMPLE_SCRIPT__'] = (ROOT/'reproduction/report_examples.js').read_text('utf8')
     for key, value in replacements.items():
         template = template.replace(key, value)
-    (OUT / "index.html").write_text(template, encoding="utf8")
-    (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
-    (OUT / "sources.json").write_text(json.dumps(data["sources"], ensure_ascii=False, indent=2) + "\n", encoding="utf8")
-    (OUT / "generation_sources.json").write_text(json.dumps(data['provenance'], ensure_ascii=False, indent=2) + "\n", encoding='utf8')
+    (OUT / "index.html").write_text(template, encoding="utf8", newline="\n")
+    (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf8", newline="\n")
+    (OUT / "sources.json").write_text(json.dumps(data["sources"], ensure_ascii=False, indent=2) + "\n", encoding="utf8", newline="\n")
+    (OUT / "generation_sources.json").write_text(json.dumps(data['provenance'], ensure_ascii=False, indent=2) + "\n", encoding='utf8', newline="\n")
     print(f"Report: {OUT / 'index.html'}; {len(data['sources'])} inspected sources")
 
 

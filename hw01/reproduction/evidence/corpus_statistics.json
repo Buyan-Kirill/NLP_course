@@ -1,0 +1,220 @@
+{
+  "definition": "Lowercase Unicode words; internal hyphen/apostrophe retained; no lemmatization",
+  "scope": "Final train only; script counts are diagnostics, not language identification",
+  "domains": {
+    "prose": {
+      "input_sha256": "f8abb8dc2da0d5087052f120130a4ce9da7dd9af0a67babf56f62c8d0f7cf7a5",
+      "records": 41282,
+      "characters": 637933804,
+      "words": 95746869,
+      "word_types": 1319169,
+      "top20": [
+        {
+          "word": "и",
+          "count": 4091027
+        },
+        {
+          "word": "в",
+          "count": 2602961
+        },
+        {
+          "word": "не",
+          "count": 1898920
+        },
+        {
+          "word": "на",
+          "count": 1392115
+        },
+        {
+          "word": "что",
+          "count": 1286168
+        },
+        {
+          "word": "с",
+          "count": 1131521
+        },
+        {
+          "word": "я",
+          "count": 906974
+        },
+        {
+          "word": "он",
+          "count": 868996
+        },
+        {
+          "word": "а",
+          "count": 736434
+        },
+        {
+          "word": "как",
+          "count": 695013
+        },
+        {
+          "word": "его",
+          "count": 655490
+        },
+        {
+          "word": "к",
+          "count": 630027
+        },
+        {
+          "word": "но",
+          "count": 562079
+        },
+        {
+          "word": "по",
+          "count": 511490
+        },
+        {
+          "word": "это",
+          "count": 486437
+        },
+        {
+          "word": "все",
+          "count": 459831
+        },
+        {
+          "word": "она",
+          "count": 438911
+        },
+        {
+          "word": "за",
+          "count": 423308
+        },
+        {
+          "word": "из",
+          "count": 420337
+        },
+        {
+          "word": "у",
+          "count": 408022
+        }
+      ],
+      "top20_token_share": 0.2152139408339295,
+      "word_frequency_types": {
+        "1": 613551,
+        "2-5": 343675,
+        "6-20": 184022,
+        ">20": 177921
+      },
+      "document_words": {
+        "min": 46,
+        "p50": 662,
+        "p95": 12765,
+        "max": 170120
+      },
+      "script_letters": {
+        "cyrillic": 507228544,
+        "latin": 1016190,
+        "latin_share_of_cyrillic_and_latin": 0.0019994107799255626
+      }
+    },
+    "poetry": {
+      "input_sha256": "c4beaaa28a8ed80107fef93bc310de32762aa111a8609fb2ca50afa2b4479e6d",
+      "records": 5478,
+      "characters": 4941830,
+      "words": 802848,
+      "word_types": 86359,
+      "top20": [
+        {
+          "word": "и",
+          "count": 38459
+        },
+        {
+          "word": "в",
+          "count": 22713
+        },
+        {
+          "word": "не",
+          "count": 14537
+        },
+        {
+          "word": "я",
+          "count": 11927
+        },
+        {
+          "word": "с",
+          "count": 9953
+        },
+        {
+          "word": "на",
+          "count": 9860
+        },
+        {
+          "word": "как",
+          "count": 7454
+        },
+        {
+          "word": "ты",
+          "count": 6799
+        },
+        {
+          "word": "он",
+          "count": 5695
+        },
+        {
+          "word": "что",
+          "count": 5634
+        },
+        {
+          "word": "но",
+          "count": 5477
+        },
+        {
+          "word": "мне",
+          "count": 4959
+        },
+        {
+          "word": "к",
+          "count": 3887
+        },
+        {
+          "word": "о",
+          "count": 3442
+        },
+        {
+          "word": "за",
+          "count": 3123
+        },
+        {
+          "word": "а",
+          "count": 2965
+        },
+        {
+          "word": "так",
+          "count": 2828
+        },
+        {
+          "word": "все",
+          "count": 2720
+        },
+        {
+          "word": "их",
+          "count": 2559
+        },
+        {
+          "word": "его",
+          "count": 2543
+        }
+      ],
+      "top20_token_share": 0.20867461835864323,
+      "word_frequency_types": {
+        "1": 44419,
+        "2-5": 26713,
+        "6-20": 10734,
+        ">20": 4493
+      },
+      "document_words": {
+        "min": 6,
+        "p50": 87,
+        "p95": 393,
+        "max": 22484
+      },
+      "script_letters": {
+        "cyrillic": 3886823,
+        "latin": 2763,
+        "latin_share_of_cyrillic_and_latin": 0.000710358377472564
+      }
+    }
+  }
+}

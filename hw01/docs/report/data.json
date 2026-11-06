@@ -651,6 +651,10 @@
       "sha256": "93723cf2850e4fc5d799a84a942d557efee0a9edd8bf678e5e435f50cf298944"
     },
     {
+      "path": "reproduction/evidence/showcase_audit.json",
+      "sha256": "dfb337fec909593ce1fd3bb340e1ac0ca48ebbca66cb0a4f794a51b702fdca6d"
+    },
+    {
       "path": "audit/continuation19/final_reading/mapping.json",
       "sha256": "aae6b5f4cd25e46444105d2a24f456e40bf1f8607ab9144126292ed3515ede6b"
     },
@@ -673,6 +677,18 @@
     {
       "path": "docs/generation_quality_rubric_v2.md",
       "sha256": "c511b83646081e709ec2fd86cf1a4b3069302f04e3b7fab5a4736cd96e7c7160"
+    },
+    {
+      "path": "reproduction/evidence/corpus_statistics.json",
+      "sha256": "30189c358a3c6213adc9ddc12d35af7be14359b6bcb8a10ac8a8e3a72a25cbb3"
+    },
+    {
+      "path": "reproduction/evidence/tokenizers_v2.json",
+      "sha256": "0878c98660284c94f7a342cc6077d004e474007de3b32227b108b98b37604b9c"
+    },
+    {
+      "path": "reproduction/evidence/tokenizers_v3.json",
+      "sha256": "7fa6c4c4fe00048313fb7be0bdd238cf69a9d87f055faac46b70570680a843a2"
     }
   ],
   "examples": [
@@ -1049,6 +1065,375 @@
       "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
     }
   ],
+  "showcase": [
+    {
+      "id": "inference_2",
+      "source": "reproduction/evidence/stress_fix22_report.json",
+      "index": 2,
+      "prefix": "В саду под вечер свет горит,",
+      "output": "И в кустах соловей звенит.\n",
+      "search": "Поиск22 · выбранные веса",
+      "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "dev_1",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "index": 1,
+      "prefix": "Котёнок дремлет возле сундука,",
+      "output": "Котёнок спит у огонька.\n",
+      "search": "Поиск19 · открытая диагностическая выборка",
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    },
+    {
+      "id": "dev_0",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "index": 0,
+      "prefix": "В окне с утра виднеется река,",
+      "output": "И в ней, как в зеркале, горят два огонька.\n",
+      "search": "Поиск19 · открытая диагностическая выборка",
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "matches": {
+        "prefix": [],
+        "output": [],
+        "pair": []
+      }
+    }
+  ],
+  "data_quality": {
+    "corpus": {
+      "definition": "Lowercase Unicode words; internal hyphen/apostrophe retained; no lemmatization",
+      "scope": "Final train only; script counts are diagnostics, not language identification",
+      "domains": {
+        "prose": {
+          "input_sha256": "f8abb8dc2da0d5087052f120130a4ce9da7dd9af0a67babf56f62c8d0f7cf7a5",
+          "records": 41282,
+          "characters": 637933804,
+          "words": 95746869,
+          "word_types": 1319169,
+          "top20": [
+            {
+              "word": "и",
+              "count": 4091027
+            },
+            {
+              "word": "в",
+              "count": 2602961
+            },
+            {
+              "word": "не",
+              "count": 1898920
+            },
+            {
+              "word": "на",
+              "count": 1392115
+            },
+            {
+              "word": "что",
+              "count": 1286168
+            },
+            {
+              "word": "с",
+              "count": 1131521
+            },
+            {
+              "word": "я",
+              "count": 906974
+            },
+            {
+              "word": "он",
+              "count": 868996
+            },
+            {
+              "word": "а",
+              "count": 736434
+            },
+            {
+              "word": "как",
+              "count": 695013
+            },
+            {
+              "word": "его",
+              "count": 655490
+            },
+            {
+              "word": "к",
+              "count": 630027
+            },
+            {
+              "word": "но",
+              "count": 562079
+            },
+            {
+              "word": "по",
+              "count": 511490
+            },
+            {
+              "word": "это",
+              "count": 486437
+            },
+            {
+              "word": "все",
+              "count": 459831
+            },
+            {
+              "word": "она",
+              "count": 438911
+            },
+            {
+              "word": "за",
+              "count": 423308
+            },
+            {
+              "word": "из",
+              "count": 420337
+            },
+            {
+              "word": "у",
+              "count": 408022
+            }
+          ],
+          "top20_token_share": 0.2152139408339295,
+          "word_frequency_types": {
+            "1": 613551,
+            "2-5": 343675,
+            "6-20": 184022,
+            ">20": 177921
+          },
+          "document_words": {
+            "min": 46,
+            "p50": 662,
+            "p95": 12765,
+            "max": 170120
+          },
+          "script_letters": {
+            "cyrillic": 507228544,
+            "latin": 1016190,
+            "latin_share_of_cyrillic_and_latin": 0.0019994107799255626
+          }
+        },
+        "poetry": {
+          "input_sha256": "c4beaaa28a8ed80107fef93bc310de32762aa111a8609fb2ca50afa2b4479e6d",
+          "records": 5478,
+          "characters": 4941830,
+          "words": 802848,
+          "word_types": 86359,
+          "top20": [
+            {
+              "word": "и",
+              "count": 38459
+            },
+            {
+              "word": "в",
+              "count": 22713
+            },
+            {
+              "word": "не",
+              "count": 14537
+            },
+            {
+              "word": "я",
+              "count": 11927
+            },
+            {
+              "word": "с",
+              "count": 9953
+            },
+            {
+              "word": "на",
+              "count": 9860
+            },
+            {
+              "word": "как",
+              "count": 7454
+            },
+            {
+              "word": "ты",
+              "count": 6799
+            },
+            {
+              "word": "он",
+              "count": 5695
+            },
+            {
+              "word": "что",
+              "count": 5634
+            },
+            {
+              "word": "но",
+              "count": 5477
+            },
+            {
+              "word": "мне",
+              "count": 4959
+            },
+            {
+              "word": "к",
+              "count": 3887
+            },
+            {
+              "word": "о",
+              "count": 3442
+            },
+            {
+              "word": "за",
+              "count": 3123
+            },
+            {
+              "word": "а",
+              "count": 2965
+            },
+            {
+              "word": "так",
+              "count": 2828
+            },
+            {
+              "word": "все",
+              "count": 2720
+            },
+            {
+              "word": "их",
+              "count": 2559
+            },
+            {
+              "word": "его",
+              "count": 2543
+            }
+          ],
+          "top20_token_share": 0.20867461835864323,
+          "word_frequency_types": {
+            "1": 44419,
+            "2-5": 26713,
+            "6-20": 10734,
+            ">20": 4493
+          },
+          "document_words": {
+            "min": 6,
+            "p50": 87,
+            "p95": 393,
+            "max": 22484
+          },
+          "script_letters": {
+            "cyrillic": 3886823,
+            "latin": 2763,
+            "latin_share_of_cyrillic_and_latin": 0.000710358377472564
+          }
+        }
+      }
+    },
+    "tokenizers": [
+      {
+        "name": "bpe_4096_pretrain",
+        "size": 4096,
+        "mixture": "pretrain",
+        "tokens_per_word": 2.221282510017299,
+        "rare_types": 34,
+        "unused_types": 149,
+        "selected": false
+      },
+      {
+        "name": "bpe_4096_mixed",
+        "size": 4096,
+        "mixture": "mixed",
+        "tokens_per_word": 2.2211642245649315,
+        "rare_types": 35,
+        "unused_types": 149,
+        "selected": false
+      },
+      {
+        "name": "bpe_8192_pretrain",
+        "size": 8192,
+        "mixture": "pretrain",
+        "tokens_per_word": 1.9921635887806248,
+        "rare_types": 60,
+        "unused_types": 158,
+        "selected": false
+      },
+      {
+        "name": "bpe_8192_mixed",
+        "size": 8192,
+        "mixture": "mixed",
+        "tokens_per_word": 1.9931246580811142,
+        "rare_types": 64,
+        "unused_types": 156,
+        "selected": true
+      },
+      {
+        "name": "bpe_16384_pretrain",
+        "size": 16384,
+        "mixture": "pretrain",
+        "tokens_per_word": 1.8206201114840388,
+        "rare_types": 195,
+        "unused_types": 178,
+        "selected": false
+      },
+      {
+        "name": "bpe_16384_mixed",
+        "size": 16384,
+        "mixture": "mixed",
+        "tokens_per_word": 1.8209897535226887,
+        "rare_types": 203,
+        "unused_types": 177,
+        "selected": false
+      }
+    ],
+    "tokenizers_by_domain": [
+      {
+        "name": "baseline_v2_8192",
+        "size": 8192,
+        "prose": 2.0534399619519026,
+        "poetry": 1.9920303957001204,
+        "sft": 1.9951923076923077
+      },
+      {
+        "name": "bpe_4096_mixed",
+        "size": 4096,
+        "prose": 2.0625477252610303,
+        "poetry": 2.2732435759958696,
+        "sft": 2.208949704142012
+      },
+      {
+        "name": "bpe_8192_mixed",
+        "size": 8192,
+        "prose": 1.853510421391486,
+        "poetry": 2.043329758926089,
+        "sft": 1.9866863905325445
+      },
+      {
+        "name": "bpe_16384_mixed",
+        "size": 16384,
+        "prose": 1.6939708738291623,
+        "poetry": 1.8640533778148458,
+        "sft": 1.7747781065088757
+      }
+    ],
+    "decision": {
+      "16k_vs_8k_ratios": {
+        "prose": 0.9139257347997254,
+        "poetry": 0.9122626290112539,
+        "sft": 0.8933358153387937
+      },
+      "balanced_compression_gain": 0.08690581809451037,
+      "16k_passed": false,
+      "candidate": "bpe_8192_mixed",
+      "candidate_vs_v2_ratios": {
+        "prose": 0.902636773285364,
+        "poetry": 1.0257522994311234,
+        "sft": 0.9957367933271548
+      },
+      "replacement_passed": false
+    },
+    "selected_sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+  },
   "histories": [
     {
       "id": "initial",
@@ -5160,7 +5545,7 @@
       "description": "Контрольная ветвь от Planned400k; в выбранные веса не входит. 869 фрагментов, два прохода, 21 680 токенов в loss. Validation: 282 токена продолжений, 23 записи, 21 семейство.",
       "scale": 1000,
       "unit": "тыс. токенов",
-      "note": "Train: среднее по блокам до 1 шагов, взвешенное по токенам. Validation: только замеры до и после обучения.",
+      "note": "Train: среднее по блокам до 1 шагов, взвешенное по токенам. Validation: два замера — до и после обучения; пунктир соединяет их, промежуточные значения не измерялись.",
       "source": "reproduction/evidence/native_sft_metrics.jsonl",
       "curves": {
         "nll": [
@@ -5618,7 +6003,7 @@
             ],
             "color": "#ad5a25",
             "dashed": true,
-            "connect": false
+            "connect": true
           }
         ],
         "lr": [
@@ -6077,8 +6462,8 @@
               }
             ],
             "color": "#ad5a25",
-            "dashed": false,
-            "connect": false
+            "dashed": true,
+            "connect": true
           }
         ]
       },
@@ -6087,7 +6472,7 @@
   ],
   "provenance": {
     "complete": true,
-    "displayed_views": 25,
+    "displayed_views": 28,
     "views": [
       {
         "kind": "hero",
@@ -6250,6 +6635,27 @@
         "source": "audit/continuation19/inference/final_pair/first.json",
         "sample_index": 5,
         "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+      },
+      {
+        "kind": "showcase",
+        "source": "reproduction/evidence/stress_fix22_report.json",
+        "sample_index": 2,
+        "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+        "exact_train_matches": 0
+      },
+      {
+        "kind": "showcase",
+        "source": "audit/continuation19/inference/parent_dev/completed.json",
+        "sample_index": 1,
+        "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+        "exact_train_matches": 0
+      },
+      {
+        "kind": "showcase",
+        "source": "audit/continuation19/inference/parent_dev/completed.json",
+        "sample_index": 0,
+        "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+        "exact_train_matches": 0
       }
     ],
     "checks": [

@@ -83,14 +83,14 @@ def logged_history(key, label, source, description, *, native_validation=None):
     }
     if val:
         curves['nll'].append(series('Validation NLL', val, 'nll', color='#ad5a25',
-                                   dashed=True, connect=not bool(native_validation)))
+                                   dashed=True))
         curves['perplexity'] = [series('Validation PPL', val, 'perplexity', color='#ad5a25',
-                                      connect=not bool(native_validation))]
+                                      dashed=bool(native_validation))]
     return dict(id=key, label=label, description=description,
         scale=1e6 if token_count(train[-1]) > 1e6 else 1000,
         unit='млн токенов' if token_count(train[-1]) > 1e6 else 'тыс. токенов',
         note=f'Train: среднее по блокам до {width} шагов, взвешенное по токенам. '
-             + ('Validation: только замеры до и после обучения.' if native_validation else
+             + ('Validation: два замера — до и после обучения; пунктир соединяет их, промежуточные значения не измерялись.' if native_validation else
                 'Validation: сохранённые замеры без сглаживания.'),
         source=source, curves=curves)
 

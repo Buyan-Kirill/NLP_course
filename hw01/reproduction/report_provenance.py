@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'audit/continuation19/final_reading/'
 SOURCES = {
+    'reproduction/evidence/showcase_audit.json': 'Проверка демонстрационных входов и ответов на пересечение с train',
     BASE+'mapping.json': 'Привязка оценок к исходным генерациям',
     BASE+'cards.json': 'Инструкции слепого чтения',
     BASE+'judged_primary.json': 'Оценки первого агента по каждому критерию',
@@ -22,6 +23,33 @@ def read(name):
 
 def fingerprint(name):
     return hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+
+
+def showcase():
+    """Editorial examples; preserve raw outputs and check full-train absence."""
+    audit = read('reproduction/evidence/showcase_audit.json')
+    corpus = read('reproduction/corpus/manifest.json')
+    release = read('artifacts/releases/poetry17/manifest.json')
+    for domain, path in [('prose', 'data/prose_v7/expanded_train.jsonl'),
+                          ('poetry', 'data/poetry_v7/train.jsonl')]:
+        assert audit['inputs'][domain]['sha256'] == corpus['domains'][domain]['outputs'][path]['sha256']
+    by_id = {r['id']: r for r in audit['examples']}
+    chosen = []
+    for key in ['inference_2', 'dev_1', 'dev_0']:
+        row = by_id[key]
+        assert not any(row['matches'].values()), 'Do not present a train match as a novel example'
+        original = read(row['source'])
+        sample = original['samples'][row['index']]
+        if key.startswith('dev_'):
+            assert original['models'][0]['sha256'] == release['source']['sha256']
+            assert sample['case']['prefix'] == row['prefix']
+            assert sample['constrained']['text'] == row['output']
+        else:
+            assert original['checkpoint']['sha256'] == release['continuation']['sha256']
+            assert sample['case']['first_line'] == row['prefix']
+            assert sample['selected']['text'] == row['output']
+        chosen.append(row)
+    return chosen
 
 
 def final_examples():
@@ -99,6 +127,9 @@ def verify_examples(data):
         for mode in ['free', 'constrained']:
             checked.append(dict(kind=mode, source=row['source'],
                 sample_index=row[mode]['source_index'], checkpoint_sha256=row['checkpoint_sha256']))
+    for row in data['showcase']:
+        checked.append(dict(kind='showcase', source=row['source'], sample_index=row['index'],
+                            checkpoint_sha256=row['checkpoint_sha256'], exact_train_matches=0))
     return dict(complete=True, displayed_views=len(checked), views=checked,
         checks=['exact raw output fields, not literary reference fields',
                 'checkpoint SHA matches selected model lineage', 'judge quotes and score sums'],

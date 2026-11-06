@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "displayed_views": 25,
+  "displayed_views": 28,
   "views": [
     {
       "kind": "hero",
@@ -163,6 +163,27 @@
       "source": "audit/continuation19/inference/final_pair/first.json",
       "sample_index": 5,
       "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "showcase",
+      "source": "reproduction/evidence/stress_fix22_report.json",
+      "sample_index": 2,
+      "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+      "exact_train_matches": 0
+    },
+    {
+      "kind": "showcase",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 1,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "exact_train_matches": 0
+    },
+    {
+      "kind": "showcase",
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "exact_train_matches": 0
     }
   ],
   "checks": [
