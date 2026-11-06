@@ -1,0 +1,423 @@
+{
+  "schema": "continuation19-two-reader-summary-1",
+  "attempts": 12,
+  "unique_cards": 12,
+  "readers": {
+    "primary": {
+      "human_cards": 12,
+      "expanded_slots": 12,
+      "conditions": {
+        "pair/planned400k/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 29,
+          "mean_total": 4.833333333333333,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 5,
+            "logic": 5,
+            "naturalness": 4,
+            "style": 6
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.8333333333333334,
+            "logic": 0.8333333333333334,
+            "naturalness": 0.6666666666666666,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 15,
+          "mean_total": 2.5,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 3,
+            "logic": 0,
+            "naturalness": 2,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.0,
+            "naturalness": 0.3333333333333333,
+            "style": 0.16666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 5,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    },
+    "secondary": {
+      "human_cards": 12,
+      "expanded_slots": 12,
+      "conditions": {
+        "pair/planned400k/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 28,
+          "mean_total": 4.666666666666667,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 5,
+            "logic": 6,
+            "naturalness": 3,
+            "style": 5
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.8333333333333334,
+            "logic": 1.0,
+            "naturalness": 0.5,
+            "style": 0.8333333333333334
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 12,
+          "mean_total": 2.0,
+          "sum_axes": {
+            "relevance": 8,
+            "progress": 2,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 1.3333333333333333,
+            "progress": 0.3333333333333333,
+            "logic": 0.16666666666666666,
+            "naturalness": 0.0,
+            "style": 0.16666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 5,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 0,
+      "mode": "constrained",
+      "id": "c2f9e49bdadebea9ed9b1930",
+      "primary": {
+        "id": "c2f9e49bdadebea9ed9b1930",
+        "quote": "И в избу вбежала мамзель.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 9,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "A young lady running into the hut during a brief snowstorm is a coherent small scene; metel/mamzel rhyme."
+      },
+      "secondary": {
+        "id": "c2f9e49bdadebea9ed9b1930",
+        "quote": "И в избу вбежала мамзель.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 8,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "A young woman running into the hut during the blizzard makes a modest coherent scene, despite a slightly comic register; metel/mamzel rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 1,
+      "mode": "free",
+      "id": "e64dae31ab01793bae32886b",
+      "primary": {
+        "id": "e64dae31ab01793bae32886b",
+        "quote": "На дворе, на дворе, в поле и на дворе,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Repeated yard and field locations do not complete a coherent new action or image; sushitsya/dvore do not rhyme."
+      },
+      "secondary": {
+        "id": "e64dae31ab01793bae32886b",
+        "quote": "На дворе, на дворе, в поле и на дворе,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Repeated courtyard and field locations do not make a natural completed second line and do not rhyme with sushitsya."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 2,
+      "mode": "free",
+      "id": "1cde7cf1710259026dc97470",
+      "primary": {
+        "id": "1cde7cf1710259026dc97470",
+        "quote": "А я, с улыбкой глядя,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The observing speaker is introduced but the participial clause has no completing predicate; otdokhnut/glyadya do not rhyme."
+      },
+      "secondary": {
+        "id": "1cde7cf1710259026dc97470",
+        "quote": "А я, с улыбкой глядя,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The observer is introduced but the participial construction has no completed action; glyadya does not rhyme with otdokhnut."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 2,
+      "mode": "constrained",
+      "id": "acd5bfbfbd43f8c36a32b2d1",
+      "primary": {
+        "id": "acd5bfbfbd43f8c36a32b2d1",
+        "quote": "На лавку поглядеть, да и заснуть.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 2
+        },
+        "total": 7,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Looking at the bench after sitting down is awkward but understandable, and falling asleep develops resting; otdokhnut/zasnut rhyme."
+      },
+      "secondary": {
+        "id": "acd5bfbfbd43f8c36a32b2d1",
+        "quote": "На лавку поглядеть, да и заснуть.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 7,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "The old man sits, looks at the bench and falls asleep: repetitive but understandable rest; otdokhnut/zasnut rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 3,
+      "mode": "free",
+      "id": "d9fb72f7c5492f412551beb1",
+      "primary": {
+        "id": "d9fb72f7c5492f412551beb1",
+        "quote": "И в ней, как в зеркале, всё то, что в нем,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Vdvoyom/nem rhyme, but the net-as-mirror comparison and masculine pronoun have no coherent referent; the thought remains unresolved."
+      },
+      "secondary": {
+        "id": "d9fb72f7c5492f412551beb1",
+        "quote": "И в ней, как в зеркале, всё то, что в нем,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Vdvoyom/nem rhyme, but a net treated as a mirror and an unidentified masculine referent do not form a clear thought."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 4,
+      "mode": "free",
+      "id": "3429eeed55bb3c7d1c8233e9",
+      "primary": {
+        "id": "3429eeed55bb3c7d1c8233e9",
+        "quote": "И, в ожидании утра,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The waiting-for-morning clause remains unfinished and does not develop carrying pies; pirogov/utra do not rhyme."
+      },
+      "secondary": {
+        "id": "3429eeed55bb3c7d1c8233e9",
+        "quote": "И, в ожидании утра,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Waiting for morning is left as an unfinished prepositional phrase, without an action or rhyme with pirogov."
+      }
+    }
+  ],
+  "sources_sha256": {
+    "audit/continuation19/inference/final_pair/first.json": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+    "audit\\continuation19\\final_reading\\mapping.json": "aae6b5f4cd25e46444105d2a24f456e40bf1f8607ab9144126292ed3515ede6b",
+    "audit\\continuation19\\final_reading\\cards.json": "a051fac390d4931501f0aaa51a14f69af8150e216e3bb32fb5adb0f6f7db0cea",
+    "audit\\continuation19\\final_reading\\judged_primary.json": "2c5053282166e6e428db0ba28bbf41aa1cbc9ed04364073864b0a9b5e8b616a1",
+    "audit\\continuation19\\final_reading\\judged_secondary.json": "cc7fdea3b7297f3ca25b38318f4e4b097b2e05207d26a36acf88ce6d5fcc1806",
+    "audit\\continuation19\\evidence.py": "d648fc946d175f01af92cf20242238a97efcf749cc331ea849bc795d52138591"
+  },
+  "limitations": [
+    "All free/constrained slots retained including null, incomplete and wrong-count outputs.",
+    "pair and aabb have separate conditions/denominators; readers do not double N.",
+    "Rhyme/meaning are human judgments of exact whole continuations, not automatically inferred from metadata.",
+    "Source-bound adapter proves quote/provenance fidelity, not inference completeness beyond supplied report samples."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema": "poetry17-inference-release-1",
+  "inference_only": true,
+  "training": false,
+  "generation": false,
+  "device": "cpu",
+  "source": {
+    "path": "runs/poetry16/plan_trial/planned/stages/400000.pt",
+    "sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+    "bytes": 564556123
+  },
+  "continuation": {
+    "path": "artifacts/releases/poetry17/continuation.pt",
+    "sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311",
+    "bytes": 273820423
+  },
+  "chat_reference": {
+    "path": "artifacts/releases/poetry16/chat.pt",
+    "sha256": "0f2d57e349da20200b8bbc32b87f0e9d82862e127b75df935faa4a6262c0c191",
+    "duplicated": false
+  },
+  "tokenizer": {
+    "path": "artifacts/tokenizers_v3/selected/tokenizer.json",
+    "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+  },
+  "verified_all_tensors_equal": true,
+  "verified_metadata_equal": true,
+  "source_pre_post_sha_equal": true,
+  "source_model_config": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layers": 20,
+    "n_heads": 8,
+    "d_model": 512,
+    "dropout": 0.1,
+    "gradient_checkpointing": false,
+    "architecture": "modern",
+    "ffn_hidden_size": 1408,
+    "rope_theta": 10000.0,
+    "rms_norm_eps": 1e-06
+  },
+  "source_training_config": {
+    "domain": "poetry",
+    "mode": "pure",
+    "optimizer": "muon",
+    "seed": 2026110308,
+    "target_tokens": 1024,
+    "batch_size": 16,
+    "warmup_tokens": 10000,
+    "milestones": [
+      400000,
+      800000,
+      1600000
+    ],
+    "lr": 5e-05,
+    "min_lr": 5e-06,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "grad_clip": 1.0,
+    "precision": "bf16",
+    "cpu_threads": 4,
+    "fused_optimizer": true,
+    "save_interval": 100,
+    "eval_interval": 10000,
+    "eval_batches": 0,
+    "eval_batch_size": 16,
+    "log_interval": 50,
+    "max_active_seconds": 7200,
+    "parent": "runs/poetry16/batch4k/stages/3231558.pt",
+    "model": {
+      "vocab_size": 8192,
+      "context_length": 512,
+      "n_layers": 20,
+      "n_heads": 8,
+      "d_model": 512,
+      "dropout": 0.1,
+      "gradient_checkpointing": false,
+      "architecture": "modern",
+      "ffn_hidden_size": 1408,
+      "rope_theta": 10000.0,
+      "rms_norm_eps": 1e-06
+    },
+    "poetry_data": "data/prepared_v7/poetry_supplement",
+    "prose_data": "data/prepared_v7/expanded",
+    "tokenizer": "artifacts/tokenizers_v3/selected/tokenizer.json",
+    "input_freeze": "audit/poetry08/data_freeze.json",
+    "schedule_tokens": 1600000
+  },
+  "source_lineage": {
+    "origin": "random_initialization",
+    "seed": 2026110308,
+    "parents": [
+      {
+        "checkpoint_sha256": "b0595ee6f8157dffddb636caf0e50bdae3a262cc00535d383f866d308c8e51c4",
+        "domain": "prose",
+        "step": 38466,
+        "optimizer": "inherited complete moments and stream",
+        "pilot": "ce",
+        "schedule": "inherit",
+        "lr_multiplier": 0.5
+      },
+      {
+        "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698",
+        "domain": "prose",
+        "step": 3052,
+        "tokens_seen": 680193557,
+        "stage": "poetry08",
+        "optimizer": "new Muon + AdamW",
+        "parent_optimizer": "muon",
+        "optimizer_state": "fresh"
+      },
+      {
+        "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8",
+        "domain": "poetry",
+        "step": 100,
+        "tokens_seen": 1615779,
+        "stage": "poetry16_continuation_fork",
+        "optimizer_state": "restored",
+        "accounting": "same cumulative poetry counters; no extra parent tokens added"
+      },
+      {
+        "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725",
+        "domain": "poetry",
+        "step": 496,
+        "tokens_seen": 3231558,
+        "stage": "poetry08",
+        "optimizer": "new Muon + AdamW",
+        "parent_optimizer": "muon",
+        "optimizer_state": "fresh"
+      }
+    ]
+  },
+  "step": 391,
+  "tokens_seen": 400000,
+  "parameter_tensors": 142,
+  "code_sha256": {
+    "scripts/export_poetry17_continuation.py": "dbe55d6712893da095b9dc8233afa44e3e405904578a6bb642745f33c878c3b4",
+    "scripts/export_models16.py": "041365494d185bf4340e6d9820e24437d5ccf5762379d4e1f60c596c3a4572c0",
+    "scripts/evaluate_final14.py": "b10fded7aded05488bb5377b12a4905bf6e315955496e5a85f7283dba6000868",
+    "poetrygpt/runtime.py": "183911e9fd1a27cbe9315586469ca43bce0ec2dcbfd11c7bbf3b6d76f122ec6d",
+    "poetrygpt/data.py": "a060ea259c33b4a8e0644f0de5aaf8d8a13313b14bbe38e866e9a576db619371"
+  },
+  "seconds": 1.3732321999996202,
+  "limitation": "Export preserves selected research weights; no generation or new evaluation is performed. Poetry4k parent and existing release16 remain unchanged."
+}

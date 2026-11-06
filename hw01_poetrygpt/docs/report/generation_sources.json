@@ -1,0 +1,175 @@
+{
+  "complete": true,
+  "displayed_views": 25,
+  "views": [
+    {
+      "kind": "hero",
+      "source": "reproduction/evidence/stress_fix22_report.json",
+      "sample_index": 2,
+      "checkpoint_sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311"
+    },
+    {
+      "kind": "stage",
+      "stage": "После претрейна",
+      "source": "audit/poetry08/lr50_diagnostic13/parent_poetry.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698"
+    },
+    {
+      "kind": "stage",
+      "stage": "После претрейна",
+      "source": "audit/poetry08/lr50_diagnostic13/parent_poetry.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698"
+    },
+    {
+      "kind": "stage",
+      "stage": "После претрейна",
+      "source": "audit/poetry08/lr50_diagnostic13/parent_poetry.json",
+      "sample_index": 8,
+      "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698"
+    },
+    {
+      "kind": "stage",
+      "stage": "Первый проход поэзии",
+      "source": "audit/poetry08/lr50_diagnostic13/pure_1615779_poetry.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8"
+    },
+    {
+      "kind": "stage",
+      "stage": "Первый проход поэзии",
+      "source": "audit/poetry08/lr50_diagnostic13/pure_1615779_poetry.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8"
+    },
+    {
+      "kind": "stage",
+      "stage": "Первый проход поэзии",
+      "source": "audit/poetry08/lr50_diagnostic13/pure_1615779_poetry.json",
+      "sample_index": 8,
+      "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8"
+    },
+    {
+      "kind": "stage",
+      "stage": "Второй проход, batch 4096",
+      "source": "audit/poetry16/batch4k/3231558_poetry.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725"
+    },
+    {
+      "kind": "stage",
+      "stage": "Второй проход, batch 4096",
+      "source": "audit/poetry16/batch4k/3231558_poetry.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725"
+    },
+    {
+      "kind": "stage",
+      "stage": "Второй проход, batch 4096",
+      "source": "audit/poetry16/batch4k/3231558_poetry.json",
+      "sample_index": 8,
+      "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725"
+    },
+    {
+      "kind": "stage",
+      "stage": "Поэзия + подсказка окончания",
+      "source": "audit/poetry16/plan_trial/planned/400000_poetry.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "stage",
+      "stage": "Поэзия + подсказка окончания",
+      "source": "audit/poetry16/plan_trial/planned/400000_poetry.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "stage",
+      "stage": "Поэзия + подсказка окончания",
+      "source": "audit/poetry16/plan_trial/planned/400000_poetry.json",
+      "sample_index": 8,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 0,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 1,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 1,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 2,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 2,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 3,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 3,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 4,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "free",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 5,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    },
+    {
+      "kind": "constrained",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "sample_index": 5,
+      "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33"
+    }
+  ],
+  "checks": [
+    "exact raw output fields, not literary reference fields",
+    "checkpoint SHA matches selected model lineage",
+    "judge quotes and score sums"
+  ],
+  "new_generations": false,
+  "historical_scores_modified": false
+}

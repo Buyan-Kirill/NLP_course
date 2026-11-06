@@ -1,0 +1,6 @@
+# Python 3.12. CUDA wheels on Windows/Linux; native PyPI wheels on macOS ARM64.
+# The local-version pin replaces an installed CPU-only torch wheel as well.
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.9.1+cu126 ; sys_platform == "win32" or sys_platform == "linux"
+torch==2.9.1 ; sys_platform == "darwin"
+-r requirements-common.txt

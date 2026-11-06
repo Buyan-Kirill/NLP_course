@@ -1,0 +1,16 @@
+{
+  "selected": "baseline_v2_8192",
+  "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+  "special_tokens": {
+    "<|pad|>": 0,
+    "<|bos|>": 1,
+    "<|eos|>": 2,
+    "<|user|>": 3,
+    "<|assistant|>": 4,
+    "<|eot|>": 5
+  },
+  "context_length": 512,
+  "normalizer": null,
+  "add_prefix_space": false,
+  "tokenizers_version": "0.22.1"
+}

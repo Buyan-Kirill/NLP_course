@@ -1,0 +1,4703 @@
+{
+  "schema": "rhyme17-source-bound-two-reader-summary-1",
+  "summaries": {
+    "primary": {
+      "chat/sft183596/first_rhymed": {
+        "attempts": 12,
+        "families": 12,
+        "mean_total": 2.0833333333333335,
+        "mean_axes": {
+          "relevance": 1.0833333333333333,
+          "progress": 0.08333333333333333,
+          "logic": 0.25,
+          "naturalness": 0.3333333333333333,
+          "style": 0.3333333333333333
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 0,
+            "false": 12,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 10,
+            "false": 2,
+            "unclear": 0
+          },
+          "joint": {
+            "true": 0,
+            "false": 12,
+            "unclear": 0
+          }
+        }
+      },
+      "chat/sft183596/ordinary": {
+        "attempts": 14,
+        "families": 12,
+        "mean_total": 3.2142857142857144,
+        "mean_axes": {
+          "relevance": 1.4285714285714286,
+          "progress": 0.2857142857142857,
+          "logic": 0.5,
+          "naturalness": 0.5714285714285714,
+          "style": 0.42857142857142855
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 1,
+            "false": 13,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          },
+          "joint": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          }
+        }
+      },
+      "chat/sft183596/selected_two_line": {
+        "attempts": 14,
+        "families": 12,
+        "mean_total": 2.357142857142857,
+        "mean_axes": {
+          "relevance": 1.4285714285714286,
+          "progress": 0.14285714285714285,
+          "logic": 0.14285714285714285,
+          "naturalness": 0.2857142857142857,
+          "style": 0.35714285714285715
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 12,
+            "false": 2,
+            "unclear": 0
+          },
+          "joint": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          }
+        }
+      }
+    },
+    "secondary": {
+      "chat/sft183596/first_rhymed": {
+        "attempts": 12,
+        "families": 12,
+        "mean_total": 2.0,
+        "mean_axes": {
+          "relevance": 1.0,
+          "progress": 0.08333333333333333,
+          "logic": 0.3333333333333333,
+          "naturalness": 0.3333333333333333,
+          "style": 0.25
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 0,
+            "false": 12,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 9,
+            "false": 3,
+            "unclear": 0
+          },
+          "joint": {
+            "true": 0,
+            "false": 12,
+            "unclear": 0
+          }
+        }
+      },
+      "chat/sft183596/ordinary": {
+        "attempts": 14,
+        "families": 12,
+        "mean_total": 3.2142857142857144,
+        "mean_axes": {
+          "relevance": 1.3571428571428572,
+          "progress": 0.35714285714285715,
+          "logic": 0.5,
+          "naturalness": 0.5714285714285714,
+          "style": 0.42857142857142855
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 1,
+            "false": 13,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          },
+          "joint": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          }
+        }
+      },
+      "chat/sft183596/selected_two_line": {
+        "attempts": 14,
+        "families": 12,
+        "mean_total": 2.4285714285714284,
+        "mean_axes": {
+          "relevance": 1.3571428571428572,
+          "progress": 0.14285714285714285,
+          "logic": 0.2857142857142857,
+          "naturalness": 0.2857142857142857,
+          "style": 0.35714285714285715
+        },
+        "flags": {
+          "meaning_acceptable": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          },
+          "rhyme": {
+            "true": 13,
+            "false": 0,
+            "unclear": 1
+          },
+          "joint": {
+            "true": 0,
+            "false": 14,
+            "unclear": 0
+          }
+        }
+      }
+    }
+  },
+  "task_slices": {
+    "primary": {
+      "chat/sft183596/first_rhymed": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 1.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 0.0,
+          "mean_axes": {
+            "relevance": 0.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.0,
+          "mean_axes": {
+            "relevance": 2.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.5,
+            "naturalness": 0.0,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 1.0,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      },
+      "chat/sft183596/ordinary": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.5,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 4,
+          "families": 2,
+          "mean_total": 4.5,
+          "mean_axes": {
+            "relevance": 1.75,
+            "progress": 0.75,
+            "logic": 1.0,
+            "naturalness": 0.5,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 1,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 4.5,
+          "mean_axes": {
+            "relevance": 2.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 1.0,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 1.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 1.0,
+            "naturalness": 1.5,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      },
+      "chat/sft183596/selected_two_line": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 1.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 4,
+          "families": 2,
+          "mean_total": 2.25,
+          "mean_axes": {
+            "relevance": 1.75,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.25,
+            "style": 0.25
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 4,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 2.0,
+            "progress": 0.5,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.5,
+            "naturalness": 0.0,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 0.5,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    },
+    "secondary": {
+      "chat/sft183596/first_rhymed": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 1.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 0.0,
+          "mean_axes": {
+            "relevance": 0.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.0,
+          "mean_axes": {
+            "relevance": 2.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.0,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.5,
+            "naturalness": 0.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.0,
+          "mean_axes": {
+            "relevance": 0.5,
+            "progress": 0.0,
+            "logic": 1.0,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      },
+      "chat/sft183596/ordinary": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.5,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 4,
+          "families": 2,
+          "mean_total": 4.25,
+          "mean_axes": {
+            "relevance": 1.75,
+            "progress": 0.75,
+            "logic": 1.0,
+            "naturalness": 0.5,
+            "style": 0.25
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 1,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 4.0,
+          "mean_axes": {
+            "relevance": 2.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 0.5,
+          "mean_axes": {
+            "relevance": 0.5,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 5.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.5,
+            "logic": 1.0,
+            "naturalness": 1.5,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      },
+      "chat/sft183596/selected_two_line": {
+        "clarification": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 1.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 0,
+              "unclear": 1
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "dialogue": {
+          "attempts": 4,
+          "families": 2,
+          "mean_total": 2.25,
+          "mean_axes": {
+            "relevance": 1.75,
+            "progress": 0.0,
+            "logic": 0.0,
+            "naturalness": 0.25,
+            "style": 0.25
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 4,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 4,
+              "unclear": 0
+            }
+          }
+        },
+        "given_facts": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.5,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "observation": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.5,
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.5,
+            "logic": 0.5,
+            "naturalness": 0.0,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "question": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 2.5,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 0.5,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        },
+        "request": {
+          "attempts": 2,
+          "families": 2,
+          "mean_total": 3.0,
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.0,
+            "logic": 0.5,
+            "naturalness": 1.0,
+            "style": 0.5
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 0,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 2,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "paired_family_bootstrap": [],
+  "disagreements": [
+    {
+      "id": "983919577f9dfdda2d4cf41b",
+      "case_id": "finalize18_dev_chat_01",
+      "group_id": "finalize18_dev_chat_dry_washed_brush",
+      "task_family": "question",
+      "seed": 3875529092,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 0,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/ordinary",
+      "kind": "chat",
+      "primary": {
+        "id": "983919577f9dfdda2d4cf41b",
+        "quote": "Чтоб от излишка ткань не ушла,\nНа ней можно ткань сохранить.",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Ткань подменяет кисть, а «от излишка ткань не ушла» не объясняет цель сушки."
+      },
+      "secondary": {
+        "id": "983919577f9dfdda2d4cf41b",
+        "quote": "Чтоб от излишка ткань не ушла,\nНа ней можно ткань сохранить.",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 0,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Уходящая ткань не объясняет сушку кисти; связи предметов неясны."
+      }
+    },
+    {
+      "id": "8199ecca53fd87527806c662",
+      "case_id": "finalize18_dev_chat_01",
+      "group_id": "finalize18_dev_chat_dry_washed_brush",
+      "task_family": "question",
+      "seed": 3875529092,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 1,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/first_rhymed",
+      "kind": "chat",
+      "primary": {
+        "id": "8199ecca53fd87527806c662",
+        "quote": "Чтоб от излишка ткань не ушла,\nСушат в ней ткань, как пчела.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Ткань и пчела не объясняют сушку кисти; фраза бессвязна, ушла/пчела рифмуются."
+      },
+      "secondary": {
+        "id": "8199ecca53fd87527806c662",
+        "quote": "Чтоб от излишка ткань не ушла,\nСушат в ней ткань, как пчела.\n",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 0,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Сушка ткани как пчела бессмысленна и не объясняет сушку кисти; рифма есть."
+      }
+    },
+    {
+      "id": "dacb705af5b11cbe01666c86",
+      "case_id": "finalize18_dev_chat_03",
+      "group_id": "finalize18_dev_chat_brooch_found_thanks",
+      "task_family": "request",
+      "seed": 1816999566,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 6,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/ordinary",
+      "kind": "chat",
+      "primary": {
+        "id": "dacb705af5b11cbe01666c86",
+        "quote": "Спасибо: брошь ты прятала,\nИ брошь не забыла.",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Подругу благодарят за сокрытие и то, что она не забыла брошь, а не за находку."
+      },
+      "secondary": {
+        "id": "dacb705af5b11cbe01666c86",
+        "quote": "Спасибо: брошь ты прятала,\nИ брошь не забыла.",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 5,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Подругу благодарят за сокрытие броши вместо её нахождения, что меняет заданный факт."
+      }
+    },
+    {
+      "id": "75973fcf428e4c83b78170ea",
+      "case_id": "finalize18_dev_chat_03",
+      "group_id": "finalize18_dev_chat_brooch_found_thanks",
+      "task_family": "request",
+      "seed": 2272869289,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 8,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/selected_two_line",
+      "kind": "chat",
+      "primary": {
+        "id": "75973fcf428e4c83b78170ea",
+        "quote": "Спасибо, брошь, за брошь,\nЗа брошь, что ты нам даешь.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Благодарность обращена к броши вместо подруги; находка заменена дарением, брошь/даёшь не рифмуются."
+      },
+      "secondary": {
+        "id": "75973fcf428e4c83b78170ea",
+        "quote": "Спасибо, брошь, за брошь,\nЗа брошь, что ты нам даешь.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Благодарят саму брошь за другую брошь вместо подруги за находку; брошь и даёшь рифмуются."
+      }
+    },
+    {
+      "id": "0bdeace0c673c86bd0062010",
+      "case_id": "finalize18_dev_chat_04",
+      "group_id": "finalize18_dev_chat_daughter_close_shutters",
+      "task_family": "request",
+      "seed": 2266063414,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 9,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/ordinary",
+      "kind": "chat",
+      "primary": {
+        "id": "0bdeace0c673c86bd0062010",
+        "quote": "Камин у вас заперт, а я не пойду,\nЯ в комнате буду ждать тебя.",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 0
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Понятная реплика об ожидании в комнате не просит дочь закрыть ставни."
+      },
+      "secondary": {
+        "id": "0bdeace0c673c86bd0062010",
+        "quote": "Камин у вас заперт, а я не пойду,\nЯ в комнате буду ждать тебя.",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 5,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Ожидание в комнате и камин не передают дочери просьбу закрыть ставни."
+      }
+    },
+    {
+      "id": "b6cd91560de42faf36d35bc1",
+      "case_id": "finalize18_dev_chat_04",
+      "group_id": "finalize18_dev_chat_daughter_close_shutters",
+      "task_family": "request",
+      "seed": 2266063414,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 10,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/first_rhymed",
+      "kind": "chat",
+      "primary": {
+        "id": "b6cd91560de42faf36d35bc1",
+        "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Закрытый камин и отказ идти не являются просьбой дочери закрыть ставни; пойду/дойду рифмуются."
+      },
+      "secondary": {
+        "id": "b6cd91560de42faf36d35bc1",
+        "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Запертый камин и отказ идти не выполняют просьбу к дочери; пойду и дойду рифмуются."
+      }
+    },
+    {
+      "id": "b6cd91560de42faf36d35bc1",
+      "case_id": "finalize18_dev_chat_04",
+      "group_id": "finalize18_dev_chat_daughter_close_shutters",
+      "task_family": "request",
+      "seed": 2266063414,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 11,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/selected_two_line",
+      "kind": "chat",
+      "primary": {
+        "id": "b6cd91560de42faf36d35bc1",
+        "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Закрытый камин и отказ идти не являются просьбой дочери закрыть ставни; пойду/дойду рифмуются."
+      },
+      "secondary": {
+        "id": "b6cd91560de42faf36d35bc1",
+        "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+        "scores": {
+          "relevance": 0,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Запертый камин и отказ идти не выполняют просьбу к дочери; пойду и дойду рифмуются."
+      }
+    },
+    {
+      "id": "942676b10cd045bbef27c4b8",
+      "case_id": "finalize18_dev_chat_05",
+      "group_id": "finalize18_dev_chat_cobweb_ears",
+      "task_family": "observation",
+      "seed": 4015680017,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 13,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/first_rhymed",
+      "kind": "chat",
+      "primary": {
+        "id": "942676b10cd045bbef27c4b8",
+        "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто зелёная, а не синяя, — так же тверда.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Синяя вода затем названа зелёной и твёрдой без ясного сравнения; вода/тверда рифмуются."
+      },
+      "secondary": {
+        "id": "942676b10cd045bbef27c4b8",
+        "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто зелёная, а не синяя, — так же тверда.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Вода одновременно синяя и не синяя, сравнение с твёрдостью непонятно; вода и тверда рифмуются."
+      }
+    },
+    {
+      "id": "190f4616f81d5ee912fb7402",
+      "case_id": "finalize18_dev_chat_07",
+      "group_id": "finalize18_dev_chat_seamstress_box",
+      "task_family": "given_facts",
+      "seed": 2123813861,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 19,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/first_rhymed",
+      "kind": "chat",
+      "primary": {
+        "id": "190f4616f81d5ee912fb7402",
+        "quote": "У портнихи в шкатулке ключ укрыт,\nА у портнихи ключ от шкатулки хранит.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Выдуман ключ, а «у портнихи ключ ... хранит» не имеет ясного субъекта; укрыт/хранит рифмуются."
+      },
+      "secondary": {
+        "id": "190f4616f81d5ee912fb7402",
+        "quote": "У портнихи в шкатулке ключ укрыт,\nА у портнихи ключ от шкатулки хранит.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Введён ключ, а ключ от шкатулки хранит не имеет согласованной структуры; укрыт и хранит различаются ударными гласными."
+      }
+    },
+    {
+      "id": "4a57079584570c6b9038b689",
+      "case_id": "finalize18_dev_chat_07",
+      "group_id": "finalize18_dev_chat_seamstress_box",
+      "task_family": "given_facts",
+      "seed": 4244578767,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 20,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/selected_two_line",
+      "kind": "chat",
+      "primary": {
+        "id": "4a57079584570c6b9038b689",
+        "quote": "У портнихи ботинки оставила,\nА у портнихи ботинки отправила.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Шкатулка заменена ботинками, а «у портнихи ... отправила» не складывается в ответ; оставила/отправила рифмуются."
+      },
+      "secondary": {
+        "id": "4a57079584570c6b9038b689",
+        "quote": "У портнихи ботинки оставила,\nА у портнихи ботинки отправила.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Шкатулка заменена ботинками; ответ не сообщает, у кого забрать исходную вещь."
+      }
+    },
+    {
+      "id": "d79d9436983448ff3dc17bc3",
+      "case_id": "finalize18_dev_chat_08",
+      "group_id": "finalize18_dev_chat_drawings_tin_box",
+      "task_family": "given_facts",
+      "seed": 2682889807,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 21,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/ordinary",
+      "kind": "chat",
+      "primary": {
+        "id": "d79d9436983448ff3dc17bc3",
+        "quote": "У двери рисунки, где рисунки лежат,\nНа столе стоят рисунки, как в сказке.",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Рисунки перенесены к двери и на стол вопреки указанной жестяной коробке."
+      },
+      "secondary": {
+        "id": "d79d9436983448ff3dc17bc3",
+        "quote": "У двери рисунки, где рисунки лежат,\nНа столе стоят рисунки, как в сказке.",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Рисунки перенесены из коробки к двери и на стол, что меняет заданный факт."
+      }
+    },
+    {
+      "id": "cef61e76eb5a54eddf393beb",
+      "case_id": "finalize18_dev_chat_08",
+      "group_id": "finalize18_dev_chat_drawings_tin_box",
+      "task_family": "given_facts",
+      "seed": 983471496,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 23,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/selected_two_line",
+      "kind": "chat",
+      "primary": {
+        "id": "cef61e76eb5a54eddf393beb",
+        "quote": "В коробке рисунки, где рисунки лежат,\nВ коробке рисунки лежат.Приди над.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Местонахождение в коробке названо верно, но точный ответ испорчен бессвязным «Приди над»; лежат/над рифмуются."
+      },
+      "secondary": {
+        "id": "cef61e76eb5a54eddf393beb",
+        "quote": "В коробке рисунки, где рисунки лежат,\nВ коробке рисунки лежат.Приди над.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 1,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Рисунки правильно помещены в коробку, но Приди над ломает полный ответ; лежат и над созвучны."
+      }
+    },
+    {
+      "id": "7f52b0574f139ea846d2de00",
+      "case_id": "finalize18_dev_chat_09",
+      "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+      "task_family": "dialogue",
+      "seed": 2705461374,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 24,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/ordinary",
+      "kind": "chat",
+      "primary": {
+        "id": "7f52b0574f139ea846d2de00",
+        "quote": "Каков он, милый друг, в лесу?\nКаков твой вид? Каков его вид?",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Вопросы о виде друга в лесу не передают, что его ждут у мельницы."
+      },
+      "secondary": {
+        "id": "7f52b0574f139ea846d2de00",
+        "quote": "Каков он, милый друг, в лесу?\nКаков твой вид? Каков его вид?",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Вопросы о внешнем виде в лесу не передают ожидание у мельницы."
+      }
+    },
+    {
+      "id": "fddf53b2df6c0066eac1fca6",
+      "case_id": "finalize18_dev_chat_11",
+      "group_id": "finalize18_dev_chat_candle_holder_size",
+      "task_family": "clarification",
+      "seed": 2719715794,
+      "assistant_turn": 1,
+      "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+      "sample_index": 32,
+      "quote_path": [
+        "text"
+      ],
+      "context_path": [
+        "messages"
+      ],
+      "label": "chat/sft183596/selected_two_line",
+      "kind": "chat",
+      "primary": {
+        "id": "fddf53b2df6c0066eac1fca6",
+        "quote": "Вода из подсвечника пусть найдёт,\nИ подсвечник в подсвечнике найдёт от.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Вода и подсвечник внутри подсвечника не помогают выбрать свечу; конец «найдёт от» сломан."
+      },
+      "secondary": {
+        "id": "fddf53b2df6c0066eac1fca6",
+        "quote": "Вода из подсвечника пусть найдёт,\nИ подсвечник в подсвечнике найдёт от.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": "unclear",
+        "joint": false,
+        "reason": "Вода и вложенный подсвечник не помогают выбрать свечу; строка обрывается предлогом от."
+      }
+    }
+  ],
+  "expanded_attempts": {
+    "primary": [
+      {
+        "id": "983919577f9dfdda2d4cf41b",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 3875529092,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 0,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "983919577f9dfdda2d4cf41b",
+          "quote": "Чтоб от излишка ткань не ушла,\nНа ней можно ткань сохранить.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Ткань подменяет кисть, а «от излишка ткань не ушла» не объясняет цель сушки."
+        }
+      },
+      {
+        "id": "8199ecca53fd87527806c662",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 3875529092,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 1,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "8199ecca53fd87527806c662",
+          "quote": "Чтоб от излишка ткань не ушла,\nСушат в ней ткань, как пчела.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Ткань и пчела не объясняют сушку кисти; фраза бессвязна, ушла/пчела рифмуются."
+        }
+      },
+      {
+        "id": "4db5c87a8b6658cb925b4b5a",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 859361696,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 2,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "4db5c87a8b6658cb925b4b5a",
+          "quote": "Кисть после наковальни поднимает,\nИ ткань сушит, как будто в ней тает.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Кисть, наковальня и сушка ткани не складываются в объяснение после мытья; поднимает/тает рифмуются."
+        }
+      },
+      {
+        "id": "8505e31f1ca3c229baba9a13",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 987270599,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 3,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "8505e31f1ca3c229baba9a13",
+          "quote": "Днём огонь в печке горит,\nИ свет в нём свет в комнате горит.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Печь и повтор «свет в нём свет» не объясняют прикрывание свечи; одинаковое «горит» не рифма."
+        }
+      },
+      {
+        "id": "cb3d4ce0b8410a2685321207",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 987270599,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 4,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "cb3d4ce0b8410a2685321207",
+          "quote": "Днём огонь в печке горит,\nИ свет от свечки в комнате спит.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 2,
+            "naturalness": 2,
+            "style": 1
+          },
+          "total": 6,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Сценка с печью и спящим светом понятна образно, но не отвечает на вопрос о ладони; горит/спит рифмуются."
+        }
+      },
+      {
+        "id": "c6085e1cd82fc72871c81d41",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 2307903403,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 5,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "c6085e1cd82fc72871c81d41",
+          "quote": "Головка горит, как будто свеча горит,\nИ зажжённый огонёк горит, как будто спит.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Горящее и спящее пламя не объясняет, зачем его прикрывать ладонью; горит/спит рифмуются."
+        }
+      },
+      {
+        "id": "dacb705af5b11cbe01666c86",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 1816999566,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 6,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "dacb705af5b11cbe01666c86",
+          "quote": "Спасибо: брошь ты прятала,\nИ брошь не забыла.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Подругу благодарят за сокрытие и то, что она не забыла брошь, а не за находку."
+        }
+      },
+      {
+        "id": "c6dd2fa63799d77636b9e866",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 1816999566,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 7,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "c6dd2fa63799d77636b9e866",
+          "quote": "Спасибо: брошь ты прятала,\nИ брошь прятала, и спрятала.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Подруге приписано сокрытие броши вместо находки; прятала/спрятала рифмуются, хотя повтор беден."
+        }
+      },
+      {
+        "id": "75973fcf428e4c83b78170ea",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 2272869289,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 8,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "75973fcf428e4c83b78170ea",
+          "quote": "Спасибо, брошь, за брошь,\nЗа брошь, что ты нам даешь.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Благодарность обращена к броши вместо подруги; находка заменена дарением, брошь/даёшь не рифмуются."
+        }
+      },
+      {
+        "id": "0bdeace0c673c86bd0062010",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 9,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "0bdeace0c673c86bd0062010",
+          "quote": "Камин у вас заперт, а я не пойду,\nЯ в комнате буду ждать тебя.",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 2,
+            "naturalness": 2,
+            "style": 0
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Понятная реплика об ожидании в комнате не просит дочь закрыть ставни."
+        }
+      },
+      {
+        "id": "b6cd91560de42faf36d35bc1",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 10,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "b6cd91560de42faf36d35bc1",
+          "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Закрытый камин и отказ идти не являются просьбой дочери закрыть ставни; пойду/дойду рифмуются."
+        }
+      },
+      {
+        "id": "b6cd91560de42faf36d35bc1",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 11,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "b6cd91560de42faf36d35bc1",
+          "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Закрытый камин и отказ идти не являются просьбой дочери закрыть ставни; пойду/дойду рифмуются."
+        }
+      },
+      {
+        "id": "6e70dde78ce120b9df538cad",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 4015680017,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 12,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "6e70dde78ce120b9df538cad",
+          "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто её берегом зовётся.",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Вода над кустом могла бы быть образом, но «её берегом зовётся» не имеет ясного подлежащего."
+        }
+      },
+      {
+        "id": "942676b10cd045bbef27c4b8",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 4015680017,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 13,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "942676b10cd045bbef27c4b8",
+          "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто зелёная, а не синяя, — так же тверда.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Синяя вода затем названа зелёной и твёрдой без ясного сравнения; вода/тверда рифмуются."
+        }
+      },
+      {
+        "id": "ed9189e4dc29acbb6123b1a7",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 1715665822,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 14,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "ed9189e4dc29acbb6123b1a7",
+          "quote": "В колосьях зелень — красный пятнами узор;\nВ колосьях — красный штрих, а не костер.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "«Зелень — красный пятнами узор» нарушает грамматику и не развивает паутинку; узор/костёр рифмуются."
+        }
+      },
+      {
+        "id": "767dcb83374c021d856f9cf3",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 15,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "767dcb83374c021d856f9cf3",
+          "quote": "Коза к низкой ветке,\nКак будто клёв поднимается над головой.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Фраза о козе не закончена, а поднимающийся «клёв» не даёт ясного образного продолжения."
+        }
+      },
+      {
+        "id": "c62d8148e239fc853ec13550",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 16,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "c62d8148e239fc853ec13550",
+          "quote": "Коза к низкой ветке,\nКак будто к клетке.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Оборот о козе не завершён действием, а сравнение ветки с клеткой не получает основания; ветке/клетке рифмуются."
+        }
+      },
+      {
+        "id": "c62d8148e239fc853ec13550",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 17,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "c62d8148e239fc853ec13550",
+          "quote": "Коза к низкой ветке,\nКак будто к клетке.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Оборот о козе не завершён действием, а сравнение ветки с клеткой не получает основания; ветке/клетке рифмуются."
+        }
+      },
+      {
+        "id": "5abadf17e774582ddbb5741f",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 2123813861,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 18,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "5abadf17e774582ddbb5741f",
+          "quote": "У портнихи в шкатулке ключ укрыт,\nКак будто её нести в дом не хочется.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 5,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Портниха названа, однако речь о придуманном ключе и нежелании нести вещь, а не о том, у кого её забрать."
+        }
+      },
+      {
+        "id": "190f4616f81d5ee912fb7402",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 2123813861,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 19,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "190f4616f81d5ee912fb7402",
+          "quote": "У портнихи в шкатулке ключ укрыт,\nА у портнихи ключ от шкатулки хранит.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Выдуман ключ, а «у портнихи ключ ... хранит» не имеет ясного субъекта; укрыт/хранит рифмуются."
+        }
+      },
+      {
+        "id": "4a57079584570c6b9038b689",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 4244578767,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 20,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "4a57079584570c6b9038b689",
+          "quote": "У портнихи ботинки оставила,\nА у портнихи ботинки отправила.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Шкатулка заменена ботинками, а «у портнихи ... отправила» не складывается в ответ; оставила/отправила рифмуются."
+        }
+      },
+      {
+        "id": "d79d9436983448ff3dc17bc3",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 2682889807,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 21,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "d79d9436983448ff3dc17bc3",
+          "quote": "У двери рисунки, где рисунки лежат,\nНа столе стоят рисунки, как в сказке.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Рисунки перенесены к двери и на стол вопреки указанной жестяной коробке."
+        }
+      },
+      {
+        "id": "1040e518d107d921ccff1b05",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 2682889807,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 22,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "1040e518d107d921ccff1b05",
+          "quote": "У двери рисунки, где рисунки лежат,\nТам рисунки, где рисунок блестят.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Коробка заменена дверью, а «рисунок блестят» нарушает согласование; лежат/блестят рифмуются."
+        }
+      },
+      {
+        "id": "cef61e76eb5a54eddf393beb",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 983471496,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 23,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "cef61e76eb5a54eddf393beb",
+          "quote": "В коробке рисунки, где рисунки лежат,\nВ коробке рисунки лежат.Приди над.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Местонахождение в коробке названо верно, но точный ответ испорчен бессвязным «Приди над»; лежат/над рифмуются."
+        }
+      },
+      {
+        "id": "7f52b0574f139ea846d2de00",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 2705461374,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 24,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "7f52b0574f139ea846d2de00",
+          "quote": "Каков он, милый друг, в лесу?\nКаков твой вид? Каков его вид?",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Вопросы о виде друга в лесу не передают, что его ждут у мельницы."
+        }
+      },
+      {
+        "id": "e476df062bd7f0ef749f5b00",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": null,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 25,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "e476df062bd7f0ef749f5b00",
+          "quote": "",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Ответ пуст: напоминание другу не составлено."
+        }
+      },
+      {
+        "id": "d3abeb1a150efad1cbb88fa7",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 4207624263,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 26,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "d3abeb1a150efad1cbb88fa7",
+          "quote": "Я жду, чтоб твой у мельницы провалился,\nИ мельницу мельницей не свалился.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Ожидание падения подменяет ожидание друга; «твой» и «мельницу мельницей» грамматически сломаны, рифма есть."
+        }
+      },
+      {
+        "id": "8542241e057268af70a31437",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3417981724,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 27,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "8542241e057268af70a31437",
+          "quote": "На чай, на чай, в пятницу,\nПусть каждый день вам будет весело.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 2,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 7,
+          "meaning_acceptable": true,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Краткий зов на чай в пятницу с добрым пожеланием можно использовать как простое приглашение; рифмы нет."
+        }
+      },
+      {
+        "id": "b5fb63f19d09b7d824a61bc8",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": null,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 28,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "b5fb63f19d09b7d824a61bc8",
+          "quote": "",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Ответ пуст: приглашения учителю нет."
+        }
+      },
+      {
+        "id": "a9f96f36a9b24d6e4c21b878",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3548005627,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 29,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "a9f96f36a9b24d6e4c21b878",
+          "quote": "Учителя, например, на чай,\nУчителя к нам в пятницу не пускай.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Указание не пускать учителя прямо противоречит просьбе пригласить; чай/пускай рифмуются."
+        }
+      },
+      {
+        "id": "34965f47cbf37cee84fd230c",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 4267675131,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 30,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "34965f47cbf37cee84fd230c",
+          "quote": "В ней огонь — не надо зажигать,\nЧтоб свет от него не убил нас.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Предостережение о смертоносном свете не помогает подобрать свечу к подсвечнику."
+        }
+      },
+      {
+        "id": "f8b41d956a06ad806986072f",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 4267675131,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 31,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "f8b41d956a06ad806986072f",
+          "quote": "В ней огонь — не надо зажигать,\nЧтоб свет в подсвечник не встречать.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "«Свет в подсвечник не встречать» бессвязно, размеров нет; зажигать/встречать рифмуются."
+        }
+      },
+      {
+        "id": "fddf53b2df6c0066eac1fca6",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 2719715794,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 32,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "fddf53b2df6c0066eac1fca6",
+          "quote": "Вода из подсвечника пусть найдёт,\nИ подсвечник в подсвечнике найдёт от.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Вода и подсвечник внутри подсвечника не помогают выбрать свечу; конец «найдёт от» сломан."
+        }
+      },
+      {
+        "id": "1574e76935a9f5796a02e6c3",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 1897888452,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 33,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "1574e76935a9f5796a02e6c3",
+          "quote": "В комнате рамку можно придумать,\nЧтоб ей в комнате можно было прийти.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Придумывание рамки и приход в комнату не связаны с определением ширины ткани; выражение сломано."
+        }
+      },
+      {
+        "id": "52b7879f15556e1cf1bd8f7c",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 1897888452,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 34,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "52b7879f15556e1cf1bd8f7c",
+          "quote": "В комнате рамку можно придумать,\nЧтоб в комнату вбиться, так же, как подумать.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Придумывание рамки и «в комнату вбиться» не дают размера ткани; придумать/подумать рифмуются."
+        }
+      },
+      {
+        "id": "53656dc7ad9820a919b8afa8",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 676893987,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 35,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "53656dc7ad9820a919b8afa8",
+          "quote": "Без этих ширин ты и пройдёшь,\nИ в комнату не войдёшь, не прочтешь.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Не названа ширина ткани и не запрошен размер окна; проход и чтение бессвязны, пройдёшь/прочтёшь рифмуются."
+        }
+      },
+      {
+        "id": "51d571391645b7df3ae171e8",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 1584203363,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 36,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "51d571391645b7df3ae171e8",
+          "quote": "У мельницы — и я к кузнице:\nВот он — и я к кузнице.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Кузница замечена, но мельница сохранена как место, а повтор «я к кузнице» не даёт ясного исправленного напоминания."
+        }
+      },
+      {
+        "id": "a0efd0a6950d40d49a85c365",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 1333390932,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 37,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "a0efd0a6950d40d49a85c365",
+          "quote": "У мельницы мельница, а мельницу не свалила;\nУ мельницы мельницу мельница сохранила.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "После переноса встречи к кузнице ответ продолжает бессвязно повторять мельницу; свалила/сохранила рифмуются."
+        }
+      },
+      {
+        "id": "7d8611af12baaf5b97762452",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3277499883,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 38,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "7d8611af12baaf5b97762452",
+          "quote": "На чай, у нас суббота, у нас суббота;\nСуббота — у нас суббота.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Суббота подставлена, но многократное «у нас суббота» не складывается в пригодное приглашение; одинаковое окончание не рифма."
+        }
+      },
+      {
+        "id": "ed0c54c354ba019566ba1cdc",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 2580147167,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 39,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "ed0c54c354ba019566ba1cdc",
+          "quote": "В воскресенье, у нас за столом,\nСуббота, в субботу, на том.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Вместо исправления на субботу названы и воскресенье, и суббота; «на том» обрывает мысль, столом/том рифмуются."
+        }
+      }
+    ],
+    "secondary": [
+      {
+        "id": "983919577f9dfdda2d4cf41b",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 3875529092,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 0,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "983919577f9dfdda2d4cf41b",
+          "quote": "Чтоб от излишка ткань не ушла,\nНа ней можно ткань сохранить.",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Уходящая ткань не объясняет сушку кисти; связи предметов неясны."
+        }
+      },
+      {
+        "id": "8199ecca53fd87527806c662",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 3875529092,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 1,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "8199ecca53fd87527806c662",
+          "quote": "Чтоб от излишка ткань не ушла,\nСушат в ней ткань, как пчела.\n",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Сушка ткани как пчела бессмысленна и не объясняет сушку кисти; рифма есть."
+        }
+      },
+      {
+        "id": "4db5c87a8b6658cb925b4b5a",
+        "case_id": "finalize18_dev_chat_01",
+        "group_id": "finalize18_dev_chat_dry_washed_brush",
+        "task_family": "question",
+        "seed": 859361696,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 2,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "4db5c87a8b6658cb925b4b5a",
+          "quote": "Кисть после наковальни поднимает,\nИ ткань сушит, как будто в ней тает.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Кисть после наковальни и тающая ткань не объясняют сушку после мытья; поднимает и тает рифмуются."
+        }
+      },
+      {
+        "id": "8505e31f1ca3c229baba9a13",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 987270599,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 3,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "8505e31f1ca3c229baba9a13",
+          "quote": "Днём огонь в печке горит,\nИ свет в нём свет в комнате горит.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Повтор огня и света не объясняет защиту пламени ладонью; одинаковое горит не рифма."
+        }
+      },
+      {
+        "id": "cb3d4ce0b8410a2685321207",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 987270599,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 4,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "cb3d4ce0b8410a2685321207",
+          "quote": "Днём огонь в печке горит,\nИ свет от свечки в комнате спит.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 2,
+            "naturalness": 2,
+            "style": 1
+          },
+          "total": 6,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Печь и спящий свет допустимы как образ, но назначения ладони не объясняют."
+        }
+      },
+      {
+        "id": "c6085e1cd82fc72871c81d41",
+        "case_id": "finalize18_dev_chat_02",
+        "group_id": "finalize18_dev_chat_shelter_candle_flame",
+        "task_family": "question",
+        "seed": 2307903403,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 5,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "c6085e1cd82fc72871c81d41",
+          "quote": "Головка горит, как будто свеча горит,\nИ зажжённый огонёк горит, как будто спит.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Описано горение, но не объяснено, зачем прикрывать пламя ладонью; горит и спит рифмуются."
+        }
+      },
+      {
+        "id": "dacb705af5b11cbe01666c86",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 1816999566,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 6,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "dacb705af5b11cbe01666c86",
+          "quote": "Спасибо: брошь ты прятала,\nИ брошь не забыла.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 5,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Подругу благодарят за сокрытие броши вместо её нахождения, что меняет заданный факт."
+        }
+      },
+      {
+        "id": "c6dd2fa63799d77636b9e866",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 1816999566,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 7,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "c6dd2fa63799d77636b9e866",
+          "quote": "Спасибо: брошь ты прятала,\nИ брошь прятала, и спрятала.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Вместо найденной броши говорится о спрятанной, что меняет причину благодарности."
+        }
+      },
+      {
+        "id": "75973fcf428e4c83b78170ea",
+        "case_id": "finalize18_dev_chat_03",
+        "group_id": "finalize18_dev_chat_brooch_found_thanks",
+        "task_family": "request",
+        "seed": 2272869289,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 8,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "75973fcf428e4c83b78170ea",
+          "quote": "Спасибо, брошь, за брошь,\nЗа брошь, что ты нам даешь.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Благодарят саму брошь за другую брошь вместо подруги за находку; брошь и даёшь рифмуются."
+        }
+      },
+      {
+        "id": "0bdeace0c673c86bd0062010",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 9,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "0bdeace0c673c86bd0062010",
+          "quote": "Камин у вас заперт, а я не пойду,\nЯ в комнате буду ждать тебя.",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 2,
+            "naturalness": 2,
+            "style": 1
+          },
+          "total": 5,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Ожидание в комнате и камин не передают дочери просьбу закрыть ставни."
+        }
+      },
+      {
+        "id": "b6cd91560de42faf36d35bc1",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 10,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "b6cd91560de42faf36d35bc1",
+          "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Запертый камин и отказ идти не выполняют просьбу к дочери; пойду и дойду рифмуются."
+        }
+      },
+      {
+        "id": "b6cd91560de42faf36d35bc1",
+        "case_id": "finalize18_dev_chat_04",
+        "group_id": "finalize18_dev_chat_daughter_close_shutters",
+        "task_family": "request",
+        "seed": 2266063414,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 11,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "b6cd91560de42faf36d35bc1",
+          "quote": "Камин у вас заперт, а я не пойду,\nЧтоб в комнате не стучать, пока не дойду.\n",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Запертый камин и отказ идти не выполняют просьбу к дочери; пойду и дойду рифмуются."
+        }
+      },
+      {
+        "id": "6e70dde78ce120b9df538cad",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 4015680017,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 12,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "6e70dde78ce120b9df538cad",
+          "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто её берегом зовётся.",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Вода над кустом и её берегом зовётся не образуют связной картины."
+        }
+      },
+      {
+        "id": "942676b10cd045bbef27c4b8",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 4015680017,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 13,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "942676b10cd045bbef27c4b8",
+          "quote": "За ней зелёный куст, а над ним — синяя вода,\nКак будто зелёная, а не синяя, — так же тверда.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Вода одновременно синяя и не синяя, сравнение с твёрдостью непонятно; вода и тверда рифмуются."
+        }
+      },
+      {
+        "id": "ed9189e4dc29acbb6123b1a7",
+        "case_id": "finalize18_dev_chat_05",
+        "group_id": "finalize18_dev_chat_cobweb_ears",
+        "task_family": "observation",
+        "seed": 1715665822,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 14,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "ed9189e4dc29acbb6123b1a7",
+          "quote": "В колосьях зелень — красный пятнами узор;\nВ колосьях — красный штрих, а не костер.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Красный пятнами узор нарушает согласование, зелень смешана с красным без ясной связи; узор и костёр рифмуются."
+        }
+      },
+      {
+        "id": "767dcb83374c021d856f9cf3",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 15,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "767dcb83374c021d856f9cf3",
+          "quote": "Коза к низкой ветке,\nКак будто клёв поднимается над головой.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Клёв над головой не связан с тянущейся козой; первая строка остаётся обрывком."
+        }
+      },
+      {
+        "id": "c62d8148e239fc853ec13550",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 16,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "c62d8148e239fc853ec13550",
+          "quote": "Коза к низкой ветке,\nКак будто к клетке.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Сравнение ветки с клеткой остаётся без законченного действия и ясного развития сцены."
+        }
+      },
+      {
+        "id": "c62d8148e239fc853ec13550",
+        "case_id": "finalize18_dev_chat_06",
+        "group_id": "finalize18_dev_chat_goat_rowan",
+        "task_family": "observation",
+        "seed": 361910091,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 17,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "c62d8148e239fc853ec13550",
+          "quote": "Коза к низкой ветке,\nКак будто к клетке.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Сравнение ветки с клеткой остаётся без законченного действия и ясного развития сцены."
+        }
+      },
+      {
+        "id": "5abadf17e774582ddbb5741f",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 2123813861,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 18,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "5abadf17e774582ddbb5741f",
+          "quote": "У портнихи в шкатулке ключ укрыт,\nКак будто её нести в дом не хочется.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 5,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Добавлен ключ и нежелание нести шкатулку, а прямого ответа о получении у портнихи нет."
+        }
+      },
+      {
+        "id": "190f4616f81d5ee912fb7402",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 2123813861,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 19,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "190f4616f81d5ee912fb7402",
+          "quote": "У портнихи в шкатулке ключ укрыт,\nА у портнихи ключ от шкатулки хранит.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Введён ключ, а ключ от шкатулки хранит не имеет согласованной структуры; укрыт и хранит различаются ударными гласными."
+        }
+      },
+      {
+        "id": "4a57079584570c6b9038b689",
+        "case_id": "finalize18_dev_chat_07",
+        "group_id": "finalize18_dev_chat_seamstress_box",
+        "task_family": "given_facts",
+        "seed": 4244578767,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 20,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "4a57079584570c6b9038b689",
+          "quote": "У портнихи ботинки оставила,\nА у портнихи ботинки отправила.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Шкатулка заменена ботинками; ответ не сообщает, у кого забрать исходную вещь."
+        }
+      },
+      {
+        "id": "d79d9436983448ff3dc17bc3",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 2682889807,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 21,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "d79d9436983448ff3dc17bc3",
+          "quote": "У двери рисунки, где рисунки лежат,\nНа столе стоят рисунки, как в сказке.",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Рисунки перенесены из коробки к двери и на стол, что меняет заданный факт."
+        }
+      },
+      {
+        "id": "1040e518d107d921ccff1b05",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 2682889807,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 22,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "1040e518d107d921ccff1b05",
+          "quote": "У двери рисунки, где рисунки лежат,\nТам рисунки, где рисунок блестят.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Рисунки перенесены к двери, рисунок блестят нарушает согласование; лежат и блестят рифмуются."
+        }
+      },
+      {
+        "id": "cef61e76eb5a54eddf393beb",
+        "case_id": "finalize18_dev_chat_08",
+        "group_id": "finalize18_dev_chat_drawings_tin_box",
+        "task_family": "given_facts",
+        "seed": 983471496,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 23,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "cef61e76eb5a54eddf393beb",
+          "quote": "В коробке рисунки, где рисунки лежат,\nВ коробке рисунки лежат.Приди над.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Рисунки правильно помещены в коробку, но Приди над ломает полный ответ; лежат и над созвучны."
+        }
+      },
+      {
+        "id": "7f52b0574f139ea846d2de00",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 2705461374,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 24,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "7f52b0574f139ea846d2de00",
+          "quote": "Каков он, милый друг, в лесу?\nКаков твой вид? Каков его вид?",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 1,
+            "naturalness": 1,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Вопросы о внешнем виде в лесу не передают ожидание у мельницы."
+        }
+      },
+      {
+        "id": "e476df062bd7f0ef749f5b00",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": null,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 25,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "e476df062bd7f0ef749f5b00",
+          "quote": "",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Пустой ответ не передаёт другу напоминание."
+        }
+      },
+      {
+        "id": "d3abeb1a150efad1cbb88fa7",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 4207624263,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 26,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "d3abeb1a150efad1cbb88fa7",
+          "quote": "Я жду, чтоб твой у мельницы провалился,\nИ мельницу мельницей не свалился.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Вместо ожидания друга желают провалиться; твой и мельницу не свалился грамматически неверны."
+        }
+      },
+      {
+        "id": "8542241e057268af70a31437",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3417981724,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 27,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "8542241e057268af70a31437",
+          "quote": "На чай, на чай, в пятницу,\nПусть каждый день вам будет весело.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 2,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 7,
+          "meaning_acceptable": true,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Краткое приглашение на чай в пятницу понятно по контексту; повтор тяжеловесен, рифмы нет."
+        }
+      },
+      {
+        "id": "b5fb63f19d09b7d824a61bc8",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": null,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 28,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "b5fb63f19d09b7d824a61bc8",
+          "quote": "",
+          "scores": {
+            "relevance": 0,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 0,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Пустой ответ не содержит приглашения."
+        }
+      },
+      {
+        "id": "a9f96f36a9b24d6e4c21b878",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3548005627,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 29,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "a9f96f36a9b24d6e4c21b878",
+          "quote": "Учителя, например, на чай,\nУчителя к нам в пятницу не пускай.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Не пускай учителя прямо противоположно приглашению; чай и пускай рифмуются."
+        }
+      },
+      {
+        "id": "34965f47cbf37cee84fd230c",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 4267675131,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 30,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "34965f47cbf37cee84fd230c",
+          "quote": "В ней огонь — не надо зажигать,\nЧтоб свет от него не убил нас.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 1,
+            "style": 1
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Убийственный свет не связан с подбором размера свечи и не даёт полезного ответа."
+        }
+      },
+      {
+        "id": "f8b41d956a06ad806986072f",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 4267675131,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 31,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "f8b41d956a06ad806986072f",
+          "quote": "В ней огонь — не надо зажигать,\nЧтоб свет в подсвечник не встречать.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Свет в подсвечник не встречать грамматически не складывается; размер свечи не обсуждается."
+        }
+      },
+      {
+        "id": "fddf53b2df6c0066eac1fca6",
+        "case_id": "finalize18_dev_chat_11",
+        "group_id": "finalize18_dev_chat_candle_holder_size",
+        "task_family": "clarification",
+        "seed": 2719715794,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 32,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "fddf53b2df6c0066eac1fca6",
+          "quote": "Вода из подсвечника пусть найдёт,\nИ подсвечник в подсвечнике найдёт от.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": "unclear",
+          "joint": false,
+          "reason": "Вода и вложенный подсвечник не помогают выбрать свечу; строка обрывается предлогом от."
+        }
+      },
+      {
+        "id": "1574e76935a9f5796a02e6c3",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 1897888452,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 33,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "1574e76935a9f5796a02e6c3",
+          "quote": "В комнате рамку можно придумать,\nЧтоб ей в комнате можно было прийти.",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Рамка, которая может прийти в комнату, не помогает рассчитать ширину занавески."
+        }
+      },
+      {
+        "id": "52b7879f15556e1cf1bd8f7c",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 1897888452,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 34,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/first_rhymed",
+        "kind": "chat",
+        "grade": {
+          "id": "52b7879f15556e1cf1bd8f7c",
+          "quote": "В комнате рамку можно придумать,\nЧтоб в комнату вбиться, так же, как подумать.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Придумать рамку и вбиться в комнату не определяют ширину ткани; придумать и подумать рифмуются."
+        }
+      },
+      {
+        "id": "53656dc7ad9820a919b8afa8",
+        "case_id": "finalize18_dev_chat_12",
+        "group_id": "finalize18_dev_chat_curtain_window_width",
+        "task_family": "clarification",
+        "seed": 676893987,
+        "assistant_turn": 1,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 35,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "53656dc7ad9820a919b8afa8",
+          "quote": "Без этих ширин ты и пройдёшь,\nИ в комнату не войдёшь, не прочтешь.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Ширины названы без величины или уточнения; пройти и не войти не дают ответа о ткани."
+        }
+      },
+      {
+        "id": "51d571391645b7df3ae171e8",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 1584203363,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 36,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "51d571391645b7df3ae171e8",
+          "quote": "У мельницы — и я к кузнице:\nВот он — и я к кузнице.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 3,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Кузница названа, но старая мельница сохраняется в бессвязном описании вместо ясного нового места встречи."
+        }
+      },
+      {
+        "id": "a0efd0a6950d40d49a85c365",
+        "case_id": "finalize18_dev_chat_09",
+        "group_id": "finalize18_dev_chat_meeting_mill_to_smithy",
+        "task_family": "dialogue",
+        "seed": 1333390932,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 37,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "a0efd0a6950d40d49a85c365",
+          "quote": "У мельницы мельница, а мельницу не свалила;\nУ мельницы мельницу мельница сохранила.\n",
+          "scores": {
+            "relevance": 1,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 1,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Ответ застревает на мельнице из прежней реплики, игнорируя новое место у кузницы; рифма есть."
+        }
+      },
+      {
+        "id": "7d8611af12baaf5b97762452",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 3277499883,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 38,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/ordinary",
+        "kind": "chat",
+        "grade": {
+          "id": "7d8611af12baaf5b97762452",
+          "quote": "На чай, у нас суббота, у нас суббота;\nСуббота — у нас суббота.",
+          "scores": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 1,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 4,
+          "meaning_acceptable": false,
+          "rhyme": false,
+          "joint": false,
+          "reason": "Суббота заменила пятницу, но многократный повтор у нас суббота не составляет исправленного приглашения."
+        }
+      },
+      {
+        "id": "ed0c54c354ba019566ba1cdc",
+        "case_id": "finalize18_dev_chat_10",
+        "group_id": "finalize18_dev_chat_teacher_invitation_day_change",
+        "task_family": "dialogue",
+        "seed": 2580147167,
+        "assistant_turn": 2,
+        "source": "audit/finalize18/inference/chat12/evidence/flat.json",
+        "sample_index": 39,
+        "quote_path": [
+          "text"
+        ],
+        "context_path": [
+          "messages"
+        ],
+        "label": "chat/sft183596/selected_two_line",
+        "kind": "chat",
+        "grade": {
+          "id": "ed0c54c354ba019566ba1cdc",
+          "quote": "В воскресенье, у нас за столом,\nСуббота, в субботу, на том.\n",
+          "scores": {
+            "relevance": 2,
+            "progress": 0,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "total": 2,
+          "meaning_acceptable": false,
+          "rhyme": true,
+          "joint": false,
+          "reason": "Воскресенье противоречит просьбе перенести приглашение на субботу; столом и том рифмуются."
+        }
+      }
+    ]
+  },
+  "sources_sha256": {
+    "audit/finalize18/inference/chat12/evidence/blind/mapping.json": "49478d9f46cf7cd897c2482e5ba5e049bac8b590ee596dd0f0dcd1e3130c2a0a",
+    "audit/finalize18/inference/chat12/evidence/blind/cards.json": "94f7fd6fe74cfd536120c5acf7c718192ef357cdd8be9012cef59c7f2d23b3fe",
+    "audit/finalize18/inference/chat12/evidence/judged_primary.json": "853e60c301974114363043269aff73daee41dfc13ad20a449dbefcba64a47f4f",
+    "audit/finalize18/inference/chat12/evidence/judged_secondary.json": "888823e3aadb0cf51e262a5b8878744d6a2dac9fae07cac7ba1d5ebc282b3b2c",
+    "audit/rhyme17/reading_tools.py": "c2dbc22e4f0a69f91001ef43afa0290674a3d43f0e9121a90dd7ee53099172fb",
+    "audit/finalize18/inference/chat12/evidence/flat.json": "59b5597899cfd04fbacec8bda92e742f5521cbb0d2f0294d4cd2c27ee00e7a72"
+  },
+  "disclosures": {
+    "original_sources_sha256": {
+      "audit/finalize18/inference/chat12/turn1/completed.json": "d5b7739e042dd89a1d8959093ef6a896afe10ff5830b73f341eba137ec228737",
+      "audit/finalize18/inference/chat12/turn2/completed.json": "f184de48c64bc59b096a7e2f8c848ee04d9dfb3f8931a9b97b3f0b77b0a4ab96"
+    },
+    "catalog_sha256": {
+      "audit/finalize18/inference/chat12/catalog.json": "05823abfa845844c56ed542666a415a812ed64f02344df400aab3ff395c567f9"
+    },
+    "source_adapter_sha256": "8fa696e02288414865dca620f8b312846f3ae06abbcf35f1c7ff9defa0cd96cc",
+    "no_gold": true,
+    "raw_separate": true,
+    "scales": "relevance/progress/logic/naturalness/style 0..2; meaning_acceptable/rhyme/joint true/false/unclear",
+    "chain": "Exact nested originals -> SHA-bound flat views -> frozen reading_tools blind cards; verify originals before analysis."
+  },
+  "limitations": [
+    "All original slots counted; exact-card dedup is not a reduction of the denominator.",
+    "Readers are separate opinions, not independent evaluation cases. Bootstrap resamples families, keeping their seeds/turns/readers together.",
+    "Table means/counts are response-slot weighted; paired bootstrap differences are family-macro. They coincide only when families have equal response counts.",
+    "Human flags concern quoted views. Raw stopping, tails, explicit failure and source protocol counts are separate.",
+    "Small-sample diagnostic intervals omit reader uncertainty; no post-reserve tuning is authorized."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "rhyme17-generation-system-1",
+  "checkpoint": {
+    "path": "artifacts/releases/poetry17/continuation.pt",
+    "sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311"
+  },
+  "tokenizer": {
+    "path": "artifacts/tokenizers_v3/selected/tokenizer.json",
+    "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+  },
+  "vocabulary": {
+    "path": "data/rhyme17_candidate/vocabulary_all_poetry_wordforms.json",
+    "sha256": "76fecc9e9d94b65ec9f8f87c07b8f0870f7c810b621c6bc14d600896240cad85"
+  },
+  "code_sha256": {
+    "poetrygpt/data.py": "a060ea259c33b4a8e0644f0de5aaf8d8a13313b14bbe38e866e9a576db619371",
+    "poetrygpt/generate.py": "5226282933fedd6df8528d93de0ca7d035d46be3e3e5fc0f8b60d73d198e87b0",
+    "poetrygpt/model.py": "c006700034cce1191aed2f7e4a26f258f5243d13987f13b0923218f3b8028492",
+    "poetrygpt/runtime.py": "183911e9fd1a27cbe9315586469ca43bce0ec2dcbfd11c7bbf3b6d76f122ec6d",
+    "poetrygpt/serialization.py": "e24e827cc5bcc70449a2743c073ddd12393f5ded888d52d3243c056ce225c294",
+    "scripts/beam_ranked_rhyme17.py": "e70552bd77b185756b9739f9eeabdac1b338ff0127214d95b96dc196084ba558",
+    "scripts/evaluate_ending_plan16.py": "30dc888b4ef9f89813638fea89f509329d97a691bfd8c37869920d06eb295bd9",
+    "scripts/generate_rhyme17_system.py": "d94ad340c9a69e0cc1377c0648d9e9e08759215b45c229653b274481de57a0e6",
+    "scripts/prepare_ending_plan16.py": "a903ab7ea3ebfb958fe8aed304a5b7cc9195fe1b22a8f0a8b7d2fa525cb8c80c",
+    "scripts/prepare_rhyme17_runtime_pool.py": "606535dc9c73d23b8ba178f0c76ca1f880f41259aad456843bc00e79fb5c6515",
+    "scripts/rerank_rhyme17_context.py": "591ba1282cb6aebbafb1df078203ecf7ca1be7a6e9b2c6cc7db090538dcf6133",
+    "scripts/reselect_rhyme17_repetitions.py": "11300f54c8f44afad621a681274689b8a6823725b1fac2921a252cacef333407",
+    "scripts/rhyme17_beam_form.py": "71e4c045c2d50278ffb7fe8b9d1abaef969ab332eefb98e6746822b5554ff359",
+    "scripts/rhyme17_native_joint.py": "431b19593ebc41c51fd768e2246bbc65e072225a4f2c163482a989db18294cb6",
+    "scripts/rhyme17_search.py": "a8bdb4f6f0d084bd450a662ecb9c734d81be7231dd4710921220eb351835ceb9",
+    "scripts/rhyme_endings16.py": "e773239a6b1c4f220df024417c2c684c73e1272f352eead061a92e71925d2f62",
+    "scripts/shared_gpu11.py": "54272a35f764bfcbff3575789871a8f67057b45c413f589350741015d420d872"
+  },
+  "recipe": {
+    "method": "native_joint",
+    "selector": "native",
+    "include_free_baseline": true,
+    "seed": 7,
+    "body_limit": 24,
+    "temperature": 0.7,
+    "top_k": 40,
+    "top_p": 0.9,
+    "width": 8,
+    "branch": 8,
+    "max_prefix_tokens": 16,
+    "min_prefix_words": 2,
+    "syllable_tolerance": 2,
+    "top_paths": 128,
+    "max_pool_words": 32,
+    "native_gap": 0.5,
+    "null_weight": 0.3333333333333333
+  },
+  "label": "poetry22-input-stress-fix",
+  "pool_builder": "scripts/prepare_rhyme22_runtime_pool.py",
+  "pool_builder_sha256": "121e27f7cc4192fd3640592488ffb8ced4a45c389b79cc565184a9eebb1da4d0"
+}

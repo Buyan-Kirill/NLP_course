@@ -1,0 +1,5 @@
+# Shared dependencies of CPU, CUDA and Apple Silicon installations.
+numpy==2.2.6
+tokenizers==0.22.1
+-r requirements-phonetics.txt
+ipykernel==7.4.0

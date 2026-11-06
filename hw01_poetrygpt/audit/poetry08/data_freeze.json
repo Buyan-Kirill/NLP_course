@@ -1,0 +1,118 @@
+{
+  "status": "inputs_verified_not_authorization_to_train",
+  "tokenizer_sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+  "datasets": {
+    "poetry": {
+      "path": "data/prepared_v7/poetry_supplement",
+      "manifest_sha256": "67859322b03690d900ac8f240b353bffd1cc147e5b3d009ad2b2cc9c9aba1a23",
+      "context_length": 512,
+      "special_tokens": {
+        "<|pad|>": 0,
+        "<|bos|>": 1,
+        "<|eos|>": 2,
+        "<|user|>": 3,
+        "<|assistant|>": 4,
+        "<|eot|>": 5
+      },
+      "splits": {
+        "train": {
+          "works": 5478,
+          "targets": 1615779,
+          "families": 5476,
+          "files_sha256": {
+            "poetry_train.npy": "ac9a1a6449ed8b0f82706106dae364ac81e00c3efdc8a4ac2f8a8ddb98f3b6c6",
+            "poetry_train_offsets.json": "744c8ddb98fd11838ed2514c465490872a818b8caf831567cc9a6445cdef868f"
+          }
+        },
+        "validation": {
+          "works": 324,
+          "targets": 85928,
+          "families": 323,
+          "files_sha256": {
+            "poetry_validation.npy": "8974fa1fd3ecf38d8543c95f4241e88ea2b82e9d793ad952b813634f4da2f877",
+            "poetry_validation_offsets.json": "7564ed13f5e45c6f144e564b1c4a872346788a0b3bc27b32d3aad0df090a9291"
+          }
+        },
+        "test": {
+          "works": 295,
+          "targets": 74069,
+          "families": 295,
+          "files_sha256": {
+            "poetry_test.npy": "3a31ffcef19377153c56279926fbb46b5fb4f29263b2f00cb2881a1070c50ab3",
+            "poetry_test_offsets.json": "16503967203db7d0560ece84192a29e3aa48d72a305577a9ff0ae6959e6345d6"
+          }
+        }
+      }
+    },
+    "prose": {
+      "path": "data/prepared_v7/expanded",
+      "manifest_sha256": "afc0454058539d7f2fd3425f8e0fe4cdf974df57da7ea44abe786f0fc6362cc0",
+      "context_length": 512,
+      "special_tokens": {
+        "<|pad|>": 0,
+        "<|bos|>": 1,
+        "<|eos|>": 2,
+        "<|user|>": 3,
+        "<|assistant|>": 4,
+        "<|eot|>": 5
+      },
+      "splits": {
+        "train": {
+          "works": 41282,
+          "targets": 210064519,
+          "families": 2682,
+          "files_sha256": {
+            "prose_train.npy": "d43b988f5e7ed702b9c53be2e3714f0db24723ff595323f18664952d20ebadb0",
+            "prose_train_offsets.json": "4e6ba62d0dc3fee5b8908f857bbe8ce6c1187ddd7d9a523e5c84d60620deed16"
+          }
+        },
+        "validation": {
+          "works": 1992,
+          "targets": 10200341,
+          "families": 98,
+          "files_sha256": {
+            "prose_validation.npy": "9de930b38124f92f52bf2201066f030e73f676228ab14af3c599c2cc79db1c3d",
+            "prose_validation_offsets.json": "3f8b2f585e76c3bbd6665bd01bbbbde53b691e674863c7c947d1f2de7bfb6697"
+          }
+        },
+        "test": {
+          "works": 1807,
+          "targets": 8742446,
+          "families": 77,
+          "files_sha256": {
+            "prose_test.npy": "e709aa9f343153e5db31ae8fc58cddc3f07562a5fd7557cd3a8fb3ddfa043c61",
+            "prose_test_offsets.json": "b2723831414c607a4da9be60d593edad3d46dedb86085e1d6b96bb9d9fe962e0"
+          }
+        }
+      }
+    }
+  },
+  "family_cross_split_conflicts": 0,
+  "exact_content_cross_split_conflicts": 0,
+  "planned_comparison": {
+    "total_target_milestones": [
+      807889,
+      1615779
+    ],
+    "prose_fraction": {
+      "pure": [
+        0,
+        10
+      ],
+      "replay": [
+        1,
+        10
+      ]
+    },
+    "quota_rule": {
+      "pure": "prose=0; poetry=total_targets",
+      "replay": "prose=floor(total_targets/10); poetry=total_targets-prose"
+    },
+    "epoch_reference_poetry_targets": 1615779
+  },
+  "limitations": [
+    "Family IDs and stored exact content digests do not detect all quotations or near duplicates.",
+    "This verifies serialization/identity, not literary quality or model readiness.",
+    "No heldout text was decoded, no model was evaluated, no data changed."
+  ]
+}

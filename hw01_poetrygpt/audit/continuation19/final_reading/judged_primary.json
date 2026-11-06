@@ -1,0 +1,197 @@
+{
+  "reviewer": "independent_primary",
+  "rows": [
+    {
+      "id": "3429eeed55bb3c7d1c8233e9",
+      "quote": "И, в ожидании утра,\n",
+      "scores": {
+        "relevance": 1,
+        "progress": 0,
+        "logic": 0,
+        "naturalness": 1,
+        "style": 0
+      },
+      "total": 2,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "The waiting-for-morning clause remains unfinished and does not develop carrying pies; pirogov/utra do not rhyme."
+    },
+    {
+      "id": "4e9de2067104c4b283656e2e",
+      "quote": "И в ней был я в духе и в духе,\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 0,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 0
+      },
+      "total": 2,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "Being in the book in spirit is obscured by an unmotivated repeated idiom and malformed phrasing; temnoty/dukhe do not rhyme."
+    },
+    {
+      "id": "1cde7cf1710259026dc97470",
+      "quote": "А я, с улыбкой глядя,\n",
+      "scores": {
+        "relevance": 1,
+        "progress": 1,
+        "logic": 0,
+        "naturalness": 1,
+        "style": 0
+      },
+      "total": 3,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "The observing speaker is introduced but the participial clause has no completing predicate; otdokhnut/glyadya do not rhyme."
+    },
+    {
+      "id": "c2f9e49bdadebea9ed9b1930",
+      "quote": "И в избу вбежала мамзель.\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 2,
+        "logic": 2,
+        "naturalness": 2,
+        "style": 1
+      },
+      "total": 9,
+      "meaning_acceptable": true,
+      "rhyme": true,
+      "joint": true,
+      "reason": "A young lady running into the hut during a brief snowstorm is a coherent small scene; metel/mamzel rhyme."
+    },
+    {
+      "id": "1bab969921b1d12d23a27d67",
+      "quote": "Мы чиним сеть на дне твоем.\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 0,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 1
+      },
+      "total": 3,
+      "meaning_acceptable": false,
+      "rhyme": true,
+      "joint": false,
+      "reason": "Vdvoyom/tvoyom rhyme, but repairing the net on your bottom has no coherent referent and conflicts with the shore setting."
+    },
+    {
+      "id": "d9fb72f7c5492f412551beb1",
+      "quote": "И в ней, как в зеркале, всё то, что в нем,\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 1,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 1
+      },
+      "total": 4,
+      "meaning_acceptable": false,
+      "rhyme": true,
+      "joint": false,
+      "reason": "Vdvoyom/nem rhyme, but the net-as-mirror comparison and masculine pronoun have no coherent referent; the thought remains unresolved."
+    },
+    {
+      "id": "f079bf6304f55876a6d8593d",
+      "quote": null,
+      "scores": {
+        "relevance": 0,
+        "progress": 0,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 0
+      },
+      "total": 0,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "No continuation was supplied."
+    },
+    {
+      "id": "824a982623b4c331c2d4fa73",
+      "quote": "С пологом повисла сучья,\n",
+      "scores": {
+        "relevance": 1,
+        "progress": 1,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 0
+      },
+      "total": 2,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "Povisla suchya has broken number agreement and s pologom does not establish a coherent snowy image; no rhyme."
+    },
+    {
+      "id": "acd5bfbfbd43f8c36a32b2d1",
+      "quote": "На лавку поглядеть, да и заснуть.\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 1,
+        "logic": 1,
+        "naturalness": 1,
+        "style": 2
+      },
+      "total": 7,
+      "meaning_acceptable": true,
+      "rhyme": true,
+      "joint": true,
+      "reason": "Looking at the bench after sitting down is awkward but understandable, and falling asleep develops resting; otdokhnut/zasnut rhyme."
+    },
+    {
+      "id": "6f69a0aec002384e6199d674",
+      "quote": "На дворе, в сарае, жарко спится.\n",
+      "scores": {
+        "relevance": 1,
+        "progress": 1,
+        "logic": 2,
+        "naturalness": 1,
+        "style": 1
+      },
+      "total": 6,
+      "meaning_acceptable": true,
+      "rhyme": true,
+      "joint": true,
+      "reason": "The hot barn in the yard can accompany the domestic drying scene; zharko spitsya is awkward but comprehensible. Sushitsya/spitsya rhyme."
+    },
+    {
+      "id": "e64dae31ab01793bae32886b",
+      "quote": "На дворе, на дворе, в поле и на дворе,\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 0,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 0
+      },
+      "total": 2,
+      "meaning_acceptable": false,
+      "rhyme": false,
+      "joint": false,
+      "reason": "Repeated yard and field locations do not complete a coherent new action or image; sushitsya/dvore do not rhyme."
+    },
+    {
+      "id": "75a8dfb3df8e9070e38fe6ca",
+      "quote": "И всё, что в ней есть, — всё в цветов.\n",
+      "scores": {
+        "relevance": 2,
+        "progress": 1,
+        "logic": 0,
+        "naturalness": 0,
+        "style": 1
+      },
+      "total": 4,
+      "meaning_acceptable": false,
+      "rhyme": true,
+      "joint": false,
+      "reason": "Pirogov/tsvetov rhyme, but vsyo v tsvetov is broken grammar and the claim does not coherently describe the basket of pies."
+    }
+  ]
+}

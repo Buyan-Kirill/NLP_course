@@ -1,0 +1,41 @@
+{
+  "data": "data/prepared_v7/expanded",
+  "tokenizer": "artifacts/tokenizers_v3/selected/tokenizer.json",
+  "seed": 2026110308,
+  "optimizer": "muon",
+  "target_tokens": 16384,
+  "batch_size": 32,
+  "schedule_tokens": 1050000000,
+  "warmup_tokens": 10000000,
+  "lr": 0.0003,
+  "min_lr": 3e-05,
+  "weight_decay": 0.1,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "grad_clip": 1.0,
+  "precision": "bf16",
+  "cpu_threads": 4,
+  "fused_optimizer": true,
+  "save_interval": 1000,
+  "eval_interval": 2000,
+  "eval_batches": 32,
+  "eval_batch_size": 16,
+  "log_interval": 100,
+  "max_active_seconds": 32400,
+  "model": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layers": 20,
+    "n_heads": 8,
+    "d_model": 512,
+    "dropout": 0.1,
+    "gradient_checkpointing": false,
+    "architecture": "modern",
+    "ffn_hidden_size": 1408,
+    "rope_theta": 10000.0,
+    "rms_norm_eps": 1e-06
+  }
+}

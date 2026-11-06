@@ -1,0 +1,61 @@
+{
+  "release": "continuation16_ending_plan",
+  "serialization": "context_ending_plan_then_source_line_v1",
+  "context_length": 512,
+  "special_tokens": {
+    "<|pad|>": 0,
+    "<|bos|>": 1,
+    "<|eos|>": 2,
+    "<|user|>": 3,
+    "<|assistant|>": 4,
+    "<|eot|>": 5
+  },
+  "dataset_role": "auxiliary planned continuation only; not instruction SFT",
+  "inputs_sha256": {
+    "data/continuation16_contextual_balanced32/manifest.json": "332ac8abc8e20226f85906206b7d74d9b56fe7a13decffc4fe46720a583a5d72",
+    "artifacts/tokenizers_v3/selected/tokenizer.json": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+    "scripts/prepare_ending_plan16.py": "a903ab7ea3ebfb958fe8aed304a5b7cc9195fe1b22a8f0a8b7d2fa525cb8c80c",
+    "scripts/train_poetry_endings16.py": "989842a63a838e1c3f7f78015d258b3db11deb9591868ab63f9fe939f0b1e581",
+    "scripts/evaluate_contextual16.py": "27cd0b311efd5b3c328a97e647efba64a6ebddb38d166f796891136ce02d9eae",
+    "data/continuation16_contextual_balanced32/sft_train.npz": "bb7500c2588f028578a1c39d83af590060e1592b51e80ab206adeb1b7cd362fa",
+    "data/continuation16_contextual_balanced32/sft_train_index.json": "e5ce494bea1644a53d7207dd52f63106e1cb52a76cef7139cd2c11bcc5c4887f",
+    "data/continuation16_contextual_balanced32/sft_validation.npz": "77699a284bb16a0ecb79898fc78d1c95c1fdec4aa9af715cecc087f2b3a1b6e0",
+    "data/continuation16_contextual_balanced32/sft_validation_index.json": "19832737b76c7a4645d5ebcb71fb9895cb676ff8928a10eee8fe23d023c1818d"
+  },
+  "source_manifest_sha256": "332ac8abc8e20226f85906206b7d74d9b56fe7a13decffc4fe46720a583a5d72",
+  "protocol": {
+    "plan_marker": "Рифма:\n",
+    "line_marker": "\n",
+    "eos_targets": 0,
+    "prefix_masked": true,
+    "original_context_and_line_token_ids_unchanged": true
+  },
+  "train": {
+    "records": 6922,
+    "maximum_positions": 285,
+    "plan_word_targets": 18970,
+    "protocol_targets": 6922,
+    "line_targets": 66375,
+    "supervised_targets": 92267,
+    "masked_prefix_positions": 1179202
+  },
+  "validation": {
+    "records": 192,
+    "serialization": "source_context_onlysecondline_newline_no_eos_loss",
+    "byte_identical_to_source": true,
+    "role": "ordinary CE control; not plan teacher forcing"
+  },
+  "evaluation": {
+    "dev": "dev_prefixes.json",
+    "oracle": false,
+    "metrics": "format; own-plan compliance; actual line rhyme; meaning requires separate reading"
+  },
+  "training_performed": false,
+  "output_sha256": {
+    "dev_prefixes.json": "5303630fe59be789b398d88844bf1d91c807f09b16d0e566f098819a55ba3a3b",
+    "sft_train.npz": "9c49b2dd90266c698dc69b4aa760bd2ba80aba597c3347fa31310b6d527c5987",
+    "sft_train_index.json": "99bd672acccedbf4d608237631ab327bd7307c9a232f3ef292360fcf44ba2277",
+    "sft_validation.npz": "77699a284bb16a0ecb79898fc78d1c95c1fdec4aa9af715cecc087f2b3a1b6e0",
+    "sft_validation_index.json": "19832737b76c7a4645d5ebcb71fb9895cb676ff8928a10eee8fe23d023c1818d"
+  }
+}

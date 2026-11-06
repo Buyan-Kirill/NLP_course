@@ -1,0 +1,1322 @@
+{
+  "schema": "continuation19-two-reader-summary-1",
+  "attempts": 36,
+  "unique_cards": 34,
+  "readers": {
+    "primary": {
+      "human_cards": 34,
+      "expanded_slots": 36,
+      "conditions": {
+        "aabb/native19/constrained": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 2,
+          "source_complete": 2,
+          "exact_requested_line_count": 2,
+          "sum_total": 7,
+          "mean_total": 2.3333333333333335,
+          "sum_axes": {
+            "relevance": 4,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 2
+          },
+          "mean_axes": {
+            "relevance": 1.3333333333333333,
+            "progress": 0.3333333333333333,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.6666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/native19/free": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 3,
+          "source_complete": 3,
+          "exact_requested_line_count": 3,
+          "sum_total": 11,
+          "mean_total": 3.6666666666666665,
+          "sum_axes": {
+            "relevance": 3,
+            "progress": 5,
+            "logic": 1,
+            "naturalness": 2,
+            "style": 0
+          },
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 1.6666666666666667,
+            "logic": 0.3333333333333333,
+            "naturalness": 0.6666666666666666,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 1,
+              "false": 2,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/planned400k/constrained": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 1,
+          "source_complete": 1,
+          "exact_requested_line_count": 1,
+          "sum_total": 4,
+          "mean_total": 1.3333333333333333,
+          "sum_axes": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 0.6666666666666666,
+            "progress": 0.3333333333333333,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.3333333333333333
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/planned400k/free": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 3,
+          "source_complete": 3,
+          "exact_requested_line_count": 3,
+          "sum_total": 6,
+          "mean_total": 2.0,
+          "sum_axes": {
+            "relevance": 4,
+            "progress": 2,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "mean_axes": {
+            "relevance": 1.3333333333333333,
+            "progress": 0.6666666666666666,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/native19/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 32,
+          "mean_total": 5.333333333333333,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 7,
+            "logic": 5,
+            "naturalness": 7,
+            "style": 4
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 1.1666666666666667,
+            "logic": 0.8333333333333334,
+            "naturalness": 1.1666666666666667,
+            "style": 0.6666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/native19/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 29,
+          "mean_total": 4.833333333333333,
+          "sum_axes": {
+            "relevance": 10,
+            "progress": 5,
+            "logic": 6,
+            "naturalness": 7,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 1.6666666666666667,
+            "progress": 0.8333333333333334,
+            "logic": 1.0,
+            "naturalness": 1.1666666666666667,
+            "style": 0.16666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 35,
+          "mean_total": 5.833333333333333,
+          "sum_axes": {
+            "relevance": 10,
+            "progress": 6,
+            "logic": 6,
+            "naturalness": 5,
+            "style": 8
+          },
+          "mean_axes": {
+            "relevance": 1.6666666666666667,
+            "progress": 1.0,
+            "logic": 1.0,
+            "naturalness": 0.8333333333333334,
+            "style": 1.3333333333333333
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 25,
+          "mean_total": 4.166666666666667,
+          "sum_axes": {
+            "relevance": 11,
+            "progress": 3,
+            "logic": 5,
+            "naturalness": 4,
+            "style": 2
+          },
+          "mean_axes": {
+            "relevance": 1.8333333333333333,
+            "progress": 0.5,
+            "logic": 0.8333333333333334,
+            "naturalness": 0.6666666666666666,
+            "style": 0.3333333333333333
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 2,
+              "false": 4,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    },
+    "secondary": {
+      "human_cards": 34,
+      "expanded_slots": 36,
+      "conditions": {
+        "aabb/native19/constrained": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 2,
+          "source_complete": 2,
+          "exact_requested_line_count": 2,
+          "sum_total": 7,
+          "mean_total": 2.3333333333333335,
+          "sum_axes": {
+            "relevance": 4,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 2
+          },
+          "mean_axes": {
+            "relevance": 1.3333333333333333,
+            "progress": 0.3333333333333333,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.6666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 2,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/native19/free": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 3,
+          "source_complete": 3,
+          "exact_requested_line_count": 3,
+          "sum_total": 8,
+          "mean_total": 2.6666666666666665,
+          "sum_axes": {
+            "relevance": 2,
+            "progress": 3,
+            "logic": 1,
+            "naturalness": 2,
+            "style": 0
+          },
+          "mean_axes": {
+            "relevance": 0.6666666666666666,
+            "progress": 1.0,
+            "logic": 0.3333333333333333,
+            "naturalness": 0.6666666666666666,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/planned400k/constrained": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 1,
+          "source_complete": 1,
+          "exact_requested_line_count": 1,
+          "sum_total": 4,
+          "mean_total": 1.3333333333333333,
+          "sum_axes": {
+            "relevance": 2,
+            "progress": 1,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 0.6666666666666666,
+            "progress": 0.3333333333333333,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.3333333333333333
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 1,
+              "false": 2,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "aabb/planned400k/free": {
+          "N": 3,
+          "families": 3,
+          "nonempty": 3,
+          "source_complete": 3,
+          "exact_requested_line_count": 3,
+          "sum_total": 5,
+          "mean_total": 1.6666666666666667,
+          "sum_axes": {
+            "relevance": 3,
+            "progress": 2,
+            "logic": 0,
+            "naturalness": 0,
+            "style": 0
+          },
+          "mean_axes": {
+            "relevance": 1.0,
+            "progress": 0.6666666666666666,
+            "logic": 0.0,
+            "naturalness": 0.0,
+            "style": 0.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/native19/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 31,
+          "mean_total": 5.166666666666667,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 7,
+            "logic": 5,
+            "naturalness": 6,
+            "style": 4
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 1.1666666666666667,
+            "logic": 0.8333333333333334,
+            "naturalness": 1.0,
+            "style": 0.6666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/native19/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 26,
+          "mean_total": 4.333333333333333,
+          "sum_axes": {
+            "relevance": 8,
+            "progress": 5,
+            "logic": 6,
+            "naturalness": 5,
+            "style": 2
+          },
+          "mean_axes": {
+            "relevance": 1.3333333333333333,
+            "progress": 0.8333333333333334,
+            "logic": 1.0,
+            "naturalness": 0.8333333333333334,
+            "style": 0.3333333333333333
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/constrained": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 5,
+          "source_complete": 5,
+          "exact_requested_line_count": 5,
+          "sum_total": 33,
+          "mean_total": 5.5,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 7,
+            "logic": 6,
+            "naturalness": 5,
+            "style": 6
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 1.1666666666666667,
+            "logic": 1.0,
+            "naturalness": 0.8333333333333334,
+            "style": 1.0
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 5,
+              "false": 1,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            }
+          }
+        },
+        "pair/planned400k/free": {
+          "N": 6,
+          "families": 6,
+          "nonempty": 6,
+          "source_complete": 6,
+          "exact_requested_line_count": 6,
+          "sum_total": 23,
+          "mean_total": 3.8333333333333335,
+          "sum_axes": {
+            "relevance": 9,
+            "progress": 4,
+            "logic": 5,
+            "naturalness": 4,
+            "style": 1
+          },
+          "mean_axes": {
+            "relevance": 1.5,
+            "progress": 0.6666666666666666,
+            "logic": 0.8333333333333334,
+            "naturalness": 0.6666666666666666,
+            "style": 0.16666666666666666
+          },
+          "flags": {
+            "meaning_acceptable": {
+              "true": 3,
+              "false": 3,
+              "unclear": 0
+            },
+            "rhyme": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            },
+            "joint": {
+              "true": 0,
+              "false": 6,
+              "unclear": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 0,
+      "mode": "free",
+      "id": "f07d99b345f235f5c8e3cbe1",
+      "primary": {
+        "id": "f07d99b345f235f5c8e3cbe1",
+        "quote": "На ней в тени деревьев,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The river/tree location fragment lacks a predicate or completed image; no rhyme."
+      },
+      "secondary": {
+        "id": "f07d99b345f235f5c8e3cbe1",
+        "quote": "На ней в тени деревьев,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "On the river in the shade of trees remains an unfinished location phrase; no rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 1,
+      "mode": "free",
+      "id": "8226de7dfe1feb924f637917",
+      "primary": {
+        "id": "8226de7dfe1feb924f637917",
+        "quote": "Больно ему, что его кожа\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The clause about its skin remains syntactically unfinished and does not explain the pain; no rhyme."
+      },
+      "secondary": {
+        "id": "8226de7dfe1feb924f637917",
+        "quote": "Больно ему, что его кожа\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The painful-skin clause is unfinished and supplies no explanation; no rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 1,
+      "mode": "constrained",
+      "id": "7435ddea78bdb2b1b5ba3070",
+      "primary": {
+        "id": "7435ddea78bdb2b1b5ba3070",
+        "quote": "Котёнок спит у огонька.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 2
+        },
+        "total": 9,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "The fire adds a compatible detail to the sleeping kitten beside the chest; sunduka/ogonyka rhyme."
+      },
+      "secondary": {
+        "id": "7435ddea78bdb2b1b5ba3070",
+        "quote": "Котёнок спит у огонька.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 8,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Sleeping by a chest and a small fire is coherent although repetitive; sunduka and ogonka rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 2,
+      "mode": "free",
+      "id": "a6668b28a28c653b297b7aee",
+      "primary": {
+        "id": "a6668b28a28c653b297b7aee",
+        "quote": "И, в тени густого стола,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The table is called thick/dense and the new subordinate fragment never finishes; stolu/stola do not rhyme."
+      },
+      "secondary": {
+        "id": "a6668b28a28c653b297b7aee",
+        "quote": "И, в тени густого стола,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Unfinished prepositional fragment; a thick table is unnatural and stola does not rhyme with stolu."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 2,
+      "mode": "constrained",
+      "id": "a3434ea02496aca1afaf99d2",
+      "primary": {
+        "id": "a3434ea02496aca1afaf99d2",
+        "quote": "На стол, на стулья и в углу.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Stolu/uglu rhyme, but the list mixes directions with a location and does not coherently complete carrying bread."
+      },
+      "secondary": {
+        "id": "a3434ea02496aca1afaf99d2",
+        "quote": "На стол, на стулья и в углу.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Stolu and uglu rhyme, but the mixed destinations and locative fragment do not complete a natural statement."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 3,
+      "mode": "free",
+      "id": "aa12b4b647908b54dc87a4fd",
+      "primary": {
+        "id": "aa12b4b647908b54dc87a4fd",
+        "quote": "Колокольчик звенит, и ветер свистит.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 8,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The bell and whistling wind can accompany the snowy roof scene; truby/svistit do not rhyme."
+      },
+      "secondary": {
+        "id": "aa12b4b647908b54dc87a4fd",
+        "quote": "Колокольчик звенит, и ветер свистит.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 2,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 9,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Wind and a ringing bell naturally accompany a snowy rooftop; svistit does not rhyme with truby."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 4,
+      "mode": "free",
+      "id": "73da64de9c94c84e22fdd892",
+      "primary": {
+        "id": "73da64de9c94c84e22fdd892",
+        "quote": "И всё всё по-прежнему,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "All remains as before is unsupported filler with repeated vsyo and no concrete continuation; no rhyme."
+      },
+      "secondary": {
+        "id": "73da64de9c94c84e22fdd892",
+        "quote": "И всё всё по-прежнему,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "A modest statement that life remains the same is understandable but adds little; no sada rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 4,
+      "mode": "constrained",
+      "id": "990e45b3537779d5e4ee9955",
+      "primary": {
+        "id": "990e45b3537779d5e4ee9955",
+        "quote": "И всё, что в нем было, было винограда.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Sada/vinograda rhyme, but bylo vinograda is broken grammar and contradicts the apple account."
+      },
+      "secondary": {
+        "id": "990e45b3537779d5e4ee9955",
+        "quote": "И всё, что в нем было, было винограда.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": true,
+        "joint": false,
+        "reason": "Sada and vinograda rhyme, but bylo vinograda is ungrammatical and its referent conflicts with the apples."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 5,
+      "mode": "free",
+      "id": "826d7d41b084f4593ebdbf53",
+      "primary": {
+        "id": "826d7d41b084f4593ebdbf53",
+        "quote": "Ребёнок плачет, как дитя,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 7,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "A child crying while looking for a hat is coherent, though comparing a child with a child is tautological; no rhyme."
+      },
+      "secondary": {
+        "id": "826d7d41b084f4593ebdbf53",
+        "quote": "Ребёнок плачет, как дитя,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 6,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "A child crying while searching is coherent, though comparing a child to a child is tautological; no rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 5,
+      "mode": "constrained",
+      "id": "6a350acb37fbff88c6dbec5f",
+      "primary": {
+        "id": "6a350acb37fbff88c6dbec5f",
+        "quote": "Ребёнок-мальчуган бежит за ней.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 2
+        },
+        "total": 9,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Running after the hat can continue the search, though rebyonok-malchugan is redundant; dverey/ney rhyme."
+      },
+      "secondary": {
+        "id": "6a350acb37fbff88c6dbec5f",
+        "quote": "Ребёнок-мальчуган бежит за ней.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 2,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 8,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Running to fetch the sought hat is understandable; the doubled child designation is clumsy, but dverey/ney rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/parent_dev/completed.json",
+      "sample_index": 8,
+      "mode": "free",
+      "id": "b6df6659ed860e19c48c38f6",
+      "primary": {
+        "id": "b6df6659ed860e19c48c38f6",
+        "quote": "Он обернулся — в нем был, как в зеркале,\nПодбитый кушак.\nОн снял с себя сундучок,\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The mirror comparison has no coherent relation to the lined sash, and taking the chest off himself is unexplained; neither adjacent pair rhymes."
+      },
+      "secondary": {
+        "id": "b6df6659ed860e19c48c38f6",
+        "quote": "Он обернулся — в нем был, как в зеркале,\nПодбитый кушак.\nОн снял с себя сундучок,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The mirror comparison has no clear relation to the lined sash, and removing a worn chest is unexplained; neither adjacent pair rhymes."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 1,
+      "mode": "free",
+      "id": "91e9a9d4f464cfd36add13de",
+      "primary": {
+        "id": "91e9a9d4f464cfd36add13de",
+        "quote": "И, завидя вдали отшельника,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The participial clause about seeing a hermit has no completing action; contextual stresses sunduka/otshelnika do not rhyme."
+      },
+      "secondary": {
+        "id": "91e9a9d4f464cfd36add13de",
+        "quote": "И, завидя вдали отшельника,\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 1
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Seeing the hermit introduces an unfinished participial construction; otshelnika has incompatible stress with sunduka."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 2,
+      "mode": "free",
+      "id": "049e7cca6444685bbf586ad5",
+      "primary": {
+        "id": "049e7cca6444685bbf586ad5",
+        "quote": "И, кряхтя, на пороге\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 3,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Grunting on the threshold introduces an unfinished clause; stolu/poroge do not rhyme."
+      },
+      "secondary": {
+        "id": "049e7cca6444685bbf586ad5",
+        "quote": "И, кряхтя, на пороге\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The groaning-on-the-threshold fragment never supplies its action and does not rhyme with stolu."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 2,
+      "mode": "constrained",
+      "id": "42595a92dd882058be3d8dd4",
+      "primary": {
+        "id": "42595a92dd882058be3d8dd4",
+        "quote": "И в столовую входишь, как в кабалу.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 1,
+          "naturalness": 2,
+          "style": 1
+        },
+        "total": 8,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Entering the dining room as an oppressive duty is an intelligible bitter image, with an abrupt shift to second person; stolu/kabalu rhyme."
+      },
+      "secondary": {
+        "id": "42595a92dd882058be3d8dd4",
+        "quote": "И в столовую входишь, как в кабалу.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 1
+        },
+        "total": 7,
+        "meaning_acceptable": true,
+        "rhyme": true,
+        "joint": true,
+        "reason": "Entering the dining room as bondage is an intelligible negative metaphor, with an abrupt switch of person; stolu/kabalu rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 5,
+      "mode": "free",
+      "id": "263d2df97372a9c915640fc4",
+      "primary": {
+        "id": "263d2df97372a9c915640fc4",
+        "quote": "А мать его, мать, стоит, а мать...\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Repetition of mother breaks off without a completed development; dverey/mat do not rhyme."
+      },
+      "secondary": {
+        "id": "263d2df97372a9c915640fc4",
+        "quote": "А мать его, мать, стоит, а мать...\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 0,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 1,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Mother is repeated without completing the thought; no rhyme with dverey."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 6,
+      "mode": "free",
+      "id": "6c1170d44e4b1c60fdfd6b3b",
+      "primary": {
+        "id": "6c1170d44e4b1c60fdfd6b3b",
+        "quote": "«Эй, вы, воры! — сказал он, —\nВы, воры, не разбойники!\nСтупайте! Ступайте! — закричал он. —\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 2,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 5,
+        "meaning_acceptable": true,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The miller can address thieves and order them away; calling them thieves rather than robbers is odd but comprehensible. Neither adjacent pair rhymes."
+      },
+      "secondary": {
+        "id": "6c1170d44e4b1c60fdfd6b3b",
+        "quote": "«Эй, вы, воры! — сказал он, —\nВы, воры, не разбойники!\nСтупайте! Ступайте! — закричал он. —\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 1,
+          "naturalness": 1,
+          "style": 0
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "An abrupt accusation and denial of robbery leave the encounter unexplained; steny/on and razboyniki/on do not rhyme."
+      }
+    },
+    {
+      "source": "audit/continuation19/inference/new_dev/completed.json",
+      "sample_index": 8,
+      "mode": "free",
+      "id": "b2782a30e62331219f46a03c",
+      "primary": {
+        "id": "b2782a30e62331219f46a03c",
+        "quote": "Он переложил его в ящик.\nНа столе, за столом, сидели мужики.\nПришел мужик с бутылкой.\n",
+        "scores": {
+          "relevance": 2,
+          "progress": 2,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 4,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "The chest transfer is understandable, but men sitting on the table and behind it in the same clause breaks the scene; no AABB rhyme."
+      },
+      "secondary": {
+        "id": "b2782a30e62331219f46a03c",
+        "quote": "Он переложил его в ящик.\nНа столе, за столом, сидели мужики.\nПришел мужик с бутылкой.\n",
+        "scores": {
+          "relevance": 1,
+          "progress": 1,
+          "logic": 0,
+          "naturalness": 0,
+          "style": 0
+        },
+        "total": 2,
+        "meaning_acceptable": false,
+        "rhyme": false,
+        "joint": false,
+        "reason": "Moving the chest is possible, but sitting on and behind the table is unreconciled and the bottle arrival is disconnected; no AABB rhyme."
+      }
+    }
+  ],
+  "sources_sha256": {
+    "audit/continuation19/inference/parent_dev/completed.json": "0cf02adb4e98115f90df3e1b954fb804bd00ab70d4e1dab9b05f4b0e125f28c2",
+    "audit/continuation19/inference/new_dev/completed.json": "af5023535d7edca4a3a1ab3f708d9844cca018ed9385029edf02c255c0d13035",
+    "audit\\continuation19\\dev_reading\\mapping.json": "f4620ccffa4d310153bf4265a33eb89502b51ad892e8fcd146f38d454745bd24",
+    "audit\\continuation19\\dev_reading\\cards.json": "beb47b16b7a9ecb2801d77596be3ebe97ad0a72e07442525faa36382d6c47059",
+    "audit\\continuation19\\dev_reading\\judged_primary.json": "64d960e56faafbdaa971fb2fb580e16f87dc4e2ce4c8476caaf0de4c5eabd0f9",
+    "audit\\continuation19\\dev_reading\\judged_secondary.json": "4844bb28e1f472cf1032504c651cd32193de69ebe12d56ca31cb6bae0aa73633",
+    "audit\\continuation19\\evidence.py": "d648fc946d175f01af92cf20242238a97efcf749cc331ea849bc795d52138591"
+  },
+  "limitations": [
+    "All free/constrained slots retained including null, incomplete and wrong-count outputs.",
+    "pair and aabb have separate conditions/denominators; readers do not double N.",
+    "Rhyme/meaning are human judgments of exact whole continuations, not automatically inferred from metadata.",
+    "Source-bound adapter proves quote/provenance fidelity, not inference completeness beyond supplied report samples."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "training": {
+    "domain": "poetry",
+    "mode": "pure",
+    "optimizer": "muon",
+    "seed": 2026110308,
+    "target_tokens": 1024,
+    "batch_size": 16,
+    "warmup_tokens": 10000,
+    "milestones": [
+      400000,
+      800000,
+      1600000
+    ],
+    "lr": 5e-05,
+    "min_lr": 5e-06,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "grad_clip": 1.0,
+    "precision": "bf16",
+    "cpu_threads": 4,
+    "fused_optimizer": true,
+    "save_interval": 100,
+    "eval_interval": 10000,
+    "eval_batches": 0,
+    "eval_batch_size": 16,
+    "log_interval": 50,
+    "max_active_seconds": 7200,
+    "parent": "runs/poetry16/batch4k/stages/3231558.pt",
+    "model": {
+      "vocab_size": 8192,
+      "context_length": 512,
+      "n_layers": 20,
+      "n_heads": 8,
+      "d_model": 512,
+      "dropout": 0.1,
+      "gradient_checkpointing": false,
+      "architecture": "modern",
+      "ffn_hidden_size": 1408,
+      "rope_theta": 10000.0,
+      "rms_norm_eps": 1e-06
+    },
+    "poetry_data": "data/prepared_v7/poetry_supplement",
+    "prose_data": "data/prepared_v7/expanded",
+    "tokenizer": "artifacts/tokenizers_v3/selected/tokenizer.json",
+    "input_freeze": "audit/poetry08/data_freeze.json",
+    "schedule_tokens": 1600000
+  },
+  "parent_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725",
+  "windows": {
+    "path": "data/poetry16_units/poetry_train_windows.npy",
+    "sha256": "c7bff3fae4c705a3c64020f7bd0ae380c1fead112099cc6f34c4732c62e104dc"
+  },
+  "auxiliary": {
+    "manifest": {
+      "path": "data/continuation16_ending_plan/manifest.json",
+      "sha256": "5681ddeecba0d9bd4b14d2f60b7fbd66da623a61ad0153957ea85fd094f303e8"
+    },
+    "numerator": 1,
+    "denominator": 2
+  }
+}

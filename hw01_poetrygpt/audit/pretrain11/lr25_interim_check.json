@@ -1,0 +1,125 @@
+{
+  "status": "interim_25m_not_winner_selection",
+  "matched_panel_settings_prefixes_seeds": true,
+  "rows": {
+    "D630": {
+      "path": "audit/pretrain08/d_b_68m_muon_630m.json",
+      "sha256": "0f97666685b3969d811f2f08a9f1904611ac0490f7d60288e6ee59401574cba7",
+      "absolute_targets": 630193557,
+      "validation_nll": 2.767219808633289,
+      "validation_token_accuracy": 0.4561767578125,
+      "repeat4_mean": 0.015803032732853106,
+      "validation_genres": {
+        "narrative": {
+          "cases": 64,
+          "nll": 2.7433426511261083
+        },
+        "essays_criticism": {
+          "cases": 64,
+          "nll": 2.864076226144902
+        },
+        "memoir": {
+          "cases": 64,
+          "nll": 2.6153488103284626
+        },
+        "letters": {
+          "cases": 64,
+          "nll": 2.8461115469336837
+        }
+      }
+    },
+    "CE50": {
+      "path": "audit/pretrain10/d_ce50.json",
+      "sha256": "70d159b86ddc322eee9b2cacdd438441f6cf6cbb06f53fbbc8ecfd7020cb7a5a",
+      "absolute_targets": 680193557,
+      "validation_nll": 2.7597512230330015,
+      "validation_token_accuracy": 0.45697021484375,
+      "repeat4_mean": 0.011145945762915124,
+      "validation_genres": {
+        "narrative": {
+          "cases": 64,
+          "nll": 2.73906422251832
+        },
+        "essays_criticism": {
+          "cases": 64,
+          "nll": 2.846633977562724
+        },
+        "memoir": {
+          "cases": 64,
+          "nll": 2.614758707600597
+        },
+        "letters": {
+          "cases": 64,
+          "nll": 2.8385479844503645
+        }
+      }
+    },
+    "LR10": {
+      "path": "audit/pretrain11/d_lrhalf50_10m.json",
+      "sha256": "3df33133259b66930bfa897c4f704945fe3f7bbac89daa2ea2cb698549d77c90",
+      "absolute_targets": 640204181,
+      "validation_nll": 2.7454610727701465,
+      "validation_token_accuracy": 0.45904541015625,
+      "repeat4_mean": 0.015828823146503634,
+      "validation_genres": {
+        "narrative": {
+          "cases": 64,
+          "nll": 2.7213279093088043
+        },
+        "essays_criticism": {
+          "cases": 64,
+          "nll": 2.83153270360952
+        },
+        "memoir": {
+          "cases": 64,
+          "nll": 2.6003330511532563
+        },
+        "letters": {
+          "cases": 64,
+          "nll": 2.8286506270090053
+        }
+      }
+    },
+    "LR25": {
+      "path": "audit/pretrain11/d_lrhalf50_25m.json",
+      "sha256": "7713c1c36a93f2865d80ab852ffeb6ff01951b588719add96c108c915333fad3",
+      "absolute_targets": 655195541,
+      "validation_nll": 2.738072080787525,
+      "validation_token_accuracy": 0.4599609375,
+      "repeat4_mean": 0.011372404803918872,
+      "validation_genres": {
+        "narrative": {
+          "cases": 64,
+          "nll": 2.7222494920925406
+        },
+        "essays_criticism": {
+          "cases": 64,
+          "nll": 2.8200248902831273
+        },
+        "memoir": {
+          "cases": 64,
+          "nll": 2.592958453936526
+        },
+        "letters": {
+          "cases": 64,
+          "nll": 2.8170554868379054
+        }
+      }
+    }
+  },
+  "spot_read": {
+    "indices": [
+      4,
+      34,
+      70,
+      106
+    ],
+    "models": [
+      "D630",
+      "LR25"
+    ],
+    "blind": false,
+    "conclusion": "Role confusion, repetition and topic drift remain; no reliable semantic gain established. Not a rubric score."
+  },
+  "decision": "Complete bounded pilots and final blind review; do not extend LR based on NLL alone."
+}

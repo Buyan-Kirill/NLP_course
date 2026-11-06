@@ -1,0 +1,52 @@
+{
+  "domain": "poetry",
+  "mode": "pure",
+  "optimizer": "muon",
+  "seed": 2026110308,
+  "target_tokens": 4096,
+  "batch_size": 32,
+  "warmup_tokens": 10000,
+  "milestones": [
+    807889,
+    1615779,
+    2423668,
+    3231558
+  ],
+  "lr": 3e-05,
+  "min_lr": 3e-06,
+  "weight_decay": 0.1,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "grad_clip": 1.0,
+  "precision": "bf16",
+  "cpu_threads": 4,
+  "fused_optimizer": true,
+  "save_interval": 400,
+  "eval_interval": 400,
+  "eval_batches": 0,
+  "eval_batch_size": 16,
+  "log_interval": 100,
+  "max_active_seconds": 21600,
+  "parent": "runs/poetry08/lr50_diagnostic13/pure/stages/1615779.pt",
+  "model": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layers": 20,
+    "n_heads": 8,
+    "d_model": 512,
+    "dropout": 0.1,
+    "gradient_checkpointing": false,
+    "architecture": "modern",
+    "ffn_hidden_size": 1408,
+    "rope_theta": 10000.0,
+    "rms_norm_eps": 1e-06
+  },
+  "poetry_data": "data/prepared_v7/poetry_supplement",
+  "prose_data": "data/prepared_v7/expanded",
+  "tokenizer": "artifacts/tokenizers_v3/selected/tokenizer.json",
+  "input_freeze": "audit/poetry08/data_freeze.json",
+  "schedule_tokens": 3231558
+}

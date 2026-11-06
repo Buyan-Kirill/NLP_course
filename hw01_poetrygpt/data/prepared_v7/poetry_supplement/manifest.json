@@ -1,0 +1,1528 @@
+{
+  "context_length": 512,
+  "special_tokens": {
+    "<|pad|>": 0,
+    "<|bos|>": 1,
+    "<|eos|>": 2,
+    "<|user|>": 3,
+    "<|assistant|>": 4,
+    "<|eot|>": 5
+  },
+  "tokenizer_selected": "baseline_v2_8192",
+  "contract": {
+    "labels": "Unshifted; logits[:,:-1] vs labels[:,1:], exactly one trainer shift",
+    "pretrain": "Separate domain/split streams; one BOS, every full work followed by EOS; cross-work causal attention allowed",
+    "windows": "512 positions, stride511, overlap1; final short window retained; pad via training_data.pad_batch; drop_last=False",
+    "whole_work_encoding": true,
+    "sft": "No packing/truncation; user/role/pad masked; all assistant content/EOT and final EOS supervised",
+    "padding": "attention_mask=0, labels=-100; input_ids PAD",
+    "generation_stop_ids": [
+      5,
+      2
+    ],
+    "runtime_dtypes": "Convert stored input_ids and labels to int64 for embedding/CE",
+    "metadata": "Sidecars only; source/topic multilabel strata are not additive",
+    "model_training_performed": false
+  },
+  "release": "prepared_v7_poetry_supplement",
+  "splits": {
+    "train": {
+      "poetry": {
+        "works": 5478,
+        "stream_tokens": 1615780,
+        "content_tokens": 1610301,
+        "causal_targets": 1615779,
+        "windows": 3162,
+        "last_window_positions": 509,
+        "roundtrip_works": 5478,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    },
+    "validation": {
+      "poetry": {
+        "works": 324,
+        "stream_tokens": 85929,
+        "content_tokens": 85604,
+        "causal_targets": 85928,
+        "windows": 169,
+        "last_window_positions": 81,
+        "roundtrip_works": 324,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    },
+    "test": {
+      "poetry": {
+        "works": 295,
+        "stream_tokens": 74070,
+        "content_tokens": 73774,
+        "causal_targets": 74069,
+        "windows": 145,
+        "last_window_positions": 486,
+        "roundtrip_works": 295,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    }
+  },
+  "strata": {
+    "train": {
+      "poetry": {
+        "author:[* *]": {
+          "works": 1,
+          "content_tokens": 342
+        },
+        "author:[**]": {
+          "works": 1,
+          "content_tokens": 478
+        },
+        "author:[*]": {
+          "works": 2,
+          "content_tokens": 387
+        },
+        "author:[*…а*…]": {
+          "works": 1,
+          "content_tokens": 213
+        },
+        "author:[-ев]": {
+          "works": 1,
+          "content_tokens": 251
+        },
+        "author:[-й-]": {
+          "works": 1,
+          "content_tokens": 430
+        },
+        "author:[1.7.-]": {
+          "works": 1,
+          "content_tokens": 94
+        },
+        "author:[13]": {
+          "works": 1,
+          "content_tokens": 278
+        },
+        "author:[1…8…]": {
+          "works": 1,
+          "content_tokens": 578
+        },
+        "author:[2.17]": {
+          "works": 1,
+          "content_tokens": 234
+        },
+        "author:[N.N.]": {
+          "works": 1,
+          "content_tokens": 84
+        },
+        "author:[Z.]": {
+          "works": 2,
+          "content_tokens": 787
+        },
+        "author:[А. А-въ]": {
+          "works": 1,
+          "content_tokens": 200
+        },
+        "author:[А. Д.]": {
+          "works": 1,
+          "content_tokens": 592
+        },
+        "author:[А. Н-ъ]": {
+          "works": 1,
+          "content_tokens": 190
+        },
+        "author:[А. Сырох-въ]": {
+          "works": 1,
+          "content_tokens": 150
+        },
+        "author:[А.В.]": {
+          "works": 1,
+          "content_tokens": 215
+        },
+        "author:[Александр Герман]": {
+          "works": 1,
+          "content_tokens": 294
+        },
+        "author:[Б.-]": {
+          "works": 1,
+          "content_tokens": 309
+        },
+        "author:[Богаевский Н.]": {
+          "works": 2,
+          "content_tokens": 281
+        },
+        "author:[В. Гл-в]": {
+          "works": 1,
+          "content_tokens": 96
+        },
+        "author:[В. С…ъ]": {
+          "works": 1,
+          "content_tokens": 278
+        },
+        "author:[В. Чюриков]": {
+          "works": 1,
+          "content_tokens": 334
+        },
+        "author:[В.Р.]": {
+          "works": 1,
+          "content_tokens": 259
+        },
+        "author:[Вал:-еио-ъ]": {
+          "works": 1,
+          "content_tokens": 88
+        },
+        "author:[Валериян Никонов]": {
+          "works": 1,
+          "content_tokens": 472
+        },
+        "author:[Ватагин П.]": {
+          "works": 1,
+          "content_tokens": 294
+        },
+        "author:[Г-х-в]": {
+          "works": 1,
+          "content_tokens": 84
+        },
+        "author:[Г. Федоров]": {
+          "works": 1,
+          "content_tokens": 1542
+        },
+        "author:[Г.]": {
+          "works": 3,
+          "content_tokens": 1403
+        },
+        "author:[Градовский Николай]": {
+          "works": 1,
+          "content_tokens": 352
+        },
+        "author:[Г…в]": {
+          "works": 1,
+          "content_tokens": 706
+        },
+        "author:[Д. Ш.]": {
+          "works": 1,
+          "content_tokens": 94
+        },
+        "author:[Дм. Ш.]": {
+          "works": 1,
+          "content_tokens": 64
+        },
+        "author:[Ермолаев]": {
+          "works": 1,
+          "content_tokens": 433
+        },
+        "author:[Загорский]": {
+          "works": 1,
+          "content_tokens": 194
+        },
+        "author:[Леопольд Ланге]": {
+          "works": 1,
+          "content_tokens": 213
+        },
+        "author:[Мотыльков]": {
+          "works": 1,
+          "content_tokens": 358
+        },
+        "author:[Н. Дубровин]": {
+          "works": 1,
+          "content_tokens": 464
+        },
+        "author:[Н.К.]": {
+          "works": 1,
+          "content_tokens": 236
+        },
+        "author:[Никифоров П.]": {
+          "works": 1,
+          "content_tokens": 272
+        },
+        "author:[П-н]": {
+          "works": 1,
+          "content_tokens": 286
+        },
+        "author:[П. Клейменов]": {
+          "works": 1,
+          "content_tokens": 157
+        },
+        "author:[П. М…вич]": {
+          "works": 2,
+          "content_tokens": 651
+        },
+        "author:[П.М…]": {
+          "works": 1,
+          "content_tokens": 217
+        },
+        "author:[П.р.в]": {
+          "works": 1,
+          "content_tokens": 355
+        },
+        "author:[С-н. П-о]": {
+          "works": 1,
+          "content_tokens": 458
+        },
+        "author:[С. Каратеев]": {
+          "works": 2,
+          "content_tokens": 354
+        },
+        "author:[С. Ст-ч]": {
+          "works": 1,
+          "content_tokens": 441
+        },
+        "author:[С. С…ий]": {
+          "works": 1,
+          "content_tokens": 91
+        },
+        "author:[С. С…й]": {
+          "works": 1,
+          "content_tokens": 159
+        },
+        "author:[С.]": {
+          "works": 1,
+          "content_tokens": 133
+        },
+        "author:[Савостьянов Н.]": {
+          "works": 1,
+          "content_tokens": 522
+        },
+        "author:[Степан Степанов]": {
+          "works": 1,
+          "content_tokens": 412
+        },
+        "author:[Т.-]": {
+          "works": 1,
+          "content_tokens": 935
+        },
+        "author:[Ш-б-в]": {
+          "works": 1,
+          "content_tokens": 420
+        },
+        "author:[Ю.]": {
+          "works": 1,
+          "content_tokens": 70
+        },
+        "author:[…ий]": {
+          "works": 1,
+          "content_tokens": 330
+        },
+        "author:[…й]": {
+          "works": 1,
+          "content_tokens": 339
+        },
+        "author:unknown": {
+          "works": 10,
+          "content_tokens": 3475
+        },
+        "author:Аксаков Иван Сергеевич": {
+          "works": 1,
+          "content_tokens": 160
+        },
+        "author:Аксаков С.Т.": {
+          "works": 1,
+          "content_tokens": 584
+        },
+        "author:Алексеев Ф.А.": {
+          "works": 3,
+          "content_tokens": 574
+        },
+        "author:Анненков Н.Е.": {
+          "works": 1,
+          "content_tokens": 231
+        },
+        "author:Апухтин Алексей Николаевич": {
+          "works": 206,
+          "content_tokens": 50973
+        },
+        "author:Астафьев В. И.": {
+          "works": 1,
+          "content_tokens": 88
+        },
+        "author:Бадульф Ф.И. (?)": {
+          "works": 1,
+          "content_tokens": 258
+        },
+        "author:Бакунин Илья Модестович": {
+          "works": 1,
+          "content_tokens": 538
+        },
+        "author:Бальдауф Ф.И.": {
+          "works": 2,
+          "content_tokens": 2023
+        },
+        "author:Баратынский Евгений Абрамович": {
+          "works": 56,
+          "content_tokens": 15390
+        },
+        "author:Батюшков Константин Николаевич": {
+          "works": 73,
+          "content_tokens": 25776
+        },
+        "author:Бестужев-Марлинский Александр Александрович": {
+          "works": 13,
+          "content_tokens": 3991
+        },
+        "author:Бестужев-Рюмин М.А.": {
+          "works": 4,
+          "content_tokens": 1175
+        },
+        "author:Бистром Александр": {
+          "works": 3,
+          "content_tokens": 526
+        },
+        "author:Богданов И.": {
+          "works": 1,
+          "content_tokens": 460
+        },
+        "author:Бороздна Иван Петрович": {
+          "works": 7,
+          "content_tokens": 4282
+        },
+        "author:Бунин Иван Алексеевич": {
+          "works": 37,
+          "content_tokens": 5407
+        },
+        "author:Бушманкин Н.": {
+          "works": 2,
+          "content_tokens": 583
+        },
+        "author:В. Пушкин": {
+          "works": 1,
+          "content_tokens": 696
+        },
+        "author:Великопольский Иван Ермолаевич": {
+          "works": 4,
+          "content_tokens": 2328
+        },
+        "author:Веневитинов Дмитрий Владимирович": {
+          "works": 41,
+          "content_tokens": 15660
+        },
+        "author:Волков Александр Абрамович": {
+          "works": 1,
+          "content_tokens": 480
+        },
+        "author:Волков Платон Григорьевич": {
+          "works": 1,
+          "content_tokens": 373
+        },
+        "author:Вронченко М.П.": {
+          "works": 1,
+          "content_tokens": 296
+        },
+        "author:Вяземский Петр Андреевич": {
+          "works": 224,
+          "content_tokens": 67129
+        },
+        "author:Габбе П.А.": {
+          "works": 1,
+          "content_tokens": 1279
+        },
+        "author:Гаркуша В.": {
+          "works": 1,
+          "content_tokens": 238
+        },
+        "author:Герман А.": {
+          "works": 1,
+          "content_tokens": 274
+        },
+        "author:Глебов Александр Николаевич": {
+          "works": 1,
+          "content_tokens": 848
+        },
+        "author:Глебов Д.П.": {
+          "works": 22,
+          "content_tokens": 13074
+        },
+        "author:Глинка Федор Николаевич": {
+          "works": 32,
+          "content_tokens": 10420
+        },
+        "author:Глухорев И.Н.": {
+          "works": 2,
+          "content_tokens": 155
+        },
+        "author:Готовцева А.И.": {
+          "works": 1,
+          "content_tokens": 627
+        },
+        "author:Гребенка Евгений Павлович": {
+          "works": 2,
+          "content_tokens": 365
+        },
+        "author:Греков Николай Порфирьевич": {
+          "works": 2,
+          "content_tokens": 833
+        },
+        "author:Грен Александр Евгеньевич": {
+          "works": 1,
+          "content_tokens": 149
+        },
+        "author:Григорьев Аполлон Александрович": {
+          "works": 100,
+          "content_tokens": 35266
+        },
+        "author:Григорьев Василий Никифорович": {
+          "works": 4,
+          "content_tokens": 1529
+        },
+        "author:Давыдов Денис Васильевич": {
+          "works": 78,
+          "content_tokens": 18572
+        },
+        "author:Данилевский Григорий Петрович": {
+          "works": 1,
+          "content_tokens": 1243
+        },
+        "author:Дельвиг Антон Антонович": {
+          "works": 172,
+          "content_tokens": 40376
+        },
+        "author:Державин Гавриил Романович": {
+          "works": 43,
+          "content_tokens": 20556
+        },
+        "author:Дмитриев М.А.": {
+          "works": 18,
+          "content_tokens": 7731
+        },
+        "author:Драгоманов П.А.": {
+          "works": 1,
+          "content_tokens": 610
+        },
+        "author:Драгоманов Яков Акимович": {
+          "works": 1,
+          "content_tokens": 581
+        },
+        "author:Дуроп А.Х.": {
+          "works": 1,
+          "content_tokens": 531
+        },
+        "author:Ершов Петр Павлович": {
+          "works": 1,
+          "content_tokens": 23079
+        },
+        "author:Жемчужников Алексей Михайлович": {
+          "works": 99,
+          "content_tokens": 27838
+        },
+        "author:Жуковский Василий Андреевич": {
+          "works": 70,
+          "content_tokens": 38766
+        },
+        "author:Зайцевский Е.П.": {
+          "works": 2,
+          "content_tokens": 547
+        },
+        "author:Иванчин-Писарев Н.Д.": {
+          "works": 1,
+          "content_tokens": 240
+        },
+        "author:Илличевский А.Д.": {
+          "works": 1,
+          "content_tokens": 481
+        },
+        "author:Капнист Василий Васильевич": {
+          "works": 28,
+          "content_tokens": 8313
+        },
+        "author:Карамзин Николай Михайлович": {
+          "works": 94,
+          "content_tokens": 20905
+        },
+        "author:Карлгоф В.И.": {
+          "works": 1,
+          "content_tokens": 201
+        },
+        "author:Карниолин-Пинский М.М.": {
+          "works": 1,
+          "content_tokens": 595
+        },
+        "author:Катенин Павел Александрович": {
+          "works": 1,
+          "content_tokens": 3133
+        },
+        "author:Кобозев М.": {
+          "works": 2,
+          "content_tokens": 1245
+        },
+        "author:Козлов Иван Иванович": {
+          "works": 46,
+          "content_tokens": 16489
+        },
+        "author:Кольцов Алексей Васильевич": {
+          "works": 121,
+          "content_tokens": 24620
+        },
+        "author:Крылов А.А.": {
+          "works": 1,
+          "content_tokens": 463
+        },
+        "author:Крылов Иван Андреевич": {
+          "works": 73,
+          "content_tokens": 30294
+        },
+        "author:Крюков Александр Павлович": {
+          "works": 1,
+          "content_tokens": 162
+        },
+        "author:Кюхельбекер Вильгельм Карлович": {
+          "works": 66,
+          "content_tokens": 19262
+        },
+        "author:Лермонтов Михаил Юрьевич": {
+          "works": 280,
+          "content_tokens": 51718
+        },
+        "author:Лисицына М.А.": {
+          "works": 1,
+          "content_tokens": 384
+        },
+        "author:Лобанов М. Элегия, на кончину Софии Дмитриевны Нарышкиной": {
+          "works": 1,
+          "content_tokens": 934
+        },
+        "author:Лобанов М.Е.": {
+          "works": 1,
+          "content_tokens": 1406
+        },
+        "author:Майков Аполлон Николаевич": {
+          "works": 116,
+          "content_tokens": 21240
+        },
+        "author:Масальский К.П.": {
+          "works": 1,
+          "content_tokens": 356
+        },
+        "author:Межаков П.А.": {
+          "works": 3,
+          "content_tokens": 2510
+        },
+        "author:Мей Лев Александрович": {
+          "works": 74,
+          "content_tokens": 25493
+        },
+        "author:Милонов М.В.": {
+          "works": 1,
+          "content_tokens": 412
+        },
+        "author:Мятлев Иван Петрович": {
+          "works": 20,
+          "content_tokens": 5409
+        },
+        "author:Надеждин Н.И.": {
+          "works": 1,
+          "content_tokens": 272
+        },
+        "author:Надсон Семён Яковлевич": {
+          "works": 92,
+          "content_tokens": 19765
+        },
+        "author:Нарежный В.Т.": {
+          "works": 1,
+          "content_tokens": 609
+        },
+        "author:Некрасов Николай Алексеевич": {
+          "works": 232,
+          "content_tokens": 136308
+        },
+        "author:Нечаев С.Д.": {
+          "works": 1,
+          "content_tokens": 269
+        },
+        "author:Никитин Иван Саввич": {
+          "works": 137,
+          "content_tokens": 40185
+        },
+        "author:Никонов В.Я.": {
+          "works": 1,
+          "content_tokens": 277
+        },
+        "author:Норов А.С.": {
+          "works": 6,
+          "content_tokens": 3331
+        },
+        "author:Ободовский Платон Григорьевич": {
+          "works": 4,
+          "content_tokens": 1468
+        },
+        "author:Огарев Николай Платонович": {
+          "works": 93,
+          "content_tokens": 24189
+        },
+        "author:Одоевский Александр Иванович": {
+          "works": 47,
+          "content_tokens": 28598
+        },
+        "author:Ознобишин Дмитрий Петрович": {
+          "works": 2,
+          "content_tokens": 741
+        },
+        "author:Олин Валериан Николаевич": {
+          "works": 3,
+          "content_tokens": 2573
+        },
+        "author:Павлов Н.Ф.": {
+          "works": 2,
+          "content_tokens": 666
+        },
+        "author:Павлова Каролина Карловна": {
+          "works": 45,
+          "content_tokens": 15937
+        },
+        "author:Писарев Александр Иванович": {
+          "works": 3,
+          "content_tokens": 1489
+        },
+        "author:Плетнев П. А.": {
+          "works": 1,
+          "content_tokens": 867
+        },
+        "author:Плетнев П.А.": {
+          "works": 11,
+          "content_tokens": 6006
+        },
+        "author:Плещеев Алексей Николаевич": {
+          "works": 59,
+          "content_tokens": 13394
+        },
+        "author:Познанский Ю.И.": {
+          "works": 1,
+          "content_tokens": 543
+        },
+        "author:Полевой Н.А.": {
+          "works": 1,
+          "content_tokens": 260
+        },
+        "author:Полежаев Александр Иванович": {
+          "works": 32,
+          "content_tokens": 11267
+        },
+        "author:Полонский Яков Петрович": {
+          "works": 83,
+          "content_tokens": 19058
+        },
+        "author:Попов Д.": {
+          "works": 1,
+          "content_tokens": 1042
+        },
+        "author:Пушкин Александр Сергеевич": {
+          "works": 545,
+          "content_tokens": 200499
+        },
+        "author:Пушкин В.Л.": {
+          "works": 2,
+          "content_tokens": 429
+        },
+        "author:Радищев Александр Николаевич": {
+          "works": 2,
+          "content_tokens": 1374
+        },
+        "author:Раевский Владимир Фёдосеевич": {
+          "works": 23,
+          "content_tokens": 10526
+        },
+        "author:Рейнсдорф Н.П.": {
+          "works": 2,
+          "content_tokens": 405
+        },
+        "author:Розен Егор (Георгий) Федорович": {
+          "works": 2,
+          "content_tokens": 561
+        },
+        "author:Романов Константин Константинович": {
+          "works": 77,
+          "content_tokens": 14176
+        },
+        "author:Ростопчина Евдокия Петровна": {
+          "works": 24,
+          "content_tokens": 10051
+        },
+        "author:Рылеев Кондратий Фёдорович": {
+          "works": 83,
+          "content_tokens": 20147
+        },
+        "author:Рындовский Ф.М.": {
+          "works": 3,
+          "content_tokens": 2379
+        },
+        "author:Сиянов Петр Гаврилович": {
+          "works": 2,
+          "content_tokens": 438
+        },
+        "author:Ставелов Н.": {
+          "works": 11,
+          "content_tokens": 3191
+        },
+        "author:Станкевич Н.В.": {
+          "works": 1,
+          "content_tokens": 274
+        },
+        "author:Суриков Иван Захарович": {
+          "works": 80,
+          "content_tokens": 26086
+        },
+        "author:Суходольский А.": {
+          "works": 6,
+          "content_tokens": 1467
+        },
+        "author:Сушков Н.В.": {
+          "works": 1,
+          "content_tokens": 637
+        },
+        "author:Теряев П.": {
+          "works": 2,
+          "content_tokens": 2380
+        },
+        "author:Теряев Павел": {
+          "works": 1,
+          "content_tokens": 779
+        },
+        "author:Тило В.К.": {
+          "works": 4,
+          "content_tokens": 1806
+        },
+        "author:Толстой Алексей Константинович": {
+          "works": 169,
+          "content_tokens": 43155
+        },
+        "author:Толстой Я.Н.": {
+          "works": 1,
+          "content_tokens": 1237
+        },
+        "author:Туманский Василий Иванович": {
+          "works": 9,
+          "content_tokens": 4001
+        },
+        "author:Туманский Ф.А.": {
+          "works": 2,
+          "content_tokens": 431
+        },
+        "author:Тургенев Иван Сергеевич": {
+          "works": 37,
+          "content_tokens": 8994
+        },
+        "author:Тюрин И.Е.": {
+          "works": 1,
+          "content_tokens": 488
+        },
+        "author:Тютчев Федор Иванович": {
+          "works": 262,
+          "content_tokens": 40445
+        },
+        "author:Федоров Борис Михайлович": {
+          "works": 3,
+          "content_tokens": 534
+        },
+        "author:Фет Афанасий Афанасьевич": {
+          "works": 661,
+          "content_tokens": 104836
+        },
+        "author:Фофанов Константин Михайлович": {
+          "works": 25,
+          "content_tokens": 3557
+        },
+        "author:Хотяинцев П.": {
+          "works": 1,
+          "content_tokens": 477
+        },
+        "author:Цертелев Н.А.": {
+          "works": 1,
+          "content_tokens": 185
+        },
+        "author:Шаликов Петр Иванович": {
+          "works": 2,
+          "content_tokens": 1124
+        },
+        "author:Шаплет С.С.": {
+          "works": 1,
+          "content_tokens": 343
+        },
+        "author:Шелехов Д.П.": {
+          "works": 3,
+          "content_tokens": 2983
+        },
+        "author:Шемиот В.П.": {
+          "works": 1,
+          "content_tokens": 183
+        },
+        "author:Языков Николай Михайлович": {
+          "works": 213,
+          "content_tokens": 64194
+        },
+        "author:Яковлев М.": {
+          "works": 1,
+          "content_tokens": 126
+        },
+        "author:Яковлев М.А.": {
+          "works": 1,
+          "content_tokens": 128
+        },
+        "date_basis:catalog_source_year": {
+          "works": 2,
+          "content_tokens": 1403
+        },
+        "date_basis:explicit_mytag_text_name_year": {
+          "works": 25,
+          "content_tokens": 3557
+        },
+        "date_basis:first_KR_edition_only_dated_poem": {
+          "works": 77,
+          "content_tokens": 14176
+        },
+        "domain:poetry": {
+          "works": 5478,
+          "content_tokens": 1610301
+        },
+        "genre:classical_verse": {
+          "works": 103,
+          "content_tokens": 17893
+        },
+        "genre:long_verse": {
+          "works": 103,
+          "content_tokens": 248685
+        },
+        "genre:lyric_or_short_verse": {
+          "works": 919,
+          "content_tokens": 194526
+        },
+        "genre:narrative_verse": {
+          "works": 1,
+          "content_tokens": 1243
+        },
+        "genre:unknown": {
+          "works": 4351,
+          "content_tokens": 1124875
+        },
+        "genre:verse_fairy_tale": {
+          "works": 1,
+          "content_tokens": 23079
+        },
+        "source:Lib.ru_Classic_v7_poetry": {
+          "works": 104,
+          "content_tokens": 19136
+        },
+        "source:c1835": {
+          "works": 42,
+          "content_tokens": 19068
+        },
+        "source:elegies": {
+          "works": 381,
+          "content_tokens": 163953
+        },
+        "source:poetry": {
+          "works": 2984,
+          "content_tokens": 787105
+        },
+        "source:ru31": {
+          "works": 4516,
+          "content_tokens": 1145448
+        },
+        "source:rvb": {
+          "works": 8,
+          "content_tokens": 141784
+        },
+        "source:songs": {
+          "works": 25,
+          "content_tokens": 5306
+        },
+        "token_length:128-511": {
+          "works": 3024,
+          "content_tokens": 736250
+        },
+        "token_length:<128": {
+          "works": 1876,
+          "content_tokens": 151401
+        },
+        "token_length:>=512": {
+          "works": 578,
+          "content_tokens": 722650
+        },
+        "written_period:1800-1849": {
+          "works": 2,
+          "content_tokens": 48070
+        },
+        "written_period:1850-1899": {
+          "works": 4,
+          "content_tokens": 594
+        },
+        "written_period:unknown": {
+          "works": 5472,
+          "content_tokens": 1561637
+        }
+      }
+    },
+    "validation": {
+      "poetry": {
+        "author:[А. Дер--кий]": {
+          "works": 1,
+          "content_tokens": 87
+        },
+        "author:[Б-ов]": {
+          "works": 1,
+          "content_tokens": 128
+        },
+        "author:[Л.]": {
+          "works": 1,
+          "content_tokens": 1316
+        },
+        "author:unknown": {
+          "works": 1,
+          "content_tokens": 1124
+        },
+        "author:Апухтин Алексей Николаевич": {
+          "works": 12,
+          "content_tokens": 3072
+        },
+        "author:Баратынский Евгений Абрамович": {
+          "works": 3,
+          "content_tokens": 643
+        },
+        "author:Батюшков Константин Николаевич": {
+          "works": 7,
+          "content_tokens": 2666
+        },
+        "author:Бестужев-Марлинский Александр Александрович": {
+          "works": 1,
+          "content_tokens": 38
+        },
+        "author:Бунин Иван Алексеевич": {
+          "works": 2,
+          "content_tokens": 153
+        },
+        "author:Волков Платон Григорьевич": {
+          "works": 1,
+          "content_tokens": 496
+        },
+        "author:Вяземский Петр Андреевич": {
+          "works": 14,
+          "content_tokens": 3767
+        },
+        "author:Глебов Д.П.": {
+          "works": 1,
+          "content_tokens": 174
+        },
+        "author:Глинка Федор Николаевич": {
+          "works": 3,
+          "content_tokens": 479
+        },
+        "author:Григорьев Аполлон Александрович": {
+          "works": 7,
+          "content_tokens": 1809
+        },
+        "author:Давыдов Денис Васильевич": {
+          "works": 7,
+          "content_tokens": 1354
+        },
+        "author:Дельвиг Антон Антонович": {
+          "works": 13,
+          "content_tokens": 4685
+        },
+        "author:Державин Гавриил Романович": {
+          "works": 2,
+          "content_tokens": 382
+        },
+        "author:Жемчужников Алексей Михайлович": {
+          "works": 4,
+          "content_tokens": 1999
+        },
+        "author:Жуковский Василий Андреевич": {
+          "works": 1,
+          "content_tokens": 223
+        },
+        "author:Капнист Василий Васильевич": {
+          "works": 1,
+          "content_tokens": 195
+        },
+        "author:Карамзин Николай Михайлович": {
+          "works": 7,
+          "content_tokens": 3190
+        },
+        "author:Козлов Иван Иванович": {
+          "works": 3,
+          "content_tokens": 2045
+        },
+        "author:Кольцов Алексей Васильевич": {
+          "works": 7,
+          "content_tokens": 1436
+        },
+        "author:Крылов А.А.": {
+          "works": 1,
+          "content_tokens": 370
+        },
+        "author:Крылов Иван Андреевич": {
+          "works": 6,
+          "content_tokens": 1624
+        },
+        "author:Кюхельбекер Вильгельм Карлович": {
+          "works": 5,
+          "content_tokens": 2984
+        },
+        "author:Лермонтов Михаил Юрьевич": {
+          "works": 21,
+          "content_tokens": 5460
+        },
+        "author:Майков Аполлон Николаевич": {
+          "works": 5,
+          "content_tokens": 677
+        },
+        "author:Мей Лев Александрович": {
+          "works": 2,
+          "content_tokens": 877
+        },
+        "author:Морачевский Ф.С.": {
+          "works": 1,
+          "content_tokens": 489
+        },
+        "author:Мятлев Иван Петрович": {
+          "works": 3,
+          "content_tokens": 1050
+        },
+        "author:Надсон Семён Яковлевич": {
+          "works": 5,
+          "content_tokens": 1097
+        },
+        "author:Некрасов Николай Алексеевич": {
+          "works": 13,
+          "content_tokens": 2761
+        },
+        "author:Никитин Иван Саввич": {
+          "works": 11,
+          "content_tokens": 3309
+        },
+        "author:Огарев Николай Платонович": {
+          "works": 9,
+          "content_tokens": 1808
+        },
+        "author:Одоевский Александр Иванович": {
+          "works": 5,
+          "content_tokens": 1409
+        },
+        "author:Павлов Н.Ф.": {
+          "works": 1,
+          "content_tokens": 189
+        },
+        "author:Павлова Каролина Карловна": {
+          "works": 2,
+          "content_tokens": 341
+        },
+        "author:Плетнев П.А.": {
+          "works": 1,
+          "content_tokens": 182
+        },
+        "author:Плещеев Алексей Николаевич": {
+          "works": 1,
+          "content_tokens": 142
+        },
+        "author:Полежаев Александр Иванович": {
+          "works": 2,
+          "content_tokens": 244
+        },
+        "author:Полонский Яков Петрович": {
+          "works": 6,
+          "content_tokens": 1062
+        },
+        "author:Пушкин Александр Сергеевич": {
+          "works": 36,
+          "content_tokens": 7646
+        },
+        "author:Раевский Владимир Фёдосеевич": {
+          "works": 2,
+          "content_tokens": 556
+        },
+        "author:Ростопчина Евдокия Петровна": {
+          "works": 1,
+          "content_tokens": 677
+        },
+        "author:Рылеев Кондратий Фёдорович": {
+          "works": 3,
+          "content_tokens": 370
+        },
+        "author:Сиянов Петр Гаврилович": {
+          "works": 1,
+          "content_tokens": 455
+        },
+        "author:Суриков Иван Захарович": {
+          "works": 6,
+          "content_tokens": 2749
+        },
+        "author:Теряев П.": {
+          "works": 1,
+          "content_tokens": 838
+        },
+        "author:Толстой Алексей Константинович": {
+          "works": 10,
+          "content_tokens": 3240
+        },
+        "author:Тургенев Иван Сергеевич": {
+          "works": 3,
+          "content_tokens": 492
+        },
+        "author:Тютчев Федор Иванович": {
+          "works": 13,
+          "content_tokens": 2336
+        },
+        "author:Фет Афанасий Афанасьевич": {
+          "works": 33,
+          "content_tokens": 4797
+        },
+        "author:Хвостов Дмитрий Иванович": {
+          "works": 1,
+          "content_tokens": 604
+        },
+        "author:Языков Николай Михайлович": {
+          "works": 14,
+          "content_tokens": 3308
+        },
+        "domain:poetry": {
+          "works": 324,
+          "content_tokens": 85604
+        },
+        "genre:long_verse": {
+          "works": 6,
+          "content_tokens": 9375
+        },
+        "genre:lyric_or_short_verse": {
+          "works": 57,
+          "content_tokens": 12210
+        },
+        "genre:unknown": {
+          "works": 261,
+          "content_tokens": 64019
+        },
+        "source:c1835": {
+          "works": 6,
+          "content_tokens": 3271
+        },
+        "source:elegies": {
+          "works": 19,
+          "content_tokens": 9147
+        },
+        "source:poetry": {
+          "works": 184,
+          "content_tokens": 43176
+        },
+        "source:ru31": {
+          "works": 281,
+          "content_tokens": 70958
+        },
+        "token_length:128-511": {
+          "works": 168,
+          "content_tokens": 39788
+        },
+        "token_length:<128": {
+          "works": 117,
+          "content_tokens": 9668
+        },
+        "token_length:>=512": {
+          "works": 39,
+          "content_tokens": 36148
+        },
+        "written_period:unknown": {
+          "works": 324,
+          "content_tokens": 85604
+        }
+      }
+    },
+    "test": {
+      "poetry": {
+        "author:[А. Сырох-въ]": {
+          "works": 1,
+          "content_tokens": 279
+        },
+        "author:[А.]": {
+          "works": 1,
+          "content_tokens": 144
+        },
+        "author:[Василий Трубников]": {
+          "works": 1,
+          "content_tokens": 146
+        },
+        "author:[Г.]": {
+          "works": 1,
+          "content_tokens": 216
+        },
+        "author:[Л.]": {
+          "works": 1,
+          "content_tokens": 364
+        },
+        "author:[Подшивалов Ир.]": {
+          "works": 1,
+          "content_tokens": 238
+        },
+        "author:[Покровский И.]": {
+          "works": 1,
+          "content_tokens": 363
+        },
+        "author:Апухтин Алексей Николаевич": {
+          "works": 17,
+          "content_tokens": 4302
+        },
+        "author:Баратынский Евгений Абрамович": {
+          "works": 4,
+          "content_tokens": 1779
+        },
+        "author:Батюшков Константин Николаевич": {
+          "works": 6,
+          "content_tokens": 2262
+        },
+        "author:Бунин Иван Алексеевич": {
+          "works": 1,
+          "content_tokens": 186
+        },
+        "author:Веневитинов Дмитрий Владимирович": {
+          "works": 2,
+          "content_tokens": 635
+        },
+        "author:Вяземский Петр Андреевич": {
+          "works": 9,
+          "content_tokens": 3744
+        },
+        "author:Глинка Федор Николаевич": {
+          "works": 3,
+          "content_tokens": 671
+        },
+        "author:Грен Александр Евгеньевич": {
+          "works": 1,
+          "content_tokens": 101
+        },
+        "author:Григорьев Аполлон Александрович": {
+          "works": 2,
+          "content_tokens": 343
+        },
+        "author:Давыдов Денис Васильевич": {
+          "works": 6,
+          "content_tokens": 1273
+        },
+        "author:Дельвиг Антон Антонович": {
+          "works": 4,
+          "content_tokens": 1274
+        },
+        "author:Державин Гавриил Романович": {
+          "works": 2,
+          "content_tokens": 504
+        },
+        "author:Жемчужников Алексей Михайлович": {
+          "works": 3,
+          "content_tokens": 819
+        },
+        "author:Жуковский Василий Андреевич": {
+          "works": 4,
+          "content_tokens": 1311
+        },
+        "author:Капнист Василий Васильевич": {
+          "works": 5,
+          "content_tokens": 835
+        },
+        "author:Карамзин Николай Михайлович": {
+          "works": 3,
+          "content_tokens": 246
+        },
+        "author:Козлов Иван Иванович": {
+          "works": 1,
+          "content_tokens": 3358
+        },
+        "author:Кольцов Алексей Васильевич": {
+          "works": 7,
+          "content_tokens": 1488
+        },
+        "author:Крылов Иван Андреевич": {
+          "works": 5,
+          "content_tokens": 1023
+        },
+        "author:Кюхельбекер Вильгельм Карлович": {
+          "works": 2,
+          "content_tokens": 1061
+        },
+        "author:Лермонтов Михаил Юрьевич": {
+          "works": 20,
+          "content_tokens": 3624
+        },
+        "author:Лутковский Н.П.": {
+          "works": 1,
+          "content_tokens": 71
+        },
+        "author:Майков Аполлон Николаевич": {
+          "works": 9,
+          "content_tokens": 1905
+        },
+        "author:Милонов М.В.": {
+          "works": 1,
+          "content_tokens": 528
+        },
+        "author:Мятлев Иван Петрович": {
+          "works": 1,
+          "content_tokens": 185
+        },
+        "author:Надсон Семён Яковлевич": {
+          "works": 4,
+          "content_tokens": 588
+        },
+        "author:Некрасов Николай Алексеевич": {
+          "works": 13,
+          "content_tokens": 4486
+        },
+        "author:Никитин Иван Саввич": {
+          "works": 5,
+          "content_tokens": 1137
+        },
+        "author:Норов А.С.": {
+          "works": 1,
+          "content_tokens": 604
+        },
+        "author:Огарев Николай Платонович": {
+          "works": 4,
+          "content_tokens": 936
+        },
+        "author:Одоевский Александр Иванович": {
+          "works": 3,
+          "content_tokens": 411
+        },
+        "author:Олин Валериан Николаевич": {
+          "works": 2,
+          "content_tokens": 886
+        },
+        "author:Павлова Каролина Карловна": {
+          "works": 6,
+          "content_tokens": 1216
+        },
+        "author:Плетнев П.А.": {
+          "works": 1,
+          "content_tokens": 502
+        },
+        "author:Плещеев Алексей Николаевич": {
+          "works": 2,
+          "content_tokens": 244
+        },
+        "author:Полежаев Александр Иванович": {
+          "works": 1,
+          "content_tokens": 494
+        },
+        "author:Полонский Яков Петрович": {
+          "works": 4,
+          "content_tokens": 712
+        },
+        "author:Пушкин Александр Сергеевич": {
+          "works": 25,
+          "content_tokens": 5579
+        },
+        "author:Ростопчина Евдокия Петровна": {
+          "works": 1,
+          "content_tokens": 801
+        },
+        "author:Рылеев Кондратий Фёдорович": {
+          "works": 1,
+          "content_tokens": 45
+        },
+        "author:Суриков Иван Захарович": {
+          "works": 7,
+          "content_tokens": 1720
+        },
+        "author:Суходольский А.": {
+          "works": 1,
+          "content_tokens": 132
+        },
+        "author:Толстой Алексей Константинович": {
+          "works": 8,
+          "content_tokens": 1132
+        },
+        "author:Туманский Василий Иванович": {
+          "works": 1,
+          "content_tokens": 750
+        },
+        "author:Тургенев Иван Сергеевич": {
+          "works": 3,
+          "content_tokens": 621
+        },
+        "author:Тютчев Федор Иванович": {
+          "works": 18,
+          "content_tokens": 3166
+        },
+        "author:Фет Афанасий Афанасьевич": {
+          "works": 39,
+          "content_tokens": 5093
+        },
+        "author:Хомяков Алексей Степанович": {
+          "works": 1,
+          "content_tokens": 221
+        },
+        "author:Шкляревский П.П.": {
+          "works": 1,
+          "content_tokens": 553
+        },
+        "author:Штейнберг Д.И.": {
+          "works": 1,
+          "content_tokens": 71
+        },
+        "author:Языков Николай Михайлович": {
+          "works": 16,
+          "content_tokens": 6396
+        },
+        "domain:poetry": {
+          "works": 295,
+          "content_tokens": 73774
+        },
+        "genre:long_verse": {
+          "works": 4,
+          "content_tokens": 5703
+        },
+        "genre:lyric_or_short_verse": {
+          "works": 64,
+          "content_tokens": 13600
+        },
+        "genre:unknown": {
+          "works": 227,
+          "content_tokens": 54471
+        },
+        "source:c1835": {
+          "works": 5,
+          "content_tokens": 3265
+        },
+        "source:elegies": {
+          "works": 25,
+          "content_tokens": 8494
+        },
+        "source:poetry": {
+          "works": 151,
+          "content_tokens": 34960
+        },
+        "source:ru31": {
+          "works": 241,
+          "content_tokens": 55738
+        },
+        "source:songs": {
+          "works": 1,
+          "content_tokens": 183
+        },
+        "token_length:128-511": {
+          "works": 158,
+          "content_tokens": 36106
+        },
+        "token_length:<128": {
+          "works": 104,
+          "content_tokens": 8050
+        },
+        "token_length:>=512": {
+          "works": 33,
+          "content_tokens": 29618
+        },
+        "written_period:unknown": {
+          "works": 295,
+          "content_tokens": 73774
+        }
+      }
+    }
+  },
+  "inputs_sha256": {
+    "artifacts/tokenizers_v3/selected/tokenizer.json": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+    "data/poetry_v7/corpus.jsonl": "7a0698c638d671af2f192a7cf7d7c24567538b0973a0bb02c2e5a2dee6ec7d3f",
+    "data/poetry_v7/metadata.jsonl": "a85f75c8a0afc73b79e7ab4bde042aca31dcd4b22836ebcebb81ea560bdba928",
+    "data/poetry_v7/train.jsonl": "c4beaaa28a8ed80107fef93bc310de32762aa111a8609fb2ca50afa2b4479e6d",
+    "data/poetry_v7/validation.jsonl": "e41fb8a1239f20172741f9f1fad06a3ca0359c7f1cb5de1739782fc5c11c9c33",
+    "data/poetry_v7/test.jsonl": "dbf64e8ff5d7f73ac0e3e40ff445ea9f9f74159965d582858754d6efccde9296"
+  },
+  "model_training_performed": false,
+  "output_sha256": {
+    "poetry_test.npy": "3a31ffcef19377153c56279926fbb46b5fb4f29263b2f00cb2881a1070c50ab3",
+    "poetry_test_offsets.json": "16503967203db7d0560ece84192a29e3aa48d72a305577a9ff0ae6959e6345d6",
+    "poetry_train.npy": "ac9a1a6449ed8b0f82706106dae364ac81e00c3efdc8a4ac2f8a8ddb98f3b6c6",
+    "poetry_train_offsets.json": "744c8ddb98fd11838ed2514c465490872a818b8caf831567cc9a6445cdef868f",
+    "poetry_validation.npy": "8974fa1fd3ecf38d8543c95f4241e88ea2b82e9d793ad952b813634f4da2f877",
+    "poetry_validation_offsets.json": "7564ed13f5e45c6f144e564b1c4a872346788a0b3bc27b32d3aad0df090a9291"
+  }
+}

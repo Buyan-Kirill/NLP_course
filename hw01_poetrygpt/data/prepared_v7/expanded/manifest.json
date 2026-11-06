@@ -1,0 +1,3138 @@
+{
+  "context_length": 512,
+  "special_tokens": {
+    "<|pad|>": 0,
+    "<|bos|>": 1,
+    "<|eos|>": 2,
+    "<|user|>": 3,
+    "<|assistant|>": 4,
+    "<|eot|>": 5
+  },
+  "tokenizer_selected": "baseline_v2_8192",
+  "contract": {
+    "labels": "Unshifted; logits[:,:-1] vs labels[:,1:], exactly one trainer shift",
+    "pretrain": "Separate domain/split streams; one BOS, every full work followed by EOS; cross-work causal attention allowed",
+    "windows": "512 positions, stride511, overlap1; final short window retained; pad via training_data.pad_batch; drop_last=False",
+    "whole_work_encoding": true,
+    "sft": "No packing/truncation; user/role/pad masked; all assistant content/EOT and final EOS supervised",
+    "padding": "attention_mask=0, labels=-100; input_ids PAD",
+    "generation_stop_ids": [
+      5,
+      2
+    ],
+    "runtime_dtypes": "Convert stored input_ids and labels to int64 for embedding/CE",
+    "metadata": "Sidecars only; source/topic multilabel strata are not additive",
+    "model_training_performed": false
+  },
+  "release": "prepared_v7_expanded",
+  "profile": "expanded",
+  "splits": {
+    "train": {
+      "prose": {
+        "works": 41282,
+        "stream_tokens": 210064520,
+        "content_tokens": 210023237,
+        "causal_targets": 210064519,
+        "windows": 411086,
+        "last_window_positions": 85,
+        "roundtrip_works": 41282,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    },
+    "validation": {
+      "prose": {
+        "works": 1992,
+        "stream_tokens": 10200342,
+        "content_tokens": 10198349,
+        "causal_targets": 10200341,
+        "windows": 19962,
+        "last_window_positions": 271,
+        "roundtrip_works": 1992,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    },
+    "test": {
+      "prose": {
+        "works": 1807,
+        "stream_tokens": 8742447,
+        "content_tokens": 8740639,
+        "causal_targets": 8742446,
+        "windows": 17109,
+        "last_window_positions": 259,
+        "roundtrip_works": 1807,
+        "dtype": "uint16",
+        "dropped_or_truncated": 0
+      }
+    }
+  },
+  "strata": {
+    "train": {
+      "prose": {
+        "author:А. А. Бестужев": {
+          "works": 256,
+          "content_tokens": 766833
+        },
+        "author:А. А. Виницкая": {
+          "works": 7,
+          "content_tokens": 73324
+        },
+        "author:А. А. Григорьев": {
+          "works": 90,
+          "content_tokens": 326297
+        },
+        "author:А. А. Кирпищикова": {
+          "works": 6,
+          "content_tokens": 119063
+        },
+        "author:А. А. Нильский": {
+          "works": 41,
+          "content_tokens": 227970
+        },
+        "author:А. А. Рафалович": {
+          "works": 2,
+          "content_tokens": 13211
+        },
+        "author:А. А. Родзянко": {
+          "works": 4,
+          "content_tokens": 68666
+        },
+        "author:А. А. Слепцов": {
+          "works": 17,
+          "content_tokens": 164360
+        },
+        "author:А. А. Тихонов-Луговой": {
+          "works": 76,
+          "content_tokens": 532748
+        },
+        "author:А. А. Фет": {
+          "works": 225,
+          "content_tokens": 857780
+        },
+        "author:А. А. Черкасов": {
+          "works": 42,
+          "content_tokens": 484080
+        },
+        "author:А. А. Ярцев": {
+          "works": 8,
+          "content_tokens": 134864
+        },
+        "author:А. В. Арсеньев": {
+          "works": 4,
+          "content_tokens": 54617
+        },
+        "author:А. В. Верещагин": {
+          "works": 18,
+          "content_tokens": 224786
+        },
+        "author:А. В. Вышеславцев": {
+          "works": 9,
+          "content_tokens": 87420
+        },
+        "author:А. В. Горский": {
+          "works": 6,
+          "content_tokens": 83618
+        },
+        "author:А. В. Долгоруков": {
+          "works": 117,
+          "content_tokens": 134804
+        },
+        "author:А. В. Дружинин": {
+          "works": 277,
+          "content_tokens": 1073348
+        },
+        "author:А. В. Елисеев": {
+          "works": 5,
+          "content_tokens": 54252
+        },
+        "author:А. В. Каменский": {
+          "works": 7,
+          "content_tokens": 47620
+        },
+        "author:А. В. Павлова": {
+          "works": 5,
+          "content_tokens": 108814
+        },
+        "author:А. В. Стерн": {
+          "works": 12,
+          "content_tokens": 174117
+        },
+        "author:А. В. Суворов": {
+          "works": 44,
+          "content_tokens": 93386
+        },
+        "author:А. В. Тимофеев": {
+          "works": 3,
+          "content_tokens": 51480
+        },
+        "author:А. Г. Брикнер": {
+          "works": 4,
+          "content_tokens": 5504
+        },
+        "author:А. Г. Витковский": {
+          "works": 24,
+          "content_tokens": 408175
+        },
+        "author:А. Г. Ротчев": {
+          "works": 43,
+          "content_tokens": 54713
+        },
+        "author:А. Д. Апраксин": {
+          "works": 6,
+          "content_tokens": 143551
+        },
+        "author:А. Д. Боровков": {
+          "works": 15,
+          "content_tokens": 56053
+        },
+        "author:А. Д. Галахов": {
+          "works": 28,
+          "content_tokens": 136647
+        },
+        "author:А. Д. Градовский": {
+          "works": 39,
+          "content_tokens": 228407
+        },
+        "author:А. Д. Улыбышев": {
+          "works": 156,
+          "content_tokens": 430329
+        },
+        "author:А. Е. Лабзина": {
+          "works": 3,
+          "content_tokens": 62880
+        },
+        "author:А. Е. Розен": {
+          "works": 2,
+          "content_tokens": 2163
+        },
+        "author:А. И. Бибикова": {
+          "works": 8,
+          "content_tokens": 82483
+        },
+        "author:А. И. Васильчиков": {
+          "works": 108,
+          "content_tokens": 520032
+        },
+        "author:А. И. Герцен": {
+          "works": 380,
+          "content_tokens": 847330
+        },
+        "author:А. И. Кирпичников": {
+          "works": 20,
+          "content_tokens": 30122
+        },
+        "author:А. И. Кошелев": {
+          "works": 42,
+          "content_tokens": 284692
+        },
+        "author:А. И. Красницкий": {
+          "works": 144,
+          "content_tokens": 777652
+        },
+        "author:А. И. Левитов": {
+          "works": 30,
+          "content_tokens": 375334
+        },
+        "author:А. И. Михайловский-Данилевский": {
+          "works": 15,
+          "content_tokens": 47109
+        },
+        "author:А. И. Пальм": {
+          "works": 4,
+          "content_tokens": 90495
+        },
+        "author:А. И. Розанов": {
+          "works": 14,
+          "content_tokens": 206117
+        },
+        "author:А. И. Скребицкий": {
+          "works": 7,
+          "content_tokens": 43784
+        },
+        "author:А. И. Сумбатов-Южин": {
+          "works": 7,
+          "content_tokens": 62934
+        },
+        "author:А. И. Тургенев": {
+          "works": 203,
+          "content_tokens": 214762
+        },
+        "author:А. И. Эртель": {
+          "works": 132,
+          "content_tokens": 1206761
+        },
+        "author:А. К. Гиппиус": {
+          "works": 2,
+          "content_tokens": 43421
+        },
+        "author:А. К. Денисов": {
+          "works": 6,
+          "content_tokens": 134968
+        },
+        "author:А. К. Кешев": {
+          "works": 9,
+          "content_tokens": 55074
+        },
+        "author:А. К. Сизова": {
+          "works": 6,
+          "content_tokens": 106524
+        },
+        "author:А. К. Шеллер-Михайлов": {
+          "works": 358,
+          "content_tokens": 5314695
+        },
+        "author:А. Л. Зиссерман": {
+          "works": 53,
+          "content_tokens": 471768
+        },
+        "author:А. М. Бухарев": {
+          "works": 29,
+          "content_tokens": 47692
+        },
+        "author:А. М. Дараган": {
+          "works": 115,
+          "content_tokens": 186776
+        },
+        "author:А. М. Дмитриев": {
+          "works": 12,
+          "content_tokens": 131013
+        },
+        "author:А. М. Достоевский": {
+          "works": 22,
+          "content_tokens": 277006
+        },
+        "author:А. М. Муравьев": {
+          "works": 18,
+          "content_tokens": 14617
+        },
+        "author:А. М. Скабичевский": {
+          "works": 45,
+          "content_tokens": 157706
+        },
+        "author:А. Н. Аксаков": {
+          "works": 55,
+          "content_tokens": 415854
+        },
+        "author:А. Н. Анненская": {
+          "works": 21,
+          "content_tokens": 328352
+        },
+        "author:А. Н. Апухтин": {
+          "works": 49,
+          "content_tokens": 112825
+        },
+        "author:А. Н. Афанасьев": {
+          "works": 34,
+          "content_tokens": 641075
+        },
+        "author:А. Н. Веселовский": {
+          "works": 76,
+          "content_tokens": 124304
+        },
+        "author:А. Н. Вульф": {
+          "works": 13,
+          "content_tokens": 131568
+        },
+        "author:А. Н. Калинина": {
+          "works": 6,
+          "content_tokens": 49188
+        },
+        "author:А. Н. Куропаткин": {
+          "works": 8,
+          "content_tokens": 154295
+        },
+        "author:А. Н. Линдегрен": {
+          "works": 9,
+          "content_tokens": 84210
+        },
+        "author:А. Н. Муравьев": {
+          "works": 9,
+          "content_tokens": 240349
+        },
+        "author:А. Н. Островский": {
+          "works": 43,
+          "content_tokens": 30621
+        },
+        "author:А. Н. Плещеев": {
+          "works": 31,
+          "content_tokens": 109782
+        },
+        "author:А. Н. Попов": {
+          "works": 4,
+          "content_tokens": 73238
+        },
+        "author:А. Н. Пыпин": {
+          "works": 346,
+          "content_tokens": 419594
+        },
+        "author:А. Н. Радищев": {
+          "works": 74,
+          "content_tokens": 56109
+        },
+        "author:А. Н. Цеханович": {
+          "works": 87,
+          "content_tokens": 188079
+        },
+        "author:А. Н. Энгельгардт": {
+          "works": 19,
+          "content_tokens": 397962
+        },
+        "author:А. О. Ишимова": {
+          "works": 11,
+          "content_tokens": 263146
+        },
+        "author:А. О. Корнилович": {
+          "works": 48,
+          "content_tokens": 134461
+        },
+        "author:А. О. Смирнова-Россет": {
+          "works": 345,
+          "content_tokens": 230205
+        },
+        "author:А. П. Баласогло": {
+          "works": 28,
+          "content_tokens": 80451
+        },
+        "author:А. П. Беляев": {
+          "works": 12,
+          "content_tokens": 315509
+        },
+        "author:А. П. Ермолов": {
+          "works": 30,
+          "content_tokens": 253112
+        },
+        "author:А. П. Керн": {
+          "works": 32,
+          "content_tokens": 54390
+        },
+        "author:А. П. Кобякова": {
+          "works": 7,
+          "content_tokens": 137329
+        },
+        "author:А. П. Куницын": {
+          "works": 20,
+          "content_tokens": 82421
+        },
+        "author:А. П. Лазарев": {
+          "works": 1,
+          "content_tokens": 994
+        },
+        "author:А. П. Лебедев": {
+          "works": 17,
+          "content_tokens": 11478
+        },
+        "author:А. П. Назарьев": {
+          "works": 5,
+          "content_tokens": 110948
+        },
+        "author:А. П. Пятковский": {
+          "works": 15,
+          "content_tokens": 37876
+        },
+        "author:А. П. Стороженко": {
+          "works": 11,
+          "content_tokens": 44428
+        },
+        "author:А. П. Сумароков": {
+          "works": 5,
+          "content_tokens": 70243
+        },
+        "author:А. П. Чехов": {
+          "works": 261,
+          "content_tokens": 1840273
+        },
+        "author:А. П. Энгельгардт": {
+          "works": 11,
+          "content_tokens": 129436
+        },
+        "author:А. Погорельский": {
+          "works": 8,
+          "content_tokens": 199771
+        },
+        "author:А. С. Вязигин": {
+          "works": 4,
+          "content_tokens": 68286
+        },
+        "author:А. С. Гангеблов": {
+          "works": 34,
+          "content_tokens": 40606
+        },
+        "author:А. С. Грибоедов": {
+          "works": 57,
+          "content_tokens": 40260
+        },
+        "author:А. С. Лубкин": {
+          "works": 9,
+          "content_tokens": 71265
+        },
+        "author:А. С. Пушкин": {
+          "works": 8,
+          "content_tokens": 82645
+        },
+        "author:А. С. Суворин": {
+          "works": 3,
+          "content_tokens": 71344
+        },
+        "author:А. С. Трачевский": {
+          "works": 7,
+          "content_tokens": 82421
+        },
+        "author:А. С. Шабельская": {
+          "works": 12,
+          "content_tokens": 58511
+        },
+        "author:А. С. Шишков": {
+          "works": 53,
+          "content_tokens": 325450
+        },
+        "author:А. Т. Болотов": {
+          "works": 112,
+          "content_tokens": 784213
+        },
+        "author:А. Ф. Бестужев": {
+          "works": 20,
+          "content_tokens": 32986
+        },
+        "author:А. Ф. Вельтман": {
+          "works": 142,
+          "content_tokens": 955194
+        },
+        "author:А. Ф. Гильфердинг": {
+          "works": 7,
+          "content_tokens": 46947
+        },
+        "author:А. Ф. Леопольдов": {
+          "works": 2,
+          "content_tokens": 60451
+        },
+        "author:А. Ф. Писемский": {
+          "works": 349,
+          "content_tokens": 2710526
+        },
+        "author:А. Ф. Раевский": {
+          "works": 4,
+          "content_tokens": 98964
+        },
+        "author:А. Х. Бенкендорф": {
+          "works": 13,
+          "content_tokens": 100098
+        },
+        "author:А. Я. Артынов": {
+          "works": 21,
+          "content_tokens": 100509
+        },
+        "author:А. Я. Бабиков": {
+          "works": 14,
+          "content_tokens": 86727
+        },
+        "author:А. Я. Марченко": {
+          "works": 6,
+          "content_tokens": 83616
+        },
+        "author:А. Я. Панаева": {
+          "works": 32,
+          "content_tokens": 480118
+        },
+        "author:Алиханов-Аварский Максуд": {
+          "works": 9,
+          "content_tokens": 141496
+        },
+        "author:Амвросий Оптинский": {
+          "works": 30,
+          "content_tokens": 378646
+        },
+        "author:Б. Д. Порозовская": {
+          "works": 6,
+          "content_tokens": 127306
+        },
+        "author:Б. М. Маркевич": {
+          "works": 600,
+          "content_tokens": 1337600
+        },
+        "author:Б. Н. Чичерин": {
+          "works": 9,
+          "content_tokens": 96721
+        },
+        "author:Безродная Юлия": {
+          "works": 4,
+          "content_tokens": 39980
+        },
+        "author:В. А. Вадбольская": {
+          "works": 9,
+          "content_tokens": 147821
+        },
+        "author:В. А. Вонлярлярский": {
+          "works": 51,
+          "content_tokens": 152571
+        },
+        "author:В. А. Жуковский": {
+          "works": 36,
+          "content_tokens": 38963
+        },
+        "author:В. А. Зайцев": {
+          "works": 4,
+          "content_tokens": 60644
+        },
+        "author:В. А. Панаев": {
+          "works": 66,
+          "content_tokens": 63029
+        },
+        "author:В. А. Слепцов": {
+          "works": 36,
+          "content_tokens": 220579
+        },
+        "author:В. А. Соллогуб": {
+          "works": 21,
+          "content_tokens": 135758
+        },
+        "author:В. А. Теплов": {
+          "works": 28,
+          "content_tokens": 96732
+        },
+        "author:В. А. Тимирязев": {
+          "works": 4,
+          "content_tokens": 65435
+        },
+        "author:В. Б. Броневский": {
+          "works": 102,
+          "content_tokens": 389921
+        },
+        "author:В. В. Берви-Флеровский": {
+          "works": 40,
+          "content_tokens": 292847
+        },
+        "author:В. В. Верещагин": {
+          "works": 8,
+          "content_tokens": 84893
+        },
+        "author:В. В. Крестовский": {
+          "works": 319,
+          "content_tokens": 2681794
+        },
+        "author:В. Г. Авсеенко": {
+          "works": 65,
+          "content_tokens": 746942
+        },
+        "author:В. Г. Белинский": {
+          "works": 287,
+          "content_tokens": 1080932
+        },
+        "author:В. Г. Короленко": {
+          "works": 654,
+          "content_tokens": 1395553
+        },
+        "author:В. Г. Старостин": {
+          "works": 15,
+          "content_tokens": 275389
+        },
+        "author:В. И. Герье": {
+          "works": 47,
+          "content_tokens": 55899
+        },
+        "author:В. И. Даль": {
+          "works": 30,
+          "content_tokens": 214936
+        },
+        "author:В. И. Ден": {
+          "works": 76,
+          "content_tokens": 95485
+        },
+        "author:В. И. Засулич": {
+          "works": 79,
+          "content_tokens": 80149
+        },
+        "author:В. И. Кельсиев": {
+          "works": 17,
+          "content_tokens": 205549
+        },
+        "author:В. И. Ламанский": {
+          "works": 12,
+          "content_tokens": 46536
+        },
+        "author:В. И. Панаев": {
+          "works": 43,
+          "content_tokens": 113657
+        },
+        "author:В. И. Семевский": {
+          "works": 25,
+          "content_tokens": 25228
+        },
+        "author:В. И. Соколовский": {
+          "works": 8,
+          "content_tokens": 174257
+        },
+        "author:В. К. Кюхельбекер": {
+          "works": 16,
+          "content_tokens": 29919
+        },
+        "author:В. Л. Кигн-Дедлов": {
+          "works": 9,
+          "content_tokens": 90256
+        },
+        "author:В. М. Гаршин": {
+          "works": 32,
+          "content_tokens": 162134
+        },
+        "author:В. М. Головнин": {
+          "works": 296,
+          "content_tokens": 471888
+        },
+        "author:В. М. Михеев": {
+          "works": 11,
+          "content_tokens": 56985
+        },
+        "author:В. Н. Берх": {
+          "works": 21,
+          "content_tokens": 49398
+        },
+        "author:В. Н. Головина": {
+          "works": 98,
+          "content_tokens": 409830
+        },
+        "author:В. Н. Елагин": {
+          "works": 34,
+          "content_tokens": 160926
+        },
+        "author:В. Н. Житова": {
+          "works": 37,
+          "content_tokens": 70386
+        },
+        "author:В. Н. Майков": {
+          "works": 20,
+          "content_tokens": 57266
+        },
+        "author:В. Н. Никитин": {
+          "works": 14,
+          "content_tokens": 91035
+        },
+        "author:В. О. Португалов": {
+          "works": 17,
+          "content_tokens": 33970
+        },
+        "author:В. П. Авенариус": {
+          "works": 188,
+          "content_tokens": 950915
+        },
+        "author:В. П. Андреевская": {
+          "works": 43,
+          "content_tokens": 839383
+        },
+        "author:В. П. Безобразов": {
+          "works": 15,
+          "content_tokens": 21351
+        },
+        "author:В. П. Березин": {
+          "works": 23,
+          "content_tokens": 74510
+        },
+        "author:В. П. Боткин": {
+          "works": 10,
+          "content_tokens": 7107
+        },
+        "author:В. П. Желиховская": {
+          "works": 28,
+          "content_tokens": 185852
+        },
+        "author:В. П. Клюшников": {
+          "works": 61,
+          "content_tokens": 354086
+        },
+        "author:В. П. Мещерский": {
+          "works": 6,
+          "content_tokens": 54790
+        },
+        "author:В. П. Острогорский": {
+          "works": 6,
+          "content_tokens": 59353
+        },
+        "author:В. Р. Зотов": {
+          "works": 6,
+          "content_tokens": 69104
+        },
+        "author:В. С. Аксакова": {
+          "works": 11,
+          "content_tokens": 87357
+        },
+        "author:В. С. Баскин": {
+          "works": 12,
+          "content_tokens": 45984
+        },
+        "author:В. С. Березайский": {
+          "works": 12,
+          "content_tokens": 33964
+        },
+        "author:В. С. Глинка": {
+          "works": 3,
+          "content_tokens": 69400
+        },
+        "author:В. С. Кротков": {
+          "works": 2,
+          "content_tokens": 43053
+        },
+        "author:В. С. Соловьев": {
+          "works": 370,
+          "content_tokens": 2815607
+        },
+        "author:В. Т. Нарежный": {
+          "works": 92,
+          "content_tokens": 764103
+        },
+        "author:В. Ф. Буринский": {
+          "works": 8,
+          "content_tokens": 46905
+        },
+        "author:В. Ф. Одоевский": {
+          "works": 224,
+          "content_tokens": 687263
+        },
+        "author:В. Я. Классен": {
+          "works": 16,
+          "content_tokens": 103296
+        },
+        "author:В. Я. Стоюнин": {
+          "works": 23,
+          "content_tokens": 39695
+        },
+        "author:Вовчок Марко": {
+          "works": 52,
+          "content_tokens": 493989
+        },
+        "author:Г. А. Джаншиев": {
+          "works": 19,
+          "content_tokens": 36853
+        },
+        "author:Г. А. Мачтет": {
+          "works": 33,
+          "content_tokens": 316334
+        },
+        "author:Г. А. Паперна": {
+          "works": 13,
+          "content_tokens": 134819
+        },
+        "author:Г. А. Покровский": {
+          "works": 3,
+          "content_tokens": 63481
+        },
+        "author:Г. А. Сарычев": {
+          "works": 8,
+          "content_tokens": 154715
+        },
+        "author:Г. А. Хрущов-Сокольников": {
+          "works": 11,
+          "content_tokens": 304837
+        },
+        "author:Г. В. Гераков": {
+          "works": 10,
+          "content_tokens": 55054
+        },
+        "author:Г. В. Кугушев": {
+          "works": 8,
+          "content_tokens": 54626
+        },
+        "author:Г. Е. Благосветлов": {
+          "works": 8,
+          "content_tokens": 64137
+        },
+        "author:Г. И. Богров": {
+          "works": 67,
+          "content_tokens": 319995
+        },
+        "author:Г. И. Добрынин": {
+          "works": 172,
+          "content_tokens": 161175
+        },
+        "author:Г. И. Невельской": {
+          "works": 86,
+          "content_tokens": 271663
+        },
+        "author:Г. И. Успенский": {
+          "works": 211,
+          "content_tokens": 2360768
+        },
+        "author:Г. И. Шелехов": {
+          "works": 7,
+          "content_tokens": 62224
+        },
+        "author:Г. М. Веселовский": {
+          "works": 14,
+          "content_tokens": 30966
+        },
+        "author:Г. Н. Ге": {
+          "works": 31,
+          "content_tokens": 39308
+        },
+        "author:Г. Н. Потанин": {
+          "works": 41,
+          "content_tokens": 522737
+        },
+        "author:Г. П. Данилевский": {
+          "works": 278,
+          "content_tokens": 1395206
+        },
+        "author:Г. Р. Державин": {
+          "works": 80,
+          "content_tokens": 202721
+        },
+        "author:Г. Т. Хохлов": {
+          "works": 15,
+          "content_tokens": 72415
+        },
+        "author:Д. А. Коропчевский": {
+          "works": 3,
+          "content_tokens": 50232
+        },
+        "author:Д. А. Линев": {
+          "works": 27,
+          "content_tokens": 247997
+        },
+        "author:Д. А. Смирнов": {
+          "works": 27,
+          "content_tokens": 23451
+        },
+        "author:Д. В. Аверкиев": {
+          "works": 184,
+          "content_tokens": 918480
+        },
+        "author:Д. В. Веневитинов": {
+          "works": 27,
+          "content_tokens": 52433
+        },
+        "author:Д. В. Григорович": {
+          "works": 260,
+          "content_tokens": 1734457
+        },
+        "author:Д. В. Давыдов": {
+          "works": 7,
+          "content_tokens": 80806
+        },
+        "author:Д. Д. Минаев": {
+          "works": 1,
+          "content_tokens": 17883
+        },
+        "author:Д. Д. Семенов": {
+          "works": 7,
+          "content_tokens": 40812
+        },
+        "author:Д. Д. Языков": {
+          "works": 4,
+          "content_tokens": 73441
+        },
+        "author:Д. И. Иловайский": {
+          "works": 14,
+          "content_tokens": 277039
+        },
+        "author:Д. И. Менделеев": {
+          "works": 16,
+          "content_tokens": 109356
+        },
+        "author:Д. И. Писарев": {
+          "works": 196,
+          "content_tokens": 1194865
+        },
+        "author:Д. И. Стахеев": {
+          "works": 15,
+          "content_tokens": 341201
+        },
+        "author:Д. Л. Мордовцев": {
+          "works": 187,
+          "content_tokens": 1883559
+        },
+        "author:Д. М. Волконский": {
+          "works": 13,
+          "content_tokens": 47823
+        },
+        "author:Д. М. Перевощиков": {
+          "works": 5,
+          "content_tokens": 63714
+        },
+        "author:Д. Н. Бегичев": {
+          "works": 28,
+          "content_tokens": 326337
+        },
+        "author:Д. Н. Мамин-Сибиряк": {
+          "works": 559,
+          "content_tokens": 6308136
+        },
+        "author:Д. Н. Свербеев": {
+          "works": 157,
+          "content_tokens": 271299
+        },
+        "author:Д. Н. Цертелев": {
+          "works": 6,
+          "content_tokens": 59761
+        },
+        "author:Е. А. Вердеревский": {
+          "works": 115,
+          "content_tokens": 168594
+        },
+        "author:Е. А. Ганейзер": {
+          "works": 4,
+          "content_tokens": 89108
+        },
+        "author:Е. А. Драшусова": {
+          "works": 23,
+          "content_tokens": 131267
+        },
+        "author:Е. А. Краснова": {
+          "works": 90,
+          "content_tokens": 165748
+        },
+        "author:Е. А. Сабанеева": {
+          "works": 8,
+          "content_tokens": 78574
+        },
+        "author:Е. А. Салиас": {
+          "works": 1002,
+          "content_tokens": 6050274
+        },
+        "author:Е. А. Соловьев-Андреевич": {
+          "works": 123,
+          "content_tokens": 467507
+        },
+        "author:Е. А. Сушкова": {
+          "works": 128,
+          "content_tokens": 131530
+        },
+        "author:Е. Б. Фукс": {
+          "works": 8,
+          "content_tokens": 53002
+        },
+        "author:Е. В. Новосильцева": {
+          "works": 11,
+          "content_tokens": 118104
+        },
+        "author:Е. Г. Браун": {
+          "works": 37,
+          "content_tokens": 66237
+        },
+        "author:Е. Д. Безобразова": {
+          "works": 8,
+          "content_tokens": 130922
+        },
+        "author:Е. И. Апрелева": {
+          "works": 18,
+          "content_tokens": 172286
+        },
+        "author:Е. И. Конради": {
+          "works": 5,
+          "content_tokens": 58591
+        },
+        "author:Е. И. Маурин": {
+          "works": 107,
+          "content_tokens": 712851
+        },
+        "author:Е. И. Утин": {
+          "works": 35,
+          "content_tokens": 94462
+        },
+        "author:Е. Л. Марков": {
+          "works": 126,
+          "content_tokens": 1607712
+        },
+        "author:Е. М. Белозерский": {
+          "works": 5,
+          "content_tokens": 68263
+        },
+        "author:Е. М. Иванова": {
+          "works": 9,
+          "content_tokens": 86196
+        },
+        "author:Е. М. Феоктистов": {
+          "works": 70,
+          "content_tokens": 161609
+        },
+        "author:Е. Н. Ахматова": {
+          "works": 2,
+          "content_tokens": 44937
+        },
+        "author:Е. Н. Щепкина": {
+          "works": 19,
+          "content_tokens": 127019
+        },
+        "author:Е. П. Блаватская": {
+          "works": 214,
+          "content_tokens": 280797
+        },
+        "author:Е. П. Гребенка": {
+          "works": 63,
+          "content_tokens": 356998
+        },
+        "author:Е. П. Ермолова": {
+          "works": 6,
+          "content_tokens": 101455
+        },
+        "author:Е. П. Карнович": {
+          "works": 118,
+          "content_tokens": 1441113
+        },
+        "author:Е. П. Ковалевский": {
+          "works": 20,
+          "content_tokens": 82079
+        },
+        "author:Е. П. Леткова": {
+          "works": 8,
+          "content_tokens": 52024
+        },
+        "author:Е. П. Новиков": {
+          "works": 2,
+          "content_tokens": 52554
+        },
+        "author:Е. П. Ростопчина": {
+          "works": 52,
+          "content_tokens": 215736
+        },
+        "author:Е. Р. Дашкова": {
+          "works": 6,
+          "content_tokens": 141791
+        },
+        "author:Е. С. Горчакова": {
+          "works": 7,
+          "content_tokens": 63837
+        },
+        "author:Е. Ф. Комаровский": {
+          "works": 6,
+          "content_tokens": 130824
+        },
+        "author:Е. Ф. Литвинова": {
+          "works": 19,
+          "content_tokens": 239419
+        },
+        "author:Е. Э. Дриянский": {
+          "works": 46,
+          "content_tokens": 96921
+        },
+        "author:Е. Я. Колбасин": {
+          "works": 34,
+          "content_tokens": 54917
+        },
+        "author:З. С. Мирович-Иванова": {
+          "works": 63,
+          "content_tokens": 70958
+        },
+        "author:Забытый О.": {
+          "works": 19,
+          "content_tokens": 488904
+        },
+        "author:И. А. Арсеньев": {
+          "works": 17,
+          "content_tokens": 49543
+        },
+        "author:И. А. Вашков": {
+          "works": 7,
+          "content_tokens": 117849
+        },
+        "author:И. А. Гончаров": {
+          "works": 419,
+          "content_tokens": 1652848
+        },
+        "author:И. А. Давидов": {
+          "works": 11,
+          "content_tokens": 50408
+        },
+        "author:И. А. Крылов": {
+          "works": 9,
+          "content_tokens": 182549
+        },
+        "author:И. А. Кущевский": {
+          "works": 55,
+          "content_tokens": 187004
+        },
+        "author:И. А. Салов": {
+          "works": 75,
+          "content_tokens": 967976
+        },
+        "author:И. В. Омулевский": {
+          "works": 28,
+          "content_tokens": 306429
+        },
+        "author:И. Д. Ахшарумов": {
+          "works": 17,
+          "content_tokens": 129226
+        },
+        "author:И. Е. Забелин": {
+          "works": 75,
+          "content_tokens": 218139
+        },
+        "author:И. И. Вальберх": {
+          "works": 3,
+          "content_tokens": 786
+        },
+        "author:И. И. Дмитриев": {
+          "works": 24,
+          "content_tokens": 137365
+        },
+        "author:И. И. Иванов": {
+          "works": 77,
+          "content_tokens": 66987
+        },
+        "author:И. И. Иванюков": {
+          "works": 31,
+          "content_tokens": 74185
+        },
+        "author:И. И. Лажечников": {
+          "works": 291,
+          "content_tokens": 1094794
+        },
+        "author:И. И. Лепёхин": {
+          "works": 78,
+          "content_tokens": 137384
+        },
+        "author:И. И. Мартынов": {
+          "works": 20,
+          "content_tokens": 75716
+        },
+        "author:И. И. Мясницкий": {
+          "works": 10,
+          "content_tokens": 154813
+        },
+        "author:И. И. Панаев": {
+          "works": 69,
+          "content_tokens": 937048
+        },
+        "author:И. И. Пущин": {
+          "works": 29,
+          "content_tokens": 39194
+        },
+        "author:И. И. Срезневский": {
+          "works": 60,
+          "content_tokens": 108926
+        },
+        "author:И. И. Ясинский": {
+          "works": 9,
+          "content_tokens": 212120
+        },
+        "author:И. К. Кондратьев": {
+          "works": 24,
+          "content_tokens": 537452
+        },
+        "author:И. Л. Леонтьев-Щеглов": {
+          "works": 10,
+          "content_tokens": 47028
+        },
+        "author:И. М. Аничкова": {
+          "works": 2,
+          "content_tokens": 57302
+        },
+        "author:И. М. Долгоруков": {
+          "works": 240,
+          "content_tokens": 938918
+        },
+        "author:И. Н. Березин": {
+          "works": 7,
+          "content_tokens": 199472
+        },
+        "author:И. Н. Глухарев": {
+          "works": 6,
+          "content_tokens": 49308
+        },
+        "author:И. Н. Захарьин": {
+          "works": 6,
+          "content_tokens": 78669
+        },
+        "author:И. Н. Потапенко": {
+          "works": 76,
+          "content_tokens": 1429660
+        },
+        "author:И. Н. Харламов": {
+          "works": 18,
+          "content_tokens": 37646
+        },
+        "author:И. П. Барсуков": {
+          "works": 24,
+          "content_tokens": 232431
+        },
+        "author:И. П. Борисов": {
+          "works": 51,
+          "content_tokens": 40871
+        },
+        "author:И. С. Аксаков": {
+          "works": 136,
+          "content_tokens": 884846
+        },
+        "author:И. С. Генслер": {
+          "works": 14,
+          "content_tokens": 99957
+        },
+        "author:И. С. Никитин": {
+          "works": 7,
+          "content_tokens": 51149
+        },
+        "author:И. С. Тургенев": {
+          "works": 446,
+          "content_tokens": 1604971
+        },
+        "author:И. Т. Калашников": {
+          "works": 40,
+          "content_tokens": 122138
+        },
+        "author:И. Т. Кокорев": {
+          "works": 30,
+          "content_tokens": 117842
+        },
+        "author:К. В. Назарьева": {
+          "works": 3,
+          "content_tokens": 65595
+        },
+        "author:К. В. Чернышев": {
+          "works": 34,
+          "content_tokens": 102400
+        },
+        "author:К. Д. Кавелин": {
+          "works": 22,
+          "content_tokens": 150225
+        },
+        "author:К. Д. Ушинский": {
+          "works": 174,
+          "content_tokens": 833686
+        },
+        "author:К. К. Абаза": {
+          "works": 14,
+          "content_tokens": 209125
+        },
+        "author:К. К. Арсеньев": {
+          "works": 11,
+          "content_tokens": 19950
+        },
+        "author:К. М. Базили": {
+          "works": 11,
+          "content_tokens": 263929
+        },
+        "author:К. М. Станюкович": {
+          "works": 307,
+          "content_tokens": 3258832
+        },
+        "author:К. Н. Баранов": {
+          "works": 6,
+          "content_tokens": 46973
+        },
+        "author:К. Н. Батюшков": {
+          "works": 20,
+          "content_tokens": 34481
+        },
+        "author:К. Н. Бестужев-Рюмин": {
+          "works": 6,
+          "content_tokens": 105035
+        },
+        "author:К. Н. Леонтьев": {
+          "works": 724,
+          "content_tokens": 1886872
+        },
+        "author:К. Н. Ярош": {
+          "works": 7,
+          "content_tokens": 43918
+        },
+        "author:К. П. Кованько": {
+          "works": 3,
+          "content_tokens": 46273
+        },
+        "author:К. П. Масальский": {
+          "works": 32,
+          "content_tokens": 324737
+        },
+        "author:К. П. Победоносцев": {
+          "works": 30,
+          "content_tokens": 173642
+        },
+        "author:К. С. Аксаков": {
+          "works": 138,
+          "content_tokens": 243588
+        },
+        "author:К. С. Баранцевич": {
+          "works": 15,
+          "content_tokens": 339852
+        },
+        "author:К. Ф. Головин": {
+          "works": 6,
+          "content_tokens": 45230
+        },
+        "author:К. Ф. Дитмар": {
+          "works": 36,
+          "content_tokens": 417715
+        },
+        "author:К. Э. Паприц": {
+          "works": 2,
+          "content_tokens": 44195
+        },
+        "author:Комаров Матвей": {
+          "works": 17,
+          "content_tokens": 76547
+        },
+        "author:Л. А. Загоскин": {
+          "works": 58,
+          "content_tokens": 230995
+        },
+        "author:Л. А. Полонский": {
+          "works": 37,
+          "content_tokens": 246992
+        },
+        "author:Л. В. Брант": {
+          "works": 85,
+          "content_tokens": 1134037
+        },
+        "author:Л. Д. Шаховская": {
+          "works": 129,
+          "content_tokens": 814717
+        },
+        "author:Л. Е. Белянкин": {
+          "works": 2,
+          "content_tokens": 48754
+        },
+        "author:Л. И. Мечников": {
+          "works": 22,
+          "content_tokens": 369628
+        },
+        "author:Л. Н. Майков": {
+          "works": 86,
+          "content_tokens": 63567
+        },
+        "author:Л. Н. Павлищев": {
+          "works": 111,
+          "content_tokens": 214174
+        },
+        "author:Л. Н. Толстой": {
+          "works": 631,
+          "content_tokens": 2850923
+        },
+        "author:Л. Н. Трефолев": {
+          "works": 17,
+          "content_tokens": 50739
+        },
+        "author:Л. П. Шелгунова": {
+          "works": 177,
+          "content_tokens": 213084
+        },
+        "author:Л. Ф. Маклакова-Нелидова": {
+          "works": 4,
+          "content_tokens": 92576
+        },
+        "author:М. А. Бакунин": {
+          "works": 211,
+          "content_tokens": 673570
+        },
+        "author:М. А. Воронов": {
+          "works": 10,
+          "content_tokens": 99862
+        },
+        "author:М. А. Дмитриев": {
+          "works": 11,
+          "content_tokens": 108829
+        },
+        "author:М. А. Терентьев": {
+          "works": 66,
+          "content_tokens": 558421
+        },
+        "author:М. А. Филиппов": {
+          "works": 6,
+          "content_tokens": 72870
+        },
+        "author:М. В. Барро": {
+          "works": 21,
+          "content_tokens": 90403
+        },
+        "author:М. В. Ватсон": {
+          "works": 9,
+          "content_tokens": 99784
+        },
+        "author:М. В. Крестовская": {
+          "works": 62,
+          "content_tokens": 666294
+        },
+        "author:М. В. Ломоносов": {
+          "works": 7,
+          "content_tokens": 59263
+        },
+        "author:М. В. Певцов": {
+          "works": 63,
+          "content_tokens": 203266
+        },
+        "author:М. В. Петрашевский": {
+          "works": 95,
+          "content_tokens": 206003
+        },
+        "author:М. Г. Кривошлык": {
+          "works": 5,
+          "content_tokens": 63895
+        },
+        "author:М. Г. Рудометкин": {
+          "works": 111,
+          "content_tokens": 223625
+        },
+        "author:М. Д. Муретов": {
+          "works": 31,
+          "content_tokens": 55092
+        },
+        "author:М. Д. Чулков": {
+          "works": 15,
+          "content_tokens": 254756
+        },
+        "author:М. Е. Салтыков-Щедрин": {
+          "works": 724,
+          "content_tokens": 3213451
+        },
+        "author:М. И. Богданович": {
+          "works": 140,
+          "content_tokens": 904919
+        },
+        "author:М. И. Венюков": {
+          "works": 114,
+          "content_tokens": 180868
+        },
+        "author:М. И. Драгомиров": {
+          "works": 15,
+          "content_tokens": 60737
+        },
+        "author:М. И. Жихарев": {
+          "works": 29,
+          "content_tokens": 23372
+        },
+        "author:М. И. Иванин": {
+          "works": 1,
+          "content_tokens": 29468
+        },
+        "author:М. И. Ловцова": {
+          "works": 6,
+          "content_tokens": 60239
+        },
+        "author:М. И. Пыляев": {
+          "works": 72,
+          "content_tokens": 535551
+        },
+        "author:М. И. Семевский": {
+          "works": 197,
+          "content_tokens": 411985
+        },
+        "author:М. И. Чайковский": {
+          "works": 103,
+          "content_tokens": 309060
+        },
+        "author:М. К. Башкирцева": {
+          "works": 21,
+          "content_tokens": 276335
+        },
+        "author:М. К. Цебрикова": {
+          "works": 10,
+          "content_tokens": 136566
+        },
+        "author:М. Л. Магницкий": {
+          "works": 11,
+          "content_tokens": 52609
+        },
+        "author:М. Л. Михайлов": {
+          "works": 196,
+          "content_tokens": 741633
+        },
+        "author:М. Л. Песковский": {
+          "works": 12,
+          "content_tokens": 195571
+        },
+        "author:М. М. Достоевский": {
+          "works": 2,
+          "content_tokens": 57835
+        },
+        "author:М. М. Сперанский": {
+          "works": 31,
+          "content_tokens": 45515
+        },
+        "author:М. М. Филиппов": {
+          "works": 42,
+          "content_tokens": 510610
+        },
+        "author:М. М. Щербатов": {
+          "works": 15,
+          "content_tokens": 55349
+        },
+        "author:М. Н. Альбов": {
+          "works": 21,
+          "content_tokens": 392393
+        },
+        "author:М. Н. Вернадская": {
+          "works": 3,
+          "content_tokens": 74854
+        },
+        "author:М. Н. Владыкин": {
+          "works": 50,
+          "content_tokens": 243332
+        },
+        "author:М. Н. Загоскин": {
+          "works": 138,
+          "content_tokens": 1155599
+        },
+        "author:М. Н. Катков": {
+          "works": 21,
+          "content_tokens": 36241
+        },
+        "author:М. Н. Ремезов": {
+          "works": 43,
+          "content_tokens": 314803
+        },
+        "author:М. О. Меньшиков": {
+          "works": 42,
+          "content_tokens": 144071
+        },
+        "author:М. П. Погодин": {
+          "works": 14,
+          "content_tokens": 59743
+        },
+        "author:М. С. Громека": {
+          "works": 3,
+          "content_tokens": 45059
+        },
+        "author:М. С. Жукова": {
+          "works": 11,
+          "content_tokens": 141002
+        },
+        "author:М. С. Корелин": {
+          "works": 5,
+          "content_tokens": 106356
+        },
+        "author:М. С. Щепкин": {
+          "works": 9,
+          "content_tokens": 57227
+        },
+        "author:М. Ф. Де-Пуле": {
+          "works": 80,
+          "content_tokens": 76392
+        },
+        "author:М. Ф. Ростовская": {
+          "works": 20,
+          "content_tokens": 482297
+        },
+        "author:М. Ю. Лермонтов": {
+          "works": 14,
+          "content_tokens": 143712
+        },
+        "author:Москвин П.": {
+          "works": 3,
+          "content_tokens": 91763
+        },
+        "author:Н. А. Арнольди": {
+          "works": 13,
+          "content_tokens": 199224
+        },
+        "author:Н. А. Белоголовый": {
+          "works": 34,
+          "content_tokens": 197634
+        },
+        "author:Н. А. Бестужев": {
+          "works": 47,
+          "content_tokens": 98017
+        },
+        "author:Н. А. Благовещенский": {
+          "works": 53,
+          "content_tokens": 80858
+        },
+        "author:Н. А. Вормс": {
+          "works": 20,
+          "content_tokens": 26731
+        },
+        "author:Н. А. Демерт": {
+          "works": 12,
+          "content_tokens": 133670
+        },
+        "author:Н. А. Демидов": {
+          "works": 108,
+          "content_tokens": 80946
+        },
+        "author:Н. А. Добролюбов": {
+          "works": 178,
+          "content_tokens": 600012
+        },
+        "author:Н. А. Дурова": {
+          "works": 48,
+          "content_tokens": 349524
+        },
+        "author:Н. А. Лейкин": {
+          "works": 250,
+          "content_tokens": 1957205
+        },
+        "author:Н. А. Лухманова": {
+          "works": 38,
+          "content_tokens": 92476
+        },
+        "author:Н. А. Львов": {
+          "works": 14,
+          "content_tokens": 17376
+        },
+        "author:Н. А. Некрасов": {
+          "works": 249,
+          "content_tokens": 1216121
+        },
+        "author:Н. А. Основский": {
+          "works": 2,
+          "content_tokens": 45244
+        },
+        "author:Н. А. Островская": {
+          "works": 19,
+          "content_tokens": 37243
+        },
+        "author:Н. А. Полевой": {
+          "works": 73,
+          "content_tokens": 403884
+        },
+        "author:Н. А. Северцов": {
+          "works": 206,
+          "content_tokens": 276906
+        },
+        "author:Н. А. Чаев": {
+          "works": 33,
+          "content_tokens": 329254
+        },
+        "author:Н. А. Чмырев": {
+          "works": 7,
+          "content_tokens": 177120
+        },
+        "author:Н. А. Чудов": {
+          "works": 1,
+          "content_tokens": 2493
+        },
+        "author:Н. В. Берг": {
+          "works": 19,
+          "content_tokens": 63071
+        },
+        "author:Н. В. Буссе": {
+          "works": 7,
+          "content_tokens": 74285
+        },
+        "author:Н. В. Водовозов": {
+          "works": 3,
+          "content_tokens": 59944
+        },
+        "author:Н. В. Гоголь": {
+          "works": 328,
+          "content_tokens": 714838
+        },
+        "author:Н. В. Кукольник": {
+          "works": 16,
+          "content_tokens": 333363
+        },
+        "author:Н. В. Максимов": {
+          "works": 11,
+          "content_tokens": 103462
+        },
+        "author:Н. В. Реутский": {
+          "works": 11,
+          "content_tokens": 40339
+        },
+        "author:Н. В. Соколов": {
+          "works": 34,
+          "content_tokens": 89653
+        },
+        "author:Н. В. Станкевич": {
+          "works": 39,
+          "content_tokens": 21278
+        },
+        "author:Н. В. Успенский": {
+          "works": 17,
+          "content_tokens": 50531
+        },
+        "author:Н. В. Шелгунов": {
+          "works": 51,
+          "content_tokens": 327332
+        },
+        "author:Н. В. Яковлева-Ланская": {
+          "works": 10,
+          "content_tokens": 131431
+        },
+        "author:Н. Г. Богословский": {
+          "works": 6,
+          "content_tokens": 93568
+        },
+        "author:Н. Г. Гарин-Михайловский": {
+          "works": 50,
+          "content_tokens": 706912
+        },
+        "author:Н. Г. Помяловский": {
+          "works": 25,
+          "content_tokens": 307851
+        },
+        "author:Н. Г. Чаплыгин": {
+          "works": 33,
+          "content_tokens": 197854
+        },
+        "author:Н. Г. Чернышевский": {
+          "works": 1812,
+          "content_tokens": 4489189
+        },
+        "author:Н. Д. Ахшарумов": {
+          "works": 97,
+          "content_tokens": 689649
+        },
+        "author:Н. Д. Дмитриев": {
+          "works": 2,
+          "content_tokens": 43862
+        },
+        "author:Н. Д. Дурново": {
+          "works": 10,
+          "content_tokens": 53751
+        },
+        "author:Н. Д. Хвощинская": {
+          "works": 167,
+          "content_tokens": 791982
+        },
+        "author:Н. Е. Анненков": {
+          "works": 3,
+          "content_tokens": 47482
+        },
+        "author:Н. Е. Каронин-Петропавловский": {
+          "works": 17,
+          "content_tokens": 369631
+        },
+        "author:Н. И. Волокитин": {
+          "works": 14,
+          "content_tokens": 48117
+        },
+        "author:Н. И. Греч": {
+          "works": 30,
+          "content_tokens": 510947
+        },
+        "author:Н. И. Зуев": {
+          "works": 14,
+          "content_tokens": 52137
+        },
+        "author:Н. И. Костомаров": {
+          "works": 195,
+          "content_tokens": 2543159
+        },
+        "author:Н. И. Лорер": {
+          "works": 120,
+          "content_tokens": 110980
+        },
+        "author:Н. И. Надеждин": {
+          "works": 34,
+          "content_tokens": 233453
+        },
+        "author:Н. И. Новиков": {
+          "works": 56,
+          "content_tokens": 186953
+        },
+        "author:Н. И. Пирогов": {
+          "works": 282,
+          "content_tokens": 413876
+        },
+        "author:Н. И. Позняков": {
+          "works": 11,
+          "content_tokens": 93458
+        },
+        "author:Н. И. Свешников": {
+          "works": 5,
+          "content_tokens": 137142
+        },
+        "author:Н. И. Стороженко": {
+          "works": 49,
+          "content_tokens": 193230
+        },
+        "author:Н. И. Тимковский": {
+          "works": 4,
+          "content_tokens": 91458
+        },
+        "author:Н. И. Тургенев": {
+          "works": 306,
+          "content_tokens": 362371
+        },
+        "author:Н. И. Утина": {
+          "works": 26,
+          "content_tokens": 237709
+        },
+        "author:Н. И. Черняев": {
+          "works": 41,
+          "content_tokens": 110578
+        },
+        "author:Н. К. Бобылев": {
+          "works": 40,
+          "content_tokens": 70795
+        },
+        "author:Н. К. Михайловский": {
+          "works": 121,
+          "content_tokens": 714487
+        },
+        "author:Н. М. Астырев": {
+          "works": 18,
+          "content_tokens": 194178
+        },
+        "author:Н. М. Карамзин": {
+          "works": 153,
+          "content_tokens": 660052
+        },
+        "author:Н. М. Павлов": {
+          "works": 9,
+          "content_tokens": 172168
+        },
+        "author:Н. М. Пржевальский": {
+          "works": 218,
+          "content_tokens": 177716
+        },
+        "author:Н. М. Сементовский": {
+          "works": 6,
+          "content_tokens": 145153
+        },
+        "author:Н. М. Соколовский": {
+          "works": 13,
+          "content_tokens": 41342
+        },
+        "author:Н. М. Ядринцев": {
+          "works": 216,
+          "content_tokens": 752770
+        },
+        "author:Н. Н. Александров": {
+          "works": 10,
+          "content_tokens": 108497
+        },
+        "author:Н. Н. Алексеев": {
+          "works": 98,
+          "content_tokens": 709086
+        },
+        "author:Н. Н. Булич": {
+          "works": 26,
+          "content_tokens": 26602
+        },
+        "author:Н. Н. Веревкин": {
+          "works": 23,
+          "content_tokens": 49518
+        },
+        "author:Н. Н. Животов": {
+          "works": 11,
+          "content_tokens": 308186
+        },
+        "author:Н. Н. Златовратский": {
+          "works": 51,
+          "content_tokens": 718810
+        },
+        "author:Н. Н. Каразин": {
+          "works": 88,
+          "content_tokens": 761475
+        },
+        "author:Н. Н. Миклухо-Маклай": {
+          "works": 9,
+          "content_tokens": 43273
+        },
+        "author:Н. Н. Муравьев-Карский": {
+          "works": 5,
+          "content_tokens": 126728
+        },
+        "author:Н. Н. Толстой": {
+          "works": 2,
+          "content_tokens": 48052
+        },
+        "author:Н. Н. Фирсов": {
+          "works": 10,
+          "content_tokens": 98195
+        },
+        "author:Н. Н. Шелонский": {
+          "works": 14,
+          "content_tokens": 305416
+        },
+        "author:Н. О. Пружанский": {
+          "works": 19,
+          "content_tokens": 30005
+        },
+        "author:Н. П. Аксаков": {
+          "works": 5,
+          "content_tokens": 28679
+        },
+        "author:Н. П. Вагнер": {
+          "works": 110,
+          "content_tokens": 699672
+        },
+        "author:Н. П. Гиляров-Платонов": {
+          "works": 34,
+          "content_tokens": 288893
+        },
+        "author:Н. П. Колюпанов": {
+          "works": 9,
+          "content_tokens": 95215
+        },
+        "author:Н. П. Огарев": {
+          "works": 116,
+          "content_tokens": 133405
+        },
+        "author:Н. П. Шаликова": {
+          "works": 10,
+          "content_tokens": 143980
+        },
+        "author:Н. С. Всеволожский": {
+          "works": 95,
+          "content_tokens": 275709
+        },
+        "author:Н. С. Кохановская": {
+          "works": 29,
+          "content_tokens": 422803
+        },
+        "author:Н. С. Лесков": {
+          "works": 532,
+          "content_tokens": 3771776
+        },
+        "author:Н. С. Русанов": {
+          "works": 13,
+          "content_tokens": 51604
+        },
+        "author:Н. С. Соколов": {
+          "works": 16,
+          "content_tokens": 34154
+        },
+        "author:Н. Т.": {
+          "works": 25,
+          "content_tokens": 121811
+        },
+        "author:Н. Ф. Бажин": {
+          "works": 18,
+          "content_tokens": 478828
+        },
+        "author:Н. Ф. Бунаков": {
+          "works": 2,
+          "content_tokens": 50106
+        },
+        "author:Н. Ф. Дубровин": {
+          "works": 89,
+          "content_tokens": 63258
+        },
+        "author:Н. Ф. Павлов": {
+          "works": 8,
+          "content_tokens": 146667
+        },
+        "author:Н. Ф. Петровский": {
+          "works": 36,
+          "content_tokens": 30859
+        },
+        "author:Н. Ф. Федоров": {
+          "works": 17,
+          "content_tokens": 25466
+        },
+        "author:Н. Э. Гейнце": {
+          "works": 170,
+          "content_tokens": 2795258
+        },
+        "author:Н. Я. Грот": {
+          "works": 86,
+          "content_tokens": 161395
+        },
+        "author:Н. Я. Данилевский": {
+          "works": 70,
+          "content_tokens": 510617
+        },
+        "author:Н. Я. Капустина": {
+          "works": 4,
+          "content_tokens": 96292
+        },
+        "author:О. А. Шапир": {
+          "works": 39,
+          "content_tokens": 564035
+        },
+        "author:О. А. Щербатова": {
+          "works": 44,
+          "content_tokens": 147000
+        },
+        "author:О. И. Рогова": {
+          "works": 32,
+          "content_tokens": 302151
+        },
+        "author:О. И. Сенковский": {
+          "works": 3,
+          "content_tokens": 51083
+        },
+        "author:О. Н. Хмелева": {
+          "works": 29,
+          "content_tokens": 318069
+        },
+        "author:П. А. Андреевский": {
+          "works": 19,
+          "content_tokens": 165672
+        },
+        "author:П. А. Валуев": {
+          "works": 64,
+          "content_tokens": 48604
+        },
+        "author:П. А. Висковатов": {
+          "works": 2,
+          "content_tokens": 2853
+        },
+        "author:П. А. Вяземский": {
+          "works": 594,
+          "content_tokens": 1255170
+        },
+        "author:П. А. Дукмасов": {
+          "works": 2,
+          "content_tokens": 21874
+        },
+        "author:П. А. Зарубин": {
+          "works": 65,
+          "content_tokens": 210431
+        },
+        "author:П. А. Кропоткин": {
+          "works": 31,
+          "content_tokens": 145624
+        },
+        "author:П. А. Крушеван": {
+          "works": 26,
+          "content_tokens": 152246
+        },
+        "author:П. А. Лачинова": {
+          "works": 10,
+          "content_tokens": 234636
+        },
+        "author:П. А. Муханов": {
+          "works": 35,
+          "content_tokens": 27489
+        },
+        "author:П. А. Ровинский": {
+          "works": 26,
+          "content_tokens": 137818
+        },
+        "author:П. А. Чихачев": {
+          "works": 44,
+          "content_tokens": 31771
+        },
+        "author:П. В. Анненков": {
+          "works": 174,
+          "content_tokens": 561828
+        },
+        "author:П. В. Ефебовский": {
+          "works": 4,
+          "content_tokens": 53728
+        },
+        "author:П. В. Засодимский": {
+          "works": 12,
+          "content_tokens": 257598
+        },
+        "author:П. В. Полежаев": {
+          "works": 126,
+          "content_tokens": 731407
+        },
+        "author:П. Д. Боборыкин": {
+          "works": 460,
+          "content_tokens": 2355848
+        },
+        "author:П. Е. Анненкова": {
+          "works": 7,
+          "content_tokens": 85541
+        },
+        "author:П. И. Бартенев": {
+          "works": 18,
+          "content_tokens": 92986
+        },
+        "author:П. И. Вейнберг": {
+          "works": 6,
+          "content_tokens": 73185
+        },
+        "author:П. И. Голота": {
+          "works": 18,
+          "content_tokens": 141398
+        },
+        "author:П. И. Мельников-Печерский": {
+          "works": 172,
+          "content_tokens": 2091251
+        },
+        "author:П. И. Небольсин": {
+          "works": 52,
+          "content_tokens": 784543
+        },
+        "author:П. И. Челищев": {
+          "works": 42,
+          "content_tokens": 206764
+        },
+        "author:П. И. Якушкин": {
+          "works": 30,
+          "content_tokens": 77384
+        },
+        "author:П. К. Козлов": {
+          "works": 138,
+          "content_tokens": 132876
+        },
+        "author:П. К. Мартьянов": {
+          "works": 67,
+          "content_tokens": 298659
+        },
+        "author:П. К. Услар": {
+          "works": 11,
+          "content_tokens": 68000
+        },
+        "author:П. Л. Лавров": {
+          "works": 128,
+          "content_tokens": 376223
+        },
+        "author:П. М. Ковалевский": {
+          "works": 31,
+          "content_tokens": 187747
+        },
+        "author:П. Н. Ивашев": {
+          "works": 31,
+          "content_tokens": 24671
+        },
+        "author:П. Н. Кудрявцев": {
+          "works": 12,
+          "content_tokens": 81386
+        },
+        "author:П. Н. Петров": {
+          "works": 155,
+          "content_tokens": 489688
+        },
+        "author:П. Н. Полевой": {
+          "works": 107,
+          "content_tokens": 256198
+        },
+        "author:П. Н. Свистунов": {
+          "works": 19,
+          "content_tokens": 25646
+        },
+        "author:П. Н. Ткачев": {
+          "works": 230,
+          "content_tokens": 779286
+        },
+        "author:П. П. Булыгин": {
+          "works": 5,
+          "content_tokens": 132845
+        },
+        "author:П. П. Гнедич": {
+          "works": 5,
+          "content_tokens": 62353
+        },
+        "author:П. П. Ершов": {
+          "works": 5,
+          "content_tokens": 96145
+        },
+        "author:П. П. Зубов": {
+          "works": 22,
+          "content_tokens": 449354
+        },
+        "author:П. П. Инфантьев": {
+          "works": 13,
+          "content_tokens": 45598
+        },
+        "author:П. П. Каратыгин": {
+          "works": 33,
+          "content_tokens": 722928
+        },
+        "author:П. П. Семенов-Тян-Шанский": {
+          "works": 77,
+          "content_tokens": 161888
+        },
+        "author:П. П. Сухонин": {
+          "works": 53,
+          "content_tokens": 1104045
+        },
+        "author:П. С. Батурин": {
+          "works": 6,
+          "content_tokens": 81411
+        },
+        "author:П. С. Васильев": {
+          "works": 14,
+          "content_tokens": 356954
+        },
+        "author:П. С. Соколов": {
+          "works": 41,
+          "content_tokens": 28596
+        },
+        "author:П. Ф. Вистенгоф": {
+          "works": 10,
+          "content_tokens": 61651
+        },
+        "author:П. Ф. Якубович": {
+          "works": 42,
+          "content_tokens": 306995
+        },
+        "author:Панов Семен А.": {
+          "works": 4,
+          "content_tokens": 62711
+        },
+        "author:Р. А. Дистерло": {
+          "works": 16,
+          "content_tokens": 69889
+        },
+        "author:Р. А. Коренева-Гарднер": {
+          "works": 4,
+          "content_tokens": 77987
+        },
+        "author:Р. И. Сементковский": {
+          "works": 10,
+          "content_tokens": 59138
+        },
+        "author:Р. М. Зотов": {
+          "works": 12,
+          "content_tokens": 233000
+        },
+        "author:С. А. Ладыженский": {
+          "works": 19,
+          "content_tokens": 193171
+        },
+        "author:С. А. Приклонский": {
+          "works": 24,
+          "content_tokens": 89504
+        },
+        "author:С. А. Толстая": {
+          "works": 54,
+          "content_tokens": 91944
+        },
+        "author:С. А. Тучков": {
+          "works": 4,
+          "content_tokens": 92930
+        },
+        "author:С. А. Юрьев": {
+          "works": 4,
+          "content_tokens": 53304
+        },
+        "author:С. В. Капнист-Скалон": {
+          "works": 21,
+          "content_tokens": 67563
+        },
+        "author:С. В. Ковалевская": {
+          "works": 40,
+          "content_tokens": 138013
+        },
+        "author:С. В. Максимов": {
+          "works": 360,
+          "content_tokens": 1151063
+        },
+        "author:С. В. Флеров": {
+          "works": 38,
+          "content_tokens": 45985
+        },
+        "author:С. В. Энгельгардт": {
+          "works": 53,
+          "content_tokens": 248547
+        },
+        "author:С. Г. Ярон": {
+          "works": 13,
+          "content_tokens": 267880
+        },
+        "author:С. Д. Хвощинская": {
+          "works": 41,
+          "content_tokens": 147470
+        },
+        "author:С. Е. Усова": {
+          "works": 6,
+          "content_tokens": 59486
+        },
+        "author:С. И. Кончилович": {
+          "works": 2,
+          "content_tokens": 46895
+        },
+        "author:С. И. Смирнова-Сазонова": {
+          "works": 26,
+          "content_tokens": 295120
+        },
+        "author:С. К. Ферельцт": {
+          "works": 3,
+          "content_tokens": 67023
+        },
+        "author:С. Л. Геевский": {
+          "works": 9,
+          "content_tokens": 56554
+        },
+        "author:С. М. Брилиант": {
+          "works": 40,
+          "content_tokens": 207876
+        },
+        "author:С. М. Пономарев": {
+          "works": 6,
+          "content_tokens": 45016
+        },
+        "author:С. М. Соловьев": {
+          "works": 10,
+          "content_tokens": 110434
+        },
+        "author:С. М. Степняк-Кравчинский": {
+          "works": 26,
+          "content_tokens": 462759
+        },
+        "author:С. Н. Глинка": {
+          "works": 19,
+          "content_tokens": 190931
+        },
+        "author:С. Н. Терпигорев": {
+          "works": 25,
+          "content_tokens": 527662
+        },
+        "author:С. Н. Южаков": {
+          "works": 33,
+          "content_tokens": 228537
+        },
+        "author:С. О. Ярошевский": {
+          "works": 11,
+          "content_tokens": 249112
+        },
+        "author:С. П. Бурнашева": {
+          "works": 4,
+          "content_tokens": 37718
+        },
+        "author:С. П. Жихарев": {
+          "works": 286,
+          "content_tokens": 288909
+        },
+        "author:С. П. Победоносцев": {
+          "works": 15,
+          "content_tokens": 110762
+        },
+        "author:С. П. Шевырев": {
+          "works": 174,
+          "content_tokens": 702376
+        },
+        "author:С. С. Татищев": {
+          "works": 132,
+          "content_tokens": 190083
+        },
+        "author:С. С. Уваров": {
+          "works": 39,
+          "content_tokens": 121447
+        },
+        "author:С. Т. Аксаков": {
+          "works": 392,
+          "content_tokens": 1086217
+        },
+        "author:С. Т. Славутинский": {
+          "works": 23,
+          "content_tokens": 89624
+        },
+        "author:С. Я. Надсон": {
+          "works": 5,
+          "content_tokens": 50909
+        },
+        "author:С. Я. Унковский": {
+          "works": 80,
+          "content_tokens": 119095
+        },
+        "author:Т. А. Астракова": {
+          "works": 4,
+          "content_tokens": 74820
+        },
+        "author:Т. П. Пассек": {
+          "works": 263,
+          "content_tokens": 547608
+        },
+        "author:Толстой Л. Н., Бирюков П. И.": {
+          "works": 10,
+          "content_tokens": 40303
+        },
+        "author:Тур Евгения": {
+          "works": 136,
+          "content_tokens": 986684
+        },
+        "author:Ф. А. Кони": {
+          "works": 10,
+          "content_tokens": 278670
+        },
+        "author:Ф. А. Эмин": {
+          "works": 7,
+          "content_tokens": 60154
+        },
+        "author:Ф. В. Булгарин": {
+          "works": 130,
+          "content_tokens": 611473
+        },
+        "author:Ф. В. Ростопчин": {
+          "works": 8,
+          "content_tokens": 50343
+        },
+        "author:Ф. Г. Головкин": {
+          "works": 9,
+          "content_tokens": 216001
+        },
+        "author:Ф. Д. Бобков": {
+          "works": 3,
+          "content_tokens": 63137
+        },
+        "author:Ф. Д. Нефедов": {
+          "works": 15,
+          "content_tokens": 212028
+        },
+        "author:Ф. И. Булгаков": {
+          "works": 30,
+          "content_tokens": 178419
+        },
+        "author:Ф. И. Буслаев": {
+          "works": 31,
+          "content_tokens": 328728
+        },
+        "author:Ф. И. Тимирязев": {
+          "works": 8,
+          "content_tokens": 43894
+        },
+        "author:Ф. И. Тютчев": {
+          "works": 11,
+          "content_tokens": 10150
+        },
+        "author:Ф. К. Дершау": {
+          "works": 10,
+          "content_tokens": 58427
+        },
+        "author:Ф. М. Достоевский": {
+          "works": 552,
+          "content_tokens": 1863592
+        },
+        "author:Ф. М. Решетников": {
+          "works": 172,
+          "content_tokens": 1647042
+        },
+        "author:Ф. М. Толстой": {
+          "works": 86,
+          "content_tokens": 154438
+        },
+        "author:Ф. Н. Глинка": {
+          "works": 48,
+          "content_tokens": 271327
+        },
+        "author:Ф. Н. Юрковский": {
+          "works": 11,
+          "content_tokens": 53175
+        },
+        "author:Ф. П. Врангель": {
+          "works": 1,
+          "content_tokens": 15230
+        },
+        "author:Ф. С. Ефремов": {
+          "works": 4,
+          "content_tokens": 49962
+        },
+        "author:Ф. Ф. Беллинсгаузен": {
+          "works": 83,
+          "content_tokens": 317428
+        },
+        "author:Ф. Ф. Вигель": {
+          "works": 194,
+          "content_tokens": 323119
+        },
+        "author:Ф. Ф. Корф": {
+          "works": 10,
+          "content_tokens": 91088
+        },
+        "author:Ф. Ф. Торнау": {
+          "works": 8,
+          "content_tokens": 111844
+        },
+        "author:Ф. Ф. Тютчев": {
+          "works": 45,
+          "content_tokens": 251025
+        },
+        "author:Филарет": {
+          "works": 588,
+          "content_tokens": 823785
+        },
+        "author:Х. Д. Алчевская": {
+          "works": 49,
+          "content_tokens": 25541
+        },
+        "author:Э. И. Стогов": {
+          "works": 55,
+          "content_tokens": 94365
+        },
+        "author:Э. Р. Циммерман": {
+          "works": 32,
+          "content_tokens": 581961
+        },
+        "author:Э. Э. Ухтомский": {
+          "works": 155,
+          "content_tokens": 728374
+        },
+        "author:Ю. А. Россель": {
+          "works": 4,
+          "content_tokens": 54315
+        },
+        "author:Ю. В. Жадовская": {
+          "works": 10,
+          "content_tokens": 215871
+        },
+        "author:Ю. Г. Жуковский": {
+          "works": 39,
+          "content_tokens": 161597
+        },
+        "author:Ю. П. Перцова": {
+          "works": 13,
+          "content_tokens": 46093
+        },
+        "author:Ю. Ф. Лисянский": {
+          "works": 112,
+          "content_tokens": 120525
+        },
+        "author:Ю. Ф. Самарин": {
+          "works": 84,
+          "content_tokens": 204705
+        },
+        "author:Я. В. Абрамов": {
+          "works": 8,
+          "content_tokens": 159936
+        },
+        "author:Я. Г. Гололобов": {
+          "works": 6,
+          "content_tokens": 41999
+        },
+        "author:Я. К. Грот": {
+          "works": 39,
+          "content_tokens": 552771
+        },
+        "author:Я. П. Бутков": {
+          "works": 4,
+          "content_tokens": 107105
+        },
+        "author:Я. П. Полонский": {
+          "works": 72,
+          "content_tokens": 402844
+        },
+        "author:Я. Я. Гуревич": {
+          "works": 4,
+          "content_tokens": 62197
+        },
+        "author:Яковлев Н.": {
+          "works": 2,
+          "content_tokens": 50966
+        },
+        "date_basis:catalog_source_year": {
+          "works": 34821,
+          "content_tokens": 160466695
+        },
+        "date_basis:historical_author_catalog_requires_text_date_review": {
+          "works": 160,
+          "content_tokens": 675988
+        },
+        "date_basis:library_catalog_year_unverified_creation_vs_publication": {
+          "works": 5196,
+          "content_tokens": 41285867
+        },
+        "date_basis:source_curated_19th_century_unverified_work_date": {
+          "works": 1105,
+          "content_tokens": 7594687
+        },
+        "domain:prose": {
+          "works": 41282,
+          "content_tokens": 210023237
+        },
+        "genre:essays_criticism": {
+          "works": 12082,
+          "content_tokens": 45190641
+        },
+        "genre:historical_translation": {
+          "works": 27,
+          "content_tokens": 318359
+        },
+        "genre:letters": {
+          "works": 4196,
+          "content_tokens": 10586074
+        },
+        "genre:memoir": {
+          "works": 7153,
+          "content_tokens": 21840052
+        },
+        "genre:miniature": {
+          "works": 1,
+          "content_tokens": 376
+        },
+        "genre:narrative": {
+          "works": 11523,
+          "content_tokens": 83207557
+        },
+        "genre:novel": {
+          "works": 1637,
+          "content_tokens": 15817916
+        },
+        "genre:novella": {
+          "works": 1130,
+          "content_tokens": 9034435
+        },
+        "genre:prose_narrative": {
+          "works": 1700,
+          "content_tokens": 13349031
+        },
+        "genre:short_story": {
+          "works": 1075,
+          "content_tokens": 7384186
+        },
+        "genre:sketch": {
+          "works": 758,
+          "content_tokens": 3294610
+        },
+        "source:Lib.ru_Classic": {
+          "works": 40177,
+          "content_tokens": 202428550
+        },
+        "source:RSD": {
+          "works": 1105,
+          "content_tokens": 7594687
+        },
+        "token_length:128-511": {
+          "works": 10086,
+          "content_tokens": 3226037
+        },
+        "token_length:<128": {
+          "works": 5,
+          "content_tokens": 606
+        },
+        "token_length:>=512": {
+          "works": 31191,
+          "content_tokens": 206796594
+        },
+        "written_period:unknown": {
+          "works": 41282,
+          "content_tokens": 210023237
+        }
+      }
+    },
+    "validation": {
+      "prose": {
+        "author:А. И. Герцен": {
+          "works": 5,
+          "content_tokens": 13071
+        },
+        "author:А. И. Левитов": {
+          "works": 5,
+          "content_tokens": 41041
+        },
+        "author:А. К. Толстой": {
+          "works": 7,
+          "content_tokens": 196877
+        },
+        "author:А. М. Грибовский": {
+          "works": 15,
+          "content_tokens": 74717
+        },
+        "author:А. П. Чехов": {
+          "works": 1,
+          "content_tokens": 1069
+        },
+        "author:А. С. Пушкин": {
+          "works": 3,
+          "content_tokens": 68959
+        },
+        "author:А. Я. Булгаков": {
+          "works": 19,
+          "content_tokens": 23114
+        },
+        "author:В. А. Потто": {
+          "works": 273,
+          "content_tokens": 1950971
+        },
+        "author:В. В. Крестовский": {
+          "works": 168,
+          "content_tokens": 965034
+        },
+        "author:В. В. Стасов": {
+          "works": 265,
+          "content_tokens": 1098790
+        },
+        "author:В. Г. Авсеенко": {
+          "works": 5,
+          "content_tokens": 74336
+        },
+        "author:В. Г. Короленко": {
+          "works": 2,
+          "content_tokens": 1634
+        },
+        "author:В. Ф. Одоевский": {
+          "works": 4,
+          "content_tokens": 32981
+        },
+        "author:Вовчок Марко": {
+          "works": 9,
+          "content_tokens": 20907
+        },
+        "author:Г. И. Успенский": {
+          "works": 13,
+          "content_tokens": 241452
+        },
+        "author:Г. К. Градовский": {
+          "works": 13,
+          "content_tokens": 144683
+        },
+        "author:Д. К. Гирс": {
+          "works": 22,
+          "content_tokens": 280414
+        },
+        "author:Д. Н. Мамин-Сибиряк": {
+          "works": 15,
+          "content_tokens": 127435
+        },
+        "author:Екатерина Вторая": {
+          "works": 103,
+          "content_tokens": 166610
+        },
+        "author:И. Д. Путилин": {
+          "works": 5,
+          "content_tokens": 144814
+        },
+        "author:И. Н. Потапенко": {
+          "works": 6,
+          "content_tokens": 26810
+        },
+        "author:И. С. Тургенев": {
+          "works": 87,
+          "content_tokens": 275907
+        },
+        "author:К. Р.": {
+          "works": 44,
+          "content_tokens": 52019
+        },
+        "author:Л. Н. Толстой": {
+          "works": 1,
+          "content_tokens": 29964
+        },
+        "author:М. А. Энгельгардт": {
+          "works": 30,
+          "content_tokens": 164307
+        },
+        "author:М. В. Авдеев": {
+          "works": 52,
+          "content_tokens": 684393
+        },
+        "author:М. Е. Салтыков-Щедрин": {
+          "works": 2,
+          "content_tokens": 14246
+        },
+        "author:М. Н. Загоскин": {
+          "works": 12,
+          "content_tokens": 253467
+        },
+        "author:Н. А. Александров": {
+          "works": 15,
+          "content_tokens": 174309
+        },
+        "author:Н. В. Гоголь": {
+          "works": 2,
+          "content_tokens": 21754
+        },
+        "author:Н. М. Коншин": {
+          "works": 7,
+          "content_tokens": 153243
+        },
+        "author:Н. С. Лесков": {
+          "works": 38,
+          "content_tokens": 160338
+        },
+        "author:П. А. Катенин": {
+          "works": 41,
+          "content_tokens": 63541
+        },
+        "author:П. Д. Боборыкин": {
+          "works": 13,
+          "content_tokens": 118566
+        },
+        "author:П. Я. Чаадаев": {
+          "works": 50,
+          "content_tokens": 107322
+        },
+        "author:С. А. Венгеров": {
+          "works": 40,
+          "content_tokens": 164303
+        },
+        "author:Т. Н. Грановский": {
+          "works": 2,
+          "content_tokens": 40598
+        },
+        "author:Ф. М. Достоевский": {
+          "works": 423,
+          "content_tokens": 1733517
+        },
+        "author:Ф. Э. Ромер": {
+          "works": 4,
+          "content_tokens": 60406
+        },
+        "author:Феофан-Затворник": {
+          "works": 132,
+          "content_tokens": 189725
+        },
+        "author:Я. Б. Княжнин": {
+          "works": 39,
+          "content_tokens": 40705
+        },
+        "date_basis:catalog_source_year": {
+          "works": 1180,
+          "content_tokens": 5981907
+        },
+        "date_basis:library_catalog_year_unverified_creation_vs_publication": {
+          "works": 294,
+          "content_tokens": 1941201
+        },
+        "date_basis:source_curated_19th_century_unverified_work_date": {
+          "works": 518,
+          "content_tokens": 2275241
+        },
+        "domain:prose": {
+          "works": 1992,
+          "content_tokens": 10198349
+        },
+        "genre:essays_criticism": {
+          "works": 667,
+          "content_tokens": 3223010
+        },
+        "genre:letters": {
+          "works": 144,
+          "content_tokens": 329924
+        },
+        "genre:memoir": {
+          "works": 280,
+          "content_tokens": 971013
+        },
+        "genre:narrative": {
+          "works": 89,
+          "content_tokens": 1457960
+        },
+        "genre:novel": {
+          "works": 196,
+          "content_tokens": 1053820
+        },
+        "genre:novella": {
+          "works": 23,
+          "content_tokens": 244282
+        },
+        "genre:prose_narrative": {
+          "works": 544,
+          "content_tokens": 2587473
+        },
+        "genre:short_story": {
+          "works": 38,
+          "content_tokens": 286225
+        },
+        "genre:sketch": {
+          "works": 11,
+          "content_tokens": 44642
+        },
+        "source:Lib.ru_Classic": {
+          "works": 1474,
+          "content_tokens": 7923108
+        },
+        "source:RSD": {
+          "works": 518,
+          "content_tokens": 2275241
+        },
+        "token_length:128-511": {
+          "works": 347,
+          "content_tokens": 114012
+        },
+        "token_length:<128": {
+          "works": 7,
+          "content_tokens": 658
+        },
+        "token_length:>=512": {
+          "works": 1638,
+          "content_tokens": 10083679
+        },
+        "written_period:unknown": {
+          "works": 1992,
+          "content_tokens": 10198349
+        }
+      }
+    },
+    "test": {
+      "prose": {
+        "author:А. А. Быков": {
+          "works": 25,
+          "content_tokens": 44676
+        },
+        "author:А. А. Оленина": {
+          "works": 32,
+          "content_tokens": 17035
+        },
+        "author:А. А. Шкляревский": {
+          "works": 10,
+          "content_tokens": 45362
+        },
+        "author:А. В. Кольцов": {
+          "works": 39,
+          "content_tokens": 97601
+        },
+        "author:А. В. Никитенко": {
+          "works": 80,
+          "content_tokens": 763303
+        },
+        "author:А. Г. Глаголев": {
+          "works": 11,
+          "content_tokens": 79731
+        },
+        "author:А. И. Дельвиг": {
+          "works": 206,
+          "content_tokens": 192784
+        },
+        "author:А. К. Булатович": {
+          "works": 158,
+          "content_tokens": 206427
+        },
+        "author:Бичурин Иакинф": {
+          "works": 40,
+          "content_tokens": 41457
+        },
+        "author:В. А. Левшин": {
+          "works": 25,
+          "content_tokens": 87211
+        },
+        "author:В. А. Обручев": {
+          "works": 3,
+          "content_tokens": 69559
+        },
+        "author:В. А. Ушаков": {
+          "works": 10,
+          "content_tokens": 61128
+        },
+        "author:В. И. Аскоченский": {
+          "works": 28,
+          "content_tokens": 256482
+        },
+        "author:В. И. Немирович-Данченко": {
+          "works": 230,
+          "content_tokens": 2071882
+        },
+        "author:В. И. Яковенко": {
+          "works": 38,
+          "content_tokens": 434818
+        },
+        "author:В. Л. Величко": {
+          "works": 7,
+          "content_tokens": 158336
+        },
+        "author:В. Л. Марков": {
+          "works": 31,
+          "content_tokens": 349934
+        },
+        "author:Ваненко Иван": {
+          "works": 14,
+          "content_tokens": 219277
+        },
+        "author:Е. И. Борхсениус": {
+          "works": 17,
+          "content_tokens": 71123
+        },
+        "author:Е. К. Мейендорф": {
+          "works": 1,
+          "content_tokens": 295
+        },
+        "author:И. Г. Прыжов": {
+          "works": 30,
+          "content_tokens": 153824
+        },
+        "author:И. И. Сведенцов": {
+          "works": 2,
+          "content_tokens": 43351
+        },
+        "author:И. С. Тургенев": {
+          "works": 56,
+          "content_tokens": 90052
+        },
+        "author:И. Ф. Крузенштерн": {
+          "works": 192,
+          "content_tokens": 316537
+        },
+        "author:М. Е. Салтыков-Щедрин": {
+          "works": 15,
+          "content_tokens": 56714
+        },
+        "author:М. С. Сабинина": {
+          "works": 25,
+          "content_tokens": 74353
+        },
+        "author:Н. В. Басаргин": {
+          "works": 31,
+          "content_tokens": 64450
+        },
+        "author:Н. В. Гоголь": {
+          "works": 12,
+          "content_tokens": 75225
+        },
+        "author:Н. Г. Курганов": {
+          "works": 31,
+          "content_tokens": 203773
+        },
+        "author:Н. И. Гнедич": {
+          "works": 7,
+          "content_tokens": 65318
+        },
+        "author:Н. И. Страхов": {
+          "works": 6,
+          "content_tokens": 37595
+        },
+        "author:П. А. Радищев": {
+          "works": 18,
+          "content_tokens": 38903
+        },
+        "author:П. П. Филео": {
+          "works": 5,
+          "content_tokens": 95947
+        },
+        "author:Сальянова Елена": {
+          "works": 11,
+          "content_tokens": 134754
+        },
+        "author:Северин Н.": {
+          "works": 149,
+          "content_tokens": 1619518
+        },
+        "author:Ф. А. Бюлер": {
+          "works": 206,
+          "content_tokens": 178636
+        },
+        "author:Ф. М. Достоевский": {
+          "works": 6,
+          "content_tokens": 223268
+        },
+        "date_basis:catalog_source_year": {
+          "works": 1718,
+          "content_tokens": 8295380
+        },
+        "date_basis:source_curated_19th_century_unverified_work_date": {
+          "works": 89,
+          "content_tokens": 445259
+        },
+        "domain:prose": {
+          "works": 1807,
+          "content_tokens": 8740639
+        },
+        "genre:essays_criticism": {
+          "works": 752,
+          "content_tokens": 1829791
+        },
+        "genre:letters": {
+          "works": 70,
+          "content_tokens": 301374
+        },
+        "genre:memoir": {
+          "works": 410,
+          "content_tokens": 1313025
+        },
+        "genre:narrative": {
+          "works": 486,
+          "content_tokens": 4851190
+        },
+        "genre:prose_narrative": {
+          "works": 89,
+          "content_tokens": 445259
+        },
+        "source:Lib.ru_Classic": {
+          "works": 1718,
+          "content_tokens": 8295380
+        },
+        "source:RSD": {
+          "works": 89,
+          "content_tokens": 445259
+        },
+        "token_length:128-511": {
+          "works": 436,
+          "content_tokens": 143780
+        },
+        "token_length:<128": {
+          "works": 3,
+          "content_tokens": 321
+        },
+        "token_length:>=512": {
+          "works": 1368,
+          "content_tokens": 8596538
+        },
+        "written_period:unknown": {
+          "works": 1807,
+          "content_tokens": 8740639
+        }
+      }
+    }
+  },
+  "inputs_sha256": {
+    "artifacts/tokenizers_v3/selected/tokenizer.json": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+    "data/prose_v7/metadata.jsonl": "2aa7be7204219f40b48a8a65bf3217b4156f7b37e604e77fa37e2d4fdb4e24d3",
+    "data/prose_v7/strict_train.jsonl": "ab17724110c11546b61d2cfcc2eb8fa138aaa6203cd48a5a7b9a001216c98590",
+    "data/prose_v7/expanded_train.jsonl": "f8abb8dc2da0d5087052f120130a4ce9da7dd9af0a67babf56f62c8d0f7cf7a5",
+    "data/prose_v7/validation.jsonl": "3a764b921e3c451027ab678a628385797280c1b46910fa8d6067ac2ac3d7bf7f",
+    "data/prose_v7/test.jsonl": "2828cc6a049faef18ff5f41c52c2d4291eae7d510a646b553b19b39167ccbcf9"
+  },
+  "model_training_performed": false,
+  "tokenizer_policy": "Frozen BPE8192, no vocabulary training on new validation/test.",
+  "output_sha256": {
+    "prose_test.npy": "e709aa9f343153e5db31ae8fc58cddc3f07562a5fd7557cd3a8fb3ddfa043c61",
+    "prose_test_offsets.json": "b2723831414c607a4da9be60d593edad3d46dedb86085e1d6b96bb9d9fe962e0",
+    "prose_train.npy": "d43b988f5e7ed702b9c53be2e3714f0db24723ff595323f18664952d20ebadb0",
+    "prose_train_offsets.json": "4e6ba62d0dc3fee5b8908f857bbe8ce6c1187ddd7d9a523e5c84d60620deed16",
+    "prose_validation.npy": "9de930b38124f92f52bf2201066f030e73f676228ab14af3c599c2cc79db1c3d",
+    "prose_validation_offsets.json": "3f8b2f585e76c3bbd6665bd01bbbbde53b691e674863c7c947d1f2de7bfb6697"
+  }
+}

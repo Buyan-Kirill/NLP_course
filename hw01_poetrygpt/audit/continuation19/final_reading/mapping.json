@@ -1,0 +1,263 @@
+{
+  "schema": "continuation19-source-bindings-1",
+  "sources_sha256": {
+    "audit/continuation19/inference/final_pair/first.json": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8"
+  },
+  "rows": [
+    {
+      "id": "824a982623b4c331c2d4fa73",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 0,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_07",
+      "group_id": "continuation19_courtyard_brief_blizzard",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "Легла на двор короткая метель,",
+      "quote": "С пологом повисла сучья,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "c2f9e49bdadebea9ed9b1930",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 0,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_07",
+      "group_id": "continuation19_courtyard_brief_blizzard",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "Легла на двор короткая метель,",
+      "quote": "И в избу вбежала мамзель.\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "e64dae31ab01793bae32886b",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 1,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_08",
+      "group_id": "continuation19_linen_drying_behind_house",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "За домом лён развесили сушиться,",
+      "quote": "На дворе, на дворе, в поле и на дворе,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "6f69a0aec002384e6199d674",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 1,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_08",
+      "group_id": "continuation19_linen_drying_behind_house",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "За домом лён развесили сушиться,",
+      "quote": "На дворе, в сарае, жарко спится.\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "1cde7cf1710259026dc97470",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 2,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_09",
+      "group_id": "continuation19_elder_bench_rest",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "Старик присел на лавку отдохнуть,",
+      "quote": "А я, с улыбкой глядя,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "acd5bfbfbd43f8c36a32b2d1",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 2,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_09",
+      "group_id": "continuation19_elder_bench_rest",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "Старик присел на лавку отдохнуть,",
+      "quote": "На лавку поглядеть, да и заснуть.\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "d9fb72f7c5492f412551beb1",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 3,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_10",
+      "group_id": "continuation19_two_people_mending_net",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "Мы чиним сеть на берегу вдвоём,",
+      "quote": "И в ней, как в зеркале, всё то, что в нем,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "1bab969921b1d12d23a27d67",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 3,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_10",
+      "group_id": "continuation19_two_people_mending_net",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "Мы чиним сеть на берегу вдвоём,",
+      "quote": "Мы чиним сеть на дне твоем.\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "3429eeed55bb3c7d1c8233e9",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 4,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_11",
+      "group_id": "continuation19_sister_basket_pies",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "Сестра несёт корзину пирогов,",
+      "quote": "И, в ожидании утра,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "75a8dfb3df8e9070e38fe6ca",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 4,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_11",
+      "group_id": "continuation19_sister_basket_pies",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "Сестра несёт корзину пирогов,",
+      "quote": "И всё, что в ней есть, — всё в цветов.\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "4e9de2067104c4b283656e2e",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 5,
+      "quote_path": [
+        "free",
+        "text"
+      ],
+      "case_id": "continuation19_pair_12",
+      "group_id": "continuation19_reading_until_dark",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "free",
+      "prefix": "Я книгу дочитал до темноты,",
+      "quote": "И в ней был я в духе и в духе,\n",
+      "source_complete": true,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "f079bf6304f55876a6d8593d",
+      "source": "audit/continuation19/inference/final_pair/first.json",
+      "source_sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8",
+      "sample_index": 5,
+      "quote_path": [
+        "constrained",
+        "text"
+      ],
+      "case_id": "continuation19_pair_12",
+      "group_id": "continuation19_reading_until_dark",
+      "kind": "pair",
+      "model": "planned400k",
+      "mode": "constrained",
+      "prefix": "Я книгу дочитал до темноты,",
+      "quote": null,
+      "source_complete": false,
+      "requested_new_lines": 1,
+      "nonempty_line_count": 0,
+      "exact_requested_line_count": false
+    }
+  ],
+  "attempts": 12,
+  "unique_cards": 12,
+  "adapter_sha256": "d648fc946d175f01af92cf20242238a97efcf749cc331ea849bc795d52138591"
+}

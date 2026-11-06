@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PoetryGPT — обучение с нуля и рифмованное продолжение</title>
+<style>
+:root{--ink:#1f302b;--muted:#5c6b65;--paper:#f5f3ed;--card:#fffefb;--line:#d5dcd4;--green:#256855;--gold:#a25a24;--soft:#e7eee6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,sans-serif}a{color:var(--green);text-underline-offset:3px}header,main,footer{max-width:1080px;margin:auto;padding:26px}header{padding-top:48px;padding-bottom:8px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700}h1{font:600 clamp(31px,5vw,49px)/1.14 Georgia,serif;max-width:850px;margin:16px 0 20px}h2{font:600 28px/1.2 Georgia,serif;margin:0 0 16px}h3{font-size:17px;margin:0 0 10px}p{margin:10px 0}.lead{font-size:19px;max-width:850px}.muted,small,.source{color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0}section{margin:20px 0 38px;scroll-margin-top:22px}.grid,.steps{display:grid;grid-template-columns:1fr 1fr;gap:18px}.steps{grid-template-columns:repeat(3,1fr)}.grid>*,.steps>*{min-width:0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}.numbers{display:flex;gap:36px;flex-wrap:wrap;margin:24px 0}.number b{display:block;font:600 28px Georgia,serif}.number span{font-size:13px;color:var(--muted)}.tag{font-size:12px;color:var(--green);display:block;margin-bottom:6px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:10px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft);font-weight:650}caption{text-align:left;font-size:13px;color:var(--muted);padding:8px 0}code{font-size:12px;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:18px/1.65 Georgia,serif;margin:8px 0}mark{background:#e6eed7;color:inherit;border-radius:3px;padding:1px 3px}select,button{font:inherit;max-width:100%;padding:7px 10px;background:var(--card);color:var(--ink);border:1px solid #8d9d93;border-radius:6px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0}.toolbar label{font-size:14px}select{min-width:0}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}svg{width:100%;height:auto;display:block}svg text{font:16px system-ui;fill:var(--muted)}.axis{stroke:var(--line);fill:none}.curve{fill:none;stroke:var(--green);stroke-width:2.5}.source,.caption{font-size:13px;margin-top:10px}.note{border-left:3px solid var(--gold);padding:4px 15px}.pill{display:inline-block;background:var(--soft);border-radius:30px;padding:3px 9px;font-size:13px;margin:3px}.stage-text{max-height:270px;overflow:auto}details{border-top:1px solid var(--line);padding-top:14px;margin:18px 0}summary{cursor:pointer;font-weight:650}.sources{font-size:12px;padding-left:18px}.sources li{margin:10px 0}.sources code{display:block;color:var(--muted)}footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+.hero-example{margin:26px 0 18px;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.hero-flow{display:grid;grid-template-columns:minmax(0,1fr) 160px minmax(0,1fr);gap:20px;align-items:center}
+.hero-verse{font:24px/1.5 Georgia,serif;margin:4px 0}.hero-process{text-align:center;font-size:13px;color:var(--green)}
+.hero-arrow{display:block;font-size:28px;line-height:1.2}.hero-example figcaption{font-size:12px;color:var(--muted);margin-top:18px}
+.spec{font-size:13px;color:var(--muted)}.sources .source-meta{font-size:11px;color:var(--muted);display:block}
+@media(max-width:700px){header,main,footer{padding:18px}header{padding-top:28px}.grid,.steps{grid-template-columns:minmax(0,1fr)}h2{font-size:25px}.lead{font-size:17px}.numbers{gap:18px}.card{padding:16px}.scroll table{min-width:530px}.toolbar select{width:100%}.hero-example{padding:18px}.hero-flow{grid-template-columns:minmax(0,1fr);gap:12px}.hero-process{text-align:left}.hero-arrow{display:inline-block;transform:rotate(90deg);margin-right:8px}.hero-verse{font-size:22px}}
+@media print{body{background:white;font-size:11pt}header{padding-top:0}nav,.toolbar{display:none}h1{font-size:29pt}.card,table{break-inside:avoid}.grid{grid-template-columns:1fr 1fr}pre{font-size:12pt}.stage-text{max-height:none}footer{margin-top:16px}}
+[hidden]{display:none!important}
+.chart-scroll{overflow-x:auto}.chart-scroll svg{min-width:650px}.chart-grid{stroke:var(--line);stroke-width:1}.chart-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin:12px 0}.chart-legend span{border-top:3px solid;padding-top:3px;font-size:13px}#history-chart text{font-size:16px}#history-chart .boundary-label{font-size:13px}#history-chart circle:focus{outline:2px solid var(--ink)}.score{font:600 18px system-ui;color:var(--muted);margin-top:8px}.rubric td:first-child{min-width:130px}.ratings table{min-width:0;font-size:13px}.ratings td,.ratings th{padding:7px 5px}.ratings td:last-child{font-weight:700}
+
+</style></head><body>
+<header><div class="eyebrow">Углублённый NLP · Домашнее задание №1 · 6 ноября 2026</div>
+<h1>PoetryGPT</h1><p class="lead">Обучение языковой модели с нуля на русских текстах XVIII–XIX веков, поэтическая адаптация и генерация рифмованных продолжений.</p>
+<figure class="hero-example"><div class="hero-flow"><div><span class="tag">Ввод</span><p class="hero-verse">__HERO_INPUT__</p></div><div class="hero-process"><span class="hero-arrow" aria-hidden="true">→</span>PoetryGPT<br>+ поиск рифмы</div><div><span class="tag">Продолжение</span><p class="hero-verse">__HERO_OUTPUT__</p></div></div><figcaption>Сохранённый вывод выбранной модели с ограниченным поиском.</figcaption></figure>
+<nav aria-label="Разделы"><a href="#overview">Описание</a><a href="#pretrain">Претрейн</a><a href="#adaptation">Дообучение</a><a href="#sft">SFT</a><a href="#inference">Инференс</a><a href="#metrics">Метрики</a></nav></header>
+<main>
+<section id="overview"><h2>Описание</h2><p>Decoder-only Transformer: 68,44 млн параметров, 20 слоёв, ширина 512, 8 голов attention, RoPE, RMSNorm, SwiGLU. Контекст 512 токенов; собственный byte-level BPE со словарём 8192. Все веса языковой модели инициализированы случайно.</p>
+<div class="scroll"><table><thead><tr><th>Корпус</th><th>Train-токены</th><th>Состав</th></tr></thead><tbody><tr><td>Историческая проза</td><td>210,02 млн</td><td>41 282 сегмента: RSD, Lib.ru/Классика</td></tr><tr><td>Поэзия</td><td>1,61 млн</td><td>5478 произведений: PoetryCorpus, ru-poetry-dataset, corpus_1835, rus_elegies, РВБ, Lib.ru</td></tr></tbody></table></div>
+<p>Удалены HTML-разметка и редакторский аппарат; применены OCR-проверки, дедупликация и контроль пересечений. Семейства произведений разделены до нарезки окон; сохранены строки и доступные строфы.</p>
+<p class="caption">В объёме корпуса указаны содержательные токены. В бюджете обучения и батче — токены, включённые в loss, с учётом EOS и повторных проходов. Исторический отбор основан на авторстве и каталогах; точные даты написания подтверждены не для всех произведений.</p><p class="source"><a href="../dataset.md">Данные</a> · <a href="../model.md">Архитектура и гиперпараметры</a> · <a href="../reproduction.md">Воспроизведение</a></p></section>
+
+<section id="pretrain"><h2>Претрейн</h2><p>Next-token CE, Muon для скрытых матриц и AdamW для embedding/head и одномерных параметров. BF16, gradient clipping 1, эффективный батч 16 384 токена. Основная ветвь обучена на 630,19 млн токенов; затем выполнено ещё 50 млн с LR ×0,5.</p>
+<p>На общем checkpoint сравнивались четыре продолжения по 50 млн токенов: контроль CE, LR ×0,5, замена 5% входных токенов и смесь 70% исходного потока / 30% отобранной прозы.</p>
+<div id="training-curves" class="card">
+<h3>Динамика обучения</h3>
+<div class="toolbar"><label for="history">График</label><select id="history"></select><label for="history-metric">Метрика</label><select id="history-metric"></select></div>
+<p id="history-description" class="caption"></p>
+<div id="history-legend" class="chart-legend"></div>
+<div class="chart-scroll"><svg id="history-chart" role="img"></svg></div>
+<p id="history-readout" class="caption" aria-live="polite"></p>
+<p id="history-note" class="caption"></p><a id="history-source" class="source"></a>
+</div>
+<details><summary>Сравнение четырёх вариантов: одинаковый бюджет 50 млн токенов</summary>
+<div class="scroll"><table><caption>Validation: 256 окон, 73 семейства, 16 384 токена. Генерация: 96 продолжений длиной до 96 токенов.</caption><thead><tr><th>Вариант</th><th>NLL ↓</th><th>PPL ↓</th><th>Top-1 ↑</th><th>Distinct-2 ↑</th><th>Repeat-4 ↓</th></tr></thead><tbody>__PRE_ROWS__</tbody></table></div>
+<p>LR ×0,5 дал лучший validation NLL. У контроля выше Distinct-2 и ниже Repeat-4. Для дальнейшей адаптации выбран LR ×0,5 с учётом совокупной оценки.</p></details></section>
+
+<section id="adaptation"><h2>Поэтическое дообучение</h2><p>Два прохода по поэтическому train. LR плавно снижается от 3e-5 до 3e-6 за 3 231 558 обучаемых токенов; состояния оптимизаторов сброшены в начале первого прохода. На втором проходе эффективный батч снижен с 16 384 до 4096 токенов.</p>
+<p>Дополнительно выполнено 400 тыс. токенов на смеси обычной поэзии и примеров с заданным конечным словом, 50/50. Для этой ветви выбран checkpoint Planned400k.</p>
+<div class="scroll"><table><caption>Общая validation: 324 записи, 323 семейства, 85 928 токенов.</caption><thead><tr><th>Этап</th><th>NLL ↓</th><th>PPL ↓</th></tr></thead><tbody>__POETRY_ROWS__</tbody></table></div>
+<p><button type="button" data-history="poetry">График поэтического дообучения</button></p>
+<p>Минимальный NLL получен после второго прохода с батчем 4096; финальные веса выбраны по результатам генерации и проверки рифмы, а не только по NLL.</p>
+<details><summary>Генерации после этапов</summary><p class="caption">Три общих входа из validation, seed 7, до 48 новых токенов; исходный вывод без редактирования.</p><div class="toolbar"><label for="stage-case">Ввод</label><select id="stage-case"></select></div><pre id="stage-prompt"></pre><div id="stage-examples" class="grid" aria-live="polite"></div></details></section>
+
+<section id="sft"><h2>SFT · отдельные эксперименты</h2><p>Обе ветви оценивались отдельно и не входят в выбранные веса Planned400k.</p><h3>Инструкционные ответы</h3><p>Вопросы, просьбы, наблюдения и короткие диалоги. Loss вычисляется по ответам ассистента и маркерам завершения; пользовательский текст замаскирован. Родитель этой контрольной ветви — модель после второго прохода поэзии с батчем 4096.</p>
+<div class="scroll"><table><caption>Validation: 110 окон, 40 групп, 3321 токен текста ответов. Маркеры завершения исключены из этой таблицы.</caption><thead><tr><th>Модель</th><th>NLL ↓</th><th>PPL ↓</th><th>Top-1 ↑</th></tr></thead><tbody>__CHAT_ROWS__</tbody></table></div>
+<p>Инструкционная ветвь сохранена для сравнения; в финальные веса не включена.</p>
+<h3>Продолжение строки</h3><p>869 фрагментов, два прохода, 21 680 токенов в loss. AdamW, LR 3e-5→3e-6, эффективный батч 256 токенов. Родитель — Planned400k; loss только по продолжению, без chat-ролей.</p>
+<div class="scroll"><table><caption>Validation: 23 фрагмента, 21 семейство, 282 токена продолжений.</caption><thead><tr><th>Модель</th><th>NLL ↓</th><th>PPL ↓</th></tr></thead><tbody>__NATIVE_ROWS__</tbody></table></div>
+<p><button type="button" data-history="native">График SFT продолжения строки</button></p><p>NLL снизился; сравнение генераций на открытых примерах не дало преимущества перед Planned400k. Сохранён родитель.</p></section>
+
+<section id="inference"><h2>Инференс</h2><p>Локальный запуск в <a href="../../inference.ipynb">inference.ipynb</a>. RPST определяет ударение и до 32 рифмующихся окончаний на CPU. PoetryGPT строит варианты второй строки на выбранном устройстве CPU/CUDA; поиск ранжирует целые строки по языковой вероятности с ограничениями длины и повторов.</p>
+<details><summary>Параметры поиска</summary><p>Beam 8, ветвление 8; префикс до 16 BPE-токенов, строка до 24; длина в пределах ±2 слогов от ввода. Веса модели неизменны. <a href="../inference22.md">Реализация и фонетические ресурсы</a>.</p></details>
+<div class="toolbar"><label for="example">Пример из заключительной проверки</label><select id="example"></select></div>
+<div class="card"><span class="tag">Ввод</span><pre id="prompt"></pre></div>
+<div class="grid" style="margin-top:16px" aria-live="polite">
+<article class="card"><h3>Свободная генерация</h3><pre id="free"></pre><p class="score" id="free-score"></p><details><summary>Разбор балла</summary><div id="free-ratings" class="scroll ratings"></div></details></article>
+<article class="card"><h3>Ограниченный поиск</h3><pre id="constrained"></pre><p class="score" id="constrained-score"></p><details><summary>Разбор балла</summary><div id="constrained-ratings" class="scroll ratings"></div></details></article></div>
+<p class="caption">Одна модель, шесть одинаковых входов для двух режимов. «Метель» — более связная сцена; «сеть» — пример рифмы с потерей смысла. Сохранены все шесть случаев, включая отказ. Тексты не редактировались; интерактив не запускает модель.</p>
+<p><a id="example-source" class="source"></a></p></section>
+
+<section id="metrics"><h2>Метрики и итоговая оценка</h2><p>NLL — средний next-token loss по размеченным токенам, PPL = exp(NLL), Top-1 — точность следующего токена. Distinct-2 — доля уникальных словных биграмм; Repeat-4 = 1 − unique 4-grams / all 4-grams. N-граммные показатели усредняются по генерациям.</p>
+<p>NLL, PPL и Top-1 рассчитаны на эталонном контексте. Для свободных продолжений дополнительно используются n-граммные показатели и агентная шкала 0–10; исходные баллы раскрываются рядом с примерами.</p>
+<details id="rubric"><summary>Десятибалльная шкала: критерии и протокол</summary>
+<p>Два агента независимо читали вход и точный вывод; имена модели и режима были скрыты. Пять равновесных критериев по 0–2, сумма до 10. В примерах приведены обе исходные оценки; диапазон означает разногласие оценщиков, а не доверительный интервал.</p>
+<div class="scroll"><table class="rubric"><thead><tr><th>Критерий</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
+<tr><td>Связь с началом</td><td>Посторонний текст</td><td>Общая тема или слабая связь</td><td>Использована конкретная ситуация из начала</td></tr>
+<tr><td>Развитие мысли</td><td>Нет содержательного сообщения</td><td>Понятная, слабо развитая мысль</td><td>Содержательное развитие или завершение мысли</td></tr>
+<tr><td>Логика</td><td>Противоречия, нарушенная причинность, путаница ролей</td><td>Сомнительные или необоснованные связи</td><td>Последовательность без обнаруженного противоречия</td></tr>
+<tr><td>Естественность</td><td>Сломанные конструкции</td><td>Понятно, но неловко или с повторами</td><td>Естественная грамматически оформленная речь</td></tr>
+<tr><td>Историческая манера</td><td>Явное несоответствие</td><td>Совместимая нейтральная речь, отдельные признаки</td><td>Последовательная литературная манера XVIII–XIX века</td></tr>
+</tbody></table></div>
+<p>Рифма оценивается отдельно и не входит в сумму. Архаизмы не дают автоматического преимущества; несовпадение с авторским продолжением не считается ошибкой. В заключительной проверке пустой ответ или отказ получает 0/10. Высокий балл по манере не компенсирует потерю смысла.</p>
+<p class="source"><a href="../generation_quality_rubric_v2.md">Исходная шкала</a> · <a href="../../audit/continuation19/final_reading/cards.json">Протокол заключительного чтения</a></p></details>
+<details><summary>Агрегированные оценки на заключительных шести входах</summary>
+<div class="scroll"><table><caption>Шесть независимых ситуаций; два агента — два мнения о тех же ответах. Отказ включён в знаменатель.</caption><thead><tr><th>Режим</th><th>Рифма</th><th>Смысл и рифма</th><th>Средний балл, /10</th></tr></thead><tbody>__FINAL_ROWS__</tbody></table></div>
+<p class="caption">Это малая выборка. «Смысл» и «рифма» — качественные отметки агентов; фонетическая проверка RPST использовалась в поиске. Эти доли не заменяют стандартные метрики из таблиц этапов.</p></details>
+<details id="evidence"><summary>Измерения и версии</summary><p>Финальная оценка получена до исправления выбора неоднозначных ударений. Исправление сохраняет веса и численный поиск; новая локальная проверка исполнения не заменяет оценку качества.</p><p>Показанные строки сверены с полями вывода в исходных протоколах, SHA checkpoint и разметкой двух агентов. Литературные эталоны не подставлялись вместо генераций.</p><p><a href="generation_sources.json">Проверка происхождения генераций (JSON)</a> · <a href="sources.json">Манифест источников (JSON)</a> · <a href="../experiments.md">История экспериментов</a></p><ul class="sources">__SOURCES__</ul></details></section>
+</main><footer>PoetryGPT · <a href="../../README.md">Проект</a> · <a href="../reproduction.md">Воспроизведение</a> · <a href="../../inference.ipynb">Ноутбук</a></footer>
+<script id="report-data" type="application/json">__DATA__</script><script>
+'use strict';
+const report=JSON.parse(document.getElementById('report-data').textContent);
+__EXAMPLE_SCRIPT__
+__CHART_SCRIPT__
+</script></body></html>

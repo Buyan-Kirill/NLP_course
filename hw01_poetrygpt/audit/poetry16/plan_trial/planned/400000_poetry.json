@@ -1,0 +1,1785 @@
+{
+  "checkpoint": "runs\\poetry16\\plan_trial\\planned\\stages\\400000.pt",
+  "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+  "panel_sha256": "7946c06e38d55de2f6c1f664bd3131c3941bb759a9d610195ece846f75dbfe04",
+  "model": {
+    "vocab_size": 8192,
+    "context_length": 512,
+    "n_layers": 20,
+    "n_heads": 8,
+    "d_model": 512,
+    "dropout": 0.1,
+    "gradient_checkpointing": false,
+    "architecture": "modern",
+    "ffn_hidden_size": 1408,
+    "rope_theta": 10000.0,
+    "rms_norm_eps": 1e-06
+  },
+  "step": 391,
+  "resources": {
+    "ram_free_gib": 14.100593566894531,
+    "disk_free_gib": 2007.7935371398926,
+    "gpu_free_gib": 14.7080078125,
+    "gpu_total_gib": 15.99169921875
+  },
+  "samples": [
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v3_3b636e4a0ff82731",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "В мои былые дни, в дни юности счастливой,\n",
+        "author": "Языков Николай Михайлович",
+        "title": "Малага",
+        "family_id": "work_v3_3b636e4a0ff82731",
+        "reference": {
+          "following_lines": "Вино шипучее я пил,\nИ вкус, и блеск его, и хмель его игривой,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v3_3b636e4a0ff82731",
+          "text_sha256": "2467661ff115b32ac5a4cea94977fabc6f9bcfb929c973ba5e2e26e57f87fd5e",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-31736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Языков Николай Михайлович",
+                "title": "Малага",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 12
+      },
+      "seed": 7,
+      "text": "Как в часы разлуки, в часы, когда я с тобой,\nЯ помню, когда, поутру, с тобой,\nКак в первый раз я в жизни, я в первый раз\nИ в первый раз в жизни, в",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 12,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v3_3b636e4a0ff82731",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "В мои былые дни, в дни юности счастливой,\n",
+        "author": "Языков Николай Михайлович",
+        "title": "Малага",
+        "family_id": "work_v3_3b636e4a0ff82731",
+        "reference": {
+          "following_lines": "Вино шипучее я пил,\nИ вкус, и блеск его, и хмель его игривой,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v3_3b636e4a0ff82731",
+          "text_sha256": "2467661ff115b32ac5a4cea94977fabc6f9bcfb929c973ba5e2e26e57f87fd5e",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-31736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Языков Николай Михайлович",
+                "title": "Малага",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 12
+      },
+      "seed": 2026,
+      "text": "В моей душе светилась любовь,\nКак будто я в ее глазах, в ее устах,\nЯ видел, как она\nС улыбкой говорила мне: «Я люблю!»\nИ, не слушая ее, я в душе моей\n",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 12,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_6cc9b002225f09ef",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "С тех пор как вечный судия\nМне дал всеведенье пророка,\n",
+        "author": "Лермонтов Михаил Юрьевич",
+        "title": "Пророк",
+        "family_id": "work_6cc9b002225f09ef",
+        "reference": {
+          "following_lines": "В очах людей читаю я\nСтраницы злобы и порока.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_6cc9b002225f09ef",
+          "text_sha256": "f59b31d2ab06f38e8483ec1d357eba22b085e346b551c3a68c1991e93e12813a",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-03428",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Михаил Лермонтов",
+                "title": "Пророк",
+                "date_from": "1841",
+                "date_to": "1841",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1841,
+                  "to": 1841
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-16258",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Лермонтов Михаил Юрьевич",
+                "title": "Пророк",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 19
+      },
+      "seed": 7,
+      "text": "Я часто и много думаю;\nИ часто мне, не зная,\nНе может быть и не должно,\nЧто с тех пор, как я не видал\nС тех пор, как я не знал\nНи малейшего призн",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 19,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_6cc9b002225f09ef",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "С тех пор как вечный судия\nМне дал всеведенье пророка,\n",
+        "author": "Лермонтов Михаил Юрьевич",
+        "title": "Пророк",
+        "family_id": "work_6cc9b002225f09ef",
+        "reference": {
+          "following_lines": "В очах людей читаю я\nСтраницы злобы и порока.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_6cc9b002225f09ef",
+          "text_sha256": "f59b31d2ab06f38e8483ec1d357eba22b085e346b551c3a68c1991e93e12813a",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-03428",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Михаил Лермонтов",
+                "title": "Пророк",
+                "date_from": "1841",
+                "date_to": "1841",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1841,
+                  "to": 1841
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-16258",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Лермонтов Михаил Юрьевич",
+                "title": "Пророк",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 19
+      },
+      "seed": 2026,
+      "text": "И я не знал, как он клялся\nНа суде, в чем был осужден.\nЯ знаю, что в душе моей\nМеня били, как кровь,\nИ, как совесть, она\nЯ знаю, что",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 19,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v5_4ab988f96a1104c8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Если вдруг, без видимых причин,\n",
+        "author": "Фет Афанасий Афанасьевич",
+        "title": "Если вдруг, без видимых причин…",
+        "family_id": "work_v5_4ab988f96a1104c8",
+        "reference": {
+          "following_lines": "Затоскую, загрущу один.\nЕсли плоть и кости у меня",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v5_4ab988f96a1104c8",
+          "text_sha256": "b034a3f36dc8d486768bdad3f41f27055032c871460d08690d282aa3f3376b14",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-28808",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Фет Афанасий Афанасьевич",
+                "title": "Если вдруг, без видимых причин…",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 7,
+      "text": "Я не вижу и не слышу,\nКак в первый раз я слышу,\nКак в первый раз слышу,\nКак в первый раз слышу:\nЯ слышу, как будто я\nВ первый раз слышу голос\nИ слышу, как в",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v5_4ab988f96a1104c8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Если вдруг, без видимых причин,\n",
+        "author": "Фет Афанасий Афанасьевич",
+        "title": "Если вдруг, без видимых причин…",
+        "family_id": "work_v5_4ab988f96a1104c8",
+        "reference": {
+          "following_lines": "Затоскую, загрущу один.\nЕсли плоть и кости у меня",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v5_4ab988f96a1104c8",
+          "text_sha256": "b034a3f36dc8d486768bdad3f41f27055032c871460d08690d282aa3f3376b14",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-28808",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Фет Афанасий Афанасьевич",
+                "title": "Если вдруг, без видимых причин…",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 2026,
+      "text": "Сухой, густой лес,\nВ стороне, как в тумане, в дыму,\nНа землю упадет тень,\nИ в нем, как в огне,\nВсе пропадают.\nНо если, в свою оч",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_adf291a9fc2c5cf1",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "В пространстве я плыву сухого океана;\nНыряя в зелени, тону в ее волнах;\n",
+        "author": "Козлов Иван Иванович",
+        "title": "Аккерманские степи",
+        "family_id": "work_adf291a9fc2c5cf1",
+        "reference": {
+          "following_lines": "Среди шумящих нив я зыблюся в цветах,\nМинуя бережно багровый куст бурьяна.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_adf291a9fc2c5cf1",
+          "text_sha256": "c7266471c187df4d8002706dd20be9e1d44e91c07ccead6da0e68d04c0276fed",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-11045",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Иван Козлов",
+                "title": "Аккерманские степи",
+                "date_from": "1828",
+                "date_to": "1828",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1828,
+                  "to": 1828
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-14736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Козлов Иван Иванович",
+                "title": "Аккерманские степи",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 25
+      },
+      "seed": 7,
+      "text": "На берегу, как в воду, в тени волн,\nВсё мне чудится, что она\nВ воде. Прибавлю я:\nИ я всё люблю, всё люблю!\nИ всё мне мило, всё мило,",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 25,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_adf291a9fc2c5cf1",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "В пространстве я плыву сухого океана;\nНыряя в зелени, тону в ее волнах;\n",
+        "author": "Козлов Иван Иванович",
+        "title": "Аккерманские степи",
+        "family_id": "work_adf291a9fc2c5cf1",
+        "reference": {
+          "following_lines": "Среди шумящих нив я зыблюся в цветах,\nМинуя бережно багровый куст бурьяна.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_adf291a9fc2c5cf1",
+          "text_sha256": "c7266471c187df4d8002706dd20be9e1d44e91c07ccead6da0e68d04c0276fed",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-11045",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Иван Козлов",
+                "title": "Аккерманские степи",
+                "date_from": "1828",
+                "date_to": "1828",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1828,
+                  "to": 1828
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-14736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Козлов Иван Иванович",
+                "title": "Аккерманские степи",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 25
+      },
+      "seed": 2026,
+      "text": "Сижу, лежу в глубокой тишине,\nИ в томительном сне томлюсь;\nВода, как море, в нем блестит,\nИ, как в море, в ней, как море,\nЯ сижу,",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 25,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_fb1e3031071f8b38",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Колокольчик однозвучный,\n",
+        "author": "Вяземский Петр Андреевич",
+        "title": "Дорожная дума",
+        "family_id": "work_fb1e3031071f8b38",
+        "reference": {
+          "following_lines": "Крик протяжный ямщика,\nЗимней степи сумрак скучный,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_fb1e3031071f8b38",
+          "text_sha256": "154ba2571182377bebd02b4a08d684377649d221027f09cd90cdb23c574cec86",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08365",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Петр Вяземский",
+                "title": "Дорожная дума",
+                "date_from": "1830",
+                "date_to": "1830",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1830,
+                  "to": 1830
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-08475",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Вяземский Пётр Андреевич",
+                "title": "Дорожная дума",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 10
+      },
+      "seed": 7,
+      "text": "Колокольчик звонкий,\nКолокольчик звонкий,\nВ колокольчик звонкий,\nВ колокольчик звенящий\nКолокольчик звонкий.\nВ колокольчик, в колоколь",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 10,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_fb1e3031071f8b38",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Колокольчик однозвучный,\n",
+        "author": "Вяземский Петр Андреевич",
+        "title": "Дорожная дума",
+        "family_id": "work_fb1e3031071f8b38",
+        "reference": {
+          "following_lines": "Крик протяжный ямщика,\nЗимней степи сумрак скучный,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_fb1e3031071f8b38",
+          "text_sha256": "154ba2571182377bebd02b4a08d684377649d221027f09cd90cdb23c574cec86",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08365",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Петр Вяземский",
+                "title": "Дорожная дума",
+                "date_from": "1830",
+                "date_to": "1830",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1830,
+                  "to": 1830
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-08475",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Вяземский Пётр Андреевич",
+                "title": "Дорожная дума",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 10
+      },
+      "seed": 2026,
+      "text": "Как сон, звучит в тишине\nИ в тишине ночи\nВ моей душе\nВ моей душе;\nИ в сердце моем\nЯ слышу, как в груди\nЯ слышу, как в груди\nТы слышу, как голос твой,\n",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 10,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_3d404d911d1b8de8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Я сорвал ветку кипариса\nС могилы женщины святой,\n",
+        "author": "Огарев Николай Платонович",
+        "title": "Я сорвал ветку кипариса...",
+        "family_id": "work_3d404d911d1b8de8",
+        "reference": {
+          "following_lines": "И слезы теплые лилися,\nИ дух исполнился мольбой.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_3d404d911d1b8de8",
+          "text_sha256": "6c7f969043840c28a1df6a0bfcf6bca2a5a5361db3404e86d8c8b0e42c7b3481",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-01722",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Николай Огарев",
+                "title": "Я сорвал ветку кипариса...",
+                "date_from": "1842",
+                "date_to": "1842",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1842,
+                  "to": 1842
+                }
+              }
+            },
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08997",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Николай Огарев",
+                "title": null,
+                "date_from": "1842",
+                "date_to": "1842",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1842,
+                  "to": 1842
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20172",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Огарёв Николай Платонович",
+                "title": "Я сорвал ветку кипариса",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 16
+      },
+      "seed": 7,
+      "text": "И, не зная, как мне с ней расстаться,\nИ, как ей, сироте,\nЯ к ней пристал,\nИ с тех пор, как я был,\nНе могу жить без ее руки,\nИ не",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 16,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_3d404d911d1b8de8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Я сорвал ветку кипариса\nС могилы женщины святой,\n",
+        "author": "Огарев Николай Платонович",
+        "title": "Я сорвал ветку кипариса...",
+        "family_id": "work_3d404d911d1b8de8",
+        "reference": {
+          "following_lines": "И слезы теплые лилися,\nИ дух исполнился мольбой.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_3d404d911d1b8de8",
+          "text_sha256": "6c7f969043840c28a1df6a0bfcf6bca2a5a5361db3404e86d8c8b0e42c7b3481",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-01722",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Николай Огарев",
+                "title": "Я сорвал ветку кипариса...",
+                "date_from": "1842",
+                "date_to": "1842",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1842,
+                  "to": 1842
+                }
+              }
+            },
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08997",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Николай Огарев",
+                "title": null,
+                "date_from": "1842",
+                "date_to": "1842",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1842,
+                  "to": 1842
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20172",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Огарёв Николай Платонович",
+                "title": "Я сорвал ветку кипариса",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 16
+      },
+      "seed": 2026,
+      "text": "И, как ангел, с неба свалился\nИ в меня упал.\nЯ взглянул — и всё кругом было\nИ я узнал, что там, где я жил.\nИ в душе моей проснулась\nЯ: я",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 16,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v5_2536fcb50a03442a",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Из тьмы греха, из глубины паденья\n",
+        "author": "Григорьев Аполлон Александрович",
+        "title": "К мадонне Мурильо в Париже",
+        "family_id": "work_v5_2536fcb50a03442a",
+        "reference": {
+          "following_lines": "К тебе опять я простираю руки...\nМои грехи — плоды глубокой муки,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v5_2536fcb50a03442a",
+          "text_sha256": "7610000581cd2de961654238445cffd4f3fc757f06b88e8dc47339229f913d69",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-01220",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Аполлон Григорьев",
+                "title": "К мадонне Мурильо в Париже",
+                "date_from": "1858",
+                "date_to": "1858",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1858,
+                  "to": 1858
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 10
+      },
+      "seed": 7,
+      "text": "С моей души, с моей души,\nЯ знаю, что я в ней\nС тех пор, как я ее не узнал,\nКогда я, как в тумане,\nК ней шел, и был ей мил,\nИ как",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 10,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v5_2536fcb50a03442a",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Из тьмы греха, из глубины паденья\n",
+        "author": "Григорьев Аполлон Александрович",
+        "title": "К мадонне Мурильо в Париже",
+        "family_id": "work_v5_2536fcb50a03442a",
+        "reference": {
+          "following_lines": "К тебе опять я простираю руки...\nМои грехи — плоды глубокой муки,",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v5_2536fcb50a03442a",
+          "text_sha256": "7610000581cd2de961654238445cffd4f3fc757f06b88e8dc47339229f913d69",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-01220",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Аполлон Григорьев",
+                "title": "К мадонне Мурильо в Париже",
+                "date_from": "1858",
+                "date_to": "1858",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1858,
+                  "to": 1858
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 10
+      },
+      "seed": 2026,
+      "text": "В ужасе и страхе,\nЯ видел и видел, как в нем\nЯ виделся с тобой.\nИ вот, в душе моей\nВ душе, как в зеркале,\nСознанном мной,\n",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 10,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_355d8ad7fc61dbef",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Жизнь к развязке печально идет,\nСердце счастья и радостей просит,\n",
+        "author": "Никитин Иван Саввич",
+        "title": "Грусть старика",
+        "family_id": "work_355d8ad7fc61dbef",
+        "reference": {
+          "following_lines": "А годов невозвратный полет\nИ последнюю радость уносит.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_355d8ad7fc61dbef",
+          "text_sha256": "f94b16fb6a7b15a6253cd12fcfdb22f96d7b8fb3e4d173decbcb92a22ea0e4f4",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-11596",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Иван Никитин",
+                "title": "Грусть старика",
+                "date_from": "1849",
+                "date_to": "1849",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1849,
+                  "to": 1849
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-19816",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Никитин Иван Саввич",
+                "title": "Грусть старика",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 17
+      },
+      "seed": 7,
+      "text": "И сердцу, как в могиле,\nВ ней сердце кипит,\nИ ей, как в могиле,\nРуки дрожат, как в огне.\nВ душе, как в могиле,\nВсе тихо, все тихо,\nИ",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 17,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_355d8ad7fc61dbef",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Жизнь к развязке печально идет,\nСердце счастья и радостей просит,\n",
+        "author": "Никитин Иван Саввич",
+        "title": "Грусть старика",
+        "family_id": "work_355d8ad7fc61dbef",
+        "reference": {
+          "following_lines": "А годов невозвратный полет\nИ последнюю радость уносит.",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_355d8ad7fc61dbef",
+          "text_sha256": "f94b16fb6a7b15a6253cd12fcfdb22f96d7b8fb3e4d173decbcb92a22ea0e4f4",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-11596",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Иван Никитин",
+                "title": "Грусть старика",
+                "date_from": "1849",
+                "date_to": "1849",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1849,
+                  "to": 1849
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-19816",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Никитин Иван Саввич",
+                "title": "Грусть старика",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 17
+      },
+      "seed": 2026,
+      "text": "И, как море, его ждет.\nИ что ж, что мне в жизни,\nЧто мне в ней?\nКак я могу ей ответить?\nЧто мне в ней?\nНе может быть, чтоб я мог\nИ",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 17,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v2_0753d765db9fb9c8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Еще я полн, о друг мой милый,\n",
+        "author": "Майков Аполлон Николаевич",
+        "title": "Еще я полн, о друг мой милый...",
+        "family_id": "work_v2_0753d765db9fb9c8",
+        "reference": {
+          "following_lines": "Твоим явленьем, полн тобой!..\nКак будто ангел легкокрылый",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v2_0753d765db9fb9c8",
+          "text_sha256": "09b9f3362e56eb88122397c71cc4477dad143b61f523e0ca16e7edea153fa345",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-14514",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Аполлон Майков",
+                "title": "Еще я полн, о друг мой милый...",
+                "date_from": "1852",
+                "date_to": "1852",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1852,
+                  "to": 1852
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-16736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Майков Аполлон Николаевич",
+                "title": "Еще я полн, о друг мой милый",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 7,
+      "text": "И, как в первый раз, как будто я\nВ любви к тебе, мой друг,\nВ последний раз, как в первый раз\nВ тебе я увидел ее.\nОна так мила, так мила,\nКак будто бы на",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v2_0753d765db9fb9c8",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Еще я полн, о друг мой милый,\n",
+        "author": "Майков Аполлон Николаевич",
+        "title": "Еще я полн, о друг мой милый...",
+        "family_id": "work_v2_0753d765db9fb9c8",
+        "reference": {
+          "following_lines": "Твоим явленьем, полн тобой!..\nКак будто ангел легкокрылый",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v2_0753d765db9fb9c8",
+          "text_sha256": "09b9f3362e56eb88122397c71cc4477dad143b61f523e0ca16e7edea153fa345",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-14514",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Аполлон Майков",
+                "title": "Еще я полн, о друг мой милый...",
+                "date_from": "1852",
+                "date_to": "1852",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1852,
+                  "to": 1852
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-16736",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Майков Аполлон Николаевич",
+                "title": "Еще я полн, о друг мой милый",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 2026,
+      "text": "Как ты, как ты, весел, как ты счастлив.\nНо я не в силах\nВ последний раз взглянуть на тебя:\nКак я счастлив, как я счастлив,\nЧто с тобой, с тобою,\nВлюблен в",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v3_dbcf7cf647b5f0a5",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Меняясь долгими речами,\nКогда сидим в вечерний час\n",
+        "author": "Павлова Каролина Карловна",
+        "title": "Меняясь долгими речами...",
+        "family_id": "work_v3_dbcf7cf647b5f0a5",
+        "reference": {
+          "following_lines": "Одни и тихие мы с вами,-\nВ раздумье, грустными глазами",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v3_dbcf7cf647b5f0a5",
+          "text_sha256": "64c696ef509db79b77faaca36f39f004c7042f0f679ae643360b7dce193c9e8f",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-05314",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Каролина Павлова",
+                "title": "Меняясь долгими речами...",
+                "date_from": "1854",
+                "date_to": "1854",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1854,
+                  "to": 1854
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20629",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Павлова Каролина Карловна",
+                "title": "Меняясь долгими речами",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 16
+      },
+      "seed": 7,
+      "text": "На ступенях сада,\nКак мы в первый раз в жизни\nОторвались от мира,\nВ нем я вновь наедине\nНачинаю жизнь, и в нем\nСознанье, любовь и любовь",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 16,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_v3_dbcf7cf647b5f0a5",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Меняясь долгими речами,\nКогда сидим в вечерний час\n",
+        "author": "Павлова Каролина Карловна",
+        "title": "Меняясь долгими речами...",
+        "family_id": "work_v3_dbcf7cf647b5f0a5",
+        "reference": {
+          "following_lines": "Одни и тихие мы с вами,-\nВ раздумье, грустными глазами",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_v3_dbcf7cf647b5f0a5",
+          "text_sha256": "64c696ef509db79b77faaca36f39f004c7042f0f679ae643360b7dce193c9e8f",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-05314",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Каролина Павлова",
+                "title": "Меняясь долгими речами...",
+                "date_from": "1854",
+                "date_to": "1854",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1854,
+                  "to": 1854
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20629",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Павлова Каролина Карловна",
+                "title": "Меняясь долгими речами",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 16
+      },
+      "seed": 2026,
+      "text": "На кроватях, на диванах,\nКогда на столах, на диване,\nИ на кровати, где я лежала,\nЯ думаю о том, что было бы, если б я была\nНе",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 16,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_518bd49d7298cf69",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Ты знаешь их, кого я так любил,\n",
+        "author": "Одоевский Александр Иванович",
+        "title": "Ты знаешь их, кого я так любил...",
+        "family_id": "work_518bd49d7298cf69",
+        "reference": {
+          "following_lines": "С кем черную годину я делил...\nТы знаешь их! Как я, ты жал им руку",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_518bd49d7298cf69",
+          "text_sha256": "53e87315b97e235f691e4f53196d4c72726b91768e7e4686805065cbafb55de5",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-06128",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Александр Одоевский",
+                "title": "Ты знаешь их, кого я так любил...",
+                "date_from": "1836",
+                "date_to": "1836",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1836,
+                  "to": 1836
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20231",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Одоевский Александр Иванович",
+                "title": "Ты знаешь их, кого я так любил…",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 7,
+      "text": "И я их так любил,\nЧто сердце мое так сжалось.\nИтак, я не люблю их,\nЯ люблю их, как люблю их,\nИ знаю, что их любовь — любовь;\nЯ их люблю, люблю",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_518bd49d7298cf69",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Ты знаешь их, кого я так любил,\n",
+        "author": "Одоевский Александр Иванович",
+        "title": "Ты знаешь их, кого я так любил...",
+        "family_id": "work_518bd49d7298cf69",
+        "reference": {
+          "following_lines": "С кем черную годину я делил...\nТы знаешь их! Как я, ты жал им руку",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_518bd49d7298cf69",
+          "text_sha256": "53e87315b97e235f691e4f53196d4c72726b91768e7e4686805065cbafb55de5",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-06128",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Александр Одоевский",
+                "title": "Ты знаешь их, кого я так любил...",
+                "date_from": "1836",
+                "date_to": "1836",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1836,
+                  "to": 1836
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-20231",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Одоевский Александр Иванович",
+                "title": "Ты знаешь их, кого я так любил…",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 11
+      },
+      "seed": 2026,
+      "text": "Что с тех пор как в их жизни не стало\nИ что я не в силах\nИ что я люблю, и люблю, и люблю!\nТы знаешь, что я люблю, люблю,\nИ сердце мое так полно,\nЧто",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 11,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_28415b995533d18b",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Любимец ветреных Лаис,\nПрелестный баловень Киприды -\n",
+        "author": "Пушкин Александр Сергеевич",
+        "title": "Юрьеву (Любимец ветреных Лаис...)",
+        "family_id": "work_28415b995533d18b",
+        "reference": {
+          "following_lines": "Умей сносить, мой Адонис,\nЕе минутные обиды!",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_28415b995533d18b",
+          "text_sha256": "7d63df5ab031e731353cb9a4789c6fbac70ace30b5b5d13e4d59bc65f857f98e",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08777",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Александр Пушкин",
+                "title": "Юрьеву (Любимец ветреных Лаис...)",
+                "date_from": "1821",
+                "date_to": "1821",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1821,
+                  "to": 1821
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-22130",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Пушкин Александр Сергеевич",
+                "title": "Юрьеву (Любимец ветреных Лаис...)",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 20
+      },
+      "seed": 7,
+      "text": "Не был влюблен в Марсову дочь.\nНе мог он забыть, что в нем\nПанический страх, ревность и гнев\nВ нем пробудили в нем\nИ страсть к искусству, и любовь,\nИ",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 20,
+      "candidate_scores": {}
+    },
+    {
+      "case": {
+        "seeds": [
+          7,
+          2026
+        ],
+        "temperature": 0.7,
+        "top_k": 40,
+        "top_p": 0.9,
+        "max_new_tokens": 48,
+        "id": "downstream_poetry_work_28415b995533d18b",
+        "kind": "raw",
+        "section": "poetry",
+        "prompt": "Любимец ветреных Лаис,\nПрелестный баловень Киприды -\n",
+        "author": "Пушкин Александр Сергеевич",
+        "title": "Юрьеву (Любимец ветреных Лаис...)",
+        "family_id": "work_28415b995533d18b",
+        "reference": {
+          "following_lines": "Умей сносить, мой Адонис,\nЕе минутные обиды!",
+          "purpose": "Literary comparison only; exact copying is not the success criterion."
+        },
+        "provenance": {
+          "split": "validation",
+          "source_file": "data/poetry_v7/validation.jsonl",
+          "source_id": "work_28415b995533d18b",
+          "text_sha256": "7d63df5ab031e731353cb9a4789c6fbac70ace30b5b5d13e4d59bc65f857f98e",
+          "reused_pilot04_prefix": true,
+          "sources": [
+            {
+              "dataset": "poetry",
+              "record_id": "xml-item-08777",
+              "url": "https://github.com/IlyaGusev/PoetryCorpus/blob/7a5f70e6a46b4717f7c903671f9a6a917aee6162/datasets/corpus/all.xml",
+              "edition_year": null,
+              "selected_text": true,
+              "metadata": {
+                "author": "Александр Пушкин",
+                "title": "Юрьеву (Любимец ветреных Лаис...)",
+                "date_from": "1821",
+                "date_to": "1821",
+                "themes": [],
+                "stanza_boundaries": "removed_upstream",
+                "period_evidence": {
+                  "kind": "source_date_interval",
+                  "from": 1821,
+                  "to": 1821
+                }
+              }
+            },
+            {
+              "dataset": "ru31",
+              "record_id": "csv-row-22130",
+              "url": "https://github.com/kskadart/ru-poetry-dataset/blob/54f1dc1147565759ff0c8ccb8b4acd86a3356970/datasets/ru_poems_31k_v1.0.0.csv",
+              "edition_year": null,
+              "selected_text": false,
+              "metadata": {
+                "author": "Пушкин Александр Сергеевич",
+                "title": "Юрьеву (Любимец ветреных Лаис...)",
+                "period_evidence": {
+                  "kind": "unknown",
+                  "from": null,
+                  "to": null
+                }
+              }
+            }
+          ],
+          "whole_source_bpe_prefix_stable": true
+        },
+        "prompt_tokens_with_bos": 20
+      },
+      "seed": 2026,
+      "text": "Не то, что ты, как друг,\nНе то, чтоб я был любим,\nНо ты был мне дорог.\nКак, в порыве страстного чувства,\nС ней я встречался в первый раз,\nКак с",
+      "stop_reason": "max_new_tokens",
+      "generated_tokens": 48,
+      "prompt_tokens": 20,
+      "candidate_scores": {}
+    }
+  ],
+  "test_used": false,
+  "seconds": 36.18774729999859,
+  "complete": true,
+  "training": false,
+  "tokenizer_sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+  "tokens_seen": 400000
+}

@@ -1,0 +1,95 @@
+{
+  "context_length": 512,
+  "special_tokens": {
+    "<|pad|>": 0,
+    "<|bos|>": 1,
+    "<|eos|>": 2,
+    "<|user|>": 3,
+    "<|assistant|>": 4,
+    "<|eot|>": 5
+  },
+  "inputs_sha256": {
+    "artifacts/tokenizers_v3/selected/tokenizer.json": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe",
+    "audit/poetry16/literary_units/build_units.py": "1406dc3774ca04381891f2cbe0ebdfec7756dfd6eb47506d958dad56b998f263",
+    "data/prepared_v7/poetry_supplement/manifest.json": "67859322b03690d900ac8f240b353bffd1cc147e5b3d009ad2b2cc9c9aba1a23",
+    "audit/continuation14_ready/selective_review.json": "739601c5f012e8fefc3d26de765137327d54ef5a794c85e5c53c96526309f017",
+    "audit/continuation14_verified/summary.json": "58eaa96a7a7cff1543ebce341348ed2d051790604e66beeba18663119a36d869",
+    "data/prepared_v7/poetry_supplement/poetry_train.npy": "ac9a1a6449ed8b0f82706106dae364ac81e00c3efdc8a4ac2f8a8ddb98f3b6c6",
+    "data/prepared_v7/poetry_supplement/poetry_train_offsets.json": "744c8ddb98fd11838ed2514c465490872a818b8caf831567cc9a6445cdef868f",
+    "data/poetry_v7/train.jsonl": "c4beaaa28a8ed80107fef93bc310de32762aa111a8609fb2ca50afa2b4479e6d",
+    "audit/continuation14_verified/train_candidates.jsonl": "69fbdd3a9e20ef29385e6d97560c0ff7766f746a74e436de8fc9ede8dc06068a",
+    "data/prepared_v7/poetry_supplement/poetry_validation.npy": "8974fa1fd3ecf38d8543c95f4241e88ea2b82e9d793ad952b813634f4da2f877",
+    "data/prepared_v7/poetry_supplement/poetry_validation_offsets.json": "7564ed13f5e45c6f144e564b1c4a872346788a0b3bc27b32d3aad0df090a9291",
+    "data/poetry_v7/validation.jsonl": "e41fb8a1239f20172741f9f1fad06a3ca0359c7f1cb5de1739782fc5c11c9c33",
+    "audit/continuation14_verified/validation_candidates.jsonl": "189f56df00a0a45594aa9fa9c9470c9d2d6593ee4a4574b8eb36db33ce33fd96"
+  },
+  "test_used": false,
+  "training_performed": false,
+  "split_policy": "historical poetry_v7 family assignments",
+  "release": "poetry16_source_windows",
+  "source_folder": "data/prepared_v7/poetry_supplement",
+  "array_schema": {
+    "dtype": "int64",
+    "shape": "N x 3",
+    "columns": [
+      "start",
+      "end",
+      "owner"
+    ],
+    "input": "original_stream[start:end]",
+    "targets": "original_stream[start+1:end]",
+    "owner": "zero-based row in original poetry_{split}_offsets.json"
+  },
+  "boundary_policy": "Whole work if <=511 targets; otherwise latest source stanza/sentence/line boundary in last half-window, else hard511; original EOS only",
+  "splits": {
+    "train": {
+      "works": 5478,
+      "windows": 6757,
+      "supervised_targets": 1615779,
+      "whole_work_windows": 4898,
+      "end_boundaries": {
+        "work_end": 5478,
+        "inferred_sentence": 946,
+        "source_stanza": 331,
+        "line": 2
+      },
+      "original_eos_targets": 5478,
+      "ordered_target_ids_equal_original": true,
+      "no_added_or_dropped_targets": true,
+      "target_ids_sha256": "713d3da33a5b879c629a302a87cb2d3ae789a2988e8b88c2e972b0bc5908ba50",
+      "window_positions_quantiles": {
+        "0": 11.0,
+        "0.5": 193.0,
+        "0.9": 489.0,
+        "1": 512.0
+      }
+    },
+    "validation": {
+      "works": 324,
+      "windows": 386,
+      "supervised_targets": 85928,
+      "whole_work_windows": 284,
+      "end_boundaries": {
+        "work_end": 324,
+        "inferred_sentence": 49,
+        "source_stanza": 13
+      },
+      "original_eos_targets": 324,
+      "ordered_target_ids_equal_original": true,
+      "no_added_or_dropped_targets": true,
+      "target_ids_sha256": "fc6a776a704661c0c951d47da8e4cee0342c9e7356eb16910f68985ae7072019",
+      "window_positions_quantiles": {
+        "0": 32.0,
+        "0.5": 172.0,
+        "0.9": 486.5,
+        "1": 510.0
+      }
+    }
+  },
+  "output_sha256": {
+    "poetry_train_windows.npy": "c7bff3fae4c705a3c64020f7bd0ae380c1fead112099cc6f34c4732c62e104dc",
+    "poetry_train_windows_metadata.json": "ba728ce4e1b90cadacb7b61099a9f3d353d3c3aa9218683f63f0e041ea7a568f",
+    "poetry_validation_windows.npy": "d1d1736ca909082bbd7ea9eea114f6aa2cf042c7886c3101f327950c59c69451",
+    "poetry_validation_windows_metadata.json": "df7b0bee3a63daa04e8f8fc0a7fe0c0f3466112408a0a7dbd180ddc8d3104232"
+  }
+}

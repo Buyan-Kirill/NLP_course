@@ -1,0 +1,148 @@
+{
+  "schema": "continuation19-blind-reading-1",
+  "axes": [
+    "relevance",
+    "progress",
+    "logic",
+    "naturalness",
+    "style"
+  ],
+  "flags": [
+    "meaning_acceptable",
+    "rhyme",
+    "joint"
+  ],
+  "instructions": [
+    "Read the entire supplied first line and exact quoted continuation. No gold wording is required.",
+    "pair: one new line completes AA with the supplied first line.",
+    "aabb: judge the entire three-line continuation plus supplied first line as ONE four-line AABB stanza. rhyme=true only if BOTH adjacent AA pairs rhyme under contextual stress; identical endwords are not rhyme.",
+    "Never repair grammar, imagine missing lines, replace words, or choose only a good part. Null/empty views receive all zeros and false flags.",
+    "source_complete is the generator claim; exact_requested_line_count is independent metadata. If either is false, rhyme and joint must be false. Other scores assess the exact available text.",
+    "Five integer scores0..2: relevance, progress, logic, naturalness, classical style. total=sum out of10.",
+    "meaning_acceptable/rhyme are true,false,unclear; joint=true iff both are exactly true. Modest natural scenes are enough; no masterpiece is required.",
+    "Return every card once: id, quote exactly equal to text (including null/LF), scores, total, meaning_acceptable, rhyme, joint, and specific nonempty reason.",
+    "Cards may represent identical complete views; every original slot still counts separately. Readers are separate opinions, not extra cases."
+  ],
+  "cards": [
+    {
+      "id": "3429eeed55bb3c7d1c8233e9",
+      "kind": "pair",
+      "prefix": "Сестра несёт корзину пирогов,",
+      "text": "И, в ожидании утра,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "4e9de2067104c4b283656e2e",
+      "kind": "pair",
+      "prefix": "Я книгу дочитал до темноты,",
+      "text": "И в ней был я в духе и в духе,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "1cde7cf1710259026dc97470",
+      "kind": "pair",
+      "prefix": "Старик присел на лавку отдохнуть,",
+      "text": "А я, с улыбкой глядя,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "c2f9e49bdadebea9ed9b1930",
+      "kind": "pair",
+      "prefix": "Легла на двор короткая метель,",
+      "text": "И в избу вбежала мамзель.\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "1bab969921b1d12d23a27d67",
+      "kind": "pair",
+      "prefix": "Мы чиним сеть на берегу вдвоём,",
+      "text": "Мы чиним сеть на дне твоем.\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "d9fb72f7c5492f412551beb1",
+      "kind": "pair",
+      "prefix": "Мы чиним сеть на берегу вдвоём,",
+      "text": "И в ней, как в зеркале, всё то, что в нем,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "f079bf6304f55876a6d8593d",
+      "kind": "pair",
+      "prefix": "Я книгу дочитал до темноты,",
+      "text": null,
+      "requested_new_lines": 1,
+      "source_complete": false,
+      "nonempty_line_count": 0,
+      "exact_requested_line_count": false
+    },
+    {
+      "id": "824a982623b4c331c2d4fa73",
+      "kind": "pair",
+      "prefix": "Легла на двор короткая метель,",
+      "text": "С пологом повисла сучья,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "acd5bfbfbd43f8c36a32b2d1",
+      "kind": "pair",
+      "prefix": "Старик присел на лавку отдохнуть,",
+      "text": "На лавку поглядеть, да и заснуть.\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "6f69a0aec002384e6199d674",
+      "kind": "pair",
+      "prefix": "За домом лён развесили сушиться,",
+      "text": "На дворе, в сарае, жарко спится.\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "e64dae31ab01793bae32886b",
+      "kind": "pair",
+      "prefix": "За домом лён развесили сушиться,",
+      "text": "На дворе, на дворе, в поле и на дворе,\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    },
+    {
+      "id": "75a8dfb3df8e9070e38fe6ca",
+      "kind": "pair",
+      "prefix": "Сестра несёт корзину пирогов,",
+      "text": "И всё, что в ней есть, — всё в цветов.\n",
+      "requested_new_lines": 1,
+      "source_complete": true,
+      "nonempty_line_count": 1,
+      "exact_requested_line_count": true
+    }
+  ]
+}

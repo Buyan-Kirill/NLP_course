@@ -1,0 +1,130 @@
+[
+  {
+    "path": "artifacts/releases/poetry17/manifest.json",
+    "sha256": "0fdac8eafcf4953a674728e9cf6f356934f286392043ce0404ca6e2e0086d388"
+  },
+  {
+    "path": "data/prepared_v7/expanded/manifest.json",
+    "sha256": "afc0454058539d7f2fd3425f8e0fe4cdf974df57da7ea44abe786f0fc6362cc0"
+  },
+  {
+    "path": "data/prepared_v7/poetry_supplement/manifest.json",
+    "sha256": "67859322b03690d900ac8f240b353bffd1cc147e5b3d009ad2b2cc9c9aba1a23"
+  },
+  {
+    "path": "audit/pretrain11/final_automatic_review.json",
+    "sha256": "e34ebec62ce44d5957ca215bd3544fd34b9896c4f4795fa734913d28bc70ce2d"
+  },
+  {
+    "path": "audit/continuation19/teacher_forced/result.json",
+    "sha256": "4896e427d12f9491166785e62b5f93642462c1c346c12d1b9489fd73ba21b713"
+  },
+  {
+    "path": "audit/continuation19/dev_reading/analysis/summary.json",
+    "sha256": "237ad560ce4e981cc15e67bdd8428cfa9889d3ac1969c80fcfdac7e5617b938e"
+  },
+  {
+    "path": "audit/continuation19/final_reading/analysis/summary.json",
+    "sha256": "cf869fe32bf047bde764d08705b41bd92a199dad667e318b7127cdf0437d56ab"
+  },
+  {
+    "path": "audit/continuation19/inference/parent_dev/completed.json",
+    "sha256": "0cf02adb4e98115f90df3e1b954fb804bd00ab70d4e1dab9b05f4b0e125f28c2"
+  },
+  {
+    "path": "audit/continuation19/evaluation/dev_pool.json",
+    "sha256": "599d352d04e24e6c2a728ca3d60c1f4b356bf98362b42569699ac2d47a9d72da"
+  },
+  {
+    "path": "audit/poetry16/analysis_3231558/summary.json",
+    "sha256": "1d29816f9445c7034c85d14f3ae1919d66505ec57e5d23b1a3820705126829f8"
+  },
+  {
+    "path": "audit/poetry08/lr50_diagnostic13/parent_validation.json",
+    "sha256": "39079d03c56809ed02e81baad6412d09d6144c3ddc90913e334fc69733483971"
+  },
+  {
+    "path": "audit/poetry16/plan_trial/planned/400000_validation.json",
+    "sha256": "f0a420d396a4f7a7e823422dbabd960f23c3b301e9f4472d0a2baf3e793dcc45"
+  },
+  {
+    "path": "audit/poetry08/lr50_diagnostic13/parent_poetry.json",
+    "sha256": "76d53f678da2a4d8efbd14ed04fd3300490595be64676d96d88efbbeb58054b8"
+  },
+  {
+    "path": "audit/poetry08/lr50_diagnostic13/pure_1615779_poetry.json",
+    "sha256": "00c03774af5491d3459503fc343dfd6214c7ac179b1265e8d835e6ef7d725ef4"
+  },
+  {
+    "path": "audit/poetry16/batch4k/3231558_poetry.json",
+    "sha256": "34bcb4b8d2537abc717dc2b0ac43c67ad72c85e7037b532ccbbc21e713132ca8"
+  },
+  {
+    "path": "audit/poetry16/plan_trial/planned/400000_poetry.json",
+    "sha256": "65468a0a2b1e7c5c364c21b3b428a1513d34876ff01642f755121afd468e7b94"
+  },
+  {
+    "path": "reproduction/evidence/stress_fix22_report.json",
+    "sha256": "6448f49f7c4ceefdf3d798c5b43f8739498012c98286233f79e5bd0be835fc4e"
+  },
+  {
+    "path": "audit/finalize18/final_metrics_preparation/result.json",
+    "sha256": "0f2910858e008550157a2b519e96b2ee0c3221cd173c51f67f615bee81357d2c"
+  },
+  {
+    "path": "audit/finalize18/inference/chat12/evidence/analysis/summary.json",
+    "sha256": "3b062b5a2fef5e78fe6a83165e5e828ec2102b66e789a8e3dedbadc272031c9b"
+  },
+  {
+    "path": "reproduction/evidence/inference22_config.json",
+    "sha256": "74046451fe0e669a4e58d88144db5b26c1113eaa687d12141e2b4c1db72e0b09"
+  },
+  {
+    "path": "reproduction/evidence/d_initial_metrics.jsonl",
+    "sha256": "49e826ce524ff2191b5ee4523878f2ff3606513f54ff399f0b889dee751a8b15"
+  },
+  {
+    "path": "reproduction/evidence/lr50_metrics.jsonl",
+    "sha256": "421f478e28d3cd2f40f68384c5f0f7546207a9f1701ab88f96e39b5d688d81a6"
+  },
+  {
+    "path": "reproduction/evidence/poetry_first_metrics.jsonl",
+    "sha256": "27d62f6f549b7291647d915dabe03e5b8ebba06ebac66c81c8dfb377ba898f63"
+  },
+  {
+    "path": "reproduction/evidence/native_sft_metrics.jsonl",
+    "sha256": "a504a83ef0a86c9f841249bfc7aa1927f23def9e7d9e8387cdcb6dff1a7b152e"
+  },
+  {
+    "path": "audit/poetry16/batch4k/2423668_validation.json",
+    "sha256": "ce57b7d0756787abe2a625af0e5e96c0f2c96912f7d46e87ba8ff8c521da310d"
+  },
+  {
+    "path": "audit/pretrain11/lr25_interim_check.json",
+    "sha256": "93723cf2850e4fc5d799a84a942d557efee0a9edd8bf678e5e435f50cf298944"
+  },
+  {
+    "path": "audit/continuation19/final_reading/mapping.json",
+    "sha256": "aae6b5f4cd25e46444105d2a24f456e40bf1f8607ab9144126292ed3515ede6b"
+  },
+  {
+    "path": "audit/continuation19/final_reading/cards.json",
+    "sha256": "a051fac390d4931501f0aaa51a14f69af8150e216e3bb32fb5adb0f6f7db0cea"
+  },
+  {
+    "path": "audit/continuation19/final_reading/judged_primary.json",
+    "sha256": "2c5053282166e6e428db0ba28bbf41aa1cbc9ed04364073864b0a9b5e8b616a1"
+  },
+  {
+    "path": "audit/continuation19/final_reading/judged_secondary.json",
+    "sha256": "cc7fdea3b7297f3ca25b38318f4e4b097b2e05207d26a36acf88ce6d5fcc1806"
+  },
+  {
+    "path": "audit/continuation19/inference/final_pair/first.json",
+    "sha256": "cd5a2b5f01a80b80ba9ea8c3fff3d4a7bf2600c6df423d55e5464c2ce0e34cd8"
+  },
+  {
+    "path": "docs/generation_quality_rubric_v2.md",
+    "sha256": "c511b83646081e709ec2fd86cf1a4b3069302f04e3b7fab5a4736cd96e7c7160"
+  }
+]

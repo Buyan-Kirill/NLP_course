@@ -1,0 +1,759 @@
+{
+  "schema": "native19-teacher-forced-result-1",
+  "complete": true,
+  "training": false,
+  "validation": {
+    "path": "audit/continuation19/data_final/validation.jsonl",
+    "sha256": "f7dd0a8e05acec419e89540f0165f973d3f3be6bd4be3d02561a42c20561bb73"
+  },
+  "config_sha256": "29f9dd9758292329dcbabeddd23d485773e3d299d79180529b3e0425735e0ea1",
+  "code_sha256": {
+    "audit/finalize18/native18/score.py": "5218bff60bb33832850cec10cef91b12f2921c7b4a1f9ca77954c4092f1e826c",
+    "audit/finalize18/native18/train_native.py": "814b10221c1abd216cc5fb0aa2855680b7fbe2cf5704cad5165145be148d17c9",
+    "audit/rhyme17/initial_diagnostic_job.py": "dd2652b0b77aae7a22d6dc045a46af92c15126c5844fd780359425a881423c8d",
+    "poetrygpt/__init__.py": "62a4f855d5f58160e5d541ba3c8c26d7a90309d9ed02120bd6a5ba1f8c0ba201",
+    "poetrygpt/data.py": "a060ea259c33b4a8e0644f0de5aaf8d8a13313b14bbe38e866e9a576db619371",
+    "poetrygpt/evaluate.py": "6894a59507c5dc1fcb69e42506a7299e5b29b5abc5881833296b86b78da50227",
+    "poetrygpt/generate.py": "5226282933fedd6df8528d93de0ca7d035d46be3e3e5fc0f8b60d73d198e87b0",
+    "poetrygpt/model.py": "c006700034cce1191aed2f7e4a26f258f5243d13987f13b0923218f3b8028492",
+    "poetrygpt/runtime.py": "183911e9fd1a27cbe9315586469ca43bce0ec2dcbfd11c7bbf3b6d76f122ec6d",
+    "poetrygpt/serialization.py": "e24e827cc5bcc70449a2743c073ddd12393f5ded888d52d3243c056ce225c294",
+    "poetrygpt/train.py": "5adb8d03b6686731c4118f65261fbcdbaeea23a99a6e0cd1bb6852e19e970c65",
+    "scripts/continue_pretrain08_ab.py": "35bd1199c191dd8bb71e841e8ee5fabb1dffc6a468bc6df5ea9292c808c5c85c",
+    "scripts/continue_pretrain08_selected.py": "7ba9b6503890dcb5a30b4d7598fca742357fb5f548ac678895f795ba5e3d16d3",
+    "scripts/poetry16_streams.py": "5f042cc581d6d011921e317c7fcdc62ca94342be9f0c8cd287dfa9b05711f0ac",
+    "scripts/run_pretrain08.py": "ddc5f1c5135f9d0648cb84233a34e0938d94d1f16aa50e51c02058b61015cbc5",
+    "scripts/run_pretrain08_muon.py": "dfe2d8fae637503870db4fa5c64040ac0005dd868aab533667df98bb7a9e5203",
+    "scripts/run_task_pilot02.py": "2ab02160501995074e02adadd0a1fe1b81e85d2956c7bec912ec5de00dad7f9a",
+    "scripts/shared_gpu11.py": "54272a35f764bfcbff3575789871a8f67057b45c413f589350741015d420d872",
+    "scripts/train_causal_series.py": "607c3ffbe9f86b7d9f4402ef93a30d5326dc8d9bf21d2819e28db541f5222515",
+    "scripts/train_narrative_series04.py": "6f2ce7721571f93ecf674e66c69590de582a278db587cb9c2f26a1d872888f89",
+    "scripts/train_pretrain08.py": "cd54acc02e1da28508421aae0f9980c6a023c6719643cfcf529f17dfd0d62e82",
+    "scripts/training_data.py": "70d2a4c52b547ff1d7d404914cf9a339e804f550a2d2aecca1dc879ab01f6b38"
+  },
+  "environment": {
+    "python": "3.13.17",
+    "torch": "2.9.1+cu128",
+    "numpy": "2.2.6",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "device": "cuda",
+    "precision": "bf16",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+    "cpu_threads": 4,
+    "deterministic_algorithms": false
+  },
+  "expected_targets_per_model": 282,
+  "models": [
+    {
+      "label": "planned400k",
+      "path": "runs/poetry16/plan_trial/planned/stages/400000.pt",
+      "sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+      "lineage": {
+        "origin": "random_initialization",
+        "seed": 2026110308,
+        "parents": [
+          {
+            "checkpoint_sha256": "b0595ee6f8157dffddb636caf0e50bdae3a262cc00535d383f866d308c8e51c4",
+            "domain": "prose",
+            "step": 38466,
+            "optimizer": "inherited complete moments and stream",
+            "pilot": "ce",
+            "schedule": "inherit",
+            "lr_multiplier": 0.5
+          },
+          {
+            "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698",
+            "domain": "prose",
+            "step": 3052,
+            "tokens_seen": 680193557,
+            "stage": "poetry08",
+            "optimizer": "new Muon + AdamW",
+            "parent_optimizer": "muon",
+            "optimizer_state": "fresh"
+          },
+          {
+            "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8",
+            "domain": "poetry",
+            "step": 100,
+            "tokens_seen": 1615779,
+            "stage": "poetry16_continuation_fork",
+            "optimizer_state": "restored",
+            "accounting": "same cumulative poetry counters; no extra parent tokens added"
+          },
+          {
+            "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725",
+            "domain": "poetry",
+            "step": 496,
+            "tokens_seen": 3231558,
+            "stage": "poetry08",
+            "optimizer": "new Muon + AdamW",
+            "parent_optimizer": "muon",
+            "optimizer_state": "fresh"
+          }
+        ]
+      },
+      "elapsed_seconds": 1.7161202999996021,
+      "report": {
+        "split": "validation",
+        "domain": "poetry",
+        "windows": 23,
+        "coverage": "full",
+        "metrics": {
+          "overall": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "topics:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "date_basis:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "modern_context:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "author:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "source:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "verse_feet:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "genre:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "task:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "length:<128": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "source_genre:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "knowledge_mode:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "orthography:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "core_style:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "written_period:unknown_or_cross_period": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "verse_meter:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "topic:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "themes:unknown": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          },
+          "domain:poetry": {
+            "nll": 3.9561931423534116,
+            "perplexity": 52.25800800492241,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.081562196757095
+          }
+        },
+        "per_record": [
+          {
+            "id": "native19_ctx16x_0285fe136fe17e6dfd66",
+            "family_id": "work_fe851e4c2a6a64bd",
+            "nll_sum": 51.24894569069147,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_c1e887527deffb609049",
+            "family_id": "work_v3_c93536be07d65336",
+            "nll_sum": 38.20242850482464,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_c53a35120b5837f5f477",
+            "family_id": "work_518bd49d7298cf69",
+            "nll_sum": 50.782103010918945,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_ee9431e933173c5963cd",
+            "family_id": "work_v3_65804a2f7292ed44",
+            "nll_sum": 49.69345492357388,
+            "targets": 16
+          },
+          {
+            "id": "native19_ctx16x_7124669dabcf4e44e401",
+            "family_id": "work_bb8388d2a730144a",
+            "nll_sum": 41.47067514806986,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_0fc27410b53abe1a74ac",
+            "family_id": "work_v3_4f5e780b1d10a9f5",
+            "nll_sum": 35.990495048463345,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_774d4411d5082a4766f6",
+            "family_id": "work_b5f2f373c4d93d1d",
+            "nll_sum": 67.61148357205093,
+            "targets": 14
+          },
+          {
+            "id": "native19_ctx16x_1c8070368e662504f546",
+            "family_id": "work_bd527852aaf3153e",
+            "nll_sum": 42.856220081448555,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_71cf81d0457654ed1383",
+            "family_id": "work_518bd49d7298cf69",
+            "nll_sum": 43.46625014767051,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_58632031a3206f7f2ecb",
+            "family_id": "work_0421c9bbc72a1111",
+            "nll_sum": 47.73798544611782,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_cb1cb670382c604ef585",
+            "family_id": "work_v2_8f99f88ce1498fc2",
+            "nll_sum": 42.88254182599485,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_db947bf3e46356444d4d",
+            "family_id": "work_2acd383e7173aa3f",
+            "nll_sum": 33.76963176811114,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_21db33626003ce06b74c",
+            "family_id": "work_da6a6d45018b7512",
+            "nll_sum": 36.527444288134575,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_3d1629c9249f94f487b5",
+            "family_id": "work_v5_bc0e669e4d612fe1",
+            "nll_sum": 28.79224139638245,
+            "targets": 10
+          },
+          {
+            "id": "native19_aabb_ctx16x_7da7a2b71cf28f52f638",
+            "family_id": "work_v3_dc44dd8291e56a85",
+            "nll_sum": 142.23799077863805,
+            "targets": 40
+          },
+          {
+            "id": "native19_ctx16x_7da7a2b71cf28f52f638",
+            "family_id": "work_v3_dc44dd8291e56a85",
+            "nll_sum": 55.139123778790236,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_7dbdac55b65f6d4ff122",
+            "family_id": "work_v3_db7181fa67f56013",
+            "nll_sum": 45.87325997650623,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_5692b6f5048fc6237018",
+            "family_id": "work_v5_6d7251c7e17d2e02",
+            "nll_sum": 54.453204810619354,
+            "targets": 8
+          },
+          {
+            "id": "native19_ctx16x_389ac9df2bfeb1a57b5f",
+            "family_id": "work_7973ef430ac216b1",
+            "nll_sum": 47.066881097853184,
+            "targets": 8
+          },
+          {
+            "id": "native19_ctx16x_1e7c02471a7955438dd7",
+            "family_id": "work_43e38661f68be4ff",
+            "nll_sum": 37.74653198197484,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_43a2bf580112798d609b",
+            "family_id": "work_v3_810372c3b56241ef",
+            "nll_sum": 51.803856290876865,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_d1ccbf3ba5c0c607ec98",
+            "family_id": "work_v5_0f943d5dc2f336d0",
+            "nll_sum": 22.822592303156853,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_06cdcb510cced0547945",
+            "family_id": "work_1c9cb54bd853f894",
+            "nll_sum": 47.47112427279353,
+            "targets": 11
+          }
+        ],
+        "limits": "Teacher-forced loss is not generation quality. Partial-window slices are descriptive; multilabel slices overlap."
+      }
+    },
+    {
+      "label": "native19",
+      "path": "runs/continuation19/combined/stages/21680.pt",
+      "sha256": "e90f36a89a95f257fa6d1008d64fd5c274d0cc59f8141e3d2d5d0f242fd60af4",
+      "lineage": {
+        "origin": "random_initialization",
+        "seed": 2026110308,
+        "parents": [
+          {
+            "checkpoint_sha256": "b0595ee6f8157dffddb636caf0e50bdae3a262cc00535d383f866d308c8e51c4",
+            "domain": "prose",
+            "step": 38466,
+            "optimizer": "inherited complete moments and stream",
+            "pilot": "ce",
+            "schedule": "inherit",
+            "lr_multiplier": 0.5
+          },
+          {
+            "checkpoint_sha256": "6ae28c5236645eece5f19816aa480726c6f32ed6116ac5b5128f601693bcb698",
+            "domain": "prose",
+            "step": 3052,
+            "tokens_seen": 680193557,
+            "stage": "poetry08",
+            "optimizer": "new Muon + AdamW",
+            "parent_optimizer": "muon",
+            "optimizer_state": "fresh"
+          },
+          {
+            "checkpoint_sha256": "065d48716d1f75808cdf0349429a6700cd6d302a5b27d69d5d1e2b137d9a30d8",
+            "domain": "poetry",
+            "step": 100,
+            "tokens_seen": 1615779,
+            "stage": "poetry16_continuation_fork",
+            "optimizer_state": "restored",
+            "accounting": "same cumulative poetry counters; no extra parent tokens added"
+          },
+          {
+            "checkpoint_sha256": "0180d920b015abb3bbc12873e5156bd842eb98166dbcde5e681eb06bff1e9725",
+            "domain": "poetry",
+            "step": 496,
+            "tokens_seen": 3231558,
+            "stage": "poetry08",
+            "optimizer": "new Muon + AdamW",
+            "parent_optimizer": "muon",
+            "optimizer_state": "fresh"
+          },
+          {
+            "checkpoint_sha256": "60ae2789e26c2c9ee4c7396bb4caa45454f8691bd10d64b986496c47384bbf33",
+            "domain": "poetry",
+            "step": 391,
+            "tokens_seen": 400000,
+            "optimizer": "fresh AdamW"
+          }
+        ]
+      },
+      "elapsed_seconds": 2.197561599998153,
+      "report": {
+        "split": "validation",
+        "domain": "poetry",
+        "windows": 23,
+        "coverage": "full",
+        "metrics": {
+          "overall": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "topics:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "date_basis:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "modern_context:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "author:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "source:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "verse_feet:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "genre:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "task:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "length:<128": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "source_genre:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "knowledge_mode:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "orthography:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "core_style:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "written_period:unknown_or_cross_period": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "verse_meter:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "topic:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "themes:unknown": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          },
+          "domain:poetry": {
+            "nll": 3.9144386417679953,
+            "perplexity": 50.12092781700293,
+            "targets": 282,
+            "records": 23,
+            "families": 21,
+            "family_macro_nll": 4.0186770278969455
+          }
+        },
+        "per_record": [
+          {
+            "id": "native19_ctx16x_0285fe136fe17e6dfd66",
+            "family_id": "work_fe851e4c2a6a64bd",
+            "nll_sum": 51.23817043984309,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_c1e887527deffb609049",
+            "family_id": "work_v3_c93536be07d65336",
+            "nll_sum": 37.76090172352269,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_c53a35120b5837f5f477",
+            "family_id": "work_518bd49d7298cf69",
+            "nll_sum": 47.91114525566809,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_ee9431e933173c5963cd",
+            "family_id": "work_v3_65804a2f7292ed44",
+            "nll_sum": 47.041710142977536,
+            "targets": 16
+          },
+          {
+            "id": "native19_ctx16x_7124669dabcf4e44e401",
+            "family_id": "work_bb8388d2a730144a",
+            "nll_sum": 39.64952808013186,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_0fc27410b53abe1a74ac",
+            "family_id": "work_v3_4f5e780b1d10a9f5",
+            "nll_sum": 31.970287191681564,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_774d4411d5082a4766f6",
+            "family_id": "work_b5f2f373c4d93d1d",
+            "nll_sum": 69.04835614003241,
+            "targets": 14
+          },
+          {
+            "id": "native19_ctx16x_1c8070368e662504f546",
+            "family_id": "work_bd527852aaf3153e",
+            "nll_sum": 42.9805110595189,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_71cf81d0457654ed1383",
+            "family_id": "work_518bd49d7298cf69",
+            "nll_sum": 42.47336768172681,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_58632031a3206f7f2ecb",
+            "family_id": "work_0421c9bbc72a1111",
+            "nll_sum": 47.50212995777838,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_cb1cb670382c604ef585",
+            "family_id": "work_v2_8f99f88ce1498fc2",
+            "nll_sum": 40.201334888115525,
+            "targets": 12
+          },
+          {
+            "id": "native19_ctx16x_db947bf3e46356444d4d",
+            "family_id": "work_2acd383e7173aa3f",
+            "nll_sum": 34.55536587815732,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_21db33626003ce06b74c",
+            "family_id": "work_da6a6d45018b7512",
+            "nll_sum": 35.36363861896098,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_3d1629c9249f94f487b5",
+            "family_id": "work_v5_bc0e669e4d612fe1",
+            "nll_sum": 28.192543055396527,
+            "targets": 10
+          },
+          {
+            "id": "native19_aabb_ctx16x_7da7a2b71cf28f52f638",
+            "family_id": "work_v3_dc44dd8291e56a85",
+            "nll_sum": 146.25664919312112,
+            "targets": 40
+          },
+          {
+            "id": "native19_ctx16x_7da7a2b71cf28f52f638",
+            "family_id": "work_v3_dc44dd8291e56a85",
+            "nll_sum": 56.88602825906128,
+            "targets": 13
+          },
+          {
+            "id": "native19_ctx16x_7dbdac55b65f6d4ff122",
+            "family_id": "work_v3_db7181fa67f56013",
+            "nll_sum": 47.28912698570639,
+            "targets": 9
+          },
+          {
+            "id": "native19_ctx16x_5692b6f5048fc6237018",
+            "family_id": "work_v5_6d7251c7e17d2e02",
+            "nll_sum": 54.578999042510986,
+            "targets": 8
+          },
+          {
+            "id": "native19_ctx16x_389ac9df2bfeb1a57b5f",
+            "family_id": "work_7973ef430ac216b1",
+            "nll_sum": 46.29397708643228,
+            "targets": 8
+          },
+          {
+            "id": "native19_ctx16x_1e7c02471a7955438dd7",
+            "family_id": "work_43e38661f68be4ff",
+            "nll_sum": 38.7363816248253,
+            "targets": 11
+          },
+          {
+            "id": "native19_ctx16x_43a2bf580112798d609b",
+            "family_id": "work_v3_810372c3b56241ef",
+            "nll_sum": 52.59749571606517,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_d1ccbf3ba5c0c607ec98",
+            "family_id": "work_v5_0f943d5dc2f336d0",
+            "nll_sum": 21.391352987848222,
+            "targets": 10
+          },
+          {
+            "id": "native19_ctx16x_06cdcb510cced0547945",
+            "family_id": "work_1c9cb54bd853f894",
+            "nll_sum": 43.9526959694922,
+            "targets": 11
+          }
+        ],
+        "limits": "Teacher-forced loss is not generation quality. Partial-window slices are descriptive; multilabel slices overlap."
+      }
+    }
+  ],
+  "metric": "Native target NLL with exactly one causal shift in frozen token_losses; no top1 or semantic metric claimed"
+}

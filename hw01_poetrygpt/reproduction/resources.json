@@ -1,0 +1,811 @@
+{
+  "schema": "poetrygpt-resources-1",
+  "inference": {
+    "name": "poetrygpt-v1-inference.zip",
+    "url": "https://github.com/Buyan-Kirill/NLP_course/releases/download/poetrygpt-v1/poetrygpt-v1-inference.zip",
+    "bytes": 415032929,
+    "sha256": "dc9aed3ded501faade22bcc9dcc65d2ac843ec08f9babd63afdfc3d6c8f9451e",
+    "files": [
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/bin/coloredlogs.exe",
+        "bytes": 108447,
+        "sha256": "02a5934629c60b8a7516507c546fe3a739072d9986181603e531e63ed4cdcef5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/bin/humanfriendly.exe",
+        "bytes": 108449,
+        "sha256": "9717bde20926534cb10401bf2c27c2a69c9048e8b97b4b221086b48ae0b2f298"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/LICENSE.txt",
+        "bytes": 1056,
+        "sha256": "0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/METADATA",
+        "bytes": 12387,
+        "sha256": "1663baba746f35eefb249d945345d88566cc4f3643863eb31a91258c3cac674c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/RECORD",
+        "bytes": 1441,
+        "sha256": "4693e9a4d4803e1fc4f92de99bee725250917aa8fd4dafe77e38eb77f835bbc5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/WHEEL",
+        "bytes": 110,
+        "sha256": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/entry_points.txt",
+        "bytes": 54,
+        "sha256": "b8e99830f8f2ed7e9e7df995879ea2dd4dcdf52d770d3468cc93809dc06d646d"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs-15.0.1.dist-info/top_level.txt",
+        "bytes": 12,
+        "sha256": "0f72ee46fbac110f3129484fa303d498f58d9bcf054b0f2db37c76ba5bc24b24"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs.pth",
+        "bytes": 147,
+        "sha256": "dda83a855986efa5cd87f0248b0199c0086eb0e8e7fece7d6741959c5ce39536"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/__init__.py",
+        "bytes": 64423,
+        "sha256": "1716a2235a50d09cd161bc762b97ff02bf566b599e64b8395ca1961ca80f04da"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/cli.py",
+        "bytes": 3493,
+        "sha256": "89a1e05157873e5e6221e70a1b558932c94e24429d844bac6f18fb078af5b072"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/converter/__init__.py",
+        "bytes": 18353,
+        "sha256": "b74f1ef55f3e11df72f5e35262fdf1d431f485781a5c7266416a79e23fdada79"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/converter/colors.py",
+        "bytes": 5387,
+        "sha256": "d4dd8fa426be11830c5b20ba0f0ed21b6597d600baec5f45e4eb5e7855b9d923"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/demo.py",
+        "bytes": 1825,
+        "sha256": "09a3d518e07aac2b490f27aa9345412e2d2dd398e05049e2b81fff558a39921a"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/syslog.py",
+        "bytes": 11849,
+        "sha256": "f97c91533236d102934ed56a84902d7d873e963c3472bb23c6a8d60e3aab72a5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/coloredlogs/tests.py",
+        "bytes": 30791,
+        "sha256": "a1efe95a74c67cd108eeca58dff540eb67d7ff4f59115155111bebf6c04caa73"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/LICENSE.txt",
+        "bytes": 1056,
+        "sha256": "4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/METADATA",
+        "bytes": 9201,
+        "sha256": "68bb349388cdfeca602acc3455b83a7b2fe3cbe84025e27493bcbe76f3ab6c82"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/RECORD",
+        "bytes": 2135,
+        "sha256": "41e7e785ff557228f2ce6c723fee27dd9ad3136eee3c44ab79851225f09bb395"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/WHEEL",
+        "bytes": 110,
+        "sha256": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/entry_points.txt",
+        "bytes": 58,
+        "sha256": "854f800ec1a5b379a07f7a6506df41fa860b0ad043422509674d2486e028a977"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly-10.0.dist-info/top_level.txt",
+        "bytes": 14,
+        "sha256": "ede2802a17249a50f86685899169a19d3b35a673ff6f317ee7a553ab40fb588a"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/__init__.py",
+        "bytes": 31725,
+        "sha256": "b0f08c42fd7a9b7a7cc58c1ddcdde452cd6b7b05490776460c1905d3ff2feafa"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/case.py",
+        "bytes": 6008,
+        "sha256": "7e42229e3e15d52f179773824984a0a8aa06cc209b5493a32396739d58824f54"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/cli.py",
+        "bytes": 9822,
+        "sha256": "6691aa4c72f07cb8c5002b1069c62437d0e205990679c3f3207cac96258dd62f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/compat.py",
+        "bytes": 3984,
+        "sha256": "eeaa0518c3458b31a1b39048ca230a4c352adbd0f1cee5c65f8311a192e8e26b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/decorators.py",
+        "bytes": 1501,
+        "sha256": "8afc41f94f5d7d75230a5e0667c83f80a142e1adeecb10d58bedeb9713e3bc9a"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/deprecation.py",
+        "bytes": 9499,
+        "sha256": "6ddc75fd3f0bd6017adf9138d44e9b613aa27bd3f7a3bad8ea7e30a218e42cb9"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/prompts.py",
+        "bytes": 16335,
+        "sha256": "f0f489d47a6bde577a62409a5d0b131c07a9f41b5329894a9908b54626872047"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/sphinx.py",
+        "bytes": 11452,
+        "sha256": "06b1712bead7dcb37888caa0345b8e4f07987e9a58a7ef8edc7a96065bb4e4cd"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/tables.py",
+        "bytes": 13968,
+        "sha256": "9420e710acb26519ab207ac3954cf356983dcfa94a38ef2574fe1f8758333012"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/terminal/__init__.py",
+        "bytes": 30759,
+        "sha256": "e41cf15472ab8b39dc9518eb5b060493697572dd2ad1676ea4922b92e23d8257"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/terminal/html.py",
+        "bytes": 16747,
+        "sha256": "fdcb146788480f4013c13bcf5d4f0aac07ba6730ff8144bbfed3771660870384"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/terminal/spinners.py",
+        "bytes": 11323,
+        "sha256": "a3b9e49fcac1753aabf971c84fdef6b08808bb1883ca643990f56407347bbad1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/testing.py",
+        "bytes": 24359,
+        "sha256": "844aec9813790ab7a3e64d4ffc8d1d8502bc200c05af520e67d9103c8ad9532b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/tests.py",
+        "bytes": 68919,
+        "sha256": "ddb91ab2b460c347007591478264e8e03507817127947b51a2afedd8c11a7db7"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/text.py",
+        "bytes": 16212,
+        "sha256": "fd6046e126786d3e521fde332d475f981e8d5dbbdce200581021264185c9d6c1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/humanfriendly/usage.py",
+        "bytes": 13768,
+        "sha256": "0213e8e8372f68144814658d72d536d8c70cccddd1c9ce99082f3792dd996e4e"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/METADATA",
+        "bytes": 2597,
+        "sha256": "c29692b5f9dbcdf64c5d0c9cb6a2ae3496aead8fe26e33edafa42cdeab30f67e"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/RECORD",
+        "bytes": 911,
+        "sha256": "5fccae2080b2d9a79efd37555ae2e8d0e7470e6742a58d3bbb02d339886df7fd"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/WHEEL",
+        "bytes": 95,
+        "sha256": "0b7b589807fff1662ef1b7b0b5159f352b6039d0e343c28482d406504c6a90e6"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish-1.0.3.dist-info/license_files/LICENSE",
+        "bytes": 1088,
+        "sha256": "7f5d20b8e7f104d0ad73ca60e6c00877ca807f9894764151925fe8fc42d316c1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish/__init__.py",
+        "bytes": 72,
+        "sha256": "41a3da14893016607fc0c5dccb8858c8bee2c17e01d149a4182708fd4fd78753"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish/__init__.pyi",
+        "bytes": 518,
+        "sha256": "2a7a45ee2f567164ec64da61deab942bc0e237b0181c9ce09ebe855e7ccf72c1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish/_jellyfish.py",
+        "bytes": 13776,
+        "sha256": "e7627e10a6e3624ce184e120a8392db1f584728c904d8f2391a6810311abed8c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish/_rustyfish.cp312-win_amd64.pyd",
+        "bytes": 445440,
+        "sha256": "bbec5579abe07057960b5a8befcda5794884d045f335ba72c7aa1ef23bb3b508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jellyfish/py.typed",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/LICENSE",
+        "bytes": 1547,
+        "sha256": "da4d740e7bfe1e9777baeda3cf6534f568ecb2abb27b80e7e2c2f9f2864d839d"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/METADATA",
+        "bytes": 2556,
+        "sha256": "6f9ae02c1ce9975ae6cb8ce9ec740c1948a9cc926deaebc6a4799318aed965db"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/RECORD",
+        "bytes": 1697,
+        "sha256": "81ae67b8294af73fc9ea8d1df02ab300adf56fc1073da45233d915ae52d25ee8"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/WHEEL",
+        "bytes": 92,
+        "sha256": "189eedfe4581172c1b6a02b97a8f48a14c0b5baa3239e4ca990fbd8871553714"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle-3.0.4.dist-info/top_level.txt",
+        "bytes": 11,
+        "sha256": "71d4436252dce17393d8acf33eeae278c9fe5d6ff7631173a29c1d783a8f155b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/__init__.py",
+        "bytes": 3069,
+        "sha256": "85211dc9bed2b7fe64297bc23c552953ab4f45ecd9cf4ade458b112cd24e88d0"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/backend.py",
+        "bytes": 9945,
+        "sha256": "ecbb196f468a9d14638ec58ec30ba40404b0093010e91bba2e8118ba68508be0"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/compat.py",
+        "bytes": 330,
+        "sha256": "8831a055b7fac85bd6185206a0eb8db02ed0bb06f2761148a103e250c69ee14c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/errors.py",
+        "bytes": 132,
+        "sha256": "97369d1852ed12b4cf1f40b3030c52da06ddeb596aa0e244e1fdbf4d20dadd65"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/ext/__init__.py",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/ext/gmpy.py",
+        "bytes": 558,
+        "sha256": "052a583726b061578674d42830d41c4baec7f94871a125403985e4c0f1f66057"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/ext/numpy.py",
+        "bytes": 13511,
+        "sha256": "8ea69781c581f14b5342d51512cf03a8d97943e0b36dd60bb374c1c9c2666107"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/ext/pandas.py",
+        "bytes": 8288,
+        "sha256": "228c39780539d77daf0c8cf6b4996bca6ea185d57dab08f111f4374d54859546"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/handlers.py",
+        "bytes": 8380,
+        "sha256": "b48b5054d64a61adf69d9b0ee205612255b043d0c4c3c85896be94b205e8acc1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/pickler.py",
+        "bytes": 32101,
+        "sha256": "465bbfb819a70f83172b9693e40db9337c1aa6c7a005870edc25353266d05be0"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/tags.py",
+        "bytes": 957,
+        "sha256": "4ea5fbb8e4ff44c8d0d12633652941e8cea0c7fb4eabd2ad674085cc3ab03947"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/unpickler.py",
+        "bytes": 30547,
+        "sha256": "12065bbc3cd0f2595933dd106c79fcf69f79076effaa2ba2d12d812faabeb5ed"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/util.py",
+        "bytes": 14758,
+        "sha256": "951bcd5a706d9d6395656b950b681e87582ec9b25886ca5484f3c9f44f85a6ea"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/jsonpickle/version.py",
+        "bytes": 448,
+        "sha256": "6e5be829576a221b4c00baaff1a141563e7a11821750924c0149194de73d4ed8"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/LICENSE",
+        "bytes": 1053,
+        "sha256": "2e96b02cea118f8a2c66a0bb96451623223e73c9644998ec4f3c90e5fe2f734f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/METADATA",
+        "bytes": 7972,
+        "sha256": "7e48637a9bca9676b8d348a4cda5b53a6643007904d1945a63f3c93dd323d22f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/RECORD",
+        "bytes": 1733,
+        "sha256": "1766d89491539225abcb22cae75ce7af09e2db0bc194bc64740a113550e85bbf"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/WHEEL",
+        "bytes": 92,
+        "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll-3.2.0.dist-info/top_level.txt",
+        "bytes": 8,
+        "sha256": "623ef6c855590c3fa1e930ec8489c1055fd73ebb7f37987f2e102c81abebfb5c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/__init__.py",
+        "bytes": 345,
+        "sha256": "41fbe988d3efa42cc3869f3b227ead449bc60d17f35b788450f1d0e6c53a5155"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/_parser.py",
+        "bytes": 2146,
+        "sha256": "ce6db255e730f4155452ee093314062972e4ac00950a2e9f868f7e86d194a678"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/_version.py",
+        "bytes": 259,
+        "sha256": "c3333f848fad11a2da6c550f4b8cc994c138b41fa8b97ece34b8ba84bea3fde6"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/conllable.py",
+        "bytes": 775,
+        "sha256": "45b15e17e8d346fe6b16eb5293a43d685d5705a64c5c27cada73667c39b58ad8"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/exception.py",
+        "bytes": 379,
+        "sha256": "d7b988ed6951dd2e7cdb8d49170ced2ff82bcf7597137109527dd328c9985197"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/load.py",
+        "bytes": 3881,
+        "sha256": "6d582242c047a5c24a5558f17aa64ca11c390cf4b5f09d8b8e614802e47d40bb"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/py.typed",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/tree/__init__.py",
+        "bytes": 304,
+        "sha256": "751282c670333e2b3a322152113078cd60f21ac79493d392b2708dad9e67fd71"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/tree/_treebuilder.py",
+        "bytes": 6745,
+        "sha256": "92d08977d5a8ce394de80e393dbf7b288fdbbc07d21fffc1b0683bc2210b1146"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/tree/tree.py",
+        "bytes": 2297,
+        "sha256": "cb40c234c2e2026f8afd41ae59ef82f99380962a5a9260efd59f1e49257a9a90"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/unit/__init__.py",
+        "bytes": 213,
+        "sha256": "3037efa13ba1b7f918fb3b024d085c5e3df0ec272f4a5c7ae6a6cb6827f84c6d"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/unit/conll.py",
+        "bytes": 5508,
+        "sha256": "c6f89aa6834b1eb059e7634b701f616129553265d60ed937dd570310ee9d571d"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/unit/sentence.py",
+        "bytes": 12810,
+        "sha256": "8a9da5ec3089b52448e11f259fa3f57c02be104235180365996c271a57c943a2"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/unit/token.py",
+        "bytes": 26836,
+        "sha256": "aba2433051d2301090dff43e9d37cd635d6b7434ce240da2a803176101bae76e"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/pyconll/util.py",
+        "bytes": 8229,
+        "sha256": "c3cdcc6105c9c41cf757f3f60a88a2f5b9aab5f3c121d6f32768e2de053aabec"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/LICENSE",
+        "bytes": 1066,
+        "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/METADATA",
+        "bytes": 1658,
+        "sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/RECORD",
+        "bytes": 611,
+        "sha256": "1c94725b0668d91e3fa8238d5ad89bf5ee2e77c06ff751bb967d793fe22d1bb5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/WHEEL",
+        "bytes": 109,
+        "sha256": "a7178d5f925db427b9f0f51260ff6ea6673b8dd44f82f4f41a6f646f5487955c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six-1.17.0.dist-info/top_level.txt",
+        "bytes": 4,
+        "sha256": "fe2547fe2604b445e70fc9d819062960552f9145bdb043b51986e478a4806a2b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/six.py",
+        "bytes": 34703,
+        "sha256": "c51c91f703d3d4b3696c923cb5fec213e05e75d9215393befac7f2fa6a3904df"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/INSTALLER",
+        "bytes": 4,
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/LICENSE",
+        "bytes": 16725,
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/METADATA",
+        "bytes": 11003,
+        "sha256": "b8990ceeff0ed40997a087211db051e49e75af18b63ec417fa6c5d7864ad83a9"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/RECORD",
+        "bytes": 890,
+        "sha256": "85e3573b507260755de0388b09b1622328cdc3178a541a500b6c92ecd19ab491"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/REQUESTED",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/WHEEL",
+        "bytes": 102,
+        "sha256": "8fd022b2ccdadfbe742d01c5010c987ab3639a410e375fbcc3f45a64d16d292b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal.udpipe-1.3.1.1.dist-info/top_level.txt",
+        "bytes": 5,
+        "sha256": "1ac66fe51dd6934f3198d274f415aca7f57086f2464895560f9299d43ce092d3"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal/__init__.py",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal/udpipe/__init__.py",
+        "bytes": 446,
+        "sha256": "14b2d5b8b5c7904db3aaebaad45648c5e3dc822ee2d68aa298cb5a9ee62e1f0f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal/udpipe/_udpipe.cp312-win_amd64.pyd",
+        "bytes": 1927168,
+        "sha256": "319c10566d801208a084cd77e0b8a963e9f65362c3a6a31a45146771e81752d8"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/dependencies/ufal/udpipe/msvcp140.dll",
+        "bytes": 635040,
+        "sha256": "76c9060fd749d837c92b716a91a190b038f2c03e46da124a36f88075361a9be5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/accentuator/accents.pkl",
+        "bytes": 239711568,
+        "sha256": "0e19bca5eb93273a5f19977d73041669f5b0e737e1f04827fdee1e334e44e6c6"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/accentuator/config.json",
+        "bytes": 1443,
+        "sha256": "e47c68cbc902c44cd684b220bed4cce333e07947ad4c7f47d01983e94352587b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/accentuator/pytorch_model.pth",
+        "bytes": 31963338,
+        "sha256": "a5f56b4e707d4592e4388fcaab52cc1b745458e1409c100ce11ea61714725454"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/scansion_tool/scansion_tool.pkl",
+        "bytes": 12388909,
+        "sha256": "f43ff929901e43cd22f0eeb9982b6ab97a96c4c95d975d8f1c762c8f7c8943bf"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/udpipe_syntagrus.model",
+        "bytes": 45859472,
+        "sha256": "16894d425ee328ace668a9d2f7ea5ff945468247d146333e8688f9200fa114e2"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models/word2lemma.pkl",
+        "bytes": 186772207,
+        "sha256": "268d7f24a7aa059a97d66eb779667338ba5bc0aaa5824a4aa7d8005e19b70826"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/models_manifest.json",
+        "bytes": 2514,
+        "sha256": "4b05b83c37b91990b92a8c9abe0f415ca8e91954518c240c9ee9f707470b4d3b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/rusyllab_revision.txt",
+        "bytes": 42,
+        "sha256": "525e8af7bcd5866ecd8eb3b74ea105f52f174b365cef6b400db34332013c02b5"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/smoke_results.json",
+        "bytes": 2036,
+        "sha256": "c9d074a7113e0a2a53244d75ed6b551463b2777349822af43cd7bea037fe36c1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/.gitignore",
+        "bytes": 3443,
+        "sha256": "605915eaeeec6b0680f28426d46a99d6bb824f219f01632eb0166bcba3505a91"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/LICENSE",
+        "bytes": 1095,
+        "sha256": "dcf43638d7c176bfc4e9d31ab320d46472e714ad22bd1e10c54b7c1a4d101d65"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/README.md",
+        "bytes": 6133,
+        "sha256": "a45c36528426a280dcd067958479d22242a784fc90a856532bf27c6ac1590d71"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/requirements.txt",
+        "bytes": 173,
+        "sha256": "a9a843835ead829114c21db35e4d0d5030199808349d9e718dc94e28236aa228"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/__init__.py",
+        "bytes": 1015,
+        "sha256": "251f0ea16e7731c79ba72c7f5ddaebf732a42cbdb6096c2c9097e8e29c32954b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/accentuator.py",
+        "bytes": 9412,
+        "sha256": "f70d64db2f68010ab57f6071e2fe9c67b638bb64616687f4533d771c3b61dd51"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/emoji.py",
+        "bytes": 15611,
+        "sha256": "61929cc3ae7fce95acec486024e6b11612cb007b640627e328bbab32fbfbf01d"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/metre_classifier.py",
+        "bytes": 48856,
+        "sha256": "7c17059199c410b371a46d939b4287a64159f8eb0f3221fbc03c5757220c76ed"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/.gitattributes",
+        "bytes": 110,
+        "sha256": "3c67a5bac53a795cac460ac0a19839b173315b967bdaaa0e4e8fcaf2044feaaa"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/accentuator/.gitattributes",
+        "bytes": 150,
+        "sha256": "ad2eaa996da8f398ed5905b7c9c21bb88fc0df1be2af76a7935d1027534003fe"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/accentuator/accents.pkl",
+        "bytes": 134,
+        "sha256": "d883e6e5fc6ee0d50002076a3906cf00fe2357dd157e85f3b3e30bbbcdf26d34"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/accentuator/config.json",
+        "bytes": 129,
+        "sha256": "1d9e9f3a1a2654bfc13627588f74b05c8da4ff970689959f1f4d21cc22ca9c8b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/accentuator/pytorch_model.pth",
+        "bytes": 133,
+        "sha256": "54757562c1e4fbab006cd1ba4dfa205632eb62e587cf9a0c3bdc71d3ec766ecd"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/scansion_tool/.gitattributes",
+        "bytes": 54,
+        "sha256": "f830671e2081ea7df6586da163bfe8600706c1379c99e1dbd2f3c14af68b755b"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/scansion_tool/scansion_tool.pkl",
+        "bytes": 133,
+        "sha256": "abf9a5dd7faa9902c078c39f6e4bdd1561d792bd2d3884965323268b934fb1c4"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/udpipe_syntagrus.model",
+        "bytes": 133,
+        "sha256": "3ce330f699a8e7f0a603c2708882fe68676afe013bd18602fe631b9ecb6c617e"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/models/word2lemma.pkl",
+        "bytes": 134,
+        "sha256": "56b40fa324e9d8a62806da0a8692bcd2bc9ee8c4dcd891de930a323c8aad3907"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/phonetic.py",
+        "bytes": 144967,
+        "sha256": "f49564a33c123c60b025de7b37a14ffa5db8abb2b43ee0151ac4a40c9863404f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/poetry_alignment.py",
+        "bytes": 260438,
+        "sha256": "b337bcdeccf9ef515a35dbfe8820a072059e093485883118276d32ff97dce10a"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/udpipe_parser.py",
+        "bytes": 6737,
+        "sha256": "fb09b3ed604ed52b0d217c61af2cf472629c25e0845ff992172accd09edb3285"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/russian_scansion/whitespace_normalization.py",
+        "bytes": 21185,
+        "sha256": "840231ab48df9c080a41eb21f42d8875a9017a38d1ae5c54d31e80a4af130a54"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/RussianPoetryScansionTool-9e577f036d970ba648f19d9d0c286547d9327902/setup.py",
+        "bytes": 1258,
+        "sha256": "36850c44366fbd9005c7b2ff967098e4f472b53e66f8e4fcf358ef83c5a98945"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/.gitignore",
+        "bytes": 1203,
+        "sha256": "a2ebfecdb6c1b58267fbe97e6e2ac02c2b963df7673fc1047270f0f0cff16732"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/.travis.yml",
+        "bytes": 77,
+        "sha256": "64ba66fd8917aaa5990b63664d762b0cdbff6064515449c0d6c3e45762c54689"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/LICENSE",
+        "bytes": 35149,
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/README.md",
+        "bytes": 707,
+        "sha256": "ba0f64ce417b554c0c950b23d9ffb03668e669810e9b6e2aac75d7bc988c6d6c"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/rusyllab/__init__.py",
+        "bytes": 68,
+        "sha256": "d0a4fde32010ade0b48b7d2fc4812a28cae89152eb8e202f5258d1e349310d7f"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/rusyllab/rusyllab.py",
+        "bytes": 18975,
+        "sha256": "331fdd0d9d10025bbebfc09ae648b21399d9f73cd168e1eeb76c10d6b0a31c00"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/rusyllab/tests.py",
+        "bytes": 246,
+        "sha256": "c48de2020854627946fcf23f3d0bf620b6dd5dc874bb1d75ec99c314edc0af89"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/source/rusyllab-c5d0ea405e9cc8233bd65503c26c0d2ad8b5cb57/setup.py",
+        "bytes": 513,
+        "sha256": "2f08dacb5e732b50d35b2784ff16d917b1a35594fd9f39758e3239509fd622f1"
+      },
+      {
+        "path": "artifacts/evaluators/rpst/version.json",
+        "bytes": 37286,
+        "sha256": "a9520b1ceedbfe073c5022ab392f5ea291e401ede19caba5856169fc18f238c9"
+      },
+      {
+        "path": "artifacts/releases/poetry17/continuation.pt",
+        "bytes": 273820423,
+        "sha256": "f41de7c3e533d75cd9259ab0f1074d49e84a2a07e8b2a2f686a6e25221046311"
+      },
+      {
+        "path": "artifacts/tokenizers_v3/selected/config.json",
+        "bytes": 384,
+        "sha256": "9a2c0971fe56036cbff72f4de6a43932f5b0a3387fb7a00c55ba5613f18dda11"
+      },
+      {
+        "path": "artifacts/tokenizers_v3/selected/tokenizer.json",
+        "bytes": 750529,
+        "sha256": "4cd18c31a8a5879ee3eacaf0936c191de011a71aed7fd13812f1d7b5d7e9d1fe"
+      },
+      {
+        "path": "data/rhyme17_candidate/ending_vocabulary.json",
+        "bytes": 2550473,
+        "sha256": "3476182bd617e20a551b615e2c21c814d7f207777bdef9be72183c5a2f851818"
+      },
+      {
+        "path": "data/rhyme17_candidate/vocabulary_all_poetry_wordforms.json",
+        "bytes": 23248259,
+        "sha256": "76fecc9e9d94b65ec9f8f87c07b8f0870f7c810b621c6bc14d600896240cad85"
+      }
+    ]
+  }
+}
