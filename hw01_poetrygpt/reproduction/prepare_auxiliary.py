@@ -7,6 +7,7 @@ from reproduction.datasets import catalog, restore_sidecar
 from reproduction.download import ROOT, sha256
 from poetrygpt.serialization import pad_batch
 from scripts.prepare_ending_plan16 import encode_plan, visible_case
+from reproduction.array_archive import write_npz
 
 
 def verify_outputs(folder):
@@ -55,7 +56,7 @@ def prepare():
         dtypes = dict(input_ids=np.int32, labels=np.int32, attention_mask=np.int32) if split == 'train' else dict(input_ids=np.uint16, labels=np.int32, attention_mask=np.uint8)
         path = planned / f'sft_{split}.npz'
         if not path.exists():
-            np.savez_compressed(path, **{key: np.asarray(value, dtype=dtypes[key]) for key, value in padded.items()})
+            write_npz(path, {key: np.asarray(value, dtype=dtypes[key]) for key, value in padded.items()})
     manifest = json.loads((planned / 'manifest.json').read_text('utf8'))
     prefixes = dict(schema='ending-plan16-visible-prefixes-1',
                     source_manifest_sha256=manifest['source_manifest_sha256'], cases=cases)

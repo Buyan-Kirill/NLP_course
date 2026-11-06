@@ -99,6 +99,8 @@ def extract_checked(archive_path, root, files):
 def inference():
     release = json.loads((ROOT / 'reproduction/resources.json').read_text('utf8'))
     item = release['inference']
+    if not (ROOT / '.cache' / item['name']).exists():
+        print(f'Загружаю ресурсы: {item["bytes"]/1_000_000:.0f} МБ…', flush=True)
     archive = fetch(item['url'], ROOT / '.cache' / item['name'], item['sha256'], item['bytes'])
     extract_checked(archive, ROOT, item['files'])
     return {'resource': 'inference', 'verified_files': len(item['files'])}

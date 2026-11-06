@@ -26,6 +26,21 @@ def fixture():
 
 
 class DeliveryTests(unittest.TestCase):
+    def test_npz_bytes_match_the_frozen_layout_across_platforms(self):
+        import numpy as np
+        from reproduction.array_archive import write_npz
+        arrays = dict(input_ids=np.array([[1,7,2,0],[1,8,9,2]], dtype=np.uint16),
+                      labels=np.array([[-100,7,2,-100],[-100,8,9,2]], dtype=np.int32),
+                      attention_mask=np.array([[1,1,1,0],[1,1,1,1]], dtype=np.uint8))
+        with fixture() as root:
+            path = root / 'records.npz'
+            write_npz(path, arrays)
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),
+                             '8c48bb5ae8d9d4638e48d344f0537c5de1b6330fcbb5baea6dde680daa3ed776')
+            with np.load(path, allow_pickle=False) as restored:
+                for key, value in arrays.items():
+                    np.testing.assert_array_equal(restored[key], value)
+
     def test_download_keeps_certificate_and_hostname_verification(self):
         import ssl
         context = https_context()
